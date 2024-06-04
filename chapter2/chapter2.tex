@@ -34,7 +34,7 @@
 %
 %
 %
-Dans la partie initiale de ce premier chapitre, deux concepts sont introduits : celui de codage canal, une technique avancée utilisée dans les systèmes de communications numériques afin de fiabiliser les transmissions, ainsi que le concept de codes correcteurs d'erreurs (CCE) et leur positionnement dans les chaînes de communications numériques. La seconde partie de ce chapitre présente les principales familles de CCE actuellement utilisées dans différents standards de communication ainsi que les algorithmes de décodage associés communément employés. 
+Dans la partie initiale de ce premier chapitre, deux concepts sont introduits : celui de codage canal, une technique avancée utilisée dans les systèmes de communications numériques afin de fiabiliser les transmissions, ainsi que le concept de codes correcteurs d'erreurs (\acrshort{cce}) et leur positionnement dans les chaînes de communications numériques. La seconde partie de ce chapitre présente les principales familles de CCE actuellement utilisées dans différents standards de communication ainsi que les algorithmes de décodage associés communément employés. 
 %
 %
 %
@@ -143,7 +143,7 @@ Depuis leur découverte, ces codes ont été étudiés avec attention  \cite{TUR
     \label{TURBO1}
 \end{figure}
 
-Le processus de décodage associé aux turbo codes est schématisé dans la figure \ref{TURBO1}. De manière concise, les informations provenant du canal de communication notées ($\bm{S_n, P_n, P_i}$) sont traitées de manière itérative dans le récepteur. Dans un premier temps, les vecteurs d’information $\bm{S_n}$ et les données redondantes $\bm{P_n}$ sont traitées par le premier SISO (\ding{182} figure \ref{TURBO1}). Cette étape produit un vecteur de données extrinsèques $\bm{E_n}$, informations qui sont ensuite entrelacées par $\bm{\Pi}$ afin de produire le vecteur $\bm{L_i}$ (\ding{183} figure \ref{TURBO1}). Dans un second temps, les données $\bm{S_i, P_i, L_i}$ sont traitées de manière similaire par le second SISO (\ding{184} figure \ref{TURBO1}). Ce traitement produit les extrinsèques $\bm{E_i}$ qui post-entrelacement deviennent $\bm{L_n}$. L’exécution séquentielle des SISO \ding{182} et \ding{184} est réalisée $\bm{i}$ fois au maximum, ou jusqu’à obtention d’un mot de code valide en sortie du décodeur $\bm{U}$. Une formulation algorithmique du processus de turbo décodage est proposée dans l’Algorithme \ref{algo:turbo} avec $\bm{\Pi}$ et $\bm{\Pi^{-1}}$ les opérations d’entrelacement et de désentrelacement \cite{TURBO:NEW:INTERL}.
+Le processus de décodage associé aux turbo codes est schématisé dans la figure \ref{TURBO1}. De manière concise, les informations provenant du canal de communication notées ($\bm{S_n, P_n, P_i}$) sont traitées de manière itérative dans le récepteur. Dans un premier temps, les vecteurs d’information $\bm{S_n}$ et les données redondantes $\bm{P_n}$ sont traitées par le premier \acrshort{siso} (\ding{182} figure \ref{TURBO1}). Cette étape produit un vecteur de données extrinsèques $\bm{E_n}$, informations qui sont ensuite entrelacées par $\bm{\Pi}$ afin de produire le vecteur $\bm{L_i}$ (\ding{183} figure \ref{TURBO1}). Dans un second temps, les données $\bm{S_i, P_i, L_i}$ sont traitées de manière similaire par le second SISO (\ding{184} figure \ref{TURBO1}). Ce traitement produit les extrinsèques $\bm{E_i}$ qui post-entrelacement deviennent $\bm{L_n}$. L’exécution séquentielle des SISO \ding{182} et \ding{184} est réalisée $\bm{i}$ fois au maximum, ou jusqu’à obtention d’un mot de code valide en sortie du décodeur $\bm{U}$. Une formulation algorithmique du processus de turbo décodage est proposée dans l’Algorithme \ref{algo:turbo} avec $\bm{\Pi}$ et $\bm{\Pi^{-1}}$ les opérations d’entrelacement et de désentrelacement \cite{TURBO:NEW:INTERL}.
 
 \begin{algorithm}[tb]
     \small
@@ -168,7 +168,7 @@ Le processus de décodage associé aux turbo codes est schématisé dans la figu
 \end{algorithm}
 
 
-Les traitements nommés SISO (Soft-Input, Soft-Output), utilisés dans la figure \ref{TURBO1}, sont des traitements œuvrant sur un treillis construit à partir des spécifications du turbo code \cite{BookCodes}. Pour identifier la séquence la plus probable dans le treillis constitué de $\bm S$ états figure \ref{TURBO2}, des algorithmes de type BCJR  \cite{BCJR} sont utilisés. L'algorithme BCJR parcourt le treillis dans les deux sens afin d’estimer le chemin le plus probable à partir de cette estimation et de calculer les $\bm K$ valeurs extrinsèques.
+Les traitements nommés SISO (Soft-Input, Soft-Output), utilisés dans la figure \ref{TURBO1}, sont des traitements œuvrant sur un treillis construit à partir des spécifications du turbo code \cite{BookCodes}. Pour identifier la séquence la plus probable dans le treillis constitué de $\bm S$ états figure \ref{TURBO2}, des algorithmes de type BCJR \cite{BCJR} sont utilisés. L'algorithme BCJR parcourt le treillis dans les deux sens afin d’estimer le chemin le plus probable à partir de cette estimation et de calculer les $\bm K$ valeurs extrinsèques.
 
 \begin{figure}
     \centering
@@ -303,7 +303,7 @@ L’Algorithme \ref{ldpc_minsum} présente la formulation d’un algorithme de d
     \item Le kernel (2) doit quant à lui itérer séquentiellement $\mathit{i}$ fois à cause des dépendances de données entre les itérations. 
 \end{itemize}
 
-L'exploitation de ces différents niveaux de parallélismes associés à des contraintes applicatives spécifiques, a permis la conception d’architectures numériques variées permettant d’atteindre des débits de plusieurs Gbps sur technologies FPGA \cite{PIGNOLY:MS,BOUTILLON}, mais aussi d’atteindre des débits similaires sur des architectures programmables \cite{BLG:REVUE:TPDS,FAIR:LDPC}. \\
+L'exploitation de ces différents niveaux de parallélismes associés à des contraintes applicatives spécifiques, a permis la conception d’architectures numériques variées permettant d’atteindre des débits de plusieurs Gbps sur technologies \acrshort{fpga} \cite{PIGNOLY:MS,BOUTILLON}, mais aussi d’atteindre des débits similaires sur des architectures programmables \cite{BLG:REVUE:TPDS,FAIR:LDPC}. \\
 L’ensemble de ces solutions ont permis d'obtenir des compromis \textit{débit vs flexibilité}, permettant l’émergence et l’usage à grande échelle des plateformes SdR \cite{SDR, SURVEY:SDR} et des systèmes de type Cloud-RAN \cite{CLOUD:RAN2,CLOUD:RAN3} plébiscités par exemple pour le déploiement de la 5G \cite{CLOUD:RAN1}. 
 
 En supplément des travaux relatifs à la construction des codes LDPC et de l’amélioration des caractéristiques des décodeurs matériels et logiciels, d’autres initiatives se sont focalisées sur l’extension de cette famille aux corps de Galois non binaires ($\mathbb{GF}( \bm{q} )$ avec $\bm{q}\ge2$).

@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Algorithme de décodage logiciel des codes polaires}{68}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Algorithme de décodage logiciel des turbo codes}{69}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Synthèse des extensions proposées}{71}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Évaluation de l'impact de l'ajout d'instructions spécialisées sur coeurs RISC-V}{73}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Évaluation de l'impact de l'ajout d'instructions spécialisées sur cœurs RISC-V}{73}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Conclusion}{80}{section.4.4}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 

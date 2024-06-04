@@ -25,7 +25,7 @@
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances.\relax }}{60}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Principe d'insertion d'instruction spécialisées dans un coeur RISC-V (schéma pédagogique du coeur \blx@tocontentsinit {0}\cite {ArchiRISC:V})\relax }}{61}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Principe d'insertion d'instruction spécialisées dans un cœur RISC-V (schéma pédagogique du cœur \blx@tocontentsinit {0}\cite {ArchiRISC:V})\relax }}{61}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Impact de l'ajout des instructions spécialisées: surcoût en LUT et fréquence de fonctionnement.\relax }}{79}{figure.caption.47}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
@@ -36,8 +36,8 @@
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Schéma de l'architecture du coeur CVA6.\relax }}{100}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Surcôut des instructions spécialisées SISD dans l'UAL du coeur CVA6.\relax }}{110}{figure.caption.73}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schéma de l'architecture du cœur CVA6.\relax }}{100}{figure.caption.62}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Surcôut des instructions spécialisées SISD dans l'UAL du cœur CVA6.\relax }}{110}{figure.caption.73}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation inter-trames en configuration 32 bits et 64 bits.\relax }}{113}{figure.caption.75}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation intra-trame en configuration 32 bits et 64 bits.\relax }}{116}{figure.caption.77}%
 \babel@toc {french}{}\relax 

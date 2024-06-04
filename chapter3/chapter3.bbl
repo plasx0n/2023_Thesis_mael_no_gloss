@@ -1,0 +1,898 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ArchiRISC:V}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=c11f8d662394909bac510547fbc2b7ba}{%
+           family={{OpenHW Group CORE-V CV32E40P RISC-V IP}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{c11f8d662394909bac510547fbc2b7ba}
+      \strng{fullhash}{c11f8d662394909bac510547fbc2b7ba}
+      \strng{bibnamehash}{c11f8d662394909bac510547fbc2b7ba}
+      \strng{authorbibnamehash}{c11f8d662394909bac510547fbc2b7ba}
+      \strng{authornamehash}{c11f8d662394909bac510547fbc2b7ba}
+      \strng{authorfullhash}{c11f8d662394909bac510547fbc2b7ba}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{3}
+      \field{title}{https://github.com/openhwgroup/cv32e40p}
+      \field{year}{2024}
+    \endentry
+    \entry{LDPC:APPROX:3}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f03e18b11f950b8db681b9079efac957}{%
+           family={Maunder},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Southampton}%
+      }
+      \strng{namehash}{f03e18b11f950b8db681b9079efac957}
+      \strng{fullhash}{f03e18b11f950b8db681b9079efac957}
+      \strng{bibnamehash}{f03e18b11f950b8db681b9079efac957}
+      \strng{authorbibnamehash}{f03e18b11f950b8db681b9079efac957}
+      \strng{authornamehash}{f03e18b11f950b8db681b9079efac957}
+      \strng{authorfullhash}{f03e18b11f950b8db681b9079efac957}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Survey of ASIC implementations of LDPC decoders}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://eprints.soton.ac.uk/399259/
+      \endverb
+      \verb{url}
+      \verb https://eprints.soton.ac.uk/399259/
+      \endverb
+    \endentry
+    \entry{LDPC:APPROX:4}{article}{}
+      \name{author}{5}{}{%
+        {{hash=5f07b229262049f6f7277a3844c669c8}{%
+           family={Hailes},
+           familyi={H\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8988e4206730ffa0ecb54886c691cb99}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Lei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b9148ec00ba8398ac76bd67c4637810c}{%
+           family={Maunder},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=59eb590a3a7a60ef7e7aa6bc8523e69f}{%
+           family={Al-Hashimi},
+           familyi={A\bibinithyphendelim H\bibinitperiod},
+           given={Bashir\bibnamedelima M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=5399f04ada082e113e06ff8a12dd986a}{%
+           family={Hanzo},
+           familyi={H\bibinitperiod},
+           given={Lajos},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{591f2b297a752f7af885819ca558e0f2}
+      \strng{fullhash}{502587e57a3d6d1a70f36bf54e3b75e0}
+      \strng{bibnamehash}{502587e57a3d6d1a70f36bf54e3b75e0}
+      \strng{authorbibnamehash}{502587e57a3d6d1a70f36bf54e3b75e0}
+      \strng{authornamehash}{591f2b297a752f7af885819ca558e0f2}
+      \strng{authorfullhash}{502587e57a3d6d1a70f36bf54e3b75e0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys Tutorials}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{A Survey of {FPGA}-Based {LDPC} Decoders}
+      \field{volume}{18}
+      \field{year}{2016}
+      \field{pages}{1098\bibrangedash 1122}
+      \range{pages}{25}
+    \endentry
+    \entry{BLG:REVUE:TPDS}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b302d0ceafdd4655b18e25018243626b}{%
+           family={Le\bibnamedelima Gal},
+           familyi={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+        {{hash=efbbad097796e5e35613bc06154cad4d}{%
+           family={Jego},
+           familyi={J\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{fullhash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{bibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authorbibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authornamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authorfullhash}{9dd2f85655d88334d76c43ed12e006c2}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Parallel and Distributed Systems}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{High-Throughput Multi-Core LDPC Decoders Based on x86 Processor}
+      \field{volume}{27}
+      \field{year}{2016}
+      \field{pages}{1373\bibrangedash 1386}
+      \range{pages}{14}
+    \endentry
+    \entry{14}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=3d7c6b10cb10d514e78822b6b4eac080}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=efca5e5707fea1b85340d5cacfcca076}{%
+           family={Falcao},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=21cc851495b046d01093bd0633169b59}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=6faa6ce991a0e0d26a450f39aafd08ed}{%
+           family={Kasai},
+           familyi={K\bibinitperiod},
+           given={Kenta},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{75761374186bbce88cd710d717c2ecd0}
+      \strng{fullhash}{fa13f5260696aecfdef1ab238e5361d6}
+      \strng{bibnamehash}{fa13f5260696aecfdef1ab238e5361d6}
+      \strng{authorbibnamehash}{fa13f5260696aecfdef1ab238e5361d6}
+      \strng{authornamehash}{75761374186bbce88cd710d717c2ecd0}
+      \strng{authorfullhash}{fa13f5260696aecfdef1ab238e5361d6}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE International Conference on Acoustics, Speech and Signal Processing}
+      \field{title}{FFT-SPA non-binary LDPC decoding on GPU}
+      \field{year}{2013}
+      \field{pages}{5099\bibrangedash 5103}
+      \range{pages}{5}
+    \endentry
+    \entry{BLG:LDPC:NB}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b302d0ceafdd4655b18e25018243626b}{%
+           family={{Le~Gal}},
+           familyi={L\bibinitperiod},
+           given={Bertrand},
+           giveni={B\bibinitperiod}}}%
+        {{hash=efbbad097796e5e35613bc06154cad4d}{%
+           family={Jego},
+           familyi={J\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{fullhash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{bibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authorbibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authornamehash}{9dd2f85655d88334d76c43ed12e006c2}
+      \strng{authorfullhash}{9dd2f85655d88334d76c43ed12e006c2}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Signal Processing Systems}
+      \field{month}{3}
+      \field{title}{High-Throughput {FFT-SPA} Decoder Implementation for Non-Binary {LDPC} Codes on x86 Multicore Processors}
+      \field{volume}{92}
+      \field{year}{2020}
+      \field{pages}{37\bibrangedash 53}
+      \range{pages}{17}
+    \endentry
+    \entry{survey:NB}{article}{}
+      \name{author}{10}{}{%
+        {{hash=58ca0c97fadeb13bf485d1adda698068}{%
+           family={Ferraz},
+           familyi={F\bibinitperiod},
+           given={Oscar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=f3d314a08e8902dd444709cd81296c9e}{%
+           family={Subramaniyan},
+           familyi={S\bibinitperiod},
+           given={Srinivasan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6296b949cdd647b5850de1b8c7aeeb4f}{%
+           family={Chinthala},
+           familyi={C\bibinitperiod},
+           given={Ramesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=713d93b0bbd378b39e24d26e65d4d642}{%
+           family={Andrade},
+           familyi={A\bibinitperiod},
+           given={João},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1395bf96d2f936131c2875e250824906}{%
+           family={Cavallaro},
+           familyi={C\bibinitperiod},
+           given={Joseph\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=68c89a18fcadbb6627a93ab9fcf82e8a}{%
+           family={Nandy},
+           familyi={N\bibinitperiod},
+           given={Soumitra\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=364cc3a7145f5a8c57a6a8aafc44cf01}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Vitor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=fd0fb2b1793804d90e4dfe1d913bfcb7}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xinmiao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=167275e4153acb728f77a8f7b51454a8}{%
+           family={Purnaprajna},
+           familyi={P\bibinitperiod},
+           given={Madhura},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b3fcc6fcd77d76ea500e13478312cd2c}{%
+           family={Falcao},
+           familyi={F\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{62884f5f11644fcaf1e468c64a03950b}
+      \strng{fullhash}{b0585b06cafa4dc190a0153f370c6408}
+      \strng{bibnamehash}{62884f5f11644fcaf1e468c64a03950b}
+      \strng{authorbibnamehash}{62884f5f11644fcaf1e468c64a03950b}
+      \strng{authornamehash}{62884f5f11644fcaf1e468c64a03950b}
+      \strng{authorfullhash}{b0585b06cafa4dc190a0153f370c6408}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys \& Tutorials}
+      \field{number}{1}
+      \field{title}{A Survey on High-Throughput Non-Binary LDPC Decoders: ASIC, FPGA, and GPU Architectures}
+      \field{volume}{24}
+      \field{year}{2022}
+      \field{pages}{524\bibrangedash 556}
+      \range{pages}{33}
+    \endentry
+    \entry{Arikan_2009}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f764316e49575e6c7926cb070f04ae2a}{%
+           family={Arikan},
+           familyi={A\bibinitperiod},
+           given={Erdal},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f764316e49575e6c7926cb070f04ae2a}
+      \strng{fullhash}{f764316e49575e6c7926cb070f04ae2a}
+      \strng{bibnamehash}{f764316e49575e6c7926cb070f04ae2a}
+      \strng{authorbibnamehash}{f764316e49575e6c7926cb070f04ae2a}
+      \strng{authornamehash}{f764316e49575e6c7926cb070f04ae2a}
+      \strng{authorfullhash}{f764316e49575e6c7926cb070f04ae2a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Channel Polarization: A Method for Constructing Capacity-Achieving Codes for Symmetric Binary-Input Memory less Channels}
+      \field{volume}{55}
+      \field{year}{2009}
+      \field{pages}{3051\bibrangedash 3073}
+      \range{pages}{23}
+    \endentry
+    \entry{mcgill}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2974ceeb671e21ef86b14ba0f55d425a}{%
+           family={Giard},
+           familyi={G\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=de61d34810847c4a2bafc1fbca5076df}{%
+           family={Sarkis},
+           familyi={S\bibinitperiod},
+           given={Gabi},
+           giveni={G\bibinitperiod}}}%
+        {{hash=291691b60386f17090cb45b7220ab3c8}{%
+           family={Leroux},
+           familyi={L\bibinitperiod},
+           given={Camille},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d5aeefaec4af055ee72a83e7b4b726ef}{%
+           family={Thibeault},
+           familyi={T\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d90aad83bff904908e883af6145d73af}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Warren\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{97c66bdc0de102a3e824e04505a0d640}
+      \strng{fullhash}{a274de26cd92e78b84befd99ab295d54}
+      \strng{bibnamehash}{a274de26cd92e78b84befd99ab295d54}
+      \strng{authorbibnamehash}{a274de26cd92e78b84befd99ab295d54}
+      \strng{authornamehash}{97c66bdc0de102a3e824e04505a0d640}
+      \strng{authorfullhash}{a274de26cd92e78b84befd99ab295d54}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Signal Processing Systems}
+      \field{month}{7}
+      \field{number}{5}
+      \field{title}{Low-Latency Software Polar Decoders}
+      \field{volume}{90}
+      \field{year}{2016}
+      \field{pages}{761\bibrangedash 775}
+      \range{pages}{15}
+    \endentry
+    \entry{Leonardon:2019vf}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f363e48e2a65e7e73a49565507877b12}{%
+           family={Léonardon},
+           familyi={L\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=74b4ac29dcdb0e772e587b07a72407b8}{%
+           family={Cassagne},
+           familyi={C\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=291691b60386f17090cb45b7220ab3c8}{%
+           family={Leroux},
+           familyi={L\bibinitperiod},
+           given={Camille},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cc221b5de557c68720ad7d3877fa8ed6}{%
+           family={Jégo},
+           familyi={J\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0e35757ee2dc529cbfa23f6f4a309c82}{%
+           family={Hamelin},
+           familyi={H\bibinitperiod},
+           given={Louis-Philippe},
+           giveni={L\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=6a42d4e9d7ea561406eb0d04e774086f}{%
+           family={Savaria},
+           familyi={S\bibinitperiod},
+           given={Yvon},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Nature}%
+      }
+      \strng{namehash}{f03d02d7808f3c4918425ddb86103afd}
+      \strng{fullhash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{bibnamehash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{authorbibnamehash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{authornamehash}{f03d02d7808f3c4918425ddb86103afd}
+      \strng{authorfullhash}{db95151e26040e07797ff7141bf4a35f}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Signal Processing Systems}
+      \field{month}{8}
+      \field{number}{8}
+      \field{title}{Fast and Flexible Software Polar List Decoders}
+      \field{volume}{91}
+      \field{year}{2019}
+      \field{pages}{937\bibrangedash 952}
+      \range{pages}{16}
+    \endentry
+    \entry{92}{article}{}
+      \name{author}{5}{}{%
+        {{hash=de61d34810847c4a2bafc1fbca5076df}{%
+           family={Sarkis},
+           familyi={S\bibinitperiod},
+           given={Gabi},
+           giveni={G\bibinitperiod}}}%
+        {{hash=2974ceeb671e21ef86b14ba0f55d425a}{%
+           family={Giard},
+           familyi={G\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=88849df6131174fb81130678bf6dcee9}{%
+           family={Vardy},
+           familyi={V\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d5aeefaec4af055ee72a83e7b4b726ef}{%
+           family={Thibeault},
+           familyi={T\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d90aad83bff904908e883af6145d73af}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Warren\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d160e9323fc2618a016ee58821642f6}
+      \strng{fullhash}{69a100119f46a450bf0bb53d7b0f5b57}
+      \strng{bibnamehash}{69a100119f46a450bf0bb53d7b0f5b57}
+      \strng{authorbibnamehash}{69a100119f46a450bf0bb53d7b0f5b57}
+      \strng{authornamehash}{4d160e9323fc2618a016ee58821642f6}
+      \strng{authorfullhash}{69a100119f46a450bf0bb53d7b0f5b57}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal on Selected Areas in Communications}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Fast Polar Decoders: Algorithm and Implementation}
+      \field{volume}{32}
+      \field{year}{2014}
+      \field{pages}{946\bibrangedash 957}
+      \range{pages}{12}
+    \endentry
+    \entry{LEONARDON:SCL}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f363e48e2a65e7e73a49565507877b12}{%
+           family={Léonardon},
+           familyi={L\bibinitperiod},
+           given={Mathieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=74b4ac29dcdb0e772e587b07a72407b8}{%
+           family={Cassagne},
+           familyi={C\bibinitperiod},
+           given={Adrien},
+           giveni={A\bibinitperiod}}}%
+        {{hash=291691b60386f17090cb45b7220ab3c8}{%
+           family={Leroux},
+           familyi={L\bibinitperiod},
+           given={Camille},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cc221b5de557c68720ad7d3877fa8ed6}{%
+           family={Jégo},
+           familyi={J\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0e35757ee2dc529cbfa23f6f4a309c82}{%
+           family={Hamelin},
+           familyi={H\bibinitperiod},
+           given={Louis-Philippe},
+           giveni={L\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=6a42d4e9d7ea561406eb0d04e774086f}{%
+           family={Savaria},
+           familyi={S\bibinitperiod},
+           given={Yvon},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Nature}%
+      }
+      \strng{namehash}{f03d02d7808f3c4918425ddb86103afd}
+      \strng{fullhash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{bibnamehash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{authorbibnamehash}{db95151e26040e07797ff7141bf4a35f}
+      \strng{authornamehash}{f03d02d7808f3c4918425ddb86103afd}
+      \strng{authorfullhash}{db95151e26040e07797ff7141bf4a35f}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Signal Processing Systems}
+      \field{month}{8}
+      \field{number}{8}
+      \field{title}{Fast and Flexible Software Polar List Decoders}
+      \field{volume}{91}
+      \field{year}{2019}
+      \field{pages}{937\bibrangedash 952}
+      \range{pages}{16}
+    \endentry
+    \entry{Berrou93}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=161c43e77a547105f136c6fe506e2d6a}{%
+           family={Berrou},
+           familyi={B\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=72d08f61323da4e8c9da98678631dc0d}{%
+           family={Glavieux},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3f5315dafb66611320bb168a5bf91e80}{%
+           family={Thitimajshima},
+           familyi={T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Geneva, Switzerland}%
+      }
+      \strng{namehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
+      \strng{fullhash}{ddae0743096c89cc75c1006e16a00f8d}
+      \strng{bibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
+      \strng{authorbibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
+      \strng{authornamehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
+      \strng{authorfullhash}{ddae0743096c89cc75c1006e16a00f8d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Conference on Communications (ICC)}
+      \field{month}{5}
+      \field{title}{Near Shannon limit error-correcting coding and decoding: Turbo-codes}
+      \field{year}{1993}
+      \field{pages}{1064\bibrangedash 1070}
+      \range{pages}{7}
+    \endentry
+    \entry{Wei18}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=fdbaccc1d8d607f6d9969fcf76ab15aa}{%
+           family={Weithoffer},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1c5b6d9da981080240c0b02c49271ef2}{%
+           family={Nour},
+           familyi={N\bibinitperiod},
+           given={Charbel\bibnamedelima Abdel},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=741ab3f183e3ab0819411f5006429a37}{%
+           family={Wehn},
+           familyi={W\bibinitperiod},
+           given={Norbert},
+           giveni={N\bibinitperiod}}}%
+        {{hash=da3e857bf14573d0e2b7e1e3503ad493}{%
+           family={Douillard},
+           familyi={D\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1fb4d680d2933aa1868c8f44bf696d28}{%
+           family={Berrou},
+           familyi={B\bibinitperiod},
+           given={Claude},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hong Kong, China}%
+      }
+      \strng{namehash}{16d2905400bcfe565ccf2cd22e0579a5}
+      \strng{fullhash}{1dde2ee3335710abbaca28ac38e214f3}
+      \strng{bibnamehash}{1dde2ee3335710abbaca28ac38e214f3}
+      \strng{authorbibnamehash}{1dde2ee3335710abbaca28ac38e214f3}
+      \strng{authornamehash}{16d2905400bcfe565ccf2cd22e0579a5}
+      \strng{authorfullhash}{1dde2ee3335710abbaca28ac38e214f3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE International Symposium on Turbo Codes Iterative Information Processing (ISTC)}
+      \field{month}{12}
+      \field{title}{25 Years of Turbo Codes: From {Mb/s} to beyond 100 {Gb/s}}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{Ref_4G}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=5790835f6f9e86534bc62dca2b5d9ebe}{%
+           family={{Krasniqi}},
+           familyi={K\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3cf089d5d18e57c4e1b5cf1ba6fc5d31}{%
+           family={{Maraj}},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bde863b1d8d012d53cd2607df1b0d013}{%
+           family={{Blaka}},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{abeec0a27ba39ff5a608e26b07f17e48}
+      \strng{fullhash}{1274955603dd9fcd988ff4fd1734e2bc}
+      \strng{bibnamehash}{1274955603dd9fcd988ff4fd1734e2bc}
+      \strng{authorbibnamehash}{1274955603dd9fcd988ff4fd1734e2bc}
+      \strng{authornamehash}{abeec0a27ba39ff5a608e26b07f17e48}
+      \strng{authorfullhash}{1274955603dd9fcd988ff4fd1734e2bc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 South-Eastern European Design Automation, Computer Engineering, Computer Networks and Society Media Conference (SEEDA-CECNSM)}
+      \field{title}{Performance analysis of mobile 4G/LTE networks}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{ri:LeG19c}{article}{}
+      \name{author}{2}{}{%
+        {{hash=69be0658883c797079d89a098315de96}{%
+           family={{Le~Gal}},
+           familyi={L\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=8c36ea2aca2cc7b664d122face4e5414}{%
+           family={Jego},
+           familyi={J\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7f68d69ec675c8d3b673106ec060927}
+      \strng{fullhash}{e7f68d69ec675c8d3b673106ec060927}
+      \strng{bibnamehash}{e7f68d69ec675c8d3b673106ec060927}
+      \strng{authorbibnamehash}{e7f68d69ec675c8d3b673106ec060927}
+      \strng{authornamehash}{e7f68d69ec675c8d3b673106ec060927}
+      \strng{authorfullhash}{e7f68d69ec675c8d3b673106ec060927}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Telecommunications, Springer}
+      \field{month}{2}
+      \field{title}{Low-latency and high-throughput software turbo-decoders on multi-core architectures}
+      \field{volume}{75}
+      \field{year}{2020}
+      \field{pages}{27\bibrangedash 42}
+      \range{pages}{16}
+    \endentry
+    \entry{wolf_cliffordwolfpicorv32_2021}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=c180f9cabecc406673dfc5ff5237792e}{%
+           family={{PicoRV32 RISC-V Core}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c180f9cabecc406673dfc5ff5237792e}
+      \strng{fullhash}{c180f9cabecc406673dfc5ff5237792e}
+      \strng{bibnamehash}{c180f9cabecc406673dfc5ff5237792e}
+      \strng{authorbibnamehash}{c180f9cabecc406673dfc5ff5237792e}
+      \strng{authornamehash}{c180f9cabecc406673dfc5ff5237792e}
+      \strng{authorfullhash}{c180f9cabecc406673dfc5ff5237792e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{PicoRV32}
+      \field{month}{3}
+      \field{title}{{https://github.com/cliffordwolf/picorv32}}
+      \field{year}{2021}
+    \endentry
+    \entry{cite_riscy}{article}{}
+      \name{author}{9}{}{%
+        {{hash=59688c70ebe804d4920d01d264bdd345}{%
+           family={{Gautschi}},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=69e55f0eb986efdd77f517debdbc2554}{%
+           family={{Schiavone}},
+           familyi={S\bibinitperiod},
+           given={P.\bibnamedelimi D.},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=dc4af398eb0a7bcd043e87d8ad14b12d}{%
+           family={{Traber}},
+           familyi={T\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a13e50cadccccc65ff01cc9f88b2bab0}{%
+           family={{Loi}},
+           familyi={L\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=117f76dd2eb504ac121f0bb81f816f24}{%
+           family={{Pullini}},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62bf1cad1b6d9fe8b374b97bdcbeed93}{%
+           family={{Rossi}},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=13b5415d1ee5fcf787a0a4a834a996ed}{%
+           family={{Flamand}},
+           familyi={F\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4a735541a07c5193887fa50886608e22}{%
+           family={{Gürkaynak}},
+           familyi={G\bibinitperiod},
+           given={F.\bibnamedelimi K.},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=88cd45aaa85fdc68da784758ee629391}{%
+           family={{Benini}},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{15ae515150c50af6a648f057f0b58149}
+      \strng{fullhash}{11f29ded7a0b321df51fd8af06ec6b5f}
+      \strng{bibnamehash}{15ae515150c50af6a648f057f0b58149}
+      \strng{authorbibnamehash}{15ae515150c50af6a648f057f0b58149}
+      \strng{authornamehash}{15ae515150c50af6a648f057f0b58149}
+      \strng{authorfullhash}{11f29ded7a0b321df51fd8af06ec6b5f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Very Large Scale Integration (VLSI) Systems}
+      \field{month}{2}
+      \field{number}{10}
+      \field{title}{Near-Threshold {RISC-V} Core With {DSP} Extensions for Scalable IoT Endpoint Devices}
+      \field{volume}{25}
+      \field{year}{2017}
+      \field{pages}{2700\bibrangedash 2713}
+      \range{pages}{14}
+    \endentry
+    \entry{noauthor_lowriscibex_2021}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=d1a416d7cab4c7ef6d98d4cf47039481}{%
+           family={{Ibex RISC-V Core}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \strng{fullhash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \strng{bibnamehash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \strng{authorbibnamehash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \strng{authornamehash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \strng{authorfullhash}{d1a416d7cab4c7ef6d98d4cf47039481}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Ibex is a small 32 bit RISC-V CPU core, previously known as zero-riscy.}
+      \field{month}{3}
+      \field{title}{{https://github.com/lowRISC/ibex}}
+      \field{year}{2021}
+    \endentry
+    \entry{schiavone_slow_2017}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=e7d42b0a5caf397a069ea518a80aa2a0}{%
+           family={Schiavone},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6c37ed62ba6b1c46ca61e77cccb0725b}{%
+           family={Conti},
+           familyi={C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=62bf1cad1b6d9fe8b374b97bdcbeed93}{%
+           family={Rossi},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=59688c70ebe804d4920d01d264bdd345}{%
+           family={Gautschi},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=117f76dd2eb504ac121f0bb81f816f24}{%
+           family={Pullini},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=13b5415d1ee5fcf787a0a4a834a996ed}{%
+           family={Flamand},
+           familyi={F\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=88cd45aaa85fdc68da784758ee629391}{%
+           family={Benini},
+           familyi={B\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Thessaloniki, Greece}%
+      }
+      \strng{namehash}{f4de19a591539c2451dc165e929948f2}
+      \strng{fullhash}{058b15417b8d92f7ab741f52aa467bc6}
+      \strng{bibnamehash}{f4de19a591539c2451dc165e929948f2}
+      \strng{authorbibnamehash}{f4de19a591539c2451dc165e929948f2}
+      \strng{authornamehash}{f4de19a591539c2451dc165e929948f2}
+      \strng{authorfullhash}{058b15417b8d92f7ab741f52aa467bc6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the International Symposium on Power and Timing Modeling, Optimization and Simulation (PATMOS)}
+      \field{month}{9}
+      \field{title}{Slow and steady wins the race? {A} comparison of ultra-low-power {RISC}-{V} cores for {Internet}-of-{Things} applications}
+      \field{year}{2017}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+    \endentry
+    \entry{noauthor_syntacorescr1_2021}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=1f9350dbc0e2b1eb125457032ab9d0c1}{%
+           family={{SCR1 RISC-V Core}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \strng{fullhash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \strng{bibnamehash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \strng{authorbibnamehash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \strng{authornamehash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \strng{authorfullhash}{1f9350dbc0e2b1eb125457032ab9d0c1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{SCR1}
+      \field{month}{3}
+      \field{title}{{https://github.com/syntacore/scr1}}
+      \field{year}{2021}
+    \endentry
+    \entry{cite_riscy_url}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=2a998caea155d3e2203e7a02796ec29a}{%
+           family={{RISCY RISC-V Core}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2a998caea155d3e2203e7a02796ec29a}
+      \strng{fullhash}{2a998caea155d3e2203e7a02796ec29a}
+      \strng{bibnamehash}{2a998caea155d3e2203e7a02796ec29a}
+      \strng{authorbibnamehash}{2a998caea155d3e2203e7a02796ec29a}
+      \strng{authornamehash}{2a998caea155d3e2203e7a02796ec29a}
+      \strng{authorfullhash}{2a998caea155d3e2203e7a02796ec29a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{RISCY}
+      \field{month}{4}
+      \field{title}{{https://github.com/pulp-platform/pulpissimo}}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

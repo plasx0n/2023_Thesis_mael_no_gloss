@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  4 JUN 2024 05:20
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  4 JUN 2024 06:18
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -2313,6 +2313,12 @@ LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/m/sc' undefined
 (Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 23
 3.
 
+
+Overfull \hbox (3.2762pt too wide) in paragraph at lines 233--233
+ [][] [][][]\TU/LatinModernRoman(0)/m/n/12 Éva-lua-tion de l’im-pact de l
+’ajout d’ins-truc-tions spé-cia-li-sées sur cœurs RISC- 
+ []
+
 [3
 
 
@@ -2343,9 +2349,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [7] [8
 
 ] (./main.lof
-Overfull \hbox (8.14288pt too wide) in paragraph at lines 28--28
+Overfull \hbox (5.86287pt too wide) in paragraph at lines 28--28
  [][] [][][]\TU/LatinModernRoman(0)/m/sc/12 Prin-cipe d’in-ser-tion d’ins-tr
-uc-tion spé-cia-li-sées dans un coeur RISC-V (schéma 
+uc-tion spé-cia-li-sées dans un cœur RISC-V (schéma 
  []
 
 [9
@@ -2452,7 +2458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--60
 
  []
 
-<chapter2/figs/chainecom.png, id=544, 1362.08875pt x 583.17876pt>
+<chapter2/figs/chainecom.png, id=552, 1362.08875pt x 583.17876pt>
 File: chapter2/figs/chainecom.png Graphic file (type png)
 <use chapter2/figs/chainecom.png>
 Package luatex.def Info: chapter2/figs/chainecom.png  used on input line 71.
@@ -2494,7 +2500,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 102.
 
-<chapter2/figs/comp_courbes_text.png, id=595, 696.6025pt x 560.0925pt>
+<chapter2/figs/comp_courbes_text.png, id=603, 696.6025pt x 560.0925pt>
 File: chapter2/figs/comp_courbes_text.png Graphic file (type png)
 <use chapter2/figs/comp_courbes_text.png>
 Package luatex.def Info: chapter2/figs/comp_courbes_text.png  used on input lin
@@ -2518,7 +2524,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-<chapter2/figs/siso_turbo.pdf, id=637, 448.5558pt x 155.6214pt>
+<chapter2/figs/siso_turbo.pdf, id=645, 448.5558pt x 155.6214pt>
 File: chapter2/figs/siso_turbo.pdf Graphic file (type pdf)
 <use chapter2/figs/siso_turbo.pdf>
 Package luatex.def Info: chapter2/figs/siso_turbo.pdf  used on input line 141.
@@ -2534,7 +2540,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 152.
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 166.
-<chapter2/figs/turbo_treillis.png, id=648, 858.20625pt x 797.98125pt>
+<chapter2/figs/turbo_treillis.png, id=657, 858.20625pt x 797.98125pt>
 File: chapter2/figs/turbo_treillis.png Graphic file (type png)
 <use chapter2/figs/turbo_treillis.png>
 Package luatex.def Info: chapter2/figs/turbo_treillis.png  used on input line 1
@@ -2583,7 +2589,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [30]
-<chapter2/figs/tanner.png, id=749, 607.26875pt x 256.96pt>
+<chapter2/figs/tanner.png, id=758, 607.26875pt x 256.96pt>
 File: chapter2/figs/tanner.png Graphic file (type png)
 <use chapter2/figs/tanner.png>
 Package luatex.def Info: chapter2/figs/tanner.png  used on input line 243.
@@ -2616,7 +2622,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [33]
-<chapter2/figs/yyz.png, id=832, 1000.73875pt x 468.75125pt>
+<chapter2/figs/yyz.png, id=842, 1000.73875pt x 468.75125pt>
 File: chapter2/figs/yyz.png Graphic file (type png)
 <use chapter2/figs/yyz.png>
 Package luatex.def Info: chapter2/figs/yyz.png  used on input line 347.
@@ -2655,12 +2661,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [36]
-<chapter2/figs/XXPC.png, id=908, 1431.3475pt x 790.955pt>
+<chapter2/figs/XXPC.png, id=918, 1431.3475pt x 790.955pt>
 File: chapter2/figs/XXPC.png Graphic file (type png)
 <use chapter2/figs/XXPC.png>
 Package luatex.def Info: chapter2/figs/XXPC.png  used on input line 439.
 (luatex.def)             Requested size: 429.40756pt x 237.28833pt.
-<chapter2/figs/ZZ.png, id=911, 1449.415pt x 816.04875pt>
+<chapter2/figs/ZZ.png, id=921, 1449.415pt x 816.04875pt>
 File: chapter2/figs/ZZ.png Graphic file (type png)
 <use chapter2/figs/ZZ.png>
 Package luatex.def Info: chapter2/figs/ZZ.png  used on input line 448.
@@ -2732,7 +2738,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [42]
-<./chapter2_2//figs/methodo_dediee.png, id=1018, 1561.835pt x 1361.085pt>
+<./chapter2_2//figs/methodo_dediee.png, id=1030, 1561.835pt x 1361.085pt>
 File: ./chapter2_2//figs/methodo_dediee.png Graphic file (type png)
 <use ./chapter2_2//figs/methodo_dediee.png>
 Package luatex.def Info: ./chapter2_2//figs/methodo_dediee.png  used on input l
@@ -2748,7 +2754,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [43]
-<./chapter2_2//figs/methodo_hl.pdf, id=1036, 445.665pt x 260.89468pt>
+<./chapter2_2//figs/methodo_hl.pdf, id=1048, 445.665pt x 260.89468pt>
 File: ./chapter2_2//figs/methodo_hl.pdf Graphic file (type pdf)
 <use ./chapter2_2//figs/methodo_hl.pdf>
 Package luatex.def Info: ./chapter2_2//figs/methodo_hl.pdf  used on input line 
@@ -2776,7 +2782,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [45<./chapter2_2//figs/methodo_hl.pdf>]
-<./chapter2_2//figs/methodo_gpp.png, id=1086, 1100.11pt x 770.88pt>
+<./chapter2_2//figs/methodo_gpp.png, id=1099, 1100.11pt x 770.88pt>
 File: ./chapter2_2//figs/methodo_gpp.png Graphic file (type png)
 <use ./chapter2_2//figs/methodo_gpp.png>
 Package luatex.def Info: ./chapter2_2//figs/methodo_gpp.png  used on input line
@@ -2801,7 +2807,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [47]
-<./chapter2_2//figs/methodo_multimany.png, id=1118, 1682.285pt x 674.52pt>
+<./chapter2_2//figs/methodo_multimany.png, id=1133, 1682.285pt x 674.52pt>
 File: ./chapter2_2//figs/methodo_multimany.png Graphic file (type png)
 <use ./chapter2_2//figs/methodo_multimany.png>
 Package luatex.def Info: ./chapter2_2//figs/methodo_multimany.png  used on inpu
@@ -2829,7 +2835,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [49]
-<./chapter2_2//figs/SIMD.png, id=1165, 4669.445pt x 3051.4pt>
+<./chapter2_2//figs/SIMD.png, id=1180, 4669.445pt x 3051.4pt>
 File: ./chapter2_2//figs/SIMD.png Graphic file (type png)
 <use ./chapter2_2//figs/SIMD.png>
 Package luatex.def Info: ./chapter2_2//figs/SIMD.png  used on input line 198.
@@ -2865,7 +2871,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [52]
-<./chapter2_2//figs/methodo_asip.png, id=1232, 2344.76pt x 1413.28pt>
+<./chapter2_2//figs/methodo_asip.png, id=1248, 2344.76pt x 1413.28pt>
 File: ./chapter2_2//figs/methodo_asip.png Graphic file (type png)
 <use ./chapter2_2//figs/methodo_asip.png>
 Package luatex.def Info: ./chapter2_2//figs/methodo_asip.png  used on input lin
@@ -2927,6 +2933,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--57
 
  []
 
+
+Overfull \hbox (3.2762pt too wide) in paragraph at lines 57--57
+ [][] [][][]\TU/LatinModernRoman(0)/m/sc/12 Éva-lua-tion de l’im-pact de l
+’ajout d’ins-truc-tions spé-cia-li-sées sur cœurs RISC- 
+ []
+
 [57
 
 
@@ -2947,12 +2959,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Missing character: There is no   (U+202F) in font LatinModernRoman:mode=node;s
 cript=latn;language=dflt;+tlig;!
 ]
-<chapter3/figs/flot.pdf, id=1311, 329.31029pt x 409.53pt>
+<chapter3/figs/flot.pdf, id=1327, 329.31029pt x 409.53pt>
 File: chapter3/figs/flot.pdf Graphic file (type pdf)
 <use chapter3/figs/flot.pdf>
 Package luatex.def Info: chapter3/figs/flot.pdf  used on input line 98.
 (luatex.def)             Requested size: 329.30946pt x 409.52899pt.
-<chapter3/figs/CV32xxx+Ext.png, id=1313, 801.99625pt x 420.57124pt>
+<chapter3/figs/CV32xxx+Ext.png, id=1329, 801.99625pt x 420.57124pt>
 File: chapter3/figs/CV32xxx+Ext.png Graphic file (type png)
 <use chapter3/figs/CV32xxx+Ext.png>
 Package luatex.def Info: chapter3/figs/CV32xxx+Ext.png  used on input line 113.
@@ -3037,10 +3049,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [63]
-
-LaTeX Warning: Reference `eval_sisd' on page 64 undefined on input line 296.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -3139,9 +3147,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [72]
-Overfull \hbox (9.31615pt too wide) in paragraph at lines 817--818
+Overfull \hbox (7.03613pt too wide) in paragraph at lines 817--818
 []\TU/LatinModernRoman(0)/m/sc/12 Les ca-rac-té-ris-tiques prin-ci-pales des qu
-atre coeurs sé-lec-tion-nés sont pré-sen-tées ci-dessous : 
+atre cœurs sé-lec-tion-nés sont pré-sen-tées ci-dessous : 
  []
 
 
@@ -3250,7 +3258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
 
-<./chapter3_2//figs/SIMD.png, id=1716, 4669.445pt x 3051.4pt>
+<./chapter3_2//figs/SIMD.png, id=1736, 4669.445pt x 3051.4pt>
 File: ./chapter3_2//figs/SIMD.png Graphic file (type png)
 <use ./chapter3_2//figs/SIMD.png>
 Package luatex.def Info: ./chapter3_2//figs/SIMD.png  used on input line 60.
@@ -3505,7 +3513,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [99]
-<chapter4/ariane_overview.drawio.png, id=1859, 1575.8875pt x 1165.35374pt>
+<chapter4/ariane_overview.drawio.png, id=1870, 1575.8875pt x 1165.35374pt>
 File: chapter4/ariane_overview.drawio.png Graphic file (type png)
 <use chapter4/ariane_overview.drawio.png>
 Package luatex.def Info: chapter4/ariane_overview.drawio.png  used on input lin
@@ -4065,7 +4073,7 @@ File: ./Couverture-these/logos-etablissements/UBS.png Graphic file (type png)
 Package luatex.def Info: ./Couverture-these/logos-etablissements/UBS.png  used 
 on input line 12.
 (luatex.def)             Requested size: 139.99625pt x 68.29083pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png, id=2718, 796
+<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png, id=2713, 796
 .9775pt x 627.34375pt>
 File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png Graphic 
 file (type png)
@@ -4073,7 +4081,7 @@ file (type png)
 Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fo
 nd-dos.png  used on input line 44.
 (luatex.def)             Requested size: 597.52492pt x 470.34392pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png, id=2719, 14
+<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png, id=2714, 14
 66.47874pt x 1153.30875pt>
 File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png Graphic
  file (type png)
@@ -4093,27 +4101,24 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F78E7A3377E3544D5A43A80986C251E6;9974.
+(rerunfilecheck)             Checksum: C62D03A07CBFBDC7270462AA019045F1;9972.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 66772 strings out of 477805
- 745449,2848258 words of node,token memory allocated
- 19806 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 957 glue, 4 kern, 1 penalty, 2 glyph, 5283 attribut
-e, 97 glue_spec, 756 attribute_list, 3 write, 54 pdf_action nodes
-   avail lists: 1:9,2:30424,3:2279,4:12308,5:11436,6:107,7:19125,8:154,9:28446,1
+ 66449 strings out of 477805
+ 745444,2848258 words of node,token memory allocated
+ 19770 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 955 glue, 4 kern, 1 penalty, 2 glyph, 5276 attribut
+e, 97 glue_spec, 755 attribute_list, 3 write, 53 pdf_action nodes
+   avail lists: 1:8,2:30432,3:2280,4:12308,5:11436,6:107,7:19126,8:154,9:28446,1
 0:35,11:1422,12:1
- 83298 multiletter control sequences out of 65536+600000
+ 82967 multiletter control sequences out of 65536+600000
  181 fonts using 19708551 bytes
- 115i,20n,119p,2053b,4505s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,20n,119p,2053b,4475s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/
 public/lm/lmroman8-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman
@@ -4143,10 +4148,10 @@ share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (159 pages, 2857176 bytes).
+Output written on main.pdf (159 pages, 2857706 bytes).
 
-PDF statistics: 2942 PDF objects out of 2984 (max. 8388607)
- 2623 compressed objects within 27 object streams
- 1163 named destinations out of 1200 (max. 131072)
+PDF statistics: 2937 PDF objects out of 2984 (max. 8388607)
+ 2619 compressed objects within 27 object streams
+ 1171 named destinations out of 1200 (max. 131072)
  380 words of extra memory for PDF output out of 10000 (max. 100000000)
 

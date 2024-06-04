@@ -1,21 +1,12 @@
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{13}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{86}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{90}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{90}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{94}
-\glossaryentry{LDPC-NB?\glossentry{ldnb}|setentrycounter[]{page}"\glsnumberformat}{98}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{98}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{103}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{104}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{105}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{106}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{108}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{109}
-\glossaryentry{LDPC-NB?\glossentry{ldnb}|setentrycounter[]{page}"\glsnumberformat}{112}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{112}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{113}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{115}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{115}
-\glossaryentry{Codes Polaires?\glossentry{pol}|setentrycounter[]{page}"\glsnumberformat}{116}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{116}
-\glossaryentry{Turbo-Code?\glossentry{tur}|setentrycounter[]{page}"\glsnumberformat}{116}
+\glossaryentry{CCE?\glossentry{cce}|setentrycounter[]{page}"\glsnumberformat}{21}
+\glossaryentry{SISO?\glossentry{siso}|setentrycounter[]{page}"\glsnumberformat}{27}
+\glossaryentry{FPGA?\glossentry{fpga}|setentrycounter[]{page}"\glsnumberformat}{32}
+\glossaryentry{ASIC?\glossentry{asic}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{FPGA?\glossentry{fpga}|setentrycounter[]{page}"\glsnumberformat}{42}
+\glossaryentry{GCC?\glossentry{gcc}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{DSP?\glossentry{dsp}|setentrycounter[]{page}"\glsnumberformat}{46}
+\glossaryentry{SIMD?\glossentry{simd}|setentrycounter[]{page}"\glsnumberformat}{47}
+\glossaryentry{ASIP?\glossentry{asip}|setentrycounter[]{page}"\glsnumberformat}{52}
+\glossaryentry{UAL?\glossentry{ual}|setentrycounter[]{page}"\glsnumberformat}{63}
+\glossaryentry{SISD?\glossentry{sisd}|setentrycounter[]{page}"\glsnumberformat}{75}
+\glossaryentry{RISC?\glossentry{risc}|setentrycounter[]{page}"\glsnumberformat}{81}

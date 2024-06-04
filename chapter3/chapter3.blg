@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'chapter3/chapter3.blg'
+[66] biber:340> INFO - === mar. juin  4, 2024, 05:25:08
+[77] Biber.pm:418> INFO - Reading 'chapter3/chapter3.bcf'
+[127] Biber.pm:972> INFO - Found 22 citekeys in bib section 0
+[137] Biber.pm:4383> INFO - Processing section 0
+[144] Biber.pm:4574> INFO - Looking for bibtex file './biblio/biblio.bib' for section 0
+[154] bibtex.pm:1713> INFO - LaTeX decoding ...
+[414] bibtex.pm:1518> INFO - Found BibTeX data source './biblio/biblio.bib'
+[576] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[576] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[576] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'fr-FR'
+[576] Biber.pm:4209> INFO - No sort tailoring available for locale 'fr-FR'
+[590] bbl.pm:654> INFO - Writing 'chapter3/chapter3.bbl' with encoding 'UTF-8'
+[601] bbl.pm:757> INFO - Output to chapter3/chapter3.bbl

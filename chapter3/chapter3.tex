@@ -101,17 +101,17 @@ Pour toutes les familles de CCE étudiées, nous sommes partis des meilleurs alg
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-L'ensemble de ces instructions ont, par la suite, été décrites au niveau RTL en \textit{Verilog} ou \textit{System-Verilog} (\ding{185}). Ensuite, leur ajout dans l'ISA des coeurs RISC-V (\ding{188}) \cite{ArchiRISC:V} à été effectué.
+L'ensemble de ces instructions ont, par la suite, été décrites au niveau RTL en \textit{Verilog} ou \textit{System-Verilog} (\ding{185}). Ensuite, leur ajout dans l'ISA des cœurs RISC-V (\ding{188}) \cite{ArchiRISC:V} à été effectué.
 Naturellement, afin que les kernels décrits en langage C/C++ puissent exploiter ces nouvelles instructions (\ding{184}), il a été nécessaire de les adapter en remplaçant les sections de codes initiales par des invocations en assembleur à ces nouvelles fonctionnalités (\ding{187}).
-Il a été également primordial de les intégrer dans les chaînes de compilation des coeurs ciblés via GCC/Binutils (\ding{186}) pour permettre la génération de programmes exécutables.
-Enfin, une dernière étape (\ding{189}) a permis de valider les performances des kernels modifiés sur ces coeurs étendus, grâce à des tests réalisés en simulation ou par prototypage sur des circuits FPGA (Digilent Nexys 4 et Digilent Genesys 2).
+Il a été également primordial de les intégrer dans les chaînes de compilation des cœurs ciblés via GCC/Binutils (\ding{186}) pour permettre la génération de programmes exécutables.
+Enfin, une dernière étape (\ding{189}) a permis de valider les performances des kernels modifiés sur ces cœurs étendus, grâce à des tests réalisés en simulation ou par prototypage sur des circuits FPGA (Digilent Nexys 4 et Digilent Genesys 2).
 Ce sont donc ces versions incluant notre kit d'instructions qui sont alors utilisées pour les études expérimentales présentées dans ce chapitre.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{chapter3/figs/CV32xxx+Ext.png}
-\caption{Principe d'insertion d'instruction spécialisées dans un coeur RISC-V (schéma pédagogique du coeur \cite{ArchiRISC:V})}
+\caption{Principe d'insertion d'instruction spécialisées dans un cœur RISC-V (schéma pédagogique du cœur \cite{ArchiRISC:V})}
 \label{RV2regs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,7 +252,7 @@ for(iterations)  // boucle principale
 
 Pour permettre l'usage de cette nouvelle instruction, il est nécessaire de l'intégrer dans le flot de compilation associé au processeur et plus particulièrement de la provisionner dans l'outil \textit{binutils} comme cela est indiqué dans la figure \ref{flot}. Ainsi, elle devient partie intégrante de l'ISA supportée par le processeur cible et est à la disposition des utilisateurs.
 
-Dans le but de compléter l'intégration de cette nouvelle fonctionnalité, l'opérateur matériel associé doit être décrit au niveau RTL et inséré dans l'architecture de l'UAL du processeur cible. Afin d'illustrer ce travail, la description RTL en langage Verilog de l'opération de soustraction saturée est donné à titre d'exemple dans le listing \ref{SubSat8b_SV}.
+Dans le but de compléter l'intégration de cette nouvelle fonctionnalité, l'opérateur matériel associé doit être décrit au niveau RTL et inséré dans l'architecture de l'\acrshort{ual} du processeur cible. Afin d'illustrer ce travail, la description RTL en langage Verilog de l'opération de soustraction saturée est donné à titre d'exemple dans le listing \ref{SubSat8b_SV}.
     
 \begin{figure}[!tb]
 \begin{lstlisting}[
@@ -293,7 +293,7 @@ end
 L'exemple fourni dans la figure \ref{ldpc_code_custom} montre que, sur une section algorithmique simple, les possibilités d'améliorations possibles offertes par l'approche proposée sont multiples.
 Cependant, ces instructions dédiées permettant de réaliser le calcul d'une soustraction saturée, d'une valeur absolue, d'un minimum et d'un maximum (\textit{i.e. subsat, abs, min et max}) doivent toutes être provisionnées dans l'UAL des cœurs de processeur et être capable de s'exécuter en un cycle d'horloge sans pénaliser fortement la fréquence de fonctionnement. Toutes les sections de l'algorithme ne peuvent pas être optimisées de manière analogue, c'est le cas par exemple des accès à la mémoire qui impliquent des modifications architecturales complexes en dehors de l'UAL. 
 
-Finalement, le tableau \ref{tab:instr_ldpc}, résume les résultats de l'étude menée sur les codes LDPC. Les 8 instructions spécifiques identifiées après analyse de l'algorithme LDPC étudié y sont décrites. L'impact de ces instructions spécialisées sur les performances en termes de réduction du nombre de cycles d'horloges nécessaires pour le décodage sur un cœur RISC-V est détaillé dans la section \ref{eval_sisd}. 
+Finalement, le tableau \ref{tab:instr_ldpc}, résume les résultats de l'étude menée sur les codes LDPC. Les 8 instructions spécifiques identifiées après analyse de l'algorithme LDPC étudié y sont décrites. L'impact de ces instructions spécialisées sur les performances en termes de réduction du nombre de cycles d'horloges nécessaires pour le décodage sur un cœur RISC-V est détaillé dans la section \ref{chapter:3_2}. 
 %%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
 \footnotesize
@@ -800,7 +800,7 @@ Afin de tester et d'évaluer l’efficacité et la pertinence des instructions p
 %
 %
 %
-\section{Évaluation de l'impact de l'ajout d'instructions spécialisées sur coeurs RISC-V}
+\section{Évaluation de l'impact de l'ajout d'instructions spécialisées sur cœurs RISC-V}
 %
 %
 %
@@ -814,7 +814,7 @@ Dans le cadre de ces travaux et après une vaste étude préliminaire, quatre c�
 Cette sélection est basée sur les différences architecturales, les performances générales et la complexité matérielle respective des cœurs. L'objectif principal étant d’évaluer de la façon la plus objective possible l'apport et l'impact des différentes instructions ajoutées avec notre approche. 
 Les quatre architectures RISC-V sélectionnées supportent le jeu d'instruction RV32-IMC (I: integer, M: multiplication et division, C : instructions compressées). Comme cela est indiqué dans le tableau \ref{brief_cores}, le nombre d'étages de pipeline mis en œuvre varie entre 1 et 4.
 
-Les caractéristiques principales des quatre coeurs sélectionnés sont présentées ci-dessous : 
+Les caractéristiques principales des quatre cœurs sélectionnés sont présentées ci-dessous : 
 
 \begin{itemize}
     \item {\PicoRV \cite{wolf_cliffordwolfpicorv32_2021} est un cœur à faible complexité. Il a été conçu pour supporter des applications simples. Son implantation matérielle est légère et permet d'atteindre des fréquences de fonctionnement élevées (>300 MHz) sur des cibles de type FPGA. Cependant, il ne possède qu'un seul étage de pipeline avec exécution dans l'ordre.}
@@ -841,7 +841,7 @@ Les caractéristiques principales des quatre coeurs sélectionnés sont présent
     \RISCY    &     4  &     3.19  &  \sim 10 000     & Sys. Verilog\\
     \bottomrule
     \end{tabular}
-    \caption{Comparatifs de coeurs de processeurs RISC-V sélectionnés}
+    \caption{Comparatifs de cœurs de processeurs RISC-V sélectionnés}
     \label{brief_cores}
 \end{table}
 
@@ -855,7 +855,7 @@ Ensuite, les codes sources modifiés, intégrant l'usage des instructions spéci
 
 Pour mener à bien ces expérimentations, les programmes décrivant le comportement des décodeurs ont été écrits en langage C visant une exécution en mode bare-metal. Afin de compiler l'ensemble de ces codes et de produire les binaires exécutés par les cœurs RISC-V, GCC 12.2 a été utilisé. Le compilateur est configuré afin de générer un exécutable ne comportant que des instructions RV32I et avec le flag d'optimisation -O3. 
 
-Un ensemble d'expérimentations a été conduit afin de mesurer les gains apportés par l'utilisation d'instructions spécialisées opérant sur des données scalaires codées sur 8 bits (SISD). Ces expérimentations ont été réalisées sur chacune des cibles présentées précédemment. 
+Un ensemble d'expérimentations a été conduit afin de mesurer les gains apportés par l'utilisation d'instructions spécialisées opérant sur des données scalaires codées sur 8 bits (\acrshort{sisd}). Ces expérimentations ont été réalisées sur chacune des cibles présentées précédemment. 
 
 Un sous-ensemble des résultats de mesure concernant les temps d'exécution et les débits des différents décodeurs est présenté dans le tableau \ref{Cycles_cores}.
 Les valeurs fournies dans ce tableau présentent pour chacun des cœurs, le nombre de cycles d'horloge nécessaires pour l'exécution du code logiciel original (sans instruction dédiées), noté \textit{\ding{182}Baseline} ainsi que le nombre de cycles d'horloge nécessaires à la version exploitant les nouvelles instructions (\textit{\ding{183}SISD ISA 2R}). 
@@ -901,7 +901,7 @@ Il est important de noter que le gain en pourcentage est la métrique la plus co
 %          & gain(\%)          & 38.1\%    & 34.3\%    &     40.9\%    & 20.3\%        & 24.2\%      \\
 %       \bottomrule
 %\end{tabular}
-%\caption{Nombres de cycles d'horloges(CH) nécessaires pour le décodage sur les coeurs RISC-V \\
+%\caption{Nombres de cycles d'horloges(CH) nécessaires pour le décodage sur les cœurs RISC-V \\
 %\textit{ (RV32I GCC 12.2 -O3) }.}
 %\label{Cycles_cores}
 %\end{table}
@@ -983,7 +983,7 @@ Il est important de noter que le gain en pourcentage est la métrique la plus co
     & Accélération (\ding{182}$\rightarrow$\ding{183})  &           & 1.6\times & 1.5\times & 1.7\times & 1.3\times & 1.3\times \\
 \bottomrule
 \end{tabular}
-\caption{Comparaison des performances des coeurs usant des instructions à 2 entrées, configuration 8 bits SISD avec la fréquence de fonctionnement maximale pour chaque implantation.}
+\caption{Comparaison des performances des cœurs usant des instructions à 2 entrées, configuration 8 bits SISD avec la fréquence de fonctionnement maximale pour chaque implantation.}
 \label{Cycles_cores}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1006,7 +1006,7 @@ L'amélioration des performances pour l'algorithme de décodage LDPC est signifi
       Total                     & 62332     & 37921 & -39.2\% \\ 
       \bottomrule
     \end{tabular}
-    \caption{Nombre d'instructions exécutées lors du décodage de codes LDPC sur le coeur \PicoRV\space  classées en fonction de leur type.}
+    \caption{Nombre d'instructions exécutées lors du décodage de codes LDPC sur le cœur \PicoRV\space  classées en fonction de leur type.}
     \label{tab:ratio_ldpc}
   \end{table}
 
@@ -1026,7 +1026,7 @@ L'amélioration des performances pour l'algorithme de décodage LDPC est signifi
       Total                 & 192280    & 86973   & -54.7\%  \\ 
       \bottomrule
     \end{tabular}
-    \caption{Nombre d'instructions exécutées lors du décodage de codes polaires sur le coeur \PicoRV\space  (algorithme \textit{Fast-SC}), classées en fonction de leur type.}
+    \caption{Nombre d'instructions exécutées lors du décodage de codes polaires sur le cœur \PicoRV\space  (algorithme \textit{Fast-SC}), classées en fonction de leur type.}
     \label{tab:ratio_polaire}
   \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1042,7 +1042,7 @@ Si l'on s'intéresse au décodage des codes polaires par l'algorithme \textit{SC
 Si l'on s'intéresse aux autres CCE présentés dans le tableau \ref{Cycles_cores}, on peut noter que les gains en termes de temps d'exécution pour l'algorithme de décodage des codes LDPC-NB n'est pas aussi importante en comparaison des autres codes. Ces derniers avoisinent $22\%$ sur le cœur \IBEX\space et seulement $17.3\%$ sur le cœur \PicoRV. 
 La cause de ces gains plus faibles est liée au nombre important d'accès à la mémoire. En effet, le nombre d'accès mémoire est à peu près équivalent au nombre de calculs à réaliser, cela limite le facteur d'accélération.
 
-Enfin, pour conclure, les facteurs d'accélération atteint par les turbo décodeurs, tels qu'indiqué dans le tableau \ref{Cycles_cores} varient de $14.8\%$ sur le coeur \PicoRV\space tandis qu'ils atteignent $24.2\%$ sur le cœur \RISCY. Ces faibles gains s'expliquent par le faible nombre d'instructions spécifiques identifiées.
+Enfin, pour conclure, les facteurs d'accélération atteint par les turbo décodeurs, tels qu'indiqué dans le tableau \ref{Cycles_cores} varient de $14.8\%$ sur le cœur \PicoRV\space tandis qu'ils atteignent $24.2\%$ sur le cœur \RISCY. Ces faibles gains s'expliquent par le faible nombre d'instructions spécifiques identifiées.
 
 Ces résultats expérimentaux sur les cœurs RISC-V démontrent que l'enrichissement proposé améliore notablement, dans tous les cas analysés, l'implantation logicielle des algorithmes de décodage. Cependant, ces gains sont non homogènes démontrant, de ce fait, l'intérêt d'évaluer ce travail sur plusieurs cœurs.
 
@@ -1101,7 +1101,7 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
 Les données présentées dans la table \ref{lut_cost_sisd} et les figures \ref{tikz_freqXlutperc_sisd} montrent que le surcoût introduit par nos instructions dépend fortement du cœur RISC-V considéré. Même si la complexité matérielle des parties opératives placées dans l'UAL est constante, le surcoût engendré par la modification du décodeur d'instructions et des barrières de registres du pipeline lui est variable en fonction des cœurs. Ces différences peuvent être de plus exacerbées par les scripts de synthèse fournis avec les différents cœurs qui ne sont pas tous identiques en termes d'objectif d'optimisation (vitesse versus complexité). Ainsi, l'intégration des instructions proposées pour le décodage des codes LDPC augmente le coût de l'architecture \IBEX\space d'environ $+9.1\%$ en termes de LUTs, tandis que pour le cœur \PicoRV\space plus compact, l'augmentation est de $34\%$. 
 Si l'on considère les autres extensions pour lesquelles le nombre d'instructions ajoutées est moins important, les surcoûts sont plus faibles. Cependant, l'analyse fine de ces différents résultats, et le positionnement du coût des extensions les unes par rapport aux autres n'est pas triviale, à cause des choix opérés par Vivado lors de la synthèse logique et du placement/routage.
 
-Ces observations sont confirmées par l'analyse de l'évolution des fréquences maximales de fonctionnement. Dans la figure \ref{tikz_freqXlutperc_sisd}, la fréquence de fonctionnement maximale pour le \PicoRV\space est affectée par l'intégration des différents jeux d'instructions. Ce cœur subit une augmentation de la durée de son chemin critique de $\approx7\%$ (LDPC) à $\approx10\%$ (polaire) en fonction des instructions qui lui sont ajoutées. A l'opposé, sur le coeur \RISCY, la durée du chemin critique n'est pas impactée car ce dernier ne se situe pas dans l'étage d'exécution. Les expérimentations sur les cœurs \IBEX\space et \SCR\space démontrent quant à elles l'imprévisibilité des résultats de synthèse logique liée aux choix réalisés par les outils. Ainsi l'on observe une augmentation de la fréquence de fonctionnement de $\approx 3\%$ à $\approx 5\%$ est obtenue pour le cœur \IBEX\space tandis que pour le \SCR, la fréquence varie de $-1\%$ à $+1\%$.
+Ces observations sont confirmées par l'analyse de l'évolution des fréquences maximales de fonctionnement. Dans la figure \ref{tikz_freqXlutperc_sisd}, la fréquence de fonctionnement maximale pour le \PicoRV\space est affectée par l'intégration des différents jeux d'instructions. Ce cœur subit une augmentation de la durée de son chemin critique de $\approx7\%$ (LDPC) à $\approx10\%$ (polaire) en fonction des instructions qui lui sont ajoutées. A l'opposé, sur le cœur \RISCY, la durée du chemin critique n'est pas impactée car ce dernier ne se situe pas dans l'étage d'exécution. Les expérimentations sur les cœurs \IBEX\space et \SCR\space démontrent quant à elles l'imprévisibilité des résultats de synthèse logique liée aux choix réalisés par les outils. Ainsi l'on observe une augmentation de la fréquence de fonctionnement de $\approx 3\%$ à $\approx 5\%$ est obtenue pour le cœur \IBEX\space tandis que pour le \SCR, la fréquence varie de $-1\%$ à $+1\%$.
 
 Les résultats présentés dans cette partie mettent en avant l'intérêt de l'approche SISD. En effet, l'impact sur les caractéristiques matérielles des cœurs reste bien inférieur aux gains en termes de temps d'exécution présentés dans le tableau \ref{Cycles_cores}. Il est important de considérer qu'un travail supplémentaire d'optimisation des opérateurs matériels ajoutés pourrait permettre de réduire leur coût en partageant par exemple certaines des ressources mises en œuvre dans l'UAL traditionnelle et celles nécessaires pour les nouvelles instructions. 
 
