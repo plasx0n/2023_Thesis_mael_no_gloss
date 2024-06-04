@@ -1,0 +1,31 @@
+
+\begin{table}[tb]
+  \centering
+  
+      \begin{tabular}{l || l l }
+      \toprule
+          Instruction & Implementation \\
+        \midrule      
+          pl3.funcg         &    Addsat := rS1{[}Vx{]} + rS2{[}Vx{]} \\
+          
+                            &    Subsat := rS2{[}Vx{]} - rS1{[}Vx{]} \\
+            
+                            &    rD{[}Vx{]} :=(rS3{[}Vx{]} == 0) ? Addsat : Subsat  \\
+            \midrule
+            pl3.Vidxmincomp &    rD{[}Vx{]} := (rS1{[}Vx{]} >=rS2{[}Vx{]} ) ? rS3 : ?? \\
+            \midrule
+            pl3.VspcUpdate  &   todo \\
+            \midrule
+            pl3.findminpos & todo \\
+      \bottomrule
+      \end{tabular}
+  
+    \caption{Nouvelles Instructions spécifiques pour les codes POLAIRES avec 
+  3 registres sources (3 Regs) }
+
+  % VOIR PAR LA SUITE
+  % Version Scalaire Vx := V1 \\
+  % SIMD:4 (int8x4) Vx := V1,2,3,4 \\
+  % SIMD:8 (int8x8) Vx := V1,2,3,4,5,6,7,8 }
+  \label{tab:instrus_polar_3reg}
+  \end{table}

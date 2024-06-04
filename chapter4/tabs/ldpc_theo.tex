@@ -1,0 +1,41 @@
+
+\begin{table}[tb]
+\centering
+    \begin{tabular}{|r|l|l|}
+        \toprule
+            \multicolumn{3}{|c|}{LDPC int8 R2} \\ \midrule
+                        & Cycles    & delta  \\ \midrule
+            reference   & 65624     &        \\ \midrule
+            ABS         & 62904     & 2720   \\ \midrule
+            ADDSAT      & 60144     & 5480   \\ \midrule
+            EVAL        & 63544     & 2080   \\ \midrule
+            MAXMIN      & 68005     & -2381  \\ \midrule
+            NMESS       & 63642     & 1982   \\ \midrule
+            SIGN        & 67990     & -2366  \\ \midrule
+            SUBSAT      & 61756     & 3868   \\ \midrule
+            total       &           & 11383  \\ \midrule
+            total(best) &           & 16130  \\ \midrule
+            Best        & 45316     & 20308 \\
+            \bottomrule
+    \end{tabular}  
+         \begin{tabular}{|r|l|l|}
+         \toprule
+             \multicolumn{3}{|c|}{LDPC int8 R3} \\ \midrule
+                         & Cycles    & delta  \\ \midrule
+             reference   & 65624     &        \\ \midrule
+             ABS         & 62904     & 2720   \\ \midrule
+             ADDSAT      & 60144     & 5480   \\ \midrule
+             EVAL        & 63544     & 2080   \\ \midrule
+             MAXMIN      & 66825     & -1201  \\ \midrule
+             MINSORT     & 60004     & 5620   \\ \midrule
+             RSIGN\_NMESS & 60522     & 5102   \\ \midrule
+             SUBSAT      & 61616     & 4008   \\ \midrule
+             total       &           & 23809  \\ \midrule
+             total(best) &           & 25010  \\ \midrule
+             Best        & 39586     & 26038 \\
+             \bottomrule
+     \end{tabular}  
+\caption{Approximation des gains un cycles d'horloges sur un modèle de CPU RISC-V64GC parfait (SPIKE et Proxy Kernel GCC -O3)}
+\textcolor{red}{percentages would be good here}
+\label{ldpc_theo}
+\end{table}

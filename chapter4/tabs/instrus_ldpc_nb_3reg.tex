@@ -1,0 +1,23 @@
+    
+\begin{table}[tb]
+  \centering
+  
+      \begin{tabular}{l || l l }
+      \toprule
+          Instruction & Implementation \\
+          \midrule 
+          ldn3.addsat64Min &   rD{[}Vx{]} := Min( Sat63( rS1{[}Vx{]} +  rS2{[}Vx{]} ) ,  rS3{[}Vx{]} ) \\
+          \midrule
+          ldn3.3shift &  rD{[}Vx{]} :=  rS1{[}Vx{]}<<8 | rS2{[}Vx{]}<<16 | rS3{[}Vx{]}<<24 \\ \midrule
+          ldn3.vidxMincomp & rD{[}Vx{]} := (rS1{[}Vx{]} >= rS2{[}Vx{]} ) ?
+          rS3{[}Vx{]} \\
+      \bottomrule
+      \end{tabular}
+  
+    \caption{Nouvelles Instructions spécifiques pour les codes LDPC-NB avec 
+  3 registres sources (3 Regs) }
+  % Version Scalaire Vx := V1 \\
+  % SIMD:4 (int8x4) Vx := V1,2,3,4 \\
+  % SIMD:4 (int8x8) Vx := V1,2,3,4,5,6,7,8 }
+  \label{tab:instrus_ldpcnb_3reg}
+  \end{table}

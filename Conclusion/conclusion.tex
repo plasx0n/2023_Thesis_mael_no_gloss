@@ -1,0 +1,116 @@
+\documentclass[../main.tex]{subfiles}
+
+\makeatletter
+\@ifundefined{fromRoot}{%
+  \newcommand{\fromRoot}[1]{../#1}
+  
+  \usepackage{xr}
+  \externaldocument{../main}
+}{}
+
+\def\input@path{{\subfix{../}}}
+%or: \def\input@path{{/path/to/folder/}{/path/to/other/folder/}}
+\makeatother
+
+\graphicspath{{\subfix{../}}}
+
+\hypersetup{
+    pdfauthor   = {Maël TOURRES},
+    pdftitle    = {Th\`{e}se (Conclusion)},
+    pdfsubject  = {Th\`{e}se (Conclusion)},
+%    pdfkeywords = {mots-cl\'{e}s},
+}
+
+
+\begin{document}
+
+\selectlanguage{french}
+
+\setmainfont{Latin Modern Roman}
+\setmonofont{Latin Modern Math}
+
+\chapter{Conclusion et Perspectives} 
+\label{chapter:conclusion}
+\chaptermark{Conclusions}
+
+
+\section*{Conclusion}
+Les travaux de recherches effectués durant cette thèse se sont concentrés sur la spécification et la conception d'instructions spécifiques permettant d’accélérer le décodage de différentes familles de CCE. 
+Un prototypage matériel de ces extensions sur circuit FPGA a permis de caractériser l’augmentation de la complexité matérielle induite et de la mettre en perspective les facteurs d'accélérations observés.
+
+Le déploiement des standards 4G, 5G et ultérieurs devraient permettre d’interconnecter des milliards de systèmes embarqués communicants. 
+Ces systèmes développés sous diverses contraintes liées aux domaines applicatifs des dispositifs devront évoluer pour être inter-opérable. 
+Au sein de ces standards de communication, le codage canal et plus particulièrement le décodage des CCE dans les récepteurs présentent simultanément une forte complexité calculatoire et une grande variabilité en fonction des standards.
+C’est la raison pour laquelle cette thèse adresse l’optimisation de ces algorithmes de décodage qui garantissent la fiabilité des communications numériques, en corrigeant les erreurs éventuelles dues au canal de communication. 
+Les principales familles de codes correcteurs d’erreurs, ainsi que leurs algorithmes de décodage sont abordées dans le chapitre 2.
+
+Le chapitre 3 s’intéresse aux stratégies d’implantation mises en œuvre pour intégrer ces algorithmes dans les systèmes communicants. 
+Depuis une décennie, pour répondre aux besoins de flexibilité des systèmes de communications numériques, les solutions traditionnelles fondées sur l’utilisation d’ASIC spécialisés, ou bien de FPGA est en décroissance, au profit de l’utilisation d’architectures programmables telles que des CPU multicœurs ou des GPU. 
+Ces solutions procurent des temps de développement raccourcis et une plus grande flexibilité et adaptabilité grâce aux langages de programmation de type C/C++. 
+Cependant, cette flexibilité est obtenue au prix de performances en retrait face aux solutions ASIC/FPGA. 
+Ces différences proviennent de leurs jeux d’instructions génériques. 
+Ceux-ci, peu adaptés au contexte applicatif du décodage des CCE, induisent des débits réduits et une consommation énergétique plus élevée.
+
+Afin d’améliorer cet état de fait, dans le chapitre suivant, la méthodologie que nous avons utilisée dans le but d'identifier et de développer différentes extensions aux jeux d’instructions des cœurs de processeur est présenté. 
+L’analyse de codes sources logiciels optimisés issus de la littérature et d’une analyse fine des séquences d'instructions produites après compilation logicielle, ont permis d’identifier des motifs d’instructions compatibles avec la conception de nouvelles instructions. 
+Ainsi, des instructions spécifiques aux différents CCE étudiés ont été proposées dans le cadre d’un traitement scalaire des données. 
+L’impact de ces extensions tant en termes de réduction du temps d’exécution que d’augmentation de la complexité matérielle a été évaluée à l’aide de 4 cœurs RISC-V. 
+Ces expérimentations menées sur FPGA ont permis de conclure à l’intérêt de l’approche proposée avec des accélérations variant de $5.3\%$ à $77.1\%$ en fonction des cœurs et des codes, pour une augmentation de la complexité matérielle de $0.8\%$ à $63.2\%$. 
+Dans le chapitre 5, nous avons étendu ces extensions afin de permettre un traitement parallèle des données (SIMD) lors du processus décodage. 
+La modification des descriptions algorithmiques, couplées aux nouvelles instructions ont permis d’augmenter les débits de facteurs \textbf{1.2\times} à \textbf{4.1\times}, en fonction de la stratégie de parallélisation employée et du code correcteurs d’erreurs considéré.
+
+Ces premiers travaux ont mis en évidence les forts potentiels d’accélérations accessibles. 
+Toutefois, le choix des instructions composant les extensions est contraint par l’accès à uniquement 2 opérandes d’entrée dans l’UAL.
+Ainsi, dans le chapitre suivant, une seconde étude exploitant un cœur RISC-V plus complexe, offrant l’accès à une UAL à trois registres a été réalisée.
+Ces nouvelles opportunités architecturales ont permis la conception d’extensions plus performantes, tout en étant plus compactes.
+Le prototypage de ces nouvelles extensions a permis de mettre en exergue une amélioration des facteurs d’accélération pour le décodage des CCE. 
+Ces derniers peuvent atteindre jusqu’à $(13.2\times)$ pour une parallélisation inter-trames et $(23.5\times)$ pour une parallélisation intra-trame en mode 64 bits, par rapport aux descriptions logicielles initiales sans extensions.
+Pour le cœur CVA6 étudié, l’augmentation matérielle induite par les extensions vis-à-vis du coût du cœur se limite à 1\% à 3\% (pour chaque extension).
+Ce rapport entre l’augmentation de la complexité matérielle et les facteurs d’accélération démontrent la pertinence des choix réalisés.
+
+
+% 
+% 
+% 
+% ============
+\section*{Perspectives}
+% 
+% 
+% 
+Les travaux précédemment présentés ouvrent de nouvelles perspectives de recherche sur différents axes et à court, moyen et long terme en fonction de leur complexité.
+À court terme, différentes actions qui n’ont pas pu être menées durant cette thèse pourraient être réalisées :
+
+\begin{itemize}
+
+\item Une description RTL plus efficace des opérateurs pourrait être envisagée. Dans notre étude, aucune factorisation matérielle des ressources mises en œuvre dans nos extensions n’a été réalisée manuellement.
+Cette tâche d’optimisation a été laissée à l’outil Vivado.
+Certains résultats expérimentaux démontrent que l’outil ne factorise pas les ressources au niveau RTL comme cela pourrait être attendu.
+Ce travail pourrait être conduit afin d’améliorer le coût de chacune des extensions et/ou d’une méta-extension regroupant les instructions pour l’ensemble des familles de codes ECC.
+
+\item Une étude précise des performances énergétiques liées à l’utilisation de nos extensions pourrait être menée. 
+Des estimations préliminaires via l’outil XPower de Xilinx ont montré un faible impact de nos extensions sur la consommation de puissance sur les architectures déployées sur FPGA.
+Les facteurs d’accélération mesurés laissent présager des gains énergétiques conséquents, il serait donc intéressant de les caractériser finement.
+
+\end{itemize}
+
+À moyen terme, d’autres travaux pourraient être envisagés afin de généraliser l’approche proposée dans ce manuscrit :
+
+\begin{itemize}
+
+\item une remise en cause des algorithmes de décodage CCE étudiés dans ces travaux.
+Par exemple, l’algorithme de décodage Extended Min-Sum pourrait être utilisé pour les codes LDPC-NB afin d’améliorer le débit des décodeurs. 
+Les études réalisées autour des algorithmes de décodage polaire SC et F-SC pourraient servir de base pour proposer des extensions pour les différentes variantes de l’algorithme SC-List qui est plus efficace concernant le pouvoir de correction d’erreurs.
+
+De manière analogue, d’un point de vue matériel, les choix réalisés quand à l’intégration des extensions dans l’UAL pourraient être remis en cause.
+En effet, d’autres stratégies d’intégration des instructions dans les cœurs pourraient être envisagées : l’utilisation du format d’instruction P pour les instructions vectorielles (SIMD) et de leur file de registre générique pouvant atteindre plusieurs centaines de bits, mais aussi l’utilisation de l’interface de couplage CV-X-IF \cite{cvix} pour plus de généricité.
+
+\end{itemize}
+
+À plus long terme, il serait judicieux de faciliter les étapes d’ingénierie qui ont été chronophages lors de ces travaux.
+En effet, la spécification d’une méthodologie de conception unifiée permettant de (1) modifier les codes logiciels à partir des extensions proposées et (2) de générer les extensions matérielles au niveau RTL permettrait une exploration plus rapide et plus efficace de l’espace de conception.
+Pour ce faire, il serait possible de réutiliser en partie des travaux de la littérature \cite{phd_martin} mais en utilisant une approche plus guidée par le concepteur.
+À partir de ces travaux, il serait possible d’imaginer des solutions multi-cœurs pour la conception de systèmes de communications avec des cœurs hétérogènes spécialisés.
+
+
+
+\end{document}

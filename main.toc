@@ -1,0 +1,72 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{15}{chapter.1}%
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {2}Introduction aux codes correcteurs d'erreurs}{21}{chapter.2}%
+\etoc@startlocaltoc {2}
+\contentsline {section}{\numberline {2.1}Introduction au codage canal}{21}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Les métriques de performance du codage canal}{24}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Les différentes familles de CCE}{25}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Les turbo codes}{26}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}La famille des codes LDPC binaires}{28}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}La famille des codes LDPC non binaires (LDPC-NB)}{34}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}La famille des codes polaires}{37}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Conclusion}{40}{section.2.4}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {3}Stratégies d'implantation des décodeurs de CCE}{41}{chapter.3}%
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {3.1}Introduction}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architectures dédiées}{43}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Architectures programmables}{46}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Architectures programmables spécifiques}{52}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Conclusions}{55}{section.3.5}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {4}Méthodologie de conception et d'implantation d'extensions}{57}{chapter.4}%
+\etoc@startlocaltoc {4}
+\contentsline {section}{\numberline {4.1}Introduction}{58}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Descriptif du flot de conception}{59}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Amélioration du décodage logiciel des codes LDPC}{61}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Amélioration du décodage logiciel des codes LDPC non binaires}{65}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Algorithme de décodage logiciel des codes polaires}{68}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Algorithme de décodage logiciel des turbo codes}{69}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Synthèse des extensions proposées}{71}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Évaluation de l'impact de l'ajout d'instructions spécialisées sur coeurs RISC-V}{73}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Conclusion}{80}{section.4.4}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {5}Extensions SIMD pour l'accélération des décodeurs de CCE}{81}{chapter.5}%
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {5.1}Introduction}{82}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Expérimentations menées sur des décodeurs SIMD inter-trames}{84}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Expérimentations menées sur des décodeurs SIMD intra-trame}{90}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Synthèse de la partie expérimentale}{92}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Conclusion}{95}{section.5.5}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {6}Extensions spécialisées avec 3 opérandes}{97}{chapter.6}%
+\etoc@startlocaltoc {6}
+\contentsline {section}{\numberline {6.1}Modèle d'architecture ciblé}{98}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Évolution des extensions}{101}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Impact des nouvelles extensions de l'ISA}{107}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Évaluation des extensions scalaires}{107}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Évaluation des extensions SIMD inter-trames}{110}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Évaluation des extensions SIMD intra-trame}{112}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Conclusion}{115}{section.6.4}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{\numberline {7}Conclusion et Perspectives}{119}{chapter.7}%
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{Annexes}{123}{section*.82}%
+\contentsline {chapter}{Bibliographie}{143}{section*.130}%
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 
+\babel@toc {french}{}\relax 

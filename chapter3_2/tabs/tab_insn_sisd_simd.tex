@@ -1,0 +1,74 @@
+\begin{table}[!tb]
+    \scriptsize
+    \centering
+  
+    \begin{tabular}{llccc}
+        \toprule
+        \multirow{2}{*}{\textbf{CCE}} & \multirow[c]{2}{*}{\textbf{Mnemonic}} &  \textbf{SISD} 
+        &\textbf{SIMD Inter}
+        &\textbf{SIMD Intra}\\
+        & & (int8) & (int8x4) & (int8x4) \\ 
+        \toprule
+  
+  \multirow{1}{*}{LDPC}
+          % LDPC 
+          &   i8\_abs\_pi8           &  \checkmark  &   \checkmark  &   \checkmark  \\
+          &   i8\_add\_sat127\_pi8   &  \checkmark  &   \checkmark  &   \checkmark  \\
+          &   i8\_invB\_Aneq1\_pi8   &  \checkmark  &   \checkmark  &               \\
+          &   i8\_xorA\_signB\_pi8   &  \checkmark  &   \checkmark  &               \\
+          &   i8\_cmpeq\_pi8         &  \checkmark  &   \checkmark  &  \checkmark   \\
+          &   i8\_max\_pi8           &  \checkmark  &   \checkmark  &  \checkmark   \\
+          &   i8\_min\_pi8           &  \checkmark  &   \checkmark  &               \\
+          &   i8\_sub\_sat127\_pi8   &  \checkmark  &   \checkmark  & \checkmark    \\
+          &   i8\_sign\_pi8          &              &   \checkmark  &               \\
+          &   i8\_cpysign\_pi8       &              &               &  \checkmark   \\       
+          &   i8\_signextract\_pi8   &              &               &  \checkmark   \\               
+          \cmidrule(l){1-5}
+  
+  \multirow{1}{*}{polaire}    
+          &  i8\_add\_sat127\_pi8   &  \checkmark   & \checkmark    & \checkmark   \\        
+          &  i8\_sub\_sat127\_pi8   &  \checkmark   & \checkmark    & \checkmark   \\
+          &  i8\_Fx\_pi8            &  \checkmark   & \checkmark    & \checkmark   \\
+          &  i8\_Rx\_pi8            &  \checkmark   & \checkmark    & \checkmark   \\
+          &  i8\_clrA\_Bneq0\_pi8   &               & \checkmark    & \checkmark   \\
+          &  i8\_setMask\_Aeq1      &               & \checkmark    & \checkmark   \\
+          \cmidrule(l){2-5}
+            
+  \multirow{1}{*}{+ F-SC}
+          &  i16\_add\_accA\_loB\_pi8   &           & \checkmark    &   \\        
+          &  i16\_add\_accA\_hiB\_pi8   &           & \checkmark    &   \\        
+          &  i8\_sign\_pi16             &           & \checkmark    &       \\    
+          &  i8\_Hxor\_pi8              &           &               &  \checkmark   \\        
+          &  i8\_Hadd\_pi8              &           &               &  \checkmark  \\   
+          \cmidrule(l){1-5}     
+    
+  \multirow{1}{*}{LDPC-NB}
+          % ldnb 
+          & u8\_minu\_pu8               &   \checkmark   & \checkmark &  \checkmark    \\        
+          & u8\_addu\_sat64\_pu8        &   \checkmark   & \checkmark &  \checkmark    \\
+          & u8\_subu\_sat64\_pu8        &   \checkmark   & \checkmark &  \checkmark    \\
+          % inter 
+          & u8\_cmpge\_pu8              &       & \checkmark &       \\
+          & u8\_Aandb\_lo8B\_pu8        &       & \checkmark &       \\
+          & u8\_maxu\_pu8               &       & \checkmark &       \\
+          % intra 
+          & u8\_hminu\_pu8              &       &   & \checkmark     \\
+          \cmidrule(l){1-5} 
+          
+\multirow{1}{*}{turbo}
+          &  i8\_max\_pi8               &   \checkmark      & \checkmark        &  \checkmark   \\       
+          &  i8\_scale\_pi8             &   \checkmark      & \checkmark        &               \\
+          & i8\_add\_pi8                &                   &  \checkmark       &  \checkmark   \\
+          & i8\_sub\_pi8                &                   &  \checkmark       &  \checkmark   \\
+          & i8\_add\_srl\_pi8           &                   &  \checkmark       &               \\ 
+          & i8\_srl1\_pi8               &                   &  \checkmark       &               \\
+          & i8\_sign\_pi8               &                   &  \checkmark       &               \\
+          & i8\_shuffle\_pi8            &                   &                   &   \checkmark  \\
+          & i8\_srl\_pi8                &                   &                   &   \checkmark  \\
+          & i8\_min\_pi8                &                   &                   &   \checkmark  \\
+  
+          \bottomrule
+      \end{tabular}   
+      \caption{Liste des instructions spécifiques avec Mnemonic et compabilité SISD/SIMD.}
+      \label{liste:all:instr}
+  \end{table}

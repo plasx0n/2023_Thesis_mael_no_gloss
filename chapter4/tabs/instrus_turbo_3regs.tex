@@ -1,0 +1,22 @@
+
+\begin{table}[tb]
+  \centering
+  
+      \begin{tabular}{l || l l }
+      \toprule
+      Instruction & Implementation 
+      \\ \midrule
+      tb3.AccuPP        & rD[Vx] := rS1[Vx] + rS2[Vx] + rS3[Vx] \\ \midrule
+      tb3.AccuMP        & rD[Vx] := rS1[Vx] - rS2[Vx] + rS3[Vx] \\ \midrule
+      tb3.Accumaxp.m  & rD[Vx] := Max( rS1[Vx] + rS2[Vx] , rS1[Vx] + rS3[Vx]) \\ \midrule
+      tb3.plusShift     & rD[Vx] := ( rS1[Vx] - rS2[Vx] ) >> rS3[Vx] ) \\ \midrule 
+      tb3.mmblendvepi8& idem readVn \\ \midrule
+      tb3.mmax          & rD[Vx] := Max( rS1[Vx] + rS2[Vx] , rS3[Vx] - rS2[Vx] ) \\ \midrule
+      tb3.concadd      & rD[Vx] := ADD( rS1[Vx],  rS2[Vx] + rS3[Vx] ) \\ \midrule
+      tb3.maxaddsub   & rD[Vx] := Max( rS1[Vx] + rS2[Vx] , rS3[Vx] - rS2[Vx] ) \\ 
+      \bottomrule
+      \end{tabular}
+  
+  \caption{TODO}
+  \label{tab:instrus_turbo_3reg}
+  \end{table}

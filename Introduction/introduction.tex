@@ -1,0 +1,145 @@
+\documentclass[../main.tex]{subfiles}
+
+\makeatletter
+\@ifundefined{fromRoot}{%
+  \newcommand{\fromRoot}[1]{../#1}
+  
+  \usepackage{xr}
+  \externaldocument{../main}
+}{}
+
+\def\input@path{{\subfix{../}}}
+%or: \def\input@path{{/path/to/folder/}{/path/to/other/folder/}}
+\makeatother
+
+\graphicspath{{\subfix{../}}}
+
+\hypersetup{
+    pdfauthor   = {Mael TOURRES},
+    pdftitle    = {Th\`{e}se (Introduction)},
+    pdfsubject  = {Th\`{e}se (Introduction)},
+%    pdfkeywords = {mots-cl\'{e}s},
+}
+
+\begin{document}
+
+\chapter{Introduction}
+\chaptermark{Introduction}
+
+
+%\section*{Avant-propos}
+
+
+
+\section*{Contexte de l'étude}
+
+Au cœur de nos sociétés modernes, les systèmes embarqués communicants sont devenus omniprésents et sont intégrés dans d'innombrables domaines d'application. La capacité à échanger rapidement, constamment, de manière sécurisée et fiable en tout lieu est un enjeu majeur ; c'est l'une des clés de voûte du développement de notre monde. Nous disposons d'un accès étendu à des millions d'appareils et de services interconnectés par le biais de technologies de communication dont l'évolution est exponentielle. La présence de ces systèmes de communication est telle qu'il semble désormais impossible pour nombre de personnes d'imaginer un quotidien sans leur utilisation, qu'il s'agisse de discussions privées via les réseaux sociaux ou encore de programmation à distance d'objets connectés divers au sein de nos habitations.
+
+Cependant, ces derniers doivent aussi s'adapter à leur contexte d'utilisation de manière fiable et économique.
+Afin d'assurer que chaque système puisse s'intégrer rapidement et communiquer dans des réseaux déjà établis, il est nécessaire qu’ils se comprennent, ainsi l'utilisation de standards normalisés est une condition sine qua non.
+Pour ce faire, de nombreux standards de communication ont vu le jour.
+Si l’on se restreint à la téléphonie mobile, le standard 3G (UMTS) \cite{3G} déployé en France en 2004 a été remplacé progressivement au début des années 2010 par le standard 4G \cite{4G}, puis étendu quelques années plus tard par le standard 4G LTE \cite{Ref_4G}
+Ces évolutions ont permis d’améliorer la fiabilité des liens et d’augmenter les débits de communication.
+Des gains significatifs ont depuis été obtenus grâce aux techniques employées dans le standard 5G \cite{Ref_5G} qui sera à son tour rendu obsolète dans quelques années par la future 6G \cite{Ref_6G}.
+
+Un des éléments clés, ayant permis ces évolutions successives, vient de l’étape de codage canal qui exploite la puissance des Codes Correcteurs d’Erreurs (CCE).
+Leur importance dans les systèmes de communications numériques est telle qu’ils ont été intégrés de manière systématique dans tous les standards de communication depuis plusieurs décennies.
+Fondamentaux, ils améliorent de manière notable la qualité de communication ; ils en assurent aussi la fiabilité et la sécurité en exploitant des algorithmes mathématiques poussés, basés sur les informations redondantes ajoutées dans les messages transmis.
+Cette redondance est ensuite exploitée par le récepteur, afin de corriger et restituer le message d'origine, même en présence de forts niveaux de bruit (\textit{i.e.} perturbation/modification du message transmis).
+L’utilisation de codes correcteurs d’erreurs permet ainsi d’améliorer la robustesse du lien de communication, mais également de réduire les puissances d’émission.
+Cela induit toutefois une augmentation importante de la complexité calculatoire au niveau des récepteurs.
+La fonction de décodage est reconnue comme l’élément limitant des récepteurs, qu’ils soient matériels (ASIC/FPGA) ou logiciels (CPU/GPU).
+C'est pourquoi il est nécessaire pour les concepteurs d'innover et de trouver des solutions afin de concevoir des systèmes respectant les contraintes applicatives, tout en minimisant les coûts de conception, la consommation d’énergie et le temps de mise au point de tels décodeurs.
+Pendant très longtemps, seules les solutions matérielles étaient viables pour obtenir des performances temps réel, cependant le travail d’adaptation ou de re-conception des circuits pour chaque standard et/ou cadre applicatif induisait des temps et des coûts non-récurrents importants.
+L’accélération de la publication de nouveaux standards de communication couplée avec des besoins de flexibilité importants ont poussé les systèmiers à rechercher d’autres types de solutions d’implantation tels que les architectures programmables de type multi ou many-cœurs.
+La viabilité actuelle de ce type de solution est due à l’augmentation conséquente de la puissance de calcul induite par la multiplication des cœurs de processeurs dans un seul circuit ainsi qu’à l’introduction d’unités de calcul spécialisées (SIMD).
+
+
+
+Ces avancées technologiques ont concouru à la mise en œuvre de récepteurs de type Software-Define Radio (SDR) et l’émergence du cloud-RAN qui permettent, en parallèle, d’exécuter de manière déportée des récepteurs hétérogènes dans des centres de calculs.
+La flexibilité de ces systèmes, reposant sur l’utilisation d’architectures programmables, est toutefois obtenue au prix d’une consommation énergétique au moins 100 fois supérieure à celle de solutions ASIC dédiées.
+Cet aspect peut s’avérer rédhibitoire alors que le déploiement de ces systèmes de réception s’accélère.
+Pour limiter la consommation énergétique de ces solutions logicielles, une piste consiste à augmenter l’adéquation entre les besoins applicatifs (\textit{e.g.} les standards 4G ou 5G) et les capacités architecturales.
+
+\section*{Organisation du manuscrit}
+
+L'objectif du chapitre 2 est de présenter le contexte de ces travaux de thèse.
+Les principes élémentaires des systèmes de communications numériques sont exposés, permettant de positionner le codage canal et les codes correcteurs d’erreurs au sein des chaînes de communications numériques.
+Ensuite, une présentation des principales familles de codes correcteurs d'erreurs (CCE) employées actuellement dans les standards de communication est fournie. Le cadre d’usage de ces familles de CCE, ainsi qu’une description synthétique de leurs algorithmes de décodage sont exposés.
+
+Dans le chapitre 3, l’évolution dans le temps des approches d’implantation des décodeurs de codes CCE est présentée et mise en perspective.
+Cette partie permettra d'introduire les motivations qui ont amené à la réalisation de ces travaux de thèse, dont l’objectif consiste à proposer des extensions aux jeux d’instructions des architectures programmables, pour mieux supporter l’exécution de décodeurs CCE.
+
+Dans le chapitre suivant, l’approche méthodologique proposée afin d’identifier les motifs d’instructions récurrents est présentée.
+Les contraintes de l’étude liées au ciblage d’architectures de processeurs classiques manipulant des instructions possédant 2 opérandes en entrée (et produisant une unique donnée en sortie) sont expliquées.
+La méthodologie développée est ensuite décrite et appliquée sur des descriptions logicielles optimisées.
+L'analyse des instructions les plus impactantes pour la mise en œuvre du décodage va permettre l’identification de motifs d’instructions.
+Ces motifs sont analysés et de nouvelles instructions dédiées sont mises au point. Chacune des familles de codes sont ensuite présentées. Afin de démontrer la pertinence des choix effectués, le chapitre 4 présente aussi une évaluation des performances des décodeurs CCE, suite à l'intégration de nos nouvelles instructions. Ces évaluations sont réalisées sur des cœurs de processeur RISC-V, dont l'Instruction Set Architecture (ISA) a été étendue avec nos nouvelles instructions matérielles.
+Plusieurs cœurs RISC-V ont été sélectionnés et modifiés, leurs performances sont comparées à leurs architectures de base.
+Cela permet d’estimer les améliorations obtenues en termes de latence, mais également les surcoûts engendrés par l’utilisation de nos kits d'instructions.
+ 
+La recherche d'optimisation des performances de calcul sur les cibles retenues nous a amené à étudier la prise en compte du parallélisme de données dans les architectures cibles. 
+Nous avons donc mis au point des extensions du jeu d'instructions capables de travailler en mode SIMD (Single Instruction Multiple Data). 
+Ces instructions et l'évolution de leurs performances sont décrites dans le chapitre 5.   
+
+La conception des extensions présentées dans les chapitres précédents est contrainte par l’architecture interne du cœur de processeur ciblé : cette dernière ne peut fournir que deux opérandes.
+Ce choix sera remis en cause dans le chapitre 6. 
+En effet, dans de nombreuses architectures de processeurs DSP, il est possible d’accéder à 3 opérandes en parallèle, par exemple pour réaliser des opérations de type MAC.
+Nous proposons ainsi une évolution de nos jeux d'instructions afin d’obtenir une plus grande liberté sur la construction des extensions et donc, à terme, de meilleures performances.
+L’étude qui en découle est analogue à celle présentée dans les chapitres précédents, mais elle considère donc un opérande supplémentaire en entrée des instructions.
+Les codes sources des décodeurs de CCE sont analysés et de nouvelles extensions sont détaillées. Afin d'évaluer l'impact de ces kits, un nouveau cœur RISC-V, plus complexe, est utilisé. Les résultats d'intégration de ces nouveaux kits sur cible FPGA sont présentés et discutés.
+
+Le dernier chapitre conclut sur les travaux présentés dans ce manuscrit de thèse. Celui-ci expose les verrous scientifiques levés et résume les résultats obtenus. Une partie est dédiée aux différentes perspectives envisagées pour poursuivre ces travaux.
+
+Les différentes contributions de ces travaux de thèse sont résumées ci-dessous :
+
+\begin{enumerate}
+
+\item Une méthodologie d’identification, d’intégration et d’évaluation d'instructions spécifiques a été détaillée et mise en œuvre pour améliorer le support des algorithmes de décodage des CCE. À partir d’une réécriture des codes logiciels de l’état de l’art, cette dernière a permis d’identifier des extensions scalaires et vectorielles compatibles avec les contraintes architecturales des processeurs usuels, \textit{i.e.} RISC-V, INTEL et ARM.
+
+\item Un ensemble d’extensions a été proposé. Ces extensions composées d’instructions possédant au maximum deux opérandes d’entrée et une sortie, ont été définies spécifiquement pour améliorer les performances des algorithmes de décodage des CCE. Les familles de CCE pour lesquelles des extensions ont été proposées sont les turbo-codes, les codes LDPC binaires, les codes LDPC-NB et les codes polaires. Différents cas d’usage ont été considérés, incluant le traitement scalaire ou vectoriel des données.
+
+\item Ces travaux ont ensuite été étendus pour des cibles plus évoluées permettant de réaliser des opérations pouvant avoir jusqu’à 3 opérandes en entrée et une taille de registres de 64 bits. Ces modifications des hypothèses architecturales ont permis de créer de nouvelles instructions dédiées. Les extensions, composées d’instructions à 2 et à 3 opérandes, fournissent des facteurs d’accélération plus importants.
+
+\item Le prototypage des diverses extensions proposées a été mené sur des cœurs de calculs de type RISC-V.
+Pour ce faire, un processus permettant l'intégration de ces fonctionnalités au travers des outils de compilation (GCC) pour permettre leur usage à partir de codes logiciels C/C++ a été mis en œuvre.
+
+L’utilisation de cœurs RISC-V open-source a, de plus, permis le déploiement sur circuit FPGA des prototypes facilitant une validation fonctionnelle et une évaluation fine des gains apportés par l’approche proposée, mais également des surcoûts matériels induits.
+
+\end{enumerate}
+
+Ces différentes contributions ont été valorisées au travers de publications et présentations scientifiques au niveau national et au niveau international:
+
+\begin{itemize}
+    \item[$\bullet$] Conférence internationale avec comité de lecture:
+    
+    \begin{itemize}
+        \item[$\bullet$]  \underline{M. Tourres}, C. Chavet, B. Le Gal, J. Crenne and P. Coussy, "Extended RISC-V hardware architecture for future digital communication systems" 2021 IEEE 4th 5G World Forum (5GWF), 2021, pp. 224-229
+    \end{itemize}
+
+    \item[$\bullet$] Présentation internationale:
+    
+    \begin{itemize}
+        \item[$\bullet$] \underline{M. Tourres}, C. Chavet, B. Le Gal, J. Crenne and P. Coussy, "Specialized Scalar and SIMD instructions for Error Correction Codes Decoding on RISC-V processor" Spring 2022 RISC-V Week, 3-5 May 2022.
+    \end{itemize}
+    
+    \item[$\bullet$] Conférence nationale:
+    
+    \begin{itemize}
+        \item[$\bullet$] \underline{M. Tourres}, C. Chavet, B. Le Gal, J. Crenne and P. Coussy, "Architecture matérielle programmable optimisée pour les systèmes de communications numériques" Conférence Francophone d’informatique en Parallélisme, Architecture et Système (COMPAS), 6-9 Juillet 2021 
+    \end{itemize}
+    
+    \item[$\bullet$] Présentation nationale:
+    
+    \begin{itemize}
+        \item[$\bullet$] \underline{M. Tourres}, C. Chavet, B. Le Gal, J. Crenne and P. Coussy, "Architecture programmable pour les systèmes de communications numériques" Colloque GdR SoC2, 8-10 Juin 2021.
+    \end{itemize}
+
+    \item[$\bullet$] Revue internationale avec comité de lecture \textit{(En cours de rédaction)}
+    \begin{itemize}
+        \item[$\bullet$] \underline{M. Tourres}, C. Chavet, B. Le Gal and P. Coussy, "Specialized Scalar and SIMD instructions for Error Correction Codes Decoding on RISC-V processors" 
+    \end{itemize}
+    
+\end{itemize}
+
+\end{document}

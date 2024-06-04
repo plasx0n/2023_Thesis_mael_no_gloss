@@ -1,0 +1,26 @@
+\begin{table}[tb]
+\centering
+\begin{tabular}{l || l l }
+\hline
+\textbf{Instruction}    & \textbf{Mnémonique}    & \textbf{Implementation} \\ 
+\hline               
+   x &ld3.minmaxs8b       & rD[Vx] = MINs8b( MAXs8b(rS1,rS2), rS3) \\ 
+
+   x &ld3.minsorting      & mask :=(rS1!=rS2)?0x00:0xff \\
+    &                    &  min\_t:=rS1[Vx] \& \sim mask  \\
+    &                    &  min\_u:=rS2[Vx] \& mask  \\
+    &                   &  rD[Vx] := min\_t \textbar min\_u      \\ 
+
+   x & ld3.signNmess       & rD[Vx] := rS1[Vx] xor ( rS2[Vx] >= 0 )? \\
+    &                     & \hspace{4,5cm}rS3[Vx] : -rS3[Vx] \\ 
+
+   x &ld3.CopyXorVecto    & rD[Vx] := copy( XorVecto( rS1[Vx] ,rS2[Vx] ) , rS3[Vx]) \\ 
+
+   x &ld3.readVn          & mask1  := rS1[Vx] \& rS3[Vx]  \\
+    &                    & mask2  := rS2[Vx] \& NOT(rS3[Vx]) \\
+    &                    & rD[Vx] := mask1 | mask2      \\
+    \hline
+\end{tabular}
+    \caption{Nouvelles Instructions spécifiques pour les codes LPDC avec 3 registres sources (3 Regs)}
+    \label{tab:instrus_ldpc_3reg}
+\end{table}

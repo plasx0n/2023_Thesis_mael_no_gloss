@@ -1,0 +1,125 @@
+
+\begin{figure}
+        \pgfplotsset{
+            % width=8cm,
+        %    height=0.3\textheight,
+            grid=major,
+            major grid style={dotted},
+            symbolic x coords={LDPC,SC, F-SC, LDPC-NB,TURBO},
+            legend style={
+               fill,
+               at={(0.50,-0.2)},
+               legend columns=2,
+               legend cell align=left,
+               anchor=north
+            },
+         }
+        \begin{tikzpicture}
+        \begin{axis}[
+           ybar,
+         %   ytick pos=left,
+           bar width=0.15cm,
+           ymin=0, ymax=450,
+         %   ytick={0,100,200,300,400,500},
+         %   yticklabels={0,100,200,300,400,500},
+         %   ylabel style={align=center},
+           ylabel={Surcoût en LUTs},
+           xtick=data,
+           xtick pos=bottom,
+           xticklabel style={
+              inner sep=0pt,
+              anchor=north east,
+              rotate=20,
+              }
+           ]
+         \addplot [draw=Paired-1, fill=Paired-1!40, postaction={pattern color = black!80!Paired-1!70, pattern=north west  lines}]coordinates 
+         {(LDPC,333) (SC,120) (F-SC,120)  (LDPC-NB,122) (TURBO,123)};
+         \addlegendentry{PicoRV32}
+
+         \addplot [draw=Paired-3, fill=Paired-3!40, postaction={pattern color = black!80!Paired-3!70, pattern=north east  lines}]coordinates 
+         {(LDPC,222) (SC,76) (F-SC,76) (LDPC-NB,98) (TURBO,102)};
+         \addlegendentry{IBEX}
+
+         \addplot [draw=Paired-7, fill=Paired-7!40, postaction={pattern color = black!80!Paired-7!70, pattern=crosshatch  dots} ]coordinates 
+         {(LDPC,210) (SC,118) (F-SC,118) (LDPC-NB,133) (TURBO,102)};
+         \addlegendentry{SCR1}
+
+         \addplot [draw=Paired-5, fill=Paired-5!40, postaction={pattern color = black!80!Paired-5!70, pattern=horizontal lines} ]coordinates 
+         {(LDPC,233) (SC,189) (F-SC,76) (LDPC-NB,78) (TURBO,60)};
+         \addlegendentry{RISCY}
+
+        \end{axis}
+        \end{tikzpicture}
+    \pgfplotsset{
+       % width=8cm,
+    %    height=0.3\textheight,
+       grid=major,
+       major grid style={dotted},
+       symbolic x coords={Base,LDPC,SC,F-SC,LDPC-NB,TURBO},
+    %    enlarge y limits={upper,value=0.05},
+         legend style={
+            fill,
+            at={(0.50,-0.2)},
+            legend columns=2,
+            legend cell align=left,
+            anchor=north
+         },
+            % ---------------------------------------------------------------------
+            % added stuff
+            % ---------------------------------------------------------------------
+            % allow different layers
+            % set layers,
+            % % (needed because of bug <https://sourceforge.net/p/pgfplots/bugs/153/>)
+            % cell picture=true,
+            % % now add the "horizontal line" ...
+            % extra y ticks=112,
+            % % ... don't show any label and ...
+            % % extra y tick labels={},
+            % % ... adapt the style to your needs
+            % extra y tick style={
+            %     % in case you should remove the grid from the "normal" ticks ...
+            %     ymajorgrids=true,
+            %     % ... but don't show an extra tick (line)
+            %     ytick style={
+            %         /pgfplots/major tick length=0pt,
+            %     },
+            %     grid style={
+            %         red,
+            %         dashed,
+            %         % to draw this line before the bars, move it a higher layer
+            %         /pgfplots/on layer=axis foreground,
+            %     },
+            % },
+       }
+    \begin{tikzpicture}
+    \begin{axis}[
+        % axis y line*=left,
+        xtick=data,ymin=0,ymax=350,
+        ytick={0,50,...,350},
+        ylabel={Fréquence maximale en MHz},
+        xticklabel style={
+          inner sep=0pt,
+          anchor=north east,
+          rotate=20,
+          }
+       ]
+        \addplot[very thick,draw=Paired-1] plot coordinates
+        {(Base,343) (LDPC,320) (SC,309) (F-SC,309) (LDPC-NB,343) (TURBO,336) };
+        \addlegendentry{PicoRV32}
+      %%%%%%%%%%%%%%%%%%
+        \addplot[very thick,draw=Paired-3, mark=o] plot coordinates 
+        {(Base,99) (LDPC,114) (SC,104) (F-SC,104) (LDPC-NB,103) (TURBO,102) };
+        \addlegendentry{IBEX}
+       %%%%%%%%%%%%%%%%%%
+        \addplot[very thick,draw=Paired-7, mark=triangle] plot coordinates 
+        {(Base,102) (LDPC,103) (SC,101) (F-SC,101) (LDPC-NB,102) (TURBO,102) };
+        \addlegendentry{SCR1}
+       %%%%%%%%%%%%%%%%%%
+        \addplot[very thick,draw=Paired-5,mark=square] plot coordinates 
+        { (Base,20) (LDPC,20) (SC,20) (F-SC,20) (LDPC-NB,20) (TURBO,20) };
+       \addlegendentry{RISCY}
+       \end{axis}
+    \end{tikzpicture}
+\caption{Impact de l'ajout des instructions spécialisées: surcoût en LUT et fréquence de fonctionnement.}
+\label{tikz_freqXlutperc_sisd}
+\end{figure}

@@ -1,0 +1,35 @@
+\documentclass{standalone}
+
+\usepackage{amsmath}
+\usepackage{pgfplots}
+
+% \pgfplotsset{compat=newest}
+% \pgfplotsset{compat=1.10}
+\usepgfplotslibrary{colorbrewer}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{matrix, positioning, patterns}
+\pgfplotsset{scaled y ticks=false}
+
+\input{colors.tex}
+\begin{document}
+  \begin{tikzpicture}
+    \begin{axis}[/pgfplots/table/ignore chars={|}, footnotesize,
+                 width=.67\linewidth, height=0.70\linewidth,
+                 ybar stacked, bar width=20pt,
+                 legend style={at={(0.7,0.98)}, anchor=north}, legend columns=1,
+                 ymin=0 , ymax=70000, 
+                 ytick={0,10000,...,70000},
+                %  y tick label={0},
+                 ylabel={ Nb d'instructions executées}, xlabel={Type de donnée},
+                 ymajorgrids, grid style={gray!30}, grid style={dashed, gray!50}, xtick=data,
+                %  x tick label style={rotate=-20}, 
+                 xticklabels={8b, 8b+cst, 32b, 32b+cst, 64b, 64b+cst} ]
+      \addplot+[draw=Paired-1, fill=Paired-1!40, postaction={pattern color = black!80!Paired-1!70, pattern=north west  lines}] table [x=x, y expr=\thisrowno{1}] {dataldpc.txt};
+      \addplot+[draw=Paired-3, fill=Paired-3!40, postaction={pattern color = black!80!Paired-3!70, pattern=north east  lines}] table [x=x, y expr=\thisrowno{2}] {dataldpc.txt};
+      \addplot+[draw=Paired-7, fill=Paired-7!40, postaction={pattern color = black!80!Paired-7!70, pattern=crosshatch  dots} ] table [x=x, y expr=\thisrowno{3}] {dataldpc.txt};
+      \addplot+[draw=Paired-5, fill=Paired-5!40, postaction={pattern color = black!80!Paired-5!70, pattern=horizontal lines} ] table [x=x, y expr=\thisrowno{4}] {dataldpc.txt};
+
+      \legend{\texttt{controle}\text{ }, \texttt{Calcul}\text{ }, \texttt{LDPC}\text{ }, \texttt{Mémoire}\text{ }}
+    \end{axis}
+  \end{tikzpicture}
+\end{document}

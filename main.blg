@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[67] biber:340> INFO - === mar. juin  4, 2024, 05:19:53
+[79] Biber.pm:418> INFO - Reading 'main.bcf'
+[196] Biber.pm:972> INFO - Found 209 citekeys in bib section 0
+[208] Biber.pm:4383> INFO - Processing section 0
+[216] Biber.pm:4574> INFO - Looking for bibtex file './biblio/biblio.bib' for section 0
+[226] bibtex.pm:1713> INFO - LaTeX decoding ...
+[489] bibtex.pm:1518> INFO - Found BibTeX data source './biblio/biblio.bib'
+[1598] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1599] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1599] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'fr-FR'
+[1599] Biber.pm:4209> INFO - No sort tailoring available for locale 'fr-FR'
+[1703] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1803] bbl.pm:757> INFO - Output to main.bbl
+[1804] Biber.pm:130> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[1804] Biber.pm:132> INFO - WARNINGS: 1

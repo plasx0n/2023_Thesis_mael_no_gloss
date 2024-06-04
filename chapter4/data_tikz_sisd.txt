@@ -1,0 +1,6 @@
+x	    R2_i8	R23_i8
+LDPC	104	    60
+POLAIRE	118	    79
+PL-FSC	118	    79
+LDPC-NB	89	    57
+TURBO	99	    235

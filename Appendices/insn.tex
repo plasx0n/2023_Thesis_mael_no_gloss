@@ -1,0 +1,1441 @@
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_abs\_pi8 } \textit{rD rS1}\\
+Type: R\\
+Code: LDPC\\
+\textbf{Description:}\\
+Retourne la valeur absolue de rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=(rS1[7:0] >0 )? rS1[7:0] : -rS1[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := abs8(rS1[i+7:i]) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_add\_sat127\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC, polaire SC/F-SC\\
+\textbf{Description:}\\
+Addition signée entre rS1 et rS2 puis saturation à +/- 127.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=Sat127( rS1[7:0]+rS2[7:0] )
+    
+//SIMD de degré N
+FOR j := 0 to N   
+ i := j*8    
+ rD[i+7:i] := sat127(rS1[i+7:i] + rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_invB\_Aneq1\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC\\
+\textbf{Description:}\\
+Retourne rS2 ou - rS2 en fonction du signe de rS1 : si rS1 >=1 : retourne rS2 sinon retourne -rS2.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=(rS1[7:0] >= 1)?rS2[7:0]:-rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N 
+ i := j*8    
+ rD[i+7:i] := (rS1[7:0] >= 1)?rS2[7:0]:-rS2[7:0]
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_xorA\_signB\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC\\
+\textbf{Description:}\\
+Récupère le signe de rS2 (1:positif et 0:négatif) , rS1 est déja un signe, puis effectue un ou exclusif entre rS1 et rS2 et retourne le resultat.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=rS1[7:0] xor ((rS2[7:0]>=0)?1:0)
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[7:0] xor ((rS2[7:0]>=0)?1:0)
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_cmpeq\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC\\
+\textbf{Description:}\\
+Comparaison signée entre rS1 et rS2, si rS1 est différent de rS2 retourne 0x00, sinon retourne 0xFF\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=(rS1[7:0]==rS2[7:0])?0xff:0x00
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD[7:0]:=(rS1[7:0]==rS2[7:0])?0xff:0x00
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_max\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC,turbo\\
+\textbf{Description:}\\
+Retourne le maximum signé entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= ( rS1[7:0] > rS2[7:0] )? rS1[7:0] :rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N  
+ i := j*8    
+ rD[i+7:i] := max8(rS1[i+7:i], rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_min\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC,turbo\\
+\textbf{Description:}\\
+Retourne le minimum signé entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= ( rS1[7:0] < rS2[7:0] )? rS1[7:0] :rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := min8(rS1[i+7:i] , rS2[i+7:i]  ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sub\_sat127\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC, polaire SC/F-SC\\
+\textbf{Description:}\\
+Soustraction signée entre rS1 et rS2 puis saturation à +/- 127.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:=Saturate127(rS1[7:0]-rS2[7:0])
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := sat127(rS1[i+7:i] - rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sign\_pi8 } \textit{rD rS1}\\
+Type: R\\
+Code: LDPC, turbo\\
+\textbf{Description:}\\
+Comparaison signée de rS1 avec 0 ; si inf. à 0 retourne 1 sinon 0 ; signe négatif vaut 1 , signe positif vaut 0 . \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+ rD[7:0] := (rS1[7:0]< 0) ? 0x01:0x00) 
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := (rS1[i+7:i]< 0) ? 0x01:0x00) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_invC\_xorA\_signB\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: LDPC\\
+\textbf{Description:}\\
+Ou Exclusif entre rS1 et le signe de rS2, retourne rS3 si résultat vaut 1 sinon -rS3\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD :=rS1[7:0] ^ (rS2[7:0] > 0) ? rS3[7:0] : -rS3[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD :=rS1[7:0] ^ (rS2[7:0] > 0) ? rS3[7:0] : -rS3[7:0]
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_minC\_maxAB\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: LDPC\\
+\textbf{Description:}\\
+Maximum entre rS1 et rS2, puis compare et retrourne le min entre le résultat et rS3\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD  := MIN8(MAX8(rS1[7:0], rS2[7:0] ),rS3[7:0] )
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD  := MIN8(MAX8(rS1[7:0], rS2[7:0] ),rS3[7:0] )
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_blendC\_cmpeqAB\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: LDPC\\
+\textbf{Description:}\\
+Génère un masque selon rS1 et rS2 puis utilise ce masque pour trier et retourner les minimums \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+Mask := (rS1[7:0] == rS2[7:0])? 0XFF:0x00
+min_t := rS1[7:0]  &~Mask
+min_u := rS2[7:0]  &Mask
+rD := min_t | min_u
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD  :=opération SISD
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_Fx\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire SC et F-SC\\
+\textbf{Description:}\\
+Application de la fonction F de l'arbre de décodage. Retourne le signe et le minimum entre rS1 et rS2.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+min1 = abs(rS1[7:0] )
+min2 = abs(rS2[7:0] )
+min1 = min( min1 , min2 )
+sign = (rS1[7:0]  <0) ^ (rS2[7:0]  <0)
+rD[7:0]  = (sign == 0 )? min1 : -min1
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := f8(rS1[i+7:i], rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_Rx\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire SC et F-SC\\
+\textbf{Description:}\\
+Application de la fonction R de l'arbre de décodage, calcul des feuilles de niveau 0 en fonction du vecteur de bit gelées (rS2). Retourne si rS2 eq. 1 sinon si rS1 est inf. 0 retroune 1 sinon retourne 0 .\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := (rS2[7:0] == 1 )? 0x00 : (rS1[7:0] < 0 ) ? 0x01 :0x00
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := r8(rS1[i+7:i], rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_clrA\_Bneq0\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire SC\\
+\textbf{Description:}\\
+rS2 vecteur de bit gelés, rS1 Sommes Partielles: Décodage individuel des sommes partielles pour chaque element de la trame
+Std: Comparaison à 0 de rS2, si valide, retourne rS1 sinon 0 .\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := (rS2[7:0] == 0 )?  rS1[7:0] : 0x00
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := (rS2[i+7:i]==0x00)?  rS1[i+7:i] : 0x00) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_setMask\_Aeq1 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire SC et F-SC\\
+\textbf{Description:}\\
+Utilisé pour la fonction g de l'arbre de décodage. Génère un masque en fonction de rS1. rS1 est le vecteur de signes. 
+Comparaison de rS1 avec 1, si valide, retourne 0xFF sinon 0.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := (rS1[i+7:i]  ==1) ? 0xff : 0x00
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_Gx\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: Polaire SC et F-SC\\
+\textbf{Description:}\\
+Application de la fonction G de l'arbre de décodage. Retourne l’addition saturé de rS1 et rS2 ou alors rS2-rS1.\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+Addsat := sat127(rS1+rS2)
+subsat  := sat127(rS2-rS1)
+RD         := (rS3==0)?Addsat: subsat
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := g8(rS1[i+7:i], rS2[i+7:i] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i16\_add\_accA\_loB\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire F-SC\\
+\textbf{Description:}\\
+Noeud REP polaire Fast-SC. Additonne les elements 1 et 2 de rS2 dans les upper et lower bit de rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+RD[31:16] = rS1[31:16] + rS2[15:8]
+RD[15: 0]    = rS1[15: 0] + rS2[7:0] 
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i16\_add\_accA\_hiB\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire F-SC\\
+\textbf{Description:}\\
+Noeud REP polaire Fast-SC. Additonne les elements 3 et 4 de rS2 dans les upper et lower bit de rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+rD[31:16] = rS1[31:16] + rS2[31:24] 
+rD[15: 0] = rS1[15: 0] + rS2[23:16] 
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sign\_pi16 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire F-SC\\
+\textbf{Description:}\\
+Noeud REP polaire Fast-SC. Compare les upper et lower bits de rS1 et rS2 et retourne 1 si négatif sinon retourne 0 si positif\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+rD[V3] = ( rS2[31:16]) < 0 ) ? 1 : 0
+rD[V2] = ( rS2[15:0 ] ) < 0 ) ? 1 : 0 
+rD[V1] = ( rS1[31:16]) < 0 ) ? 1 : 0 
+rD[V0] = ( rS1[15:0] ) < 0 ) ? 1 : 0 
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_Hxor\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire F-SC\\
+\textbf{Description:}\\
+Noeud SPC polaire Fast-SC. INTRA-trames. Retourne le résultat d'un Ou exclusif concaténé entre tout les elements de rS2 puis rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+rD = rS1 ^( rS2[7:0] ^ rS2[15:8] ^ rS2[23:16] ^ rS2[31:24] )
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_Hadd\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: Polaire F-SC\\
+\textbf{Description:}\\
+Noeud REP polaire Fast-SC INTRA-trames. Retourne le résultat d'un AND concaténé entre tout les elements de rS2 puis rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+rD = rS1 + (rS2[7:0]+rS2[15:8]+rS2[23:16]+rS2[31:24] )
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_minu\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Retourne le minimum non-signé entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= ( rS1[7:0] < rS2[7:0] )? rS1[7:0] :rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := min8u(rS1[i+7:i] , rS2[i+7:i]  ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_addu\_sat64\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Retourne l’addition saturée à +64/0  entre rS1 et rS2 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] :=  saturate64( rS1 - rS2 ) 
+    
+//SIMD de degré N
+FOR j := 0 to N
+ i := j*8
+ rD[i+7:i] := saturate64( rS1[i+7:i] - rS2[i+7:i] )
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_subu\_sat64\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Retourne la soustraction saturée à +64/0  entre rS1 et rS2 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] :=  saturate64( rS1 - rS2 ) 
+    
+//SIMD de degré N
+FOR j := 0 to N
+ i := j*8
+ rD[i+7:i] := saturate64( rS1[i+7:i] - rS2[i+7:i] )
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_cmpge\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Part de la fonction vectorisé de recherche de minima.  Comparaison signée entre rS1 et rS2 pour générer un masque en fonction du min. 
+Si rS1 sup. ou égal à rS2 , retourne xFF,  sinon retourne 0. \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+FOR j := 0 to N
+ i := j*8
+ rD[i+7:i] := ( rS1[i+7:i] >= rS2[i+7:i] ) ? 0xff:0x00
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_Aandb\_lo8B\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Part de la fonction vectorisé de recherche de minima.
+Applique un et logique entre chaque element de rS1 avec le premier element 8b de rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+FOR j := 0 to N
+ i := j*8
+ rD[i+7:i] := ( rS1[i+7:i] & rS2[7:0] ) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_maxu\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Maximum non signé entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= ( rS1[7:0] > rS2[7:0] )? rS1[7:0] :rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N
+ i := j*8
+rD[i+7:i]:= ( rS1[i+7:i] > rS2[i+7:i] )? rS1[i+7:i] :rS2[i+7:i]
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_hminu\_pu8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Recherche du minimum horizontal
+Renvoie le minimum des 4 elements de 8b de rS1, et le compare avec rS2, pour renovyer le min absolu. \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+simd only 
+    
+//SIMD de degré N
+FOR j := 0 to N  
+i := j*8  
+rD[i+7:i] := ( rS1[i+7:i] & rS2[i+7:i] )  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_min\_addsat\_pu8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Minimum entre rS3 et
+addition saturée de rS1 et rS2 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := Min(Sat63(rS1[7:0]+rS2[7:0]), rS3[7:0])
+    
+//SIMD de degré N
+FOR j := 0 to N  
+i := j*8  
+rD[i+7:i] := Min(Sat63(rS1[i+7:i]+rS2[i+7:i]), rS3[i+7:i])
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{u8\_cmpge\_AndB\_lo8C\_pu8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: LDPC-NB\\
+\textbf{Description:}\\
+Comparaison égale ou supérieure de rS1 et rS2, retourne les 8 LSB de rS3 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] :=(rS1[7:0]  >=rS2[7:0] )? rS3[7:0]:0x00
+    
+//SIMD de degré N
+FOR j := 0 to N  
+i := j*8  
+rD[[i+7:i]] :=(rS1[i+7:i]  >=rS2[i+7:i] )? rS3[i+7:i]:0x00
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_scale\_pi8 } \textit{rD rS1}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Retourne rS1*0.75 /coefficient 0.75\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+( rS1 > 0 )? 1:0  
+A  = abs(rS1) 
+B  = A>>2 
+C  = A-B   
+rD := (Sign==0)?-C:C 
+    
+//SIMD de degré N
+FOR j := 0 to N  
+i := j*8  
+rD[i+7:i] := scale(rS1[i+7:i]) 
+ENDFOR 
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_add\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Addition signée entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]+rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] + rS2[i+7:i] 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sub\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Soustraction signée entre rS1 et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]-rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] - rS2[i+7:i]  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_add\_srl\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Addition entre rS1 et rS2 puis shift logique droit de 1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]+rS2[7:0] >>1
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] + rS2[i+7:i] >>1  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_srl1\_pi8 } \textit{rD rS1}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Shift logique droit de 1 de rS1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]>>1
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] >>1  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_shuffle\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Shuffle, selection des elements à retourner de rS1 avec l’index contenu dans rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+SIMD uniquement 
+    
+//SIMD de degré N
+FOR j := 0 to N
+I := j*8
+       IF rS2[j+7] == 1              
+            rD[j+7:i] := 0    
+       ELSE        
+            index[3:0] := rS2[j+3:j]        
+            RD[j+7:i] := rS1[index*8+7:index*8]  
+       FI 
+ENDFOR 
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_add\_div2\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Addition entre rS1 et rS2 puis shift logique droit de 1
+clone de add\_srl\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]+rS2[7:0] >>1
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] + rS2[i+7:i] >>1  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sub\_div2\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Soustraction entre rS1 et rS2 puis shift logique droit de 1\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= rS1[7:0]-rS2[7:0] >>1
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] - rS2[i+7:i] >>1  
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_sat\_sub\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+sature rS1 puis le soustraction entre le résultat et rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0]:= sat63(rS1[7:0])-rS2[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD[i+7:i]:= sat63(rS1[i+7:i])-rS2[i+7:i]
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_scale\_add\_pi8 } \textit{rD rS1,rS2}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Effectue l’instruction de scale à 0.75 sur rS1 puis additionne le résultat avec rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+RD[7:0] = scale0.75(rS1[7:0]) + rS2[7:0] 
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD[i+7:i]:= scale(rS1[i+7:i]) + rS2[i+7:i]
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_accumax\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: turbo\\
+\textbf{Description:}\\
+Maximum accumulée de rS1, rS2 et rS3\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := MAX8( rS1[7:0],  rS2[7:0], rS3[7:0])
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] :=MAX8( rS1[i+7:i],  rS2[i+7:i], rS3[i+7:i]) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_maxpm\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: turbo\\
+\textbf{Description:}\\
+Maximum entre rS1+rS2 et rS3-rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := MAX8( rS1[7:0] +  rS2[7:0],  rS3[7:0] – rS2[7:0])
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] :=MAX8( rS1[i+7:i] +  rS2[i+7:i],  rS3[i+7:i] – rS2[i+7:i])
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_accupp\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: turbo\\
+\textbf{Description:}\\
+Addition accumulée de rS1, rS2 et rS3\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := rS1[7:0] + rS2[7:0] + rS3[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] + rS2[i+7:i] + rS3[i+7:i]) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_accump\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R4\\
+Code: turbo\\
+\textbf{Description:}\\
+Addition et soustraction accumulée\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := rS1[7:0] - rS2[7:0] + rS3[7:0]
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] - rS2[i+7:i] + rS3[i+7:i]) 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_srl\_pi8  } \textit{rD rS1,rS2,rS3}\\
+Type: R\\
+Code: turbo\\
+\textbf{Description:}\\
+Shift logique droit signé de rS1 avec rS2 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] := rS1[7:0] >>rS2[7:0] 
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+ rD[i+7:i] := rS1[i+7:i] >> rS1[i+7:i] 
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================

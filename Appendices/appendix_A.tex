@@ -1,0 +1,27 @@
+\documentclass[../main.tex]{subfiles}
+
+\makeatletter
+\def\input@path{{\subfix{../}}}
+%or: \def\input@path{{/path/to/folder/}{/path/to/other/folder/}}
+\makeatother
+
+\graphicspath{{\subfix{../}}}
+
+\hypersetup{
+    pdfauthor   = {Mael TOURRES},
+    pdftitle    = {Appendix: A},
+    pdfsubject  = {Appendix: A},
+%    pdfkeywords = {mots-cl\'{e}s},
+}
+
+
+
+\setlength\parindent{0pt}
+\begin{document}
+
+\section*{Liste des instructions spécialisées} 
+\label{Annexes}
+\input{Appendices/insn.tex}
+
+\end{document}
+
