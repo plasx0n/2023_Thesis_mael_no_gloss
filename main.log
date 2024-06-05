@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  4 JUN 2024 06:18
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  4 JUN 2024 18:33
  restricted system commands enabled.
 **main.tex
 (./main.tex
@@ -3996,19 +3996,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1409--1437
 
  []
 
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1440--25
+
+Underfull \hbox (badness 10000) in paragraph at lines 1440--1468
 
  []
 
-) [141] [142
+[141]
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1499
 
-]
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 1502--25
+
+ []
+
+) [142]
 luaotfload | aux : font no 33 (nil) defines no feature for script latn
 luaotfload | aux : font no 33 (nil) defines no feature for script dflt [143
 
-] [144] [145] [146] [147] [148] [149] [150] [151] [152]
-[153]
+
+] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153]
 Overfull \hbox (0.2346pt too wide) in paragraph at lines 311--311
 []\TU/LatinModernRoman(0)/m/sc/10 M. \TU/lmr/m/sc/10 Rashid\TU/LatinModernRoman
 (0)/m/sc/10 , L. \TU/lmr/m/sc/10 Apvrille \TU/LatinModernRoman(0)/m/sc/10 et R. \TU/lmr/m/sc/10 Pacalet\TU/LatinModernRoman(0)/m/sc/10 , 
@@ -4073,7 +4081,7 @@ File: ./Couverture-these/logos-etablissements/UBS.png Graphic file (type png)
 Package luatex.def Info: ./Couverture-these/logos-etablissements/UBS.png  used 
 on input line 12.
 (luatex.def)             Requested size: 139.99625pt x 68.29083pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png, id=2713, 796
+<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png, id=2733, 796
 .9775pt x 627.34375pt>
 File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png Graphic 
 file (type png)
@@ -4081,7 +4089,7 @@ file (type png)
 Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fo
 nd-dos.png  used on input line 44.
 (luatex.def)             Requested size: 597.52492pt x 470.34392pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png, id=2714, 14
+<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png, id=2734, 14
 66.47874pt x 1153.30875pt>
 File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png Graphic
  file (type png)
@@ -4102,21 +4110,21 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C62D03A07CBFBDC7270462AA019045F1;9972.
+(rerunfilecheck)             Checksum: 2634AC2134404ACCAB4C984871E1C636;9972.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 66449 strings out of 477805
+ 66481 strings out of 477805
  745444,2848258 words of node,token memory allocated
- 19770 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 955 glue, 4 kern, 1 penalty, 2 glyph, 5276 attribut
-e, 97 glue_spec, 755 attribute_list, 3 write, 53 pdf_action nodes
-   avail lists: 1:8,2:30432,3:2280,4:12308,5:11436,6:107,7:19126,8:154,9:28446,1
+ 20046 words of node memory still in use:
+   8 hlist, 2 vlist, 2 rule, 967 glue, 4 kern, 1 penalty, 2 glyph, 5360 attribut
+e, 97 glue_spec, 767 attribute_list, 3 write, 53 pdf_action nodes
+   avail lists: 1:8,2:30336,3:2280,4:12308,5:11436,6:107,7:19205,8:154,9:28446,1
 0:35,11:1422,12:1
- 82967 multiletter control sequences out of 65536+600000
+ 82979 multiletter control sequences out of 65536+600000
  181 fonts using 19708551 bytes
  115i,20n,119p,2053b,4475s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf
@@ -4148,10 +4156,10 @@ share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
 /msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (159 pages, 2857706 bytes).
+Output written on main.pdf (159 pages, 2859667 bytes).
 
-PDF statistics: 2937 PDF objects out of 2984 (max. 8388607)
- 2619 compressed objects within 27 object streams
- 1171 named destinations out of 1200 (max. 131072)
+PDF statistics: 2958 PDF objects out of 2984 (max. 8388607)
+ 2640 compressed objects within 27 object streams
+ 1191 named destinations out of 1200 (max. 131072)
  380 words of extra memory for PDF output out of 10000 (max. 100000000)
 

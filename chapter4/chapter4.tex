@@ -342,9 +342,9 @@ Celle-ci consiste en l'assemblage de plusieurs instructions spécifiques propos�
     \textbf{Instruction} & \textbf{Mnémonique}    & \textbf{Implantation} \\ 
     \hline               
     Minimum entre C et              &u8\_min\_addsat\_pu8        & rD := Min(Sat63(rS1+rS2), rS3)        \\ 
-    addition saturée de A et B      && \\      
+    addition saturée de A et B      &rD,rS1,rS2,rS3 & \\      
     Comparaison égale ou supérieure  &u8\_cmpge\_AndB\_lo8C\_pu8 & rD := (rS1 >= rS2)? rS3[7:0]:0x00   \\
-    de A et B retourne les 8 LSB de C && \\
+    de A et B retourne les 8 LSB de C &rD,rS1,rS2,rS3 & \\
     \hline
     \end{tabular}
     \caption{Nouvelles instructions spécifiques pour les codes LDPC-NB avec 3 registres sources.}
@@ -538,7 +538,7 @@ Dans ce tableau, sont aussi indiqués les gains relatifs entre les différentes 
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-Si l'on s'intéresse tout d'abord aux décodeurs LDPC, on peut noter une réduction du nombre de cycles d'horloge d'environ  $14\%$ entre la version précédente (ISA 2R \ding{183}) et la version actuelle (ISA \textbf{3R} \ding{184}). 
+Si l'on s'intéresse tout d'abord aux décodeurs LDPC, on peut noter une réduction du nombre de cycles d'horloge d'environ  $14\%$ entre la version précédente (ISA \textbf{2R} \ding{183}) et la version actuelle (ISA \textbf{3R} \ding{184}). 
 Ces gains sont liés aux instructions à $3$ opérandes d'entrée que nous avons développées.
 Par rapport à la version d'origine du décodeur, les $7$ instructions spécialisées que nous avons ajoutées ont permis de réduire le temps d'exécution de $41\%$ sur le cœur CVA6.
 

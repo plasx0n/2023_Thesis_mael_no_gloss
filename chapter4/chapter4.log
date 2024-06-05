@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  4 JUN 2024 05:27
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.15)  5 JUN 2024 12:08
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/naptop/Documents/2023_Thesis_mael_no_gloss/chapter4/chapter4.tex
@@ -1871,7 +1871,7 @@ LaTeX Warning: No positions in optional float specifier.
 Underfull \vbox (badness 1132) has occurred while \output is active []
 
  [3]
-<chapter4/ariane_overview.drawio.png, id=82, 1575.8875pt x 1165.35374pt>
+<chapter4/ariane_overview.drawio.png, id=76, 1575.8875pt x 1165.35374pt>
 File: chapter4/ariane_overview.drawio.png Graphic file (type png)
 <use chapter4/ariane_overview.drawio.png>
 Package luatex.def Info: chapter4/ariane_overview.drawio.png  used on input line 140.
@@ -1951,16 +1951,14 @@ Package logreq Info: Writing requests to 'chapter4.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 63180 strings out of 477805
+ 62847 strings out of 477805
  125039,2848258 words of node,token memory allocated
- 2084 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 80 glue, 4 kern, 1 penalty, 2 glyph, 362 attribute, 96 glue_spec, 53 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:5,2:7214,3:1015,4:106,5:405,6:49,7:8782,8:34,9:1360,10:25,11:581,12:1
- 81277 multiletter control sequences out of 65536+600000
+ 2062 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 80 glue, 4 kern, 1 penalty, 2 glyph, 355 attribute, 96 glue_spec, 52 attribute_list, 2 write nodes
+   avail lists: 1:5,2:7134,3:1009,4:106,5:405,6:50,7:8809,8:34,9:1360,10:25,11:578,12:1
+ 80947 multiletter control sequences out of 65536+600000
  102 fonts using 10203631 bytes
  135i,19n,131p,1220b,2595s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-warning  (pdf backend): unreferenced destination with name 'glo:pol'
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@rocket'
 
@@ -1969,15 +1967,11 @@ warning  (pdf backend): unreferenced destination with name 'cite.0@shakti'
 warning  (pdf backend): unreferenced destination with name 'cite.0@zaruba2019cost'
 
 warning  (pdf backend): unreferenced destination with name 'cite.0@boom'
-
-warning  (pdf backend): unreferenced destination with name 'glo:tur'
-
-warning  (pdf backend): unreferenced destination with name 'glo:ldnb'
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on chapter4.pdf (21 pages, 371745 bytes).
+Output written on chapter4.pdf (21 pages, 371299 bytes).
 
-PDF statistics: 328 PDF objects out of 1000 (max. 8388607)
- 266 compressed objects within 3 object streams
- 57 named destinations out of 1000 (max. 131072)
+PDF statistics: 305 PDF objects out of 1000 (max. 8388607)
+ 244 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 131072)
  100 words of extra memory for PDF output out of 10000 (max. 100000000)
 

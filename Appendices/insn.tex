@@ -1439,3 +1439,65 @@ ENDFOR
 %==========================================
 \rule{8cm}{0.4pt}\\
 %==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_cpysign\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R\\
+Code: ldpc\\
+\textbf{Description:}\\
+Renvoie rS2 basé sur le signe de rS1 \\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+rD[7:0] = (rS1[7:0] ) < 0 )? -rS2[7:0] : (rS1[7:0] ) >= 0 )? rS2[7:0] : 8'h00
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD[i+7:i] = (rS1[i+7:i] ) < 0 )? -rS2[i+7:i] : (rS1[i+7:i] ) >= 0 )? rS2[i+7:i] : 8'h00
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
+{\scriptsize
+\textbf{Synopsis:}\\
+Instruction: \textbf{i8\_storeu\_pi8 } \textit{rD rS1,rS2,rS3}\\
+Type: R\\
+Code: ldpc\\
+\textbf{Description:}\\
+Xor signe rS1 avec combinaison de rS2\\
+\textbf{Opération:}\\
+    \begin{figure}[H]
+    \begin{lstlisting}[
+    basicstyle=\ttfamily\scriptsize,
+    frame=single,
+    breaklines,
+    columns=fullflexible,
+    breakindent=1.2em,
+    breakatwhitespace,
+    ]
+//scalaire
+RD[7:0]={rS1[7] ,1'b0} ^( (rS2[0]==0)? 2'b01 : 2'b11 ) ;
+    
+//SIMD de degré N
+FOR j := 0 to N    
+ i := j*8    
+rD[i+7:i] ={rS1[i+7] ,1'b0} ^( (rS2[0]==0)? 2'b01 : 2'b11 ) ;
+ENDFOR
+\end{lstlisting}
+\end{figure}
+}
+%==========================================
+\rule{8cm}{0.4pt}\\
+%==========================================
