@@ -328,7 +328,6 @@
       \strng{authorbibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
       \strng{authornamehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
       \strng{authorfullhash}{ddae0743096c89cc75c1006e16a00f8d}
-      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -531,49 +530,6 @@
       \field{title}{Digital video broadcasting (DVB) - part II: S2-extensions (DVB-s2x) march}
       \field{type}{techreport}
       \field{year}{2014}
-    \endentry
-    \entry{TURBO:BERROU}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=161c43e77a547105f136c6fe506e2d6a}{%
-           family={Berrou},
-           familyi={B\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=72d08f61323da4e8c9da98678631dc0d}{%
-           family={Glavieux},
-           familyi={G\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3f5315dafb66611320bb168a5bf91e80}{%
-           family={Thitimajshima},
-           familyi={T\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Geneva, Switzerland}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
-      \strng{fullhash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{bibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{authorbibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{authornamehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
-      \strng{authorfullhash}{ddae0743096c89cc75c1006e16a00f8d}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the IEEE International Conference on Communications 1993}
-      \field{month}{5}
-      \field{title}{Near Shannon limit error-correcting coding and decoding: Turbo-codes.}
-      \field{volume}{2}
-      \field{year}{1993}
-      \field{pages}{1064\bibrangedash 1070 vol.2}
-      \range{pages}{-1}
     \endentry
     \entry{TURBO:TEN}{article}{}
       \name{author}{1}{}{%
@@ -2110,7 +2066,7 @@
       \field{title}{LDPC decoder architecture for DVB-S2 and DVB-S2X standards}
       \field{year}{2015}
     \endentry
-    \entry{BLG:REVUE:TPDS}{article}{}
+    \entry{LDPC:SOFT4}{article}{}
       \name{author}{2}{}{%
         {{hash=b302d0ceafdd4655b18e25018243626b}{%
            family={Le\bibnamedelima Gal},
@@ -3747,7 +3703,7 @@
       \field{title}{An Efficient, Portable and Generic Library for Successive Cancellation Decoding of Polar Codes}
       \field{year}{2015}
     \endentry
-    \entry{PC:X2}{article}{}
+    \entry{ri:LeG15a}{article}{}
       \name{author}{3}{}{%
         {{hash=b302d0ceafdd4655b18e25018243626b}{%
            family={Le\bibnamedelima Gal},
@@ -3939,7 +3895,7 @@
       \endverb
       \keyw{High level synthesis ; Models ; Digital Architectures ; Error Correcting codes ; FPGA circuits ; LPDC Codes ; Polar codes ; Successive Cancellation ; List successive cancellation ; Synthèse de Haut Niveau ; Modèles ; Architectures Numériques ; Codes Correcteurs d'Erreurs ; Circuits FPGA ; Codes LPDC ; Codes polaires ; Annulation successive ; Annulation successive à liste}
     \endentry
-    \entry{SCL:X1}{article}{}
+    \entry{Leonardon:2019vf}{article}{}
       \name{author}{6}{}{%
         {{hash=f363e48e2a65e7e73a49565507877b12}{%
            family={Léonardon},
@@ -5870,7 +5826,7 @@
       \range{pages}{7}
       \keyw{Decoding;Graphics processing unit;Iterative decoding;Instruction sets;Encoding;Computer architecture;Compute unified device architecture (CUDA);graphic processing unit (GPU);log sum-product algorithm (log-SPA);low-density parity-check (LDPC);regular LDPC;remote sensing;satellite communication links}
     \endentry
-    \entry{BLG:TURBO}{inproceedings}{}
+    \entry{Adrien}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=74b4ac29dcdb0e772e587b07a72407b8}{%
            family={Cassagne},
@@ -6214,62 +6170,6 @@
       \field{title}{Low-latency software {LDPC} decoders}
       \field{year}{2017}
     \endentry
-    \entry{LEONARDON:SCL}{article}{}
-      \name{author}{6}{}{%
-        {{hash=f363e48e2a65e7e73a49565507877b12}{%
-           family={Léonardon},
-           familyi={L\bibinitperiod},
-           given={Mathieu},
-           giveni={M\bibinitperiod}}}%
-        {{hash=74b4ac29dcdb0e772e587b07a72407b8}{%
-           family={Cassagne},
-           familyi={C\bibinitperiod},
-           given={Adrien},
-           giveni={A\bibinitperiod}}}%
-        {{hash=291691b60386f17090cb45b7220ab3c8}{%
-           family={Leroux},
-           familyi={L\bibinitperiod},
-           given={Camille},
-           giveni={C\bibinitperiod}}}%
-        {{hash=cc221b5de557c68720ad7d3877fa8ed6}{%
-           family={Jégo},
-           familyi={J\bibinitperiod},
-           given={Christophe},
-           giveni={C\bibinitperiod}}}%
-        {{hash=0e35757ee2dc529cbfa23f6f4a309c82}{%
-           family={Hamelin},
-           familyi={H\bibinitperiod},
-           given={Louis-Philippe},
-           giveni={L\bibinithyphendelim P\bibinitperiod}}}%
-        {{hash=6a42d4e9d7ea561406eb0d04e774086f}{%
-           family={Savaria},
-           familyi={S\bibinitperiod},
-           given={Yvon},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Nature}%
-      }
-      \strng{namehash}{f03d02d7808f3c4918425ddb86103afd}
-      \strng{fullhash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{bibnamehash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{authorbibnamehash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{authornamehash}{f03d02d7808f3c4918425ddb86103afd}
-      \strng{authorfullhash}{db95151e26040e07797ff7141bf4a35f}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Signal Processing Systems}
-      \field{month}{8}
-      \field{number}{8}
-      \field{title}{Fast and Flexible Software Polar List Decoders}
-      \field{volume}{91}
-      \field{year}{2019}
-      \field{pages}{937\bibrangedash 952}
-      \range{pages}{16}
-    \endentry
     \entry{XXX}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=aae552b4989763fc0d89b49dee8888e4}{%
@@ -6527,7 +6427,7 @@
       \strng{authorbibnamehash}{97dfbe3cfe877555236b62354c905fd9}
       \strng{authornamehash}{de2332266970c9ac12b2c4152d2dcebc}
       \strng{authorfullhash}{97dfbe3cfe877555236b62354c905fd9}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7219,101 +7119,6 @@
       \field{title}{https://github.com/openhwgroup/cv32e40p}
       \field{year}{2024}
     \endentry
-    \entry{Leonardon:2019vf}{article}{}
-      \name{author}{6}{}{%
-        {{hash=f363e48e2a65e7e73a49565507877b12}{%
-           family={Léonardon},
-           familyi={L\bibinitperiod},
-           given={Mathieu},
-           giveni={M\bibinitperiod}}}%
-        {{hash=74b4ac29dcdb0e772e587b07a72407b8}{%
-           family={Cassagne},
-           familyi={C\bibinitperiod},
-           given={Adrien},
-           giveni={A\bibinitperiod}}}%
-        {{hash=291691b60386f17090cb45b7220ab3c8}{%
-           family={Leroux},
-           familyi={L\bibinitperiod},
-           given={Camille},
-           giveni={C\bibinitperiod}}}%
-        {{hash=cc221b5de557c68720ad7d3877fa8ed6}{%
-           family={Jégo},
-           familyi={J\bibinitperiod},
-           given={Christophe},
-           giveni={C\bibinitperiod}}}%
-        {{hash=0e35757ee2dc529cbfa23f6f4a309c82}{%
-           family={Hamelin},
-           familyi={H\bibinitperiod},
-           given={Louis-Philippe},
-           giveni={L\bibinithyphendelim P\bibinitperiod}}}%
-        {{hash=6a42d4e9d7ea561406eb0d04e774086f}{%
-           family={Savaria},
-           familyi={S\bibinitperiod},
-           given={Yvon},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer-Nature}%
-      }
-      \strng{namehash}{f03d02d7808f3c4918425ddb86103afd}
-      \strng{fullhash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{bibnamehash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{authorbibnamehash}{db95151e26040e07797ff7141bf4a35f}
-      \strng{authornamehash}{f03d02d7808f3c4918425ddb86103afd}
-      \strng{authorfullhash}{db95151e26040e07797ff7141bf4a35f}
-      \field{extraname}{4}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Signal Processing Systems}
-      \field{month}{8}
-      \field{number}{8}
-      \field{title}{Fast and Flexible Software Polar List Decoders}
-      \field{volume}{91}
-      \field{year}{2019}
-      \field{pages}{937\bibrangedash 952}
-      \range{pages}{16}
-    \endentry
-    \entry{Berrou93}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=161c43e77a547105f136c6fe506e2d6a}{%
-           family={Berrou},
-           familyi={B\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=72d08f61323da4e8c9da98678631dc0d}{%
-           family={Glavieux},
-           familyi={G\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=3f5315dafb66611320bb168a5bf91e80}{%
-           family={Thitimajshima},
-           familyi={T\bibinitperiod},
-           given={P.},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Geneva, Switzerland}%
-      }
-      \strng{namehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
-      \strng{fullhash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{bibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{authorbibnamehash}{ddae0743096c89cc75c1006e16a00f8d}
-      \strng{authornamehash}{3f7d5ccfdf504a2152df0fc4edbeb1bf}
-      \strng{authorfullhash}{ddae0743096c89cc75c1006e16a00f8d}
-      \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the IEEE International Conference on Communications (ICC)}
-      \field{month}{5}
-      \field{title}{Near Shannon limit error-correcting coding and decoding: Turbo-codes}
-      \field{year}{1993}
-      \field{pages}{1064\bibrangedash 1070}
-      \range{pages}{7}
-    \endentry
     \entry{ri:LeG19c}{article}{}
       \name{author}{2}{}{%
         {{hash=69be0658883c797079d89a098315de96}{%
@@ -7554,60 +7359,6 @@
       \field{month}{4}
       \field{title}{{https://github.com/pulp-platform/pulpissimo}}
       \field{year}{2021}
-    \endentry
-    \entry{Adrien}{inproceedings}{}
-      \name{author}{6}{}{%
-        {{hash=cdf78e44aa4a0498f25ea6d3730a981b}{%
-           family={{Cassagne}},
-           familyi={C\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a8f5a741d78be2a190ea37cc8856ea5e}{%
-           family={{Tonnellier}},
-           familyi={T\bibinitperiod},
-           given={T.},
-           giveni={T\bibinitperiod}}}%
-        {{hash=9b44b45b0b23062285b9c32b568c0f10}{%
-           family={{Leroux}},
-           familyi={L\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=69be0658883c797079d89a098315de96}{%
-           family={{Le~Gal}},
-           familyi={L\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-        {{hash=b9d5b0d8cec9c2521d235e3ebcf26ca2}{%
-           family={{Aumage}},
-           familyi={A\bibinitperiod},
-           given={O.},
-           giveni={O\bibinitperiod}}}%
-        {{hash=4c281310b69afa4b5cacffdde9c4fac0}{%
-           family={{Barthou}},
-           familyi={B\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Brest, France}%
-      }
-      \strng{namehash}{3056b8556b4511cacb2efa0e7087c611}
-      \strng{fullhash}{8e16da2e542b542b6766e27ef32c4614}
-      \strng{bibnamehash}{8e16da2e542b542b6766e27ef32c4614}
-      \strng{authorbibnamehash}{8e16da2e542b542b6766e27ef32c4614}
-      \strng{authornamehash}{3056b8556b4511cacb2efa0e7087c611}
-      \strng{authorfullhash}{8e16da2e542b542b6766e27ef32c4614}
-      \field{extraname}{5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the International Symposium on Turbo Codes and Iterative Information Processing (ISTC)}
-      \field{month}{9}
-      \field{title}{Beyond {Gbps} Turbo decoder on multi-core {CPUs}}
-      \field{year}{2016}
-      \field{pages}{136\bibrangedash 140}
-      \range{pages}{5}
     \endentry
     \entry{boom}{article}{}
       \name{author}{4}{}{%

@@ -398,7 +398,7 @@ L'ensemble de ces résultats démontrent que malgré l'augmentation de la comple
 Cette dernière section présente les gains obtenus lorsque les extensions SIMD sont utilisées pour accélérer des décodeurs utilisant une stratégie de parallélisation intra-trames. 
 Par opposition à la parallélisation inter-trames, l'approche intra-trame utilise le parallélisme interne à l'algorithme pour minimiser la latence de décodage. 
 La mise en œuvre de cette stratégie de parallélisation nécessite toutefois l'usage d'instructions SIMD différentes de celles employées pour réaliser de l'inter-trames comme cela est détaillé dans le tableau \ref{liste:all:instr}. 
-À partir des instructions identifiées et intégrées dans les cœurs de processeur RISC-V, nous avons développé des versions spécifiques des codes sources des décodeurs logiciels dans des formes proches de celles décrites dans \cite{BLG:TURBO,BLG:SIPS:LDPC,Cass21}.
+À partir des instructions identifiées et intégrées dans les cœurs de processeur RISC-V, nous avons développé des versions spécifiques des codes sources des décodeurs logiciels dans des formes proches de celles décrites dans \cite{Adrien,BLG:SIPS:LDPC,Cass21}.
 Ces décodeurs ont été évalués avec les cœurs RISC-V déployés sur circuit FPGA. 
 Les temps d'exécution et les débits maximum ainsi obtenus ont ensuite été comparés. 
 Les données issues de ces expérimentations sont résumées dans le tableau \ref{cycles_intra} et \ref{cycles_intra_2}.

@@ -2393,7 +2393,7 @@
     <bcf:citekey order="25" intorder="2">CCSDS:NB</bcf:citekey>
     <bcf:citekey order="25" intorder="3">CCSDS</bcf:citekey>
     <bcf:citekey order="25" intorder="4">DVB:S2x</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">TURBO:BERROU</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">NearShanon</bcf:citekey>
     <bcf:citekey order="26" intorder="2">BookCodes</bcf:citekey>
     <bcf:citekey order="27" intorder="1">TURBO:TEN</bcf:citekey>
     <bcf:citekey order="28" intorder="1">3G</bcf:citekey>
@@ -2466,7 +2466,7 @@
     <bcf:citekey order="73" intorder="1">LDPC:HL</bcf:citekey>
     <bcf:citekey order="74" intorder="1">PIGNOLY:MS</bcf:citekey>
     <bcf:citekey order="74" intorder="2">BOUTILLON</bcf:citekey>
-    <bcf:citekey order="75" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">LDPC:SOFT4</bcf:citekey>
     <bcf:citekey order="75" intorder="2">FAIR:LDPC</bcf:citekey>
     <bcf:citekey order="76" intorder="1">SDR</bcf:citekey>
     <bcf:citekey order="76" intorder="2">SURVEY:SDR</bcf:citekey>
@@ -2527,12 +2527,12 @@
     <bcf:citekey order="106" intorder="5">92</bcf:citekey>
     <bcf:citekey order="106" intorder="6">93</bcf:citekey>
     <bcf:citekey order="107" intorder="1">PC:X1</bcf:citekey>
-    <bcf:citekey order="107" intorder="2">PC:X2</bcf:citekey>
+    <bcf:citekey order="107" intorder="2">ri:LeG15a</bcf:citekey>
     <bcf:citekey order="107" intorder="3">PC:X3</bcf:citekey>
     <bcf:citekey order="108" intorder="1">100</bcf:citekey>
     <bcf:citekey order="109" intorder="1">PC:prune</bcf:citekey>
     <bcf:citekey order="110" intorder="1">these_yann</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">SCL:X1</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">Leonardon:2019vf</bcf:citekey>
     <bcf:citekey order="111" intorder="2">SCL:X2</bcf:citekey>
     <bcf:citekey order="112" intorder="1">these_yann</bcf:citekey>
     <bcf:citekey order="113" intorder="1">R1</bcf:citekey>
@@ -2592,7 +2592,7 @@
     <bcf:citekey order="141" intorder="2">Wang11</bcf:citekey>
     <bcf:citekey order="141" intorder="3">Falcao11</bcf:citekey>
     <bcf:citekey order="142" intorder="1">FALCAO:SURVEY</bcf:citekey>
-    <bcf:citekey order="142" intorder="2">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="142" intorder="2">LDPC:SOFT4</bcf:citekey>
     <bcf:citekey order="143" intorder="1">Falcao11</bcf:citekey>
     <bcf:citekey order="144" intorder="1">DVB:S2</bcf:citekey>
     <bcf:citekey order="145" intorder="1">wimax</bcf:citekey>
@@ -2606,8 +2606,8 @@
     <bcf:citekey order="152" intorder="1">NVIDIA:CNN:COM:NUM</bcf:citekey>
     <bcf:citekey order="153" intorder="1">massive:gpu</bcf:citekey>
     <bcf:citekey order="154" intorder="1">Chang:ldpc</bcf:citekey>
-    <bcf:citekey order="155" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="156" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">Adrien</bcf:citekey>
     <bcf:citekey order="157" intorder="1">ri:LeG15a</bcf:citekey>
     <bcf:citekey order="157" intorder="2">mcgill</bcf:citekey>
     <bcf:citekey order="158" intorder="1">BLG:LDPC:NB</bcf:citekey>
@@ -2616,14 +2616,14 @@
     <bcf:citekey order="161" intorder="1">Cass21</bcf:citekey>
     <bcf:citekey order="162" intorder="1">BLG:SIPS:LDPC</bcf:citekey>
     <bcf:citekey order="162" intorder="2">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="162" intorder="3">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="162" intorder="4">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="162" intorder="3">Leonardon:2019vf</bcf:citekey>
+    <bcf:citekey order="162" intorder="4">Adrien</bcf:citekey>
     <bcf:citekey order="162" intorder="5">mcgill</bcf:citekey>
     <bcf:citekey order="163" intorder="1">Ref_4G</bcf:citekey>
     <bcf:citekey order="164" intorder="1">5g</bcf:citekey>
-    <bcf:citekey order="165" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="165" intorder="1">Adrien</bcf:citekey>
     <bcf:citekey order="166" intorder="1">FAIR:LDPC</bcf:citekey>
-    <bcf:citekey order="167" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="167" intorder="1">LDPC:SOFT4</bcf:citekey>
     <bcf:citekey order="168" intorder="1">XXX</bcf:citekey>
     <bcf:citekey order="169" intorder="1">ASIP:1</bcf:citekey>
     <bcf:citekey order="169" intorder="2">ASIP:2</bcf:citekey>
@@ -2665,7 +2665,7 @@
     <bcf:citekey order="195" intorder="1">LDPC:APPROX:4</bcf:citekey>
     <bcf:citekey order="196" intorder="1">LDPC:APPROX:3</bcf:citekey>
     <bcf:citekey order="196" intorder="2">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="197" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="197" intorder="1">LDPC:SOFT4</bcf:citekey>
     <bcf:citekey order="198" intorder="1">14</bcf:citekey>
     <bcf:citekey order="198" intorder="2">BLG:LDPC:NB</bcf:citekey>
     <bcf:citekey order="199" intorder="1">survey:NB</bcf:citekey>
@@ -2673,8 +2673,8 @@
     <bcf:citekey order="201" intorder="1">mcgill</bcf:citekey>
     <bcf:citekey order="201" intorder="2">Leonardon:2019vf</bcf:citekey>
     <bcf:citekey order="202" intorder="1">92</bcf:citekey>
-    <bcf:citekey order="203" intorder="1">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="204" intorder="1">Berrou93</bcf:citekey>
+    <bcf:citekey order="203" intorder="1">Leonardon:2019vf</bcf:citekey>
+    <bcf:citekey order="204" intorder="1">NearShanon</bcf:citekey>
     <bcf:citekey order="204" intorder="2">Wei18</bcf:citekey>
     <bcf:citekey order="205" intorder="1">Ref_4G</bcf:citekey>
     <bcf:citekey order="206" intorder="1">ri:LeG19c</bcf:citekey>
@@ -2693,7 +2693,7 @@
     <bcf:citekey order="216" intorder="2">ri:LeG19c</bcf:citekey>
     <bcf:citekey order="216" intorder="3">LDPC:SOFT4</bcf:citekey>
     <bcf:citekey order="217" intorder="1">LDPC:SOFT4</bcf:citekey>
-    <bcf:citekey order="218" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="218" intorder="1">Adrien</bcf:citekey>
     <bcf:citekey order="218" intorder="2">BLG:SIPS:LDPC</bcf:citekey>
     <bcf:citekey order="218" intorder="3">Cass21</bcf:citekey>
     <bcf:citekey order="219" intorder="1">boom</bcf:citekey>

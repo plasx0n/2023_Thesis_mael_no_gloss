@@ -97,7 +97,7 @@ Pour toutes les familles de CCE étudiées, nous sommes partis des meilleurs alg
 \centering
 \includegraphics[scale=1]{chapter3/figs/flot.pdf}
 \caption{ Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances.
-Les coeurs sont simulés via l'utilisation de \textit{Verilator} ou \textit{iverilog}(\PicoRV) et lorsque possible, emulés sut carte FPGA.}
+Les coeurs sont simulés via l'utilisation de \textit{Verilator} ou \textit{iverilog}(\PicoRV) et lorsque possible, emulés sur carte FPGA.}
 \label{flot}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,7 +133,7 @@ Ces nouvelles instructions proposées sont encodées selon le format de type R p
          Registre source 2      & [24:20]  \\
          Fonction 7             & [31:25]  \\
     \end{tabular}
-    \caption{Format 32 bits standardisé pour les instructions de type R (2 registres d'entrées) dans la spécification RISC-V.}
+    \caption{Format 32 bits standardisé pour les instructions de type R (2 registres d'entrées) dans la spécification RISC-V. Les champs de registre désignent l'addresse du registre dans la file.}
     \label{R_instruction}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,7 +159,7 @@ La suite de ce chapitre présente, pour chacune des familles de CCE, les motifs 
 %
 Depuis leur redécouverte, il y a une trentaine d'années, les codes LDPC ont vu la mise au point de nombreux algorithmes de décodage qui offrent à la fois de bonnes propriétés d'implantation et un pouvoir élevé en termes de correction d'erreurs. Ces derniers ont donné lieu à une multitude d'architectures matérielles tant sur cible ASIC \cite{LDPC:APPROX:3} que FPGA \cite{LDPC:APPROX:4}. 
 
-Dans le cadre de ces travaux de thèse, l'algorithme considéré est le \textit{\textbf{M}in-\textbf{S}um/\textbf{O}ffset \textbf{M}in-\textbf{S}um} (\textit{MS/OMS}) offrant le meilleur compromis entre complexité d'intégration \textit{vs} et performances de décodage. De manière analogue aux architectures matérielles \cite{LDPC:APPROX:3,LDPC:APPROX:4} et aux implantations logicielles sur cibles multicœurs \cite{BLG:REVUE:TPDS}, la formulation par couche horizontale des calculs de parité a été sélectionnée afin d'accélérer la vitesse de convergence du décodeur. L'ordonnancement par innondation (flooding scheduling) n'a pas été considéré dans ces travaux, mais peut bénificier des instructions spécialisées identifiées. 
+Dans le cadre de ces travaux de thèse, l'algorithme considéré est le \textit{\textbf{M}in-\textbf{S}um/\textbf{O}ffset \textbf{M}in-\textbf{S}um} (\textit{MS/OMS}) offrant le meilleur compromis entre complexité d'intégration \textit{vs} et performances de décodage. De manière analogue aux architectures matérielles \cite{LDPC:APPROX:3,LDPC:APPROX:4} et aux implantations logicielles sur cibles multicœurs \cite{LDPC:SOFT4}, la formulation par couche horizontale des calculs de parité a été sélectionnée afin d'accélérer la vitesse de convergence du décodeur. L'ordonnancement par innondation (flooding scheduling) n'a pas été considéré dans ces travaux, mais peut bénificier des instructions spécialisées identifiées. 
 L'algorithme de décodage est composé de plusieurs boucles imbriquées permettant le calcul de la parité des nœuds $\bm{C_n}$ et la mise à jour des nœuds de données $\bm{V_n}$. 
 Pour ce faire, à chaque \textit{itération} de décodage, l'algorithme va, pour chaque $\bm{C_n}$, actualiser sa valeur de parité à partir des $DegCn$ nœuds de variable qui lui sont connectés. 
 À la suite de l'évaluation de sa parité, il va rediffuser des messages à ces mêmes $\bm{V_n}$. Par souci de clarté, un extrait de la formulation de cet algorithme de décodage est présenté ci-après dans le listing \ref{ldpc_code_origin}. Il s'agit d'un code en langage C présentant le calcul de la valeur interne des nœuds de parité à partir des valeurs des accumulateurs et des messages entrants. Cette description simple permet de mettre en exergue la prédominance des opérations arithmétiques et logiques simples par rapport aux accès mémoires et à l'arithmétique sur les pointeurs.
@@ -491,7 +491,7 @@ void update(int GF, unsigned char dst[GF], unsigned char src1[GF] )
 
 Le code logiciel présenté dans le listing \ref{ldpcnb_code_ISA} correspond au traitement décrit dans le listing \ref{ldpcnb_code} avec l'utilisation de cette nouvelle instruction.
 
-Cette analyse s'est poursuivie sur l'ensemble du processus de décodage. Le tableau \ref{ldpcnb_instr} regroupe l'ensemble des instructions retenues pour accélérer le décodage des LDPC-NB. Le nombre réduit d'instructions s'explique ici par la faible diversité des opérations arithmétiques utilisées dans cet algorithme de décodage et la prépondérance des accès mémoire mis en œuvre par exemple pour réaliser les opérations de multiplication et de division dans $\mathbb{GF}$.
+Cette analyse s'est poursuivie sur l'ensemble du processus de décodage. Le tableau \ref{ldpcnb_instr} regroupe l'ensemble des instructions retenues pour accélérer le décodage des LDPC-NB. Le nombre réduit d'instructions s'explique ici par la faible diversité des opérations arithmétiques utilisées dans cet algorithme de décodage et la prépondérance des accès mémoire mis en œuvre par exemple pour réaliser les opérations de multiplication et de division dans $\mathbb{GF}$. Ce faible nombre d'instructions est une première limitation de l'approche utilisée, car ces dernières ne permettent pas d'optimiser les accès en mémoire. 
 
 %%%%
 %%%%
@@ -505,7 +505,7 @@ Cette analyse s'est poursuivie sur l'ensemble du processus de décodage. Le tabl
 
 Les codes polaires sont une famille récente de CCE \cite{Arikan_2009}, mais fait d'ores et déjà partie intégrante du standard 5G. Les enjeux liés à ce standard ont motivé bon nombre de travaux de recherche durant la dernière décennie. De nombreux algorithmes de décodage ont été proposés dans la littérature, comme cela a été exposé dans le chapitre précédent. Ces derniers ont donné lieu à la réalisation d'implantation matérielles dédiées, mais aussi au développement de solutions logicielles \cite{mcgill,Leonardon:2019vf}.
 Dans ces travaux, nous nous sommes focalisés sur l'un des algorithmes qui a été adapté aux implantations logicielles, le \textit{SC}, ainsi qu'à sa variante \textit{Fast-SC}(F-SC) \cite{92}.
-Il est à noter que ces travaux pourraient par la suite être étendus à l'optimisation de décodeurs basés sur l'utilisation de l'algorithme SC-list \cite{LEONARDON:SCL}.
+Il est à noter que ces travaux pourraient par la suite être étendus à l'optimisation de décodeurs basés sur l'utilisation de l'algorithme SC-list \cite{Leonardon:2019vf}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[tb]
@@ -591,7 +591,7 @@ end
 \end{lstlisting}
 \end{figure}
 
-Une analyse complète de l'algorithme \textit{SC} a permis d'identifier six motifs pouvant bénéficier de la conception d'instructions dédiées, comme cela est résumé dans le tableau \ref{polar_instr}. Il est à noter que la même procédure a été appliquée sur l'algorithme \textit{Fast-SC} qui est une extension de l'algorithme \textit{SC}. Cela a permis d'identifier cinq instructions supplémentaires comme mentionné dans le tableau \ref{polar_instr}.
+Une analyse complète de l'algorithme \textit{SC} a permis d'identifier jusqu'a 6 motifs pouvant bénéficier de la conception d'instructions dédiées, comme cela est résumé dans le tableau \ref{polar_instr}. Il est à noter que la même procédure a été appliquée sur l'algorithme \textit{Fast-SC} qui est une extension de l'algorithme \textit{SC}. Cela a permis d'identifier 5 instructions supplémentaires comme mentionné dans le tableau \ref{polar_instr}.
 %%%%%%%%%%%%%%%%
 \begin{table}[!tb]
     \centering
@@ -671,7 +671,7 @@ void node(N, LLR, PS,...){
 %
 %
 %
-Les turbo codes \cite{Berrou93,Wei18} sont connus et utilisés depuis plusieurs années dans de nombreux standards, comme par exemple le 4G-LTE \cite{Ref_4G}. Lors de la conception de décodeurs associés, qu'ils soient matériels ou logiciels, l'algorithme \textit{Max-log-MAP} (MLM) est souvent plébiscité à cause du compromis complexité / performance qu'il offre. C'est aussi, d'après les travaux de la littérature, le plus adapté pour une implantation logicielle \cite{ri:LeG19c}, justifiant sa sélection. Comme cela a été introduit dans le chapitre précédent, les algorithmes de turbo décodage opèrent sur des treillis sur lesquels ils calculent divers métriques de branches. Cela se traduit dans la formulation algorithmique par la présence de boucles dans lesquelles, pour chaque état du treillis, différentes valeurs sont mises à jour. Contrairement aux autres familles de CCE, ces métriques codées en virgule fixe ne sont pas saturées. 
+Les turbo codes \cite{NearShanon,Wei18} sont connus et utilisés depuis plusieurs années dans de nombreux standards, comme par exemple le 4G-LTE \cite{Ref_4G}. Lors de la conception de décodeurs associés, qu'ils soient matériels ou logiciels, l'algorithme \textit{Max-log-MAP} (MLM) est souvent plébiscité à cause du compromis complexité / performance qu'il offre. C'est aussi, d'après les travaux de la littérature, le plus adapté pour une implantation logicielle \cite{ri:LeG19c}, justifiant sa sélection. Comme cela a été introduit dans le chapitre précédent, les algorithmes de turbo décodage opèrent sur des treillis sur lesquels ils calculent divers métriques de branches. Cela se traduit dans la formulation algorithmique par la présence de boucles dans lesquelles, pour chaque état du treillis, différentes valeurs sont mises à jour. Contrairement aux autres familles de CCE, ces métriques codées en virgule fixe ne sont pas saturées. 
 Ainsi, dans la version scalaire de l'algorithme de décodage, peu de motifs d'instructions répondent aux contraintes énoncées. Parmi les motifs restants, le facteur de pénalisation des valeurs des extrinsèques présenté dans le listing \ref{code_turbocode} est un candidat.
 
 
@@ -762,7 +762,7 @@ L'absence de saturation dans ces algorithmes de décodage, ainsi que les contrai
 %
 %
 %
-Dans cette partie, une synthèse des différentes instructions qui ont été retenues est proposée. Ces instructions, listées dans le tableau \ref{instrus_global} ont été conçues pour travailler sur des données scalaires codées sur 8 bits. Ce format de représentation limite les pertes de performances lors du décodage de codes CCE par rapport au format flottant et permet d'imaginer leur extension sous la forme d'instructions SIMD par la suite. Toutefois, il est possible de les transposer sur des formats de quantification supérieurs, c.-à-d.. 32 bits. 
+Dans cette partie, une synthèse des différentes instructions qui ont été retenues est proposée. Ces instructions, listées dans le tableau \ref{instrus_global} ont été conçues pour travailler sur des données scalaires codées sur 8 bits. Ce format de représentation limite les pertes de performances lors du décodage de codes CCE par rapport au format flottant et permet d'imaginer leur extension sous la forme d'instructions SIMD par la suite. Toutefois, il est possible de les transposer sur des formats de quantification supérieurs, c.-à-d.. 32 bits au format entier scalaire, soit 4 élements de 8 bits. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
     \footnotesize
@@ -796,7 +796,7 @@ Dans cette partie, une synthèse des différentes instructions qui ont été ret
     \label{instrus_global}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%
-Le tableau \ref{instrus_global} montre que le décodage des codes LDPC peut bénéficier de 8 instructions spécialisées, tandis que les algorithmes de décodage des codes LDPC-NB et des codes polaires (SC et F-SC) n'en possèdent que 4. Les améliorations sont plus limitées pour le turbo décodage où seules 2 instructions ont été identifiées. Il est intéressant de noter qu'il existe un sous-ensemble d'instructions commun à tout ou partie des codes CCE. Ainsi, afin d'accélérer l'ensemble des décodeurs, seules 17 instructions sont nécessaires.
+Le tableau \ref{instrus_global} montre que le décodage des codes LDPC peut bénéficier de 8 instructions spécialisées, tandis que les algorithmes de décodage des codes LDPC-NB et des codes polaires (SC et F-SC) n'en possèdent que 3 et 4 respectivement. Les améliorations sont plus limitées pour le turbo décodage où seules 2 instructions ont été identifiées. Il est intéressant de noter qu'il existe un sous-ensemble d'instructions commun à tout ou partie des codes CCE. Ainsi, afin d'accélérer l'ensemble des décodeurs, seules 17 instructions sont nécessaires.
 Afin de tester et d'évaluer l’efficacité et la pertinence des instructions proposées, le flot décrit dans la figure \ref{flot} est mis en place. Nous allons commencer par détailler celui-ci, puis nous présenterons les cœurs RISC-V retenus dans le cadre de ces travaux de thèse avant de présenter les résultats expérimentaux.
 %
 %
@@ -812,12 +812,13 @@ Les premiers travaux autour du RISC-V ont généré une importante émulation au
 À ce jour, de multiples cœurs RISC-V sont disponibles sous des licences \textit{open-source} à des fins d’évaluation et/ou d’expérimentations. 
 Les implantations varient tant au niveau du jeu d'instructions que des caractéristiques intrinsèques de l'architecture (nombre d’étages de pipeline, complexité de l’UAL, taille des mémoires caches\ldots). 
 Dans certains cœurs des mécanismes plus complexes, tel que la capacité d’exécution dans le désordre (\textit{i.e. Out-of-Order}) et/ou l'utilisation de front-end super-scalaire ont été intégrés.  Toutefois, chaque cœur est potentiellement extensible et modifiable pour permettre l'ajout d'instructions dédiées. Cependant, leurs complexités architecturales et la qualité de leurs descriptions sources peuvent parfois rendre complexe, voir compromettre, ce type d'opération. 
-Dans le cadre de ces travaux et après une vaste étude préliminaire, quatre cœurs RISC-V ont été sélectionnés : \PicoRV \cite{wolf_cliffordwolfpicorv32_2021}, \RISCY \cite{cite_riscy}, \IBEX \cite{noauthor_lowriscibex_2021,schiavone_slow_2017} et \SCR \cite{noauthor_syntacorescr1_2021}.
+Dans le cadre de ces travaux une vaste étude préliminaire consistant à tester les multiples cœurs open-sources alors disponibles dans la litérature à été effectuée. Cette dernière consistait à étudier la vitesse de prototypage, la complexité de mise en oeuvre de benchmarks, la facilité de prise en main et le developpement avec les outils proposés, ainsi que la qualité des sources HDL. Au terme de celle-ci, quatre cœurs RISC-V ont été sélectionnés : \PicoRV \cite{wolf_cliffordwolfpicorv32_2021}, \RISCY \cite{cite_riscy}, \IBEX \cite{noauthor_lowriscibex_2021,schiavone_slow_2017} et \SCR \cite{noauthor_syntacorescr1_2021}.
 
 Cette sélection est basée sur les différences architecturales, les performances générales et la complexité matérielle respective des cœurs. L'objectif principal étant d’évaluer de la façon la plus objective possible l'apport et l'impact des différentes instructions ajoutées avec notre approche. 
 Les quatre architectures RISC-V sélectionnées supportent le jeu d'instruction RV32-IMC (I: integer, M: multiplication et division, C : instructions compressées). Comme cela est indiqué dans le tableau \ref{brief_cores}, le nombre d'étages de pipeline mis en œuvre varie entre 1 et 4.
 
-Les caractéristiques principales des quatre cœurs sélectionnés sont présentées ci-dessous : 
+Les caractéristiques principales des quatre cœurs \\
+sélectionnés sont présentées ci-dessous : 
 
 \begin{itemize}
     \item {\PicoRV \cite{wolf_cliffordwolfpicorv32_2021} est un cœur à faible complexité. Il a été conçu pour supporter des applications simples. Son implantation matérielle est légère et permet d'atteindre des fréquences de fonctionnement élevées (>300 MHz) sur des cibles de type FPGA. Cependant, il ne possède qu'un seul étage de pipeline avec exécution dans l'ordre.}
@@ -854,9 +855,9 @@ Les résultats obtenus sont présentés et analysés dans la prochaine section. 
 %
 Dans cette section, les performances de l'ensemble des instructions spécialisées identifiées et déployées sur les cœurs RISC-V sont présentées et évaluées.
 Comme décrit dans les sections précédentes, les versions logicielles originales des CCE considérés ont été exécutées sur chacun des cœurs sans modification, établissant ainsi les performances de référence. 
-Ensuite, les codes sources modifiés, intégrant l'usage des instructions spécifiques, ont également été exécutés dans le but de mesurer la différence entre les temps d'exécution. De même, l'impact en termes de complexité matérielle de l'ajout de ces nouvelles instructions dans les cœurs RISC-V, ainsi que l'évolution de leur fréquence de fonctionnement maximale ont été étudiés. À cette fin, les versions originales et enrichies des cœurs ciblés ont été prototypées sur des FPGA \textit{Xilinx Artix-7} et \textit{Kintex-7}. 
+Ensuite, les codes sources modifiés, intégrant l'usage des instructions spécifiques, ont également été exécutés dans le but de mesurer la différence entre les temps d'exécution. De même, l'impact en termes de complexité matérielle de l'ajout de ces nouvelles instructions dans les cœurs RISC-V, ainsi que l'évolution de leur fréquence de fonctionnement maximale ont été étudiés. À cette fin, les versions originales et enrichies des cœurs ciblés ont été prototypées sur un FPGA \textit{Xilinx Kintex-7}. 
 
-Pour mener à bien ces expérimentations, les programmes décrivant le comportement des décodeurs ont été écrits en langage C visant une exécution en mode bare-metal. Afin de compiler l'ensemble de ces codes et de produire les binaires exécutés par les cœurs RISC-V, GCC 12.2 a été utilisé. Le compilateur est configuré afin de générer un exécutable ne comportant que des instructions RV32I et avec le flag d'optimisation -O3. 
+Pour mener à bien ces expérimentations, les programmes décrivant le comportement des décodeurs ont été écrits en langage C visant une exécution directement sur le materiel sans système d'exploitation. Afin de compiler l'ensemble de ces codes et de produire les binaires exécutés par les cœurs RISC-V, GCC 12.2 a été utilisé. Le compilateur est configuré afin de générer un exécutable ne comportant que des instructions RV32I et avec le flag d'optimisation -O3. 
 
 Un ensemble d'expérimentations a été conduit afin de mesurer les gains apportés par l'utilisation d'instructions spécialisées opérant sur des données scalaires codées sur 8 bits (\acrshort{sisd}). Ces expérimentations ont été réalisées sur chacune des cibles présentées précédemment. 
 

@@ -529,6 +529,8 @@ INPUT ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png
 INPUT ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png
 OUTPUT main.ist
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./Acknowledgement/acknowledgement.tex
+INPUT ./Acknowledgement/acknowledgement.tex
 OUTPUT main.toc
 INPUT ./main.acr
 INPUT ./main.gls

@@ -126,7 +126,7 @@ L’intégration des CCE dans les systèmes numériques a débuté dans les ann�
 %
 %
 %
-Les turbo codes sont une classe de CCE découverte au début des années 1990  \cite{TURBO:BERROU, BookCodes}. Le développement de ces codes est fondé sur l'utilisation de deux codes convolutifs parallèles appelés codes composants, combinés par un processus d'encodage itératif. Ces derniers fonctionnent de manière complémentaire et exploitent l'interférence mutuelle pour améliorer les performances de correction d'erreurs. 
+Les turbo codes sont une classe de CCE découverte au début des années 1990  \cite{NearShanon, BookCodes}. Le développement de ces codes est fondé sur l'utilisation de deux codes convolutifs parallèles appelés codes composants, combinés par un processus d'encodage itératif. Ces derniers fonctionnent de manière complémentaire et exploitent l'interférence mutuelle pour améliorer les performances de correction d'erreurs. 
 Les turbo codes ont permis d’obtenir des performances de décodage proches de la limite théorique de Shannon. 
 En plus de leurs excellentes performances de décodage, la complexité calculatoire modérée de ces algorithmes et donc de leurs réalisations matérielles \cite{TURBO:TEN}, a accéléré leur inclusion dans de nombreux standards au début des années 2000 tels que les standards 3G \cite{3G}, 4G \cite{4G}, et 4G LTE \cite{Ref_4G}. Ils ont aussi été utilisés dans le domaine des communications satellitaires  \cite{CCSDS:TURBO,DVB:RCS}.
 Depuis leur découverte, ces codes ont été étudiés avec attention  \cite{TURBO:SURVEY} afin d’améliorer leurs niveaux de performances: 
@@ -303,7 +303,7 @@ L’Algorithme \ref{ldpc_minsum} présente la formulation d’un algorithme de d
     \item Le kernel (2) doit quant à lui itérer séquentiellement $\mathit{i}$ fois à cause des dépendances de données entre les itérations. 
 \end{itemize}
 
-L'exploitation de ces différents niveaux de parallélismes associés à des contraintes applicatives spécifiques, a permis la conception d’architectures numériques variées permettant d’atteindre des débits de plusieurs Gbps sur technologies \acrshort{fpga} \cite{PIGNOLY:MS,BOUTILLON}, mais aussi d’atteindre des débits similaires sur des architectures programmables \cite{BLG:REVUE:TPDS,FAIR:LDPC}. \\
+L'exploitation de ces différents niveaux de parallélismes associés à des contraintes applicatives spécifiques, a permis la conception d’architectures numériques variées permettant d’atteindre des débits de plusieurs Gbps sur technologies \acrshort{fpga} \cite{PIGNOLY:MS,BOUTILLON}, mais aussi d’atteindre des débits similaires sur des architectures programmables \cite{LDPC:SOFT4,FAIR:LDPC}. \\
 L’ensemble de ces solutions ont permis d'obtenir des compromis \textit{débit vs flexibilité}, permettant l’émergence et l’usage à grande échelle des plateformes SdR \cite{SDR, SURVEY:SDR} et des systèmes de type Cloud-RAN \cite{CLOUD:RAN2,CLOUD:RAN3} plébiscités par exemple pour le déploiement de la 5G \cite{CLOUD:RAN1}. 
 
 En supplément des travaux relatifs à la construction des codes LDPC et de l’amélioration des caractéristiques des décodeurs matériels et logiciels, d’autres initiatives se sont focalisées sur l’extension de cette famille aux corps de Galois non binaires ($\mathbb{GF}( \bm{q} )$ avec $\bm{q}\ge2$).
@@ -485,10 +485,10 @@ Les fonctions $f$ et $g$ mises en œuvre dans lors du processus de décodage dan
 
 Chaque nœud du graphe reçoit $\bm{\frac{N}{2}}$ LLRs de son père et lui retourne après complétion du calcul $\bm{N'}$ sommes partielles.
 Ainsi, la complexité calculatoire par nœud est divisée par deux à chaque fois que l’on descend d’un niveau. Le parallélisme de calcul permettant d’accélérer l’exécution du processus de décodage évolue ainsi durant le parcours de l’arbre.
-Ainsi, l’algorithme de décodage SC est bien adapté pour les implémentations matérielles \cite{88, 89, 90, 91, 92, 93} et logicielles \cite{PC:X1, PC:X2, PC:X3}, car il possède une faible complexité calculatoire qui évolue en $\mathcal{O}(\bm{N} \times log(\bm{N}))$.
+Ainsi, l’algorithme de décodage SC est bien adapté pour les implémentations matérielles \cite{88, 89, 90, 91, 92, 93} et logicielles \cite{PC:X1, ri:LeG15a, PC:X3}, car il possède une faible complexité calculatoire qui évolue en $\mathcal{O}(\bm{N} \times log(\bm{N}))$.
 Cependant, le processus de décodage étant principalement séquentiel, il nécessite une traversée pré-ordonnée de l’arbre binaire \cite{100} qui fait: (1) varier le niveau de parallélisme exploitable en fonction du niveau de l’arbre considéré et (2) empêche l’accélération de l’exécution des feuilles terminales même si plusieurs éléments de calcul sont disponibles.
 Afin de résoudre ce dernier point, des techniques d’élagage de l’arbre binaire ont été proposées \cite{PC:prune}.
-L’algorithme SC-List \cite{these_yann}, plus efficace du point de vue des performances de décodage, augmente fortement la complexité calculatoire à cause de la gestion d’une liste de \textbf{L} solutions probables de manière concurrente. Cela rend son implantation plus difficile tant d’un point de vue logiciel \cite{SCL:X1, SCL:X2} que matériel \cite{these_yann}, car malgré des niveaux de parallélisation supplémentaires, des besoins de tri des données et de synchronisation des listes apparaissent. 
+L’algorithme SC-List \cite{these_yann}, plus efficace du point de vue des performances de décodage, augmente fortement la complexité calculatoire à cause de la gestion d’une liste de \textbf{L} solutions probables de manière concurrente. Cela rend son implantation plus difficile tant d’un point de vue logiciel \cite{Leonardon:2019vf, SCL:X2} que matériel \cite{these_yann}, car malgré des niveaux de parallélisation supplémentaires, des besoins de tri des données et de synchronisation des listes apparaissent. 
 % 
 % 
 % 

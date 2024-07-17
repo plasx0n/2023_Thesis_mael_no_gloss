@@ -83,7 +83,7 @@ Cependant, certains cœurs de processeurs pensés pour exécuter plus efficaceme
 L'accès à une troisième opérande permet l'intégration d'opérations plus complexes au sein de l'UAL, dans le but de réduire le nombre d'instructions à réaliser, et par voie de conséquence, de diminuer le temps d'exécution des applicatifs ainsi que la taille de leur binaire.
 Ces nouvelles opportunités ont toutefois un impact négatif sur la complexité matérielle de l'architecture, car elles nécessitent l'ajout d'un réseau de multiplexage supplémentaire dans la file de registres ou bien une duplication des bancs mémoire dans le but de délivrer cette donnée supplémentaire à l'UAL.
 De plus, un format d'instruction supplémentaire doit être géré dans le décodeur d'instructions pour autoriser l'usage de cet troisième opérande.
-L'augmentation de la complexité matérielle induite et le faible usage d'une troisième opérande dans l'UAL pour un bon nombre d'applications généralistes, limitent l'intégration de cette approche la majorité des cœurs RISC-V.
+L'augmentation de la complexité matérielle induite et le faible usage d'une troisième opérande dans l'UAL pour un bon nombre d'applications généralistes, limitent l'intégration de cette dans la majorité des cœurs RISC-V.
 
 
 Dans le cadre de l'étude présentée dans les chapitres précédents, nous avons identifié et intégré des instructions possédant au maximum deux opérandes en entrée, notée dans ce chapitre \textbf{2R}.
@@ -116,7 +116,7 @@ Ces dernières proposent un format 32 bits spécifique pour les opérations de t
          Registre source 3      & [31:27]  \\
         \bottomrule
     \end{tabular}
-    \caption{Format 32 bits standardisé pour les instructions de type R4 (3 registres d'entrées) dans les spécifications RISC-V : RV-FDQ}
+    \caption{Format 32 bits standardisé pour les instructions de type R4 (3 registres d'entrées) dans les spécifications RISC-V : RV-FDQ. Les champs de registre désignent l'addresse du registre dans la file.}
     \label{R4_instruction}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -487,7 +487,7 @@ Ces évaluations ont été réalisées en sélectionnant la configuration de bas
 L'évaluation du temps d'exécution des différents algorithmes de décodage a été obtenu par simulation. 
 Celles-ci ont été réalisées avec l'aide de l'outil \textit{verilator} (version 4.110) qui, à partir de la description en SystemVerilog du cœur CVA6, permet de réaliser des simulations \textit{Bit Accurate} et \textit{Cycle Accurate}.
 Cette stratégie, a été privilégiée pour éviter des temps de synthèse logique prohibitifs. 
-En effet, il faut compter environ une heure pour réaliser une synthèse et le placement routage du SoC contenant le cœur CVA6.
+En effet, il faut compter environ une heure pour réaliser une synthèse et le placement routage du SoC contenant le cœur CVA6. Avec 45 configurations différentes, une quantitée non-négligeable de temps est nécessaire. 
 %
 %
 %
@@ -566,7 +566,7 @@ Les gains obtenus sont limités à ces niveaux à cause des accès mémoire (\te
 
 \textcolor{black}{Les dernières lignes du tableau \ref{tab:perfs_scalaire_3regs} présentent le débit normalisé des décodeurs, pour une fréquence de fonctionnement à 50 MHz. 
 Cette fréquence est liée à l'implantation matérielle du cœur CVA6 sur le FPGA Kintex-7 présent sur la carte Digilent Genesys 2.
-Il est à noter que les instructions ajoutées dans le cœur CVA6 n'ont pas d'impact sur la fréquence maximale de fonctionnement.
+Il est à noter que les instructions ajoutées dans le cœur CVA6 n'ont pas d'impact sur la fréquence maximale de fonctionnement, probablement liée à la fréquence de fonctionnement limitée à 50 MHz. 
 Les résultats présentés mettent en exergue que les configurations \ding{184} des décodeurs offrent des gains substantiels grâce aux instructions spécialisées proposées.}
 
 Afin d'estimer le coût matériel associé à l'implantation des ces instructions dans le cœur testé, les UAL correspondant à chaque configuration sont isolées et comparées à la version de l'UAL standard du cœur.
@@ -625,7 +625,7 @@ Pour les codes LDPC, la configuration \textbf{2R} implante 8 instructions, soit 
 Dans le cas des codes polaires, les algorithmes SC et Fast-SC (F-SC) partagent les mêmes implantations d'instructions en matériel pour les configurations \textbf{2R} et \textbf{3R}, ainsi les résultats observés sont similaires. L'implantation de 4 (\textbf{3R}) au lieu de 6 instructions (\textbf{3R}), permet de réduire l'empreinte matérielle associée de $\approx 30\%$.
 Cette observation est également valable avec les codes LDPC-NB.
 Enfin, pour les turbo codes, 6 instructions sont implantées pour la configuration (\textbf{3R}), contre seulement 2 (\textbf{2R}). On constate ainsi que le coût matériel augmente fortement et est plus que doublé ($137\%$). 
-Il est à noter que toutes ces instructions sont implantées sans conséquences sur la fréquence de fonctionnement du cœur.}
+Il est à noter que toutes ces instructions sont implantées sans conséquences sur la fréquence de fonctionnement du cœur, pour les raisons mentionées précédemment.}
 
 
 
