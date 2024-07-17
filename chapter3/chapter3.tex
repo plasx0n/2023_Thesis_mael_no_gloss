@@ -309,7 +309,7 @@ Maximum signé sur 8 bit         & i8\_max\_pi8 rD,rS1,rS2          & rD := MAX8
 Minimum signé sur 8 bit         & i8\_min\_pi8 rD,rS1,rS2          & rD := MIN8s(rS1,rS2) \\ 
 Valeur nouv. message            & i8\_invB\_Aneq1\_pi8 rD,rS1,rS2  & rD := (rS1\geqslant1)?rS2:-rS2 \\ 
 Calcul du signe                 & i8\_xorA\_signB\_pi8 rD,rS1,rS2  & rD := rS1 xor ((rS2\geqslant0)?1:0) \\
-Soustraction saturée à 127;-127 & i8\_sub\_sat127\_pi8             & rD := SAT127(rS1-rS2) \\ 
+Soustraction saturée à 127;-127 & i8\_sub\_sat127\_pi8 rD,rS1,rS2  & rD := SAT127(rS1-rS2) \\ 
 \hline
 \end{tabular}
 \caption{Ensemble d'instructions proposées pour améliorer le décodage de code LDPC dans un contexte de fonctionnement scalaire.}
@@ -779,13 +779,13 @@ Dans cette partie, une synthèse des différentes instructions qui ont été ret
     i8\_xorA\_signB\_pi8 rD,rS1,rS2 & \checkmark    &  -    &   -    &   -   \\%\midrule
     i8\_sub\_sat127\_pi8 rD,rS1,rS2 & \checkmark    &  -    &   \checkmark    &   -   \\%\bottomrule
 
-    u8\_addu\_sat64\_pu8 rD,rS1,rS2 &  -   &  \checkmark    &   -    &   -   \\%\midrule
-    u8\_subu\_sat64\_pu8 rD,rS1,rS2 &  -   &  \checkmark    &   -    &   -   \\%\midrule
-    u8\_minu\_pu8                   &  -   &  \checkmark    &   -    &   -   \\%\midrule
-    i8\_scale\_pi8                  &  -   &  -    &   -    &  \checkmark   \\%\midrule
+    u8\_addu\_sat64\_pu8 rD,rS1,rS2 &  -            &  \checkmark    &   -    &   -   \\%\midrule
+    u8\_subu\_sat64\_pu8 rD,rS1,rS2 &  -            &  \checkmark    &   -    &   -   \\%\midrule
+    u8\_minu\_pu8 rD,rS1,rS2        &  -            &  \checkmark    &   -    &   -   \\%\midrule
+    i8\_scale\_pi8 rD,rS1           &  -            &  -     &   -    &  \checkmark   \\%\midrule
         
-    i8\_Fx\_pi8      rD,rS1,rS2     &  -   &  -    &   \checkmark    &   -   \\%\midrule
-    i8\_Rx\_pi8 rD,rS1,rS2      &  -   &  -    &  \checkmark    &   -   \\%\midrule
+    i8\_Fx\_pi8      rD,rS1,rS2     &  -            &  -    &   \checkmark    &   -   \\%\midrule
+    i8\_Rx\_pi8 rD,rS1,rS2          &  -            &  -    &  \checkmark    &   -   \\%\midrule
     \cmidrule(l){1-5}
     Total                           & 8     & 3     & 4     & 2 \\
     \bottomrule
@@ -918,7 +918,7 @@ Il est important de noter que le gain en pourcentage est la métrique la plus co
     & \ding{182} Baseline                       & cycles    & 217172    & 1333324   &  676218   & 3476435   & 2503511   \\
     \cmidrule(l){2-8}
     
-    & \ding{183} SISD                    & cycles    & 131853    &  753144   &  332693   & 2875953   & 2133442   \\
+    & \ding{183} SISD                           & cycles    & 131853    &  753144   &  332693   & 2875953   & 2133442   \\
     \cmidrule(l){2-8}
     
     & Gain (\ding{182}$\rightarrow$\ding{183})  & cycles    & 85319     & 580180    & 343525    & 600482    & 370069    \\
@@ -935,7 +935,7 @@ Il est important de noter que le gain en pourcentage est la métrique la plus co
     & \ding{182} Baseline                       & cycles    &  84966    &  516441   &  261090   & 1390238   & 1018910   \\
     \cmidrule(l){2-8}
     
-    & \ding{183} SISD                   & cycles    &  54340    &  288594   &  138544   & 1086873   &  782778   \\
+    & \ding{183} SISD                           & cycles    &  54340    &  288594   &  138544   & 1086873   &  782778   \\
     \cmidrule(l){2-8}
     
     & Gain (\ding{182}$\rightarrow$\ding{183})  & cycles    & 30626     & 227847    & 122546    & 303365    & 236132    \\
@@ -952,7 +952,7 @@ Il est important de noter que le gain en pourcentage est la métrique la plus co
     & \ding{182} Baseline                       & cycles    &  76775    &  397790   & 218120    & 1310272   &  927495   \\
     \cmidrule(l){2-8}
      
-    & \ding{183} SISD                       & cycles    &  47995    &  274793   & 125037    & 1081939   &  758988   \\
+    & \ding{183} SISD                           & cycles    &  47995    &  274793   & 125037    & 1081939   &  758988   \\
     \cmidrule(l){2-8}
     
     & Gain (\ding{182}$\rightarrow$\ding{183})  & cycles    & 28780     & 122997    & 93083     & 228333    & 168507    \\
@@ -1061,7 +1061,8 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
             & BASE      & LDPC      & \multicolumn{2}{c}{POLAIRE}   & LDPC-NB   & TURBO\\ 
             &               & OMS   & SC  &  Fast-SC                & MS        & Max-Log MAP \\
             \midrule
-  \textbf{Nb. Insn. Cst.} &      &  8        & 4     &4             &   3       &2 \\
+  \textbf{Nb. Insn. Cst.} 
+                          & &  8        & 4     &4             &   3       &2 \\
   \cmidrule(l){2-7}
   \PicoRV    
             & 978 LUTs    & +34\%     & +12.3\%  &  +12.3\%  & +12.5\%  & +12.6\%   \\
@@ -1070,7 +1071,7 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
             \cmidrule(l){2-7}
   
   \IBEX      
-            & 2446 LUTs  & +9.1\%	& +3.1\%	& +3.1\%	&   +4\%    & +4.2\% \\
+            & 2446 LUTs   & +9.1\%	& +3.1\%	& +3.1\%	& +4.0\%    & +4.2\% \\
             & 883 FFs     &	+0.0\%	& +0.0\%	& +0.0\%	& +0.0\%	& +0.0\% \\
             & 99  MHz     &	+3.8\%	& +4.7\%    & +4.7\%	& +4.1\%	& +3.1\% \\
             \cmidrule(l){2-7}
@@ -1082,9 +1083,9 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
            \cmidrule(l){2-7}
   
   \RISCY 
-            & 10302 LUTs & +1.8\%  & +2.1\%    &   +0.7\%      & +0.8\%    & +0.6\%    \\
-            & 3033 FFs   &  0.0\%	&  0.0\%    &    0.0\%	    &  0.0\%    &  0.0\%    \\
-            & 30 MHz      &  0.0\%	&  0.0\%    &    0.0\%	    &  0.0\%    &  0.0\%    \\
+            & 10302 LUTs & +1.8\%   & +1.3\%    &   +1.1\%      & +0.8\%    & +0.6\%    \\
+            & 3033 FFs   &  0.0\%   &  0.0\%    &    0.0\%	    &  0.0\%    &  0.0\%    \\
+            & 30 MHz     &  0.0\%	&  0.0\%    &    0.0\%	    &  0.0\%    &  0.0\%    \\
   \bottomrule
   
   \end{tabular}

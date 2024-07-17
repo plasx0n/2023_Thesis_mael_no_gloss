@@ -35,7 +35,7 @@ Dans ce chapitre, l'amélioration des instructions scalaires opérant sur des do
 L'objectif est alors de permettre une montée en débit des décodeurs logiciels grâce aux stratégies de parallélisation utilisées dans la littérature.
 De manière analogue à l'intégration des instructions scalaires, les résultats issus du prototypage sur cible FPGA des processeurs RISC-V enrichis évaluent l'impact des propositions sur le débit et la complexité.
 
-Il est à noter que dans ce chapitre, comme pour le précédent, nous étudierons des architectures à 2 registres d'entrée et un registre de sortie. Ce format correspond au format standard des jeux d'instructions des processeurs x86 (Intel, AMD), \acrshort{risc} et dérivés (ARM) et RISC-V. Une étude exploitant des architectures levant en partie cette restriction sera présentée dans le chapitre suivant.
+Il est à noter que dans ce chapitre, comme pour le précédent, nous étudierons des architectures à 2 registres d'entrée et un registre de sortie. Ce format correspond au format standard des jeux d'instructions des processeurs x86 (Intel, AMD), RISC et dérivés (ARM) et RISC-V. Une étude exploitant des architectures levant en partie cette restriction sera présentée dans le chapitre suivant.
 
 \etocsetnexttocdepth{4}
 \etocsettocstyle{{\large \hspace{-1.5 em} \textbf{} \hfill}\vspace{-2.5 em}\\\par\noindent\rule{\linewidth}{1 pt}\vspace{-.2 em}}{\par\noindent\rule{\linewidth}{1 pt}\\}
@@ -152,7 +152,7 @@ Ces nœuds comportent des opérations qui ne sont pas réductibles à des instru
 Par exemple, les nœuds \textit{SPC} nécessitent une recherche de minima avec leur position associée dans leurs versions inter-trames. 
 Ces opérations conditionnelles sont plus simples à approcher avec une donnée unique, mais deviennent plus complexes à implanter avec 4 données distinctes.  
 
-Les turbo codes présentent une réduction des cycles nécessaires au décodage d'un bit de donnée en moyenne de $70\%$, conformément aux résultats attendus avec des débits variant de $3.8\times$ à $4.5\times$. 
+Les \acrlong{tur} présentent une réduction des cycles nécessaires au décodage d'un bit de donnée en moyenne de $70\%$, conformément aux résultats attendus avec des débits variant de $3.8\times$ à $4.5\times$. 
 
 En conclusion, d'un point de vue applicatif on peut noter qu'indépendamment de la famille de code testée, les versions inter-trames SIMD déployées sur les cœurs offrent systématiquement une réduction significative de $\approx 70\%$ en nombre de cycles nécessaires au décodage d'un bit et des débits augmentant d'un facteur de $5\times$ en moyenne.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -252,7 +252,7 @@ En conclusion, d'un point de vue applicatif on peut noter qu'indépendamment de 
     & Accélération (\ding{182}\rightarrow\ding{184}) & 32 bits & 6.7\times & 5.3\times & 4.7\times & 4.7\times & 4.5\times \\ 
      \bottomrule
     \end{tabular}
-    \caption{Comparaison des performances des cœurs \IBEX\space et \PicoRV\space usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}
+    \caption{Comparaison des performances des coeurs \IBEX\space et \PicoRV\space usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}
     \label{tab:cycles_inter_2r_p1}
 \end{table}  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
@@ -315,7 +315,7 @@ En conclusion, d'un point de vue applicatif on peut noter qu'indépendamment de 
 
     \bottomrule
     \end{tabular}
-    \caption{Comparaison des performances des cœurs \SCR\space et \RISCY\space usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}
+    \caption{Comparaison des performances des coeurs \SCR\space et \RISCY\space usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}
     \label{tab:cycles_inter_2r_p2}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,7 +358,7 @@ Ces chiffres ont été obtenus de manière similaire à ceux présentés dans la
             & 30 MHz        & 0\%    & 0\%       & 0\%       & 0\%     &  0\%      \\ 
     \bottomrule
     \end{tabular}
-        \caption{Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation inter-trames}
+        \caption{Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des coeurs RISC-V - Stratégie de parallélisation inter-trames}
         \label{lut_cost_simd_inter}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -449,7 +449,7 @@ Les données issues de ces expérimentations sont résumées dans le tableau \re
     \centering
     \begin{tabular}{llrrrrr}
     \toprule
-                                    &&&&                polaire	&   LDPCNB	&Turbo                  \\
+                                    &&&&                \textbf{polaire}	&   LDPCNB	&Turbo                  \\
 				                    &&&          SC	&       FSC	&       MS	&MLM                    \\
 \cmidrule(l){1-7}
 \PicoRV	
@@ -501,7 +501,7 @@ Les données issues de ces expérimentations sont résumées dans le tableau \re
 	&Accel\ding{182}\rightarrow\ding{184}&32bits	&	4.3     & 	4.4     & 1.4       & 3.8       \\
 \bottomrule
 \end{tabular}
-\caption{Comparaison des performances des cœurs usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}
+\caption{Comparaison des performances des coeurs usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}
 \label{cycles_intra}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -562,13 +562,13 @@ Les données issues de ces expérimentations sont résumées dans le tableau \re
 	&Accel \ding{182}\rightarrow\ding{184}&32bits	&3.6	    &4.3	    &1.3	        &4.1        \\
 \bottomrule
 \end{tabular}
-\caption{Comparaison des performances des cœurs \SCR\space et \RISCY\space usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}
+\caption{Comparaison des performances des coeurs \SCR\space et \RISCY\space usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}
 \label{cycles_intra_2}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\textcolor{black}{Les résultats expérimentaux mettent tout d'abord en évidence une accélération des décodeurs spécialisés dans le décodage des codes polaires et des turbo codes. 
+\textcolor{black}{Les résultats expérimentaux mettent tout d'abord en évidence une accélération des décodeurs spécialisés dans le décodage des \acrlong{pol} et des \acrlong{tur}. 
 Les gains en termes de temps d'exécution sont pour ces familles de codes compris dans l'intervalle de $\approx 58\%$ à $68\%$. 
 Ces gains sont calculés par rapport aux versions scalaires \textit{\ding{183} SISD} développées précédemment. 
 Les gains relatifs aux versions de base \textit{\ding{182}Baseline} sont également présentés.
@@ -618,7 +618,7 @@ Nb. Insn Cst. &         &  7        & 6         &8          &    4      &   6   
 \bottomrule
 
 \end{tabular}
-    \caption{Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation intra-trame}
+    \caption{Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des coeurs RISC-V - Stratégie de parallélisation intra-trame}
   \label{lut_cost_intra}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -693,7 +693,7 @@ Des colonnes similaires fournissent les métriques relatives aux surcoûts en LU
 \textcolor{black}{Ce tableau met en relief les gains obtenus pour chacune des familles de codes correcteurs d'erreurs considérés. 
 Il est à noter que les gains sont substantiels en SISD lorsque l'on observe le temps d'exécution. 
 Cependant, tous les algorithmes de décodage n'en bénéficient pas de manière équivalente. 
-Par exemple, les turbo codes, avec seulement $2$ instructions spécialisées possibles, ne gagnent que $\approx 15~20\%$. 
+Par exemple, les \acrlong{tur}, avec seulement $2$ instructions spécialisées possibles, ne gagnent que $\approx 15~20\%$. 
 Le constat est similaire pour le décodage des codes LDPC-NB, qui avec uniquement $3$ instructions spécialisées ne voit son temps d'exécution réduit que de $\approx 20\%$. 
 En fonction des cœurs RISC-V considérés, le surcoût matériel induit par l'introduction de ces nouvelles instructions est bien inférieur aux gains apportés : de $\approx2\times$ à $\approx8\times$.}
 

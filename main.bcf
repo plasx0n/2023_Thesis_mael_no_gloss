@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -135,6 +140,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -491,6 +505,7 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -599,6 +614,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -716,6 +732,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1047,7 +1064,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2348,557 +2365,351 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">./biblio/biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="2">3G</bcf:citekey>
-    <bcf:citekey order="3">4G</bcf:citekey>
-    <bcf:citekey order="4">Ref_4G</bcf:citekey>
-    <bcf:citekey order="5">Ref_5G</bcf:citekey>
-    <bcf:citekey order="6">Ref_6G</bcf:citekey>
-    <bcf:citekey order="7">3G</bcf:citekey>
-    <bcf:citekey order="8">wifi</bcf:citekey>
-    <bcf:citekey order="9">wimax</bcf:citekey>
-    <bcf:citekey order="10">Ref_4G</bcf:citekey>
-    <bcf:citekey order="11">5g</bcf:citekey>
-    <bcf:citekey order="12">Ref_6G</bcf:citekey>
-    <bcf:citekey order="13">Sha48</bcf:citekey>
-    <bcf:citekey order="14">BookCodes</bcf:citekey>
-    <bcf:citekey order="15">Sha48</bcf:citekey>
-    <bcf:citekey order="16">NearShanon</bcf:citekey>
-    <bcf:citekey order="17">Ham50</bcf:citekey>
-    <bcf:citekey order="18">ReedCodes</bcf:citekey>
-    <bcf:citekey order="19">BCHCode</bcf:citekey>
-    <bcf:citekey order="20">BookCodes</bcf:citekey>
-    <bcf:citekey order="20">BookCom</bcf:citekey>
-    <bcf:citekey order="21">BookCodes</bcf:citekey>
-    <bcf:citekey order="22">Ham50</bcf:citekey>
-    <bcf:citekey order="23">4G</bcf:citekey>
-    <bcf:citekey order="24">5g</bcf:citekey>
-    <bcf:citekey order="25">DVB:RCS</bcf:citekey>
-    <bcf:citekey order="25">CCSDS:NB</bcf:citekey>
-    <bcf:citekey order="25">CCSDS</bcf:citekey>
-    <bcf:citekey order="25">DVB:S2x</bcf:citekey>
-    <bcf:citekey order="26">TURBO:BERROU</bcf:citekey>
-    <bcf:citekey order="26">BookCodes</bcf:citekey>
-    <bcf:citekey order="27">TURBO:TEN</bcf:citekey>
-    <bcf:citekey order="28">3G</bcf:citekey>
-    <bcf:citekey order="29">4G</bcf:citekey>
-    <bcf:citekey order="30">Ref_4G</bcf:citekey>
-    <bcf:citekey order="31">CCSDS:TURBO</bcf:citekey>
-    <bcf:citekey order="31">DVB:RCS</bcf:citekey>
-    <bcf:citekey order="32">TURBO:SURVEY</bcf:citekey>
-    <bcf:citekey order="33">TURBO:NEW:INTERL</bcf:citekey>
-    <bcf:citekey order="34">TURBO:ALGO1</bcf:citekey>
-    <bcf:citekey order="34">TURBO:PIPE</bcf:citekey>
-    <bcf:citekey order="35">TURBO:HARD1</bcf:citekey>
-    <bcf:citekey order="35">TURBO:HARD2</bcf:citekey>
-    <bcf:citekey order="35">TURBO:HARD3</bcf:citekey>
-    <bcf:citekey order="36">TURBO:NEW:INTERL</bcf:citekey>
-    <bcf:citekey order="37">BookCodes</bcf:citekey>
-    <bcf:citekey order="38">BCJR</bcf:citekey>
-    <bcf:citekey order="39">BCJR2</bcf:citekey>
-    <bcf:citekey order="40">TURBO:TEN</bcf:citekey>
-    <bcf:citekey order="40">TURBO:SURVEY</bcf:citekey>
-    <bcf:citekey order="41">TURBO:HARD3</bcf:citekey>
-    <bcf:citekey order="42">TURBO:HARD2</bcf:citekey>
-    <bcf:citekey order="43">TURBO:SURVEY</bcf:citekey>
-    <bcf:citekey order="44">TURBO:ALGO1</bcf:citekey>
-    <bcf:citekey order="45">3G</bcf:citekey>
-    <bcf:citekey order="46">Ref_4G</bcf:citekey>
-    <bcf:citekey order="47">5g</bcf:citekey>
-    <bcf:citekey order="47">Ref_6G</bcf:citekey>
-    <bcf:citekey order="48">ref_trubo_6g</bcf:citekey>
-    <bcf:citekey order="49">LDPC1</bcf:citekey>
-    <bcf:citekey order="50">LDPC2</bcf:citekey>
-    <bcf:citekey order="51">LDPC2</bcf:citekey>
-    <bcf:citekey order="52">LDPC3</bcf:citekey>
-    <bcf:citekey order="52">LDPC4</bcf:citekey>
-    <bcf:citekey order="53">LDPC5</bcf:citekey>
-    <bcf:citekey order="53">LDPC6</bcf:citekey>
-    <bcf:citekey order="54">LDPC:MS</bcf:citekey>
-    <bcf:citekey order="55">Hailes2016</bcf:citekey>
-    <bcf:citekey order="56">Ref_Wimax</bcf:citekey>
-    <bcf:citekey order="57">DVB:S2</bcf:citekey>
-    <bcf:citekey order="58">DVB:S2x</bcf:citekey>
-    <bcf:citekey order="59">CCSDS</bcf:citekey>
-    <bcf:citekey order="60">5g</bcf:citekey>
-    <bcf:citekey order="61">Tanner</bcf:citekey>
-    <bcf:citekey order="62">Gallager62</bcf:citekey>
-    <bcf:citekey order="62">LDPC2</bcf:citekey>
-    <bcf:citekey order="63">NISC:BLG</bcf:citekey>
-    <bcf:citekey order="64">wifi</bcf:citekey>
-    <bcf:citekey order="64">wimax</bcf:citekey>
-    <bcf:citekey order="64">wlan</bcf:citekey>
-    <bcf:citekey order="64">verizon</bcf:citekey>
-    <bcf:citekey order="65">5g</bcf:citekey>
-    <bcf:citekey order="66">QC:LDPC</bcf:citekey>
-    <bcf:citekey order="67">LDPC:SPA</bcf:citekey>
-    <bcf:citekey order="68">LDPC:SPA</bcf:citekey>
-    <bcf:citekey order="69">LDPC:APPROX:1</bcf:citekey>
-    <bcf:citekey order="69">LDPC:APPROX:2</bcf:citekey>
-    <bcf:citekey order="69">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="69">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="69">LDPC:ARCH2</bcf:citekey>
-    <bcf:citekey order="70">LDPC:HL</bcf:citekey>
-    <bcf:citekey order="71">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="71">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="71">LDPC:ARCH1</bcf:citekey>
-    <bcf:citekey order="71">LDPC:ARCH2</bcf:citekey>
-    <bcf:citekey order="72">LDPC:SOFT1</bcf:citekey>
-    <bcf:citekey order="72">LDPC:SOFT2</bcf:citekey>
-    <bcf:citekey order="72">LDPC:SOFT3</bcf:citekey>
-    <bcf:citekey order="72">LDPC:SOFT4</bcf:citekey>
-    <bcf:citekey order="73">LDPC:HL</bcf:citekey>
-    <bcf:citekey order="74">PIGNOLY:MS</bcf:citekey>
-    <bcf:citekey order="74">BOUTILLON</bcf:citekey>
-    <bcf:citekey order="75">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="75">FAIR:LDPC</bcf:citekey>
-    <bcf:citekey order="76">SDR</bcf:citekey>
-    <bcf:citekey order="76">SURVEY:SDR</bcf:citekey>
-    <bcf:citekey order="77">CLOUD:RAN2</bcf:citekey>
-    <bcf:citekey order="77">CLOUD:RAN3</bcf:citekey>
-    <bcf:citekey order="78">CLOUD:RAN1</bcf:citekey>
-    <bcf:citekey order="79">NBLDPC:1</bcf:citekey>
-    <bcf:citekey order="79">NBLDPC:2</bcf:citekey>
-    <bcf:citekey order="80">CCSDS:NB</bcf:citekey>
-    <bcf:citekey order="80">NBLDPC:3</bcf:citekey>
-    <bcf:citekey order="81">NBLDPC:1</bcf:citekey>
-    <bcf:citekey order="82">survey:NB</bcf:citekey>
-    <bcf:citekey order="83">NB:SPA</bcf:citekey>
-    <bcf:citekey order="84">NB:SPA</bcf:citekey>
-    <bcf:citekey order="85">NB:FFT:BLG</bcf:citekey>
-    <bcf:citekey order="86">NB:FFT:BLG</bcf:citekey>
-    <bcf:citekey order="86">14</bcf:citekey>
-    <bcf:citekey order="86">15</bcf:citekey>
-    <bcf:citekey order="86">16</bcf:citekey>
-    <bcf:citekey order="87">17</bcf:citekey>
-    <bcf:citekey order="87">18</bcf:citekey>
-    <bcf:citekey order="87">19</bcf:citekey>
-    <bcf:citekey order="88">22</bcf:citekey>
-    <bcf:citekey order="88">21</bcf:citekey>
-    <bcf:citekey order="89">phd_hassan</bcf:citekey>
-    <bcf:citekey order="90">CCSDS:NB</bcf:citekey>
-    <bcf:citekey order="91">BEIDOU</bcf:citekey>
-    <bcf:citekey order="92">phd_moniere</bcf:citekey>
-    <bcf:citekey order="92">phd_kassem</bcf:citekey>
-    <bcf:citekey order="93">Arikan08</bcf:citekey>
-    <bcf:citekey order="94">Golden</bcf:citekey>
-    <bcf:citekey order="94">phd_seyyed</bcf:citekey>
-    <bcf:citekey order="95">89</bcf:citekey>
-    <bcf:citekey order="95">97</bcf:citekey>
-    <bcf:citekey order="96">91</bcf:citekey>
-    <bcf:citekey order="96">92</bcf:citekey>
-    <bcf:citekey order="96">101</bcf:citekey>
-    <bcf:citekey order="97">87</bcf:citekey>
-    <bcf:citekey order="97">122</bcf:citekey>
-    <bcf:citekey order="98">SC:STACK</bcf:citekey>
-    <bcf:citekey order="99">85</bcf:citekey>
-    <bcf:citekey order="99">86</bcf:citekey>
-    <bcf:citekey order="100">SC:SCAN</bcf:citekey>
-    <bcf:citekey order="101">88</bcf:citekey>
-    <bcf:citekey order="101">89</bcf:citekey>
-    <bcf:citekey order="101">90</bcf:citekey>
-    <bcf:citekey order="101">91</bcf:citekey>
-    <bcf:citekey order="101">92</bcf:citekey>
-    <bcf:citekey order="101">93</bcf:citekey>
-    <bcf:citekey order="102">5g</bcf:citekey>
-    <bcf:citekey order="103">Arikan08</bcf:citekey>
-    <bcf:citekey order="104">Arikan_2009</bcf:citekey>
-    <bcf:citekey order="105">91</bcf:citekey>
-    <bcf:citekey order="106">88</bcf:citekey>
-    <bcf:citekey order="106">89</bcf:citekey>
-    <bcf:citekey order="106">90</bcf:citekey>
-    <bcf:citekey order="106">91</bcf:citekey>
-    <bcf:citekey order="106">92</bcf:citekey>
-    <bcf:citekey order="106">93</bcf:citekey>
-    <bcf:citekey order="107">PC:X1</bcf:citekey>
-    <bcf:citekey order="107">PC:X2</bcf:citekey>
-    <bcf:citekey order="107">PC:X3</bcf:citekey>
-    <bcf:citekey order="108">100</bcf:citekey>
-    <bcf:citekey order="109">PC:prune</bcf:citekey>
-    <bcf:citekey order="110">these_yann</bcf:citekey>
-    <bcf:citekey order="111">SCL:X1</bcf:citekey>
-    <bcf:citekey order="111">SCL:X2</bcf:citekey>
-    <bcf:citekey order="112">these_yann</bcf:citekey>
-    <bcf:citekey order="113">R1</bcf:citekey>
-    <bcf:citekey order="113">R2</bcf:citekey>
-    <bcf:citekey order="113">R3</bcf:citekey>
-    <bcf:citekey order="114">26</bcf:citekey>
-    <bcf:citekey order="115">27</bcf:citekey>
-    <bcf:citekey order="116">28</bcf:citekey>
-    <bcf:citekey order="117">29</bcf:citekey>
-    <bcf:citekey order="118">30</bcf:citekey>
-    <bcf:citekey order="119">CLOUD:RAN1</bcf:citekey>
-    <bcf:citekey order="119">CLOUD:RAN2</bcf:citekey>
-    <bcf:citekey order="119">CLOUD:RAN3</bcf:citekey>
-    <bcf:citekey order="119">INTEL:FLEXRAN</bcf:citekey>
-    <bcf:citekey order="120">17</bcf:citekey>
-    <bcf:citekey order="121">AA1</bcf:citekey>
-    <bcf:citekey order="122">AA2</bcf:citekey>
-    <bcf:citekey order="122">AA3</bcf:citekey>
-    <bcf:citekey order="122">AA4</bcf:citekey>
-    <bcf:citekey order="123">PIGNOLY:MS</bcf:citekey>
-    <bcf:citekey order="123">BOUTILLON</bcf:citekey>
-    <bcf:citekey order="123">Wei18</bcf:citekey>
-    <bcf:citekey order="124">HLS1</bcf:citekey>
-    <bcf:citekey order="124">HLS2</bcf:citekey>
-    <bcf:citekey order="124">HLS3</bcf:citekey>
-    <bcf:citekey order="125">Vitis</bcf:citekey>
-    <bcf:citekey order="126">catapult_c</bcf:citekey>
-    <bcf:citekey order="127">HLS:LDPC1</bcf:citekey>
-    <bcf:citekey order="127">HLS:LDPC2</bcf:citekey>
-    <bcf:citekey order="127">HLS:LDPC3</bcf:citekey>
-    <bcf:citekey order="128">HLS:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="129">HLS:TURBO</bcf:citekey>
-    <bcf:citekey order="130">HLS:POLAR</bcf:citekey>
-    <bcf:citekey order="131">HLS:POLAR</bcf:citekey>
-    <bcf:citekey order="131">HLS:LDPC1</bcf:citekey>
-    <bcf:citekey order="131">HLS:LDPC2</bcf:citekey>
-    <bcf:citekey order="131">HLS:LDPC3</bcf:citekey>
-    <bcf:citekey order="132">CloudComp:1</bcf:citekey>
-    <bcf:citekey order="132">CloudComp:2</bcf:citekey>
-    <bcf:citekey order="132">CloudComp:3</bcf:citekey>
-    <bcf:citekey order="132">CloudComp:4</bcf:citekey>
-    <bcf:citekey order="133">SDR</bcf:citekey>
-    <bcf:citekey order="134">turbo:mmx</bcf:citekey>
-    <bcf:citekey order="134">viterbi:sse</bcf:citekey>
-    <bcf:citekey order="134">viterbi:mmx</bcf:citekey>
-    <bcf:citekey order="135">CELL</bcf:citekey>
-    <bcf:citekey order="136">CELL:LDPC1</bcf:citekey>
-    <bcf:citekey order="136">CELL:LDPC2</bcf:citekey>
-    <bcf:citekey order="136">CELL:TURBO</bcf:citekey>
-    <bcf:citekey order="137">CELL:LDPC1</bcf:citekey>
-    <bcf:citekey order="137">CELL:LDPC2</bcf:citekey>
-    <bcf:citekey order="137">CELL:TURBO</bcf:citekey>
-    <bcf:citekey order="138">14</bcf:citekey>
-    <bcf:citekey order="139">OpenCL</bcf:citekey>
-    <bcf:citekey order="140">CUDA</bcf:citekey>
-    <bcf:citekey order="141">Wang13</bcf:citekey>
-    <bcf:citekey order="141">Wang11</bcf:citekey>
-    <bcf:citekey order="141">Falcao11</bcf:citekey>
-    <bcf:citekey order="142">FALCAO:SURVEY</bcf:citekey>
-    <bcf:citekey order="142">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="143">Falcao11</bcf:citekey>
-    <bcf:citekey order="144">DVB:S2</bcf:citekey>
-    <bcf:citekey order="145">wimax</bcf:citekey>
-    <bcf:citekey order="146">BLG:GPU</bcf:citekey>
-    <bcf:citekey order="147">Ref_4G</bcf:citekey>
-    <bcf:citekey order="148">5g</bcf:citekey>
-    <bcf:citekey order="149">BLG:GPU</bcf:citekey>
-    <bcf:citekey order="150">FALCAO:SURVEY</bcf:citekey>
-    <bcf:citekey order="151">OpenAirInterface</bcf:citekey>
-    <bcf:citekey order="151">INTEL:FLEXRAN</bcf:citekey>
-    <bcf:citekey order="152">NVIDIA:CNN:COM:NUM</bcf:citekey>
-    <bcf:citekey order="153">massive:gpu</bcf:citekey>
-    <bcf:citekey order="154">Chang:ldpc</bcf:citekey>
-    <bcf:citekey order="155">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="156">BLG:TURBO</bcf:citekey>
-    <bcf:citekey order="157">ri:LeG15a</bcf:citekey>
-    <bcf:citekey order="157">mcgill</bcf:citekey>
-    <bcf:citekey order="158">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="159">ri:LeG15a</bcf:citekey>
-    <bcf:citekey order="160">aff3ct</bcf:citekey>
-    <bcf:citekey order="161">Cass21</bcf:citekey>
-    <bcf:citekey order="162">BLG:SIPS:LDPC</bcf:citekey>
-    <bcf:citekey order="162">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="162">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="162">BLG:TURBO</bcf:citekey>
-    <bcf:citekey order="162">mcgill</bcf:citekey>
-    <bcf:citekey order="163">Ref_4G</bcf:citekey>
-    <bcf:citekey order="164">5g</bcf:citekey>
-    <bcf:citekey order="165">BLG:TURBO</bcf:citekey>
-    <bcf:citekey order="166">FAIR:LDPC</bcf:citekey>
-    <bcf:citekey order="167">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="168">XXX</bcf:citekey>
-    <bcf:citekey order="169">ASIP:1</bcf:citekey>
-    <bcf:citekey order="169">ASIP:2</bcf:citekey>
-    <bcf:citekey order="170">ASIP:DSL:1</bcf:citekey>
-    <bcf:citekey order="170">ASIP:DSL:2</bcf:citekey>
-    <bcf:citekey order="170">ASIP:DSL:3</bcf:citekey>
-    <bcf:citekey order="171">ASIP:PC:SC</bcf:citekey>
-    <bcf:citekey order="172">Coware:1</bcf:citekey>
-    <bcf:citekey order="172">Coware:2</bcf:citekey>
-    <bcf:citekey order="173">Ref_FlexFEC</bcf:citekey>
-    <bcf:citekey order="174">Ref_Flexichap</bcf:citekey>
-    <bcf:citekey order="175">ASIP:PC:SC</bcf:citekey>
-    <bcf:citekey order="176">PPB</bcf:citekey>
-    <bcf:citekey order="176">PPC</bcf:citekey>
-    <bcf:citekey order="177">phd_martin</bcf:citekey>
-    <bcf:citekey order="178">NIOS:II</bcf:citekey>
-    <bcf:citekey order="179">INSTR:SURVEY</bcf:citekey>
-    <bcf:citekey order="180">SS1</bcf:citekey>
-    <bcf:citekey order="181">NIOS:II</bcf:citekey>
-    <bcf:citekey order="182">NIOS:II</bcf:citekey>
-    <bcf:citekey order="182">XTENSA:1</bcf:citekey>
-    <bcf:citekey order="182">XTENSA:2</bcf:citekey>
-    <bcf:citekey order="182">XTENSA:3</bcf:citekey>
-    <bcf:citekey order="183">NIOS:II</bcf:citekey>
-    <bcf:citekey order="183">XTENSA:1</bcf:citekey>
-    <bcf:citekey order="183">phd_martin</bcf:citekey>
-    <bcf:citekey order="184">INSTR:SURVEY</bcf:citekey>
-    <bcf:citekey order="185">RISC:V:Survey</bcf:citekey>
-    <bcf:citekey order="185">SS2</bcf:citekey>
-    <bcf:citekey order="186">RISC:V:Survey</bcf:citekey>
-    <bcf:citekey order="187">RISC:V:AES</bcf:citekey>
-    <bcf:citekey order="188">RISC:V:FIXER</bcf:citekey>
-    <bcf:citekey order="189">Ref_IA1</bcf:citekey>
-    <bcf:citekey order="190">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="191">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="192">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="193">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="194">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="195">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="196">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="196">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="197">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="198">14</bcf:citekey>
-    <bcf:citekey order="198">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="199">survey:NB</bcf:citekey>
-    <bcf:citekey order="200">Arikan_2009</bcf:citekey>
-    <bcf:citekey order="201">mcgill</bcf:citekey>
-    <bcf:citekey order="201">Leonardon:2019vf</bcf:citekey>
-    <bcf:citekey order="202">92</bcf:citekey>
-    <bcf:citekey order="203">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="204">Berrou93</bcf:citekey>
-    <bcf:citekey order="204">Wei18</bcf:citekey>
-    <bcf:citekey order="205">Ref_4G</bcf:citekey>
-    <bcf:citekey order="206">ri:LeG19c</bcf:citekey>
-    <bcf:citekey order="207">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="208">cite_riscy</bcf:citekey>
-    <bcf:citekey order="209">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="209">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="210">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="211">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="212">cite_riscy</bcf:citekey>
-    <bcf:citekey order="213">cite_riscy_url</bcf:citekey>
-    <bcf:citekey order="214">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="214">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="215">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="216">Adrien</bcf:citekey>
-    <bcf:citekey order="216">ri:LeG19c</bcf:citekey>
-    <bcf:citekey order="216">LDPC:SOFT4</bcf:citekey>
-    <bcf:citekey order="217">LDPC:SOFT4</bcf:citekey>
-    <bcf:citekey order="218">BLG:TURBO</bcf:citekey>
-    <bcf:citekey order="218">BLG:SIPS:LDPC</bcf:citekey>
-    <bcf:citekey order="218">Cass21</bcf:citekey>
-    <bcf:citekey order="219">boom</bcf:citekey>
-    <bcf:citekey order="220">zaruba2019cost</bcf:citekey>
-    <bcf:citekey order="221">shakti</bcf:citekey>
-    <bcf:citekey order="222">rocket</bcf:citekey>
-    <bcf:citekey order="223">cvix</bcf:citekey>
-    <bcf:citekey order="224">phd_martin</bcf:citekey>
-    <bcf:citekey order="225">3G</bcf:citekey>
-    <bcf:citekey order="226">4G</bcf:citekey>
-    <bcf:citekey order="227">Ref_4G</bcf:citekey>
-    <bcf:citekey order="228">Ref_5G</bcf:citekey>
-    <bcf:citekey order="229">Ref_6G</bcf:citekey>
-    <bcf:citekey order="230">wifi</bcf:citekey>
-    <bcf:citekey order="231">wimax</bcf:citekey>
-    <bcf:citekey order="232">5g</bcf:citekey>
-    <bcf:citekey order="233">Sha48</bcf:citekey>
-    <bcf:citekey order="234">BookCodes</bcf:citekey>
-    <bcf:citekey order="235">NearShanon</bcf:citekey>
-    <bcf:citekey order="236">Ham50</bcf:citekey>
-    <bcf:citekey order="237">ReedCodes</bcf:citekey>
-    <bcf:citekey order="238">BCHCode</bcf:citekey>
-    <bcf:citekey order="239">BookCom</bcf:citekey>
-    <bcf:citekey order="240">DVB:RCS</bcf:citekey>
-    <bcf:citekey order="241">CCSDS:NB</bcf:citekey>
-    <bcf:citekey order="242">CCSDS</bcf:citekey>
-    <bcf:citekey order="243">DVB:S2x</bcf:citekey>
-    <bcf:citekey order="244">TURBO:BERROU</bcf:citekey>
-    <bcf:citekey order="245">TURBO:TEN</bcf:citekey>
-    <bcf:citekey order="246">CCSDS:TURBO</bcf:citekey>
-    <bcf:citekey order="247">TURBO:SURVEY</bcf:citekey>
-    <bcf:citekey order="248">TURBO:NEW:INTERL</bcf:citekey>
-    <bcf:citekey order="249">TURBO:ALGO1</bcf:citekey>
-    <bcf:citekey order="250">TURBO:PIPE</bcf:citekey>
-    <bcf:citekey order="251">TURBO:HARD1</bcf:citekey>
-    <bcf:citekey order="252">TURBO:HARD2</bcf:citekey>
-    <bcf:citekey order="253">TURBO:HARD3</bcf:citekey>
-    <bcf:citekey order="254">BCJR</bcf:citekey>
-    <bcf:citekey order="255">BCJR2</bcf:citekey>
-    <bcf:citekey order="256">ref_trubo_6g</bcf:citekey>
-    <bcf:citekey order="257">LDPC1</bcf:citekey>
-    <bcf:citekey order="258">LDPC2</bcf:citekey>
-    <bcf:citekey order="259">LDPC3</bcf:citekey>
-    <bcf:citekey order="260">LDPC4</bcf:citekey>
-    <bcf:citekey order="261">LDPC5</bcf:citekey>
-    <bcf:citekey order="262">LDPC6</bcf:citekey>
-    <bcf:citekey order="263">LDPC:MS</bcf:citekey>
-    <bcf:citekey order="264">Hailes2016</bcf:citekey>
-    <bcf:citekey order="265">Ref_Wimax</bcf:citekey>
-    <bcf:citekey order="266">DVB:S2</bcf:citekey>
-    <bcf:citekey order="267">Tanner</bcf:citekey>
-    <bcf:citekey order="268">Gallager62</bcf:citekey>
-    <bcf:citekey order="269">NISC:BLG</bcf:citekey>
-    <bcf:citekey order="270">wlan</bcf:citekey>
-    <bcf:citekey order="271">verizon</bcf:citekey>
-    <bcf:citekey order="272">QC:LDPC</bcf:citekey>
-    <bcf:citekey order="273">LDPC:SPA</bcf:citekey>
-    <bcf:citekey order="274">LDPC:APPROX:1</bcf:citekey>
-    <bcf:citekey order="275">LDPC:APPROX:2</bcf:citekey>
-    <bcf:citekey order="276">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="277">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="278">LDPC:ARCH2</bcf:citekey>
-    <bcf:citekey order="279">LDPC:HL</bcf:citekey>
-    <bcf:citekey order="280">LDPC:ARCH1</bcf:citekey>
-    <bcf:citekey order="281">LDPC:SOFT1</bcf:citekey>
-    <bcf:citekey order="282">LDPC:SOFT2</bcf:citekey>
-    <bcf:citekey order="283">LDPC:SOFT3</bcf:citekey>
-    <bcf:citekey order="284">LDPC:SOFT4</bcf:citekey>
-    <bcf:citekey order="285">PIGNOLY:MS</bcf:citekey>
-    <bcf:citekey order="286">BOUTILLON</bcf:citekey>
-    <bcf:citekey order="287">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="288">FAIR:LDPC</bcf:citekey>
-    <bcf:citekey order="289">SDR</bcf:citekey>
-    <bcf:citekey order="290">SURVEY:SDR</bcf:citekey>
-    <bcf:citekey order="291">CLOUD:RAN2</bcf:citekey>
-    <bcf:citekey order="292">CLOUD:RAN3</bcf:citekey>
-    <bcf:citekey order="293">CLOUD:RAN1</bcf:citekey>
-    <bcf:citekey order="294">NBLDPC:1</bcf:citekey>
-    <bcf:citekey order="295">NBLDPC:2</bcf:citekey>
-    <bcf:citekey order="296">NBLDPC:3</bcf:citekey>
-    <bcf:citekey order="297">survey:NB</bcf:citekey>
-    <bcf:citekey order="298">NB:SPA</bcf:citekey>
-    <bcf:citekey order="299">NB:FFT:BLG</bcf:citekey>
-    <bcf:citekey order="300">14</bcf:citekey>
-    <bcf:citekey order="301">15</bcf:citekey>
-    <bcf:citekey order="302">16</bcf:citekey>
-    <bcf:citekey order="303">17</bcf:citekey>
-    <bcf:citekey order="304">18</bcf:citekey>
-    <bcf:citekey order="305">19</bcf:citekey>
-    <bcf:citekey order="306">22</bcf:citekey>
-    <bcf:citekey order="307">21</bcf:citekey>
-    <bcf:citekey order="308">phd_hassan</bcf:citekey>
-    <bcf:citekey order="309">BEIDOU</bcf:citekey>
-    <bcf:citekey order="310">phd_moniere</bcf:citekey>
-    <bcf:citekey order="311">phd_kassem</bcf:citekey>
-    <bcf:citekey order="312">Arikan08</bcf:citekey>
-    <bcf:citekey order="313">Golden</bcf:citekey>
-    <bcf:citekey order="314">phd_seyyed</bcf:citekey>
-    <bcf:citekey order="315">89</bcf:citekey>
-    <bcf:citekey order="316">97</bcf:citekey>
-    <bcf:citekey order="317">91</bcf:citekey>
-    <bcf:citekey order="318">92</bcf:citekey>
-    <bcf:citekey order="319">101</bcf:citekey>
-    <bcf:citekey order="320">87</bcf:citekey>
-    <bcf:citekey order="321">122</bcf:citekey>
-    <bcf:citekey order="322">SC:STACK</bcf:citekey>
-    <bcf:citekey order="323">85</bcf:citekey>
-    <bcf:citekey order="324">86</bcf:citekey>
-    <bcf:citekey order="325">SC:SCAN</bcf:citekey>
-    <bcf:citekey order="326">88</bcf:citekey>
-    <bcf:citekey order="327">90</bcf:citekey>
-    <bcf:citekey order="328">93</bcf:citekey>
-    <bcf:citekey order="329">Arikan_2009</bcf:citekey>
-    <bcf:citekey order="330">PC:X1</bcf:citekey>
-    <bcf:citekey order="331">PC:X2</bcf:citekey>
-    <bcf:citekey order="332">PC:X3</bcf:citekey>
-    <bcf:citekey order="333">100</bcf:citekey>
-    <bcf:citekey order="334">PC:prune</bcf:citekey>
-    <bcf:citekey order="335">these_yann</bcf:citekey>
-    <bcf:citekey order="336">SCL:X1</bcf:citekey>
-    <bcf:citekey order="337">SCL:X2</bcf:citekey>
-    <bcf:citekey order="338">R1</bcf:citekey>
-    <bcf:citekey order="339">R2</bcf:citekey>
-    <bcf:citekey order="340">R3</bcf:citekey>
-    <bcf:citekey order="341">26</bcf:citekey>
-    <bcf:citekey order="342">27</bcf:citekey>
-    <bcf:citekey order="343">28</bcf:citekey>
-    <bcf:citekey order="344">29</bcf:citekey>
-    <bcf:citekey order="345">30</bcf:citekey>
-    <bcf:citekey order="346">INTEL:FLEXRAN</bcf:citekey>
-    <bcf:citekey order="347">AA1</bcf:citekey>
-    <bcf:citekey order="348">AA2</bcf:citekey>
-    <bcf:citekey order="349">AA3</bcf:citekey>
-    <bcf:citekey order="350">AA4</bcf:citekey>
-    <bcf:citekey order="351">Wei18</bcf:citekey>
-    <bcf:citekey order="352">HLS1</bcf:citekey>
-    <bcf:citekey order="353">HLS2</bcf:citekey>
-    <bcf:citekey order="354">HLS3</bcf:citekey>
-    <bcf:citekey order="355">Vitis</bcf:citekey>
-    <bcf:citekey order="356">catapult_c</bcf:citekey>
-    <bcf:citekey order="357">HLS:LDPC1</bcf:citekey>
-    <bcf:citekey order="358">HLS:LDPC2</bcf:citekey>
-    <bcf:citekey order="359">HLS:LDPC3</bcf:citekey>
-    <bcf:citekey order="360">HLS:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="361">HLS:TURBO</bcf:citekey>
-    <bcf:citekey order="362">HLS:POLAR</bcf:citekey>
-    <bcf:citekey order="363">CloudComp:1</bcf:citekey>
-    <bcf:citekey order="364">CloudComp:2</bcf:citekey>
-    <bcf:citekey order="365">CloudComp:3</bcf:citekey>
-    <bcf:citekey order="366">CloudComp:4</bcf:citekey>
-    <bcf:citekey order="367">turbo:mmx</bcf:citekey>
-    <bcf:citekey order="368">viterbi:sse</bcf:citekey>
-    <bcf:citekey order="369">viterbi:mmx</bcf:citekey>
-    <bcf:citekey order="370">CELL</bcf:citekey>
-    <bcf:citekey order="371">CELL:LDPC1</bcf:citekey>
-    <bcf:citekey order="372">CELL:LDPC2</bcf:citekey>
-    <bcf:citekey order="373">CELL:TURBO</bcf:citekey>
-    <bcf:citekey order="374">OpenCL</bcf:citekey>
-    <bcf:citekey order="375">CUDA</bcf:citekey>
-    <bcf:citekey order="376">Wang13</bcf:citekey>
-    <bcf:citekey order="377">Wang11</bcf:citekey>
-    <bcf:citekey order="378">Falcao11</bcf:citekey>
-    <bcf:citekey order="379">FALCAO:SURVEY</bcf:citekey>
-    <bcf:citekey order="380">BLG:GPU</bcf:citekey>
-    <bcf:citekey order="381">OpenAirInterface</bcf:citekey>
-    <bcf:citekey order="382">NVIDIA:CNN:COM:NUM</bcf:citekey>
-    <bcf:citekey order="383">massive:gpu</bcf:citekey>
-    <bcf:citekey order="384">Chang:ldpc</bcf:citekey>
-    <bcf:citekey order="385">BLG:TURBO</bcf:citekey>
-    <bcf:citekey order="386">ri:LeG15a</bcf:citekey>
-    <bcf:citekey order="387">mcgill</bcf:citekey>
-    <bcf:citekey order="388">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="389">aff3ct</bcf:citekey>
-    <bcf:citekey order="390">Cass21</bcf:citekey>
-    <bcf:citekey order="391">BLG:SIPS:LDPC</bcf:citekey>
-    <bcf:citekey order="392">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="393">XXX</bcf:citekey>
-    <bcf:citekey order="394">ASIP:1</bcf:citekey>
-    <bcf:citekey order="395">ASIP:2</bcf:citekey>
-    <bcf:citekey order="396">ASIP:DSL:1</bcf:citekey>
-    <bcf:citekey order="397">ASIP:DSL:2</bcf:citekey>
-    <bcf:citekey order="398">ASIP:DSL:3</bcf:citekey>
-    <bcf:citekey order="399">ASIP:PC:SC</bcf:citekey>
-    <bcf:citekey order="400">Coware:1</bcf:citekey>
-    <bcf:citekey order="401">Coware:2</bcf:citekey>
-    <bcf:citekey order="402">Ref_FlexFEC</bcf:citekey>
-    <bcf:citekey order="403">Ref_Flexichap</bcf:citekey>
-    <bcf:citekey order="404">PPB</bcf:citekey>
-    <bcf:citekey order="405">PPC</bcf:citekey>
-    <bcf:citekey order="406">phd_martin</bcf:citekey>
-    <bcf:citekey order="407">NIOS:II</bcf:citekey>
-    <bcf:citekey order="408">INSTR:SURVEY</bcf:citekey>
-    <bcf:citekey order="409">SS1</bcf:citekey>
-    <bcf:citekey order="410">XTENSA:1</bcf:citekey>
-    <bcf:citekey order="411">XTENSA:2</bcf:citekey>
-    <bcf:citekey order="412">XTENSA:3</bcf:citekey>
-    <bcf:citekey order="413">RISC:V:Survey</bcf:citekey>
-    <bcf:citekey order="414">SS2</bcf:citekey>
-    <bcf:citekey order="415">RISC:V:AES</bcf:citekey>
-    <bcf:citekey order="416">RISC:V:FIXER</bcf:citekey>
-    <bcf:citekey order="417">Ref_IA1</bcf:citekey>
-    <bcf:citekey order="418">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="419">Leonardon:2019vf</bcf:citekey>
-    <bcf:citekey order="420">Berrou93</bcf:citekey>
-    <bcf:citekey order="421">ri:LeG19c</bcf:citekey>
-    <bcf:citekey order="422">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="423">cite_riscy</bcf:citekey>
-    <bcf:citekey order="424">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="425">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="426">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="427">cite_riscy_url</bcf:citekey>
-    <bcf:citekey order="428">Adrien</bcf:citekey>
-    <bcf:citekey order="429">boom</bcf:citekey>
-    <bcf:citekey order="430">zaruba2019cost</bcf:citekey>
-    <bcf:citekey order="431">shakti</bcf:citekey>
-    <bcf:citekey order="432">rocket</bcf:citekey>
-    <bcf:citekey order="433">cvix</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">3G</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">4G</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Ref_5G</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Ref_6G</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">3G</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">wifi</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">wimax</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Ref_6G</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Sha48</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">BookCodes</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Sha48</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">NearShanon</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">Ham50</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">ReedCodes</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">BCHCode</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">BookCodes</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">BookCom</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">BookCodes</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">Ham50</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">4G</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">DVB:RCS</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">CCSDS:NB</bcf:citekey>
+    <bcf:citekey order="25" intorder="3">CCSDS</bcf:citekey>
+    <bcf:citekey order="25" intorder="4">DVB:S2x</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">TURBO:BERROU</bcf:citekey>
+    <bcf:citekey order="26" intorder="2">BookCodes</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">TURBO:TEN</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">3G</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">4G</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">CCSDS:TURBO</bcf:citekey>
+    <bcf:citekey order="31" intorder="2">DVB:RCS</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">TURBO:SURVEY</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">TURBO:NEW:INTERL</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">TURBO:ALGO1</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">TURBO:PIPE</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">TURBO:HARD1</bcf:citekey>
+    <bcf:citekey order="35" intorder="2">TURBO:HARD2</bcf:citekey>
+    <bcf:citekey order="35" intorder="3">TURBO:HARD3</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">TURBO:NEW:INTERL</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">BookCodes</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">BCJR</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">BCJR2</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">TURBO:TEN</bcf:citekey>
+    <bcf:citekey order="40" intorder="2">TURBO:SURVEY</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">TURBO:HARD3</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">TURBO:HARD2</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">TURBO:SURVEY</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">TURBO:ALGO1</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">3G</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="47" intorder="2">Ref_6G</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">ref_trubo_6g</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">LDPC1</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">LDPC2</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">LDPC2</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">LDPC3</bcf:citekey>
+    <bcf:citekey order="52" intorder="2">LDPC4</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">LDPC5</bcf:citekey>
+    <bcf:citekey order="53" intorder="2">LDPC6</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">LDPC:MS</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">Hailes2016</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">Ref_Wimax</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">DVB:S2</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">DVB:S2x</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">CCSDS</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">Tanner</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Gallager62</bcf:citekey>
+    <bcf:citekey order="62" intorder="2">LDPC2</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">NISC:BLG</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">wifi</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">wimax</bcf:citekey>
+    <bcf:citekey order="64" intorder="3">wlan</bcf:citekey>
+    <bcf:citekey order="64" intorder="4">verizon</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">QC:LDPC</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">LDPC:SPA</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">LDPC:SPA</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">LDPC:APPROX:1</bcf:citekey>
+    <bcf:citekey order="69" intorder="2">LDPC:APPROX:2</bcf:citekey>
+    <bcf:citekey order="69" intorder="3">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="69" intorder="4">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="69" intorder="5">LDPC:ARCH2</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">LDPC:HL</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="71" intorder="2">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="71" intorder="3">LDPC:ARCH1</bcf:citekey>
+    <bcf:citekey order="71" intorder="4">LDPC:ARCH2</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">LDPC:SOFT1</bcf:citekey>
+    <bcf:citekey order="72" intorder="2">LDPC:SOFT2</bcf:citekey>
+    <bcf:citekey order="72" intorder="3">LDPC:SOFT3</bcf:citekey>
+    <bcf:citekey order="72" intorder="4">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">LDPC:HL</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">PIGNOLY:MS</bcf:citekey>
+    <bcf:citekey order="74" intorder="2">BOUTILLON</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="75" intorder="2">FAIR:LDPC</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">SDR</bcf:citekey>
+    <bcf:citekey order="76" intorder="2">SURVEY:SDR</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">CLOUD:RAN2</bcf:citekey>
+    <bcf:citekey order="77" intorder="2">CLOUD:RAN3</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">CLOUD:RAN1</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">NBLDPC:1</bcf:citekey>
+    <bcf:citekey order="79" intorder="2">NBLDPC:2</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">CCSDS:NB</bcf:citekey>
+    <bcf:citekey order="80" intorder="2">NBLDPC:3</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">NBLDPC:1</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">survey:NB</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">NB:SPA</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">NB:SPA</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">NB:FFT:BLG</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">NB:FFT:BLG</bcf:citekey>
+    <bcf:citekey order="86" intorder="2">14</bcf:citekey>
+    <bcf:citekey order="86" intorder="3">15</bcf:citekey>
+    <bcf:citekey order="86" intorder="4">16</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">17</bcf:citekey>
+    <bcf:citekey order="87" intorder="2">18</bcf:citekey>
+    <bcf:citekey order="87" intorder="3">19</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">22</bcf:citekey>
+    <bcf:citekey order="88" intorder="2">21</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">phd_hassan</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">CCSDS:NB</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">BEIDOU</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">phd_moniere</bcf:citekey>
+    <bcf:citekey order="92" intorder="2">phd_kassem</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">Arikan08</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">Golden</bcf:citekey>
+    <bcf:citekey order="94" intorder="2">phd_seyyed</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">89</bcf:citekey>
+    <bcf:citekey order="95" intorder="2">97</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">91</bcf:citekey>
+    <bcf:citekey order="96" intorder="2">92</bcf:citekey>
+    <bcf:citekey order="96" intorder="3">101</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">87</bcf:citekey>
+    <bcf:citekey order="97" intorder="2">122</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">SC:STACK</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">85</bcf:citekey>
+    <bcf:citekey order="99" intorder="2">86</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">SC:SCAN</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">88</bcf:citekey>
+    <bcf:citekey order="101" intorder="2">89</bcf:citekey>
+    <bcf:citekey order="101" intorder="3">90</bcf:citekey>
+    <bcf:citekey order="101" intorder="4">91</bcf:citekey>
+    <bcf:citekey order="101" intorder="5">92</bcf:citekey>
+    <bcf:citekey order="101" intorder="6">93</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">Arikan08</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">Arikan_2009</bcf:citekey>
+    <bcf:citekey order="105" intorder="1">91</bcf:citekey>
+    <bcf:citekey order="106" intorder="1">88</bcf:citekey>
+    <bcf:citekey order="106" intorder="2">89</bcf:citekey>
+    <bcf:citekey order="106" intorder="3">90</bcf:citekey>
+    <bcf:citekey order="106" intorder="4">91</bcf:citekey>
+    <bcf:citekey order="106" intorder="5">92</bcf:citekey>
+    <bcf:citekey order="106" intorder="6">93</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">PC:X1</bcf:citekey>
+    <bcf:citekey order="107" intorder="2">PC:X2</bcf:citekey>
+    <bcf:citekey order="107" intorder="3">PC:X3</bcf:citekey>
+    <bcf:citekey order="108" intorder="1">100</bcf:citekey>
+    <bcf:citekey order="109" intorder="1">PC:prune</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">these_yann</bcf:citekey>
+    <bcf:citekey order="111" intorder="1">SCL:X1</bcf:citekey>
+    <bcf:citekey order="111" intorder="2">SCL:X2</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">these_yann</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">R1</bcf:citekey>
+    <bcf:citekey order="113" intorder="2">R2</bcf:citekey>
+    <bcf:citekey order="113" intorder="3">R3</bcf:citekey>
+    <bcf:citekey order="114" intorder="1">26</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">27</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">28</bcf:citekey>
+    <bcf:citekey order="117" intorder="1">29</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">30</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">CLOUD:RAN1</bcf:citekey>
+    <bcf:citekey order="119" intorder="2">CLOUD:RAN2</bcf:citekey>
+    <bcf:citekey order="119" intorder="3">CLOUD:RAN3</bcf:citekey>
+    <bcf:citekey order="119" intorder="4">INTEL:FLEXRAN</bcf:citekey>
+    <bcf:citekey order="120" intorder="1">17</bcf:citekey>
+    <bcf:citekey order="121" intorder="1">AA1</bcf:citekey>
+    <bcf:citekey order="122" intorder="1">AA2</bcf:citekey>
+    <bcf:citekey order="122" intorder="2">AA3</bcf:citekey>
+    <bcf:citekey order="122" intorder="3">AA4</bcf:citekey>
+    <bcf:citekey order="123" intorder="1">PIGNOLY:MS</bcf:citekey>
+    <bcf:citekey order="123" intorder="2">BOUTILLON</bcf:citekey>
+    <bcf:citekey order="123" intorder="3">Wei18</bcf:citekey>
+    <bcf:citekey order="124" intorder="1">HLS1</bcf:citekey>
+    <bcf:citekey order="124" intorder="2">HLS2</bcf:citekey>
+    <bcf:citekey order="124" intorder="3">HLS3</bcf:citekey>
+    <bcf:citekey order="125" intorder="1">Vitis</bcf:citekey>
+    <bcf:citekey order="126" intorder="1">catapult_c</bcf:citekey>
+    <bcf:citekey order="127" intorder="1">HLS:LDPC1</bcf:citekey>
+    <bcf:citekey order="127" intorder="2">HLS:LDPC2</bcf:citekey>
+    <bcf:citekey order="127" intorder="3">HLS:LDPC3</bcf:citekey>
+    <bcf:citekey order="128" intorder="1">HLS:LDPC:NB</bcf:citekey>
+    <bcf:citekey order="129" intorder="1">HLS:TURBO</bcf:citekey>
+    <bcf:citekey order="130" intorder="1">HLS:POLAR</bcf:citekey>
+    <bcf:citekey order="131" intorder="1">HLS:POLAR</bcf:citekey>
+    <bcf:citekey order="131" intorder="2">HLS:LDPC1</bcf:citekey>
+    <bcf:citekey order="131" intorder="3">HLS:LDPC2</bcf:citekey>
+    <bcf:citekey order="131" intorder="4">HLS:LDPC3</bcf:citekey>
+    <bcf:citekey order="132" intorder="1">CloudComp:1</bcf:citekey>
+    <bcf:citekey order="132" intorder="2">CloudComp:2</bcf:citekey>
+    <bcf:citekey order="132" intorder="3">CloudComp:3</bcf:citekey>
+    <bcf:citekey order="132" intorder="4">CloudComp:4</bcf:citekey>
+    <bcf:citekey order="133" intorder="1">SDR</bcf:citekey>
+    <bcf:citekey order="134" intorder="1">turbo:mmx</bcf:citekey>
+    <bcf:citekey order="134" intorder="2">viterbi:sse</bcf:citekey>
+    <bcf:citekey order="134" intorder="3">viterbi:mmx</bcf:citekey>
+    <bcf:citekey order="135" intorder="1">CELL</bcf:citekey>
+    <bcf:citekey order="136" intorder="1">CELL:LDPC1</bcf:citekey>
+    <bcf:citekey order="136" intorder="2">CELL:LDPC2</bcf:citekey>
+    <bcf:citekey order="136" intorder="3">CELL:TURBO</bcf:citekey>
+    <bcf:citekey order="137" intorder="1">CELL:LDPC1</bcf:citekey>
+    <bcf:citekey order="137" intorder="2">CELL:LDPC2</bcf:citekey>
+    <bcf:citekey order="137" intorder="3">CELL:TURBO</bcf:citekey>
+    <bcf:citekey order="138" intorder="1">14</bcf:citekey>
+    <bcf:citekey order="139" intorder="1">OpenCL</bcf:citekey>
+    <bcf:citekey order="140" intorder="1">CUDA</bcf:citekey>
+    <bcf:citekey order="141" intorder="1">Wang13</bcf:citekey>
+    <bcf:citekey order="141" intorder="2">Wang11</bcf:citekey>
+    <bcf:citekey order="141" intorder="3">Falcao11</bcf:citekey>
+    <bcf:citekey order="142" intorder="1">FALCAO:SURVEY</bcf:citekey>
+    <bcf:citekey order="142" intorder="2">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="143" intorder="1">Falcao11</bcf:citekey>
+    <bcf:citekey order="144" intorder="1">DVB:S2</bcf:citekey>
+    <bcf:citekey order="145" intorder="1">wimax</bcf:citekey>
+    <bcf:citekey order="146" intorder="1">BLG:GPU</bcf:citekey>
+    <bcf:citekey order="147" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="148" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="149" intorder="1">BLG:GPU</bcf:citekey>
+    <bcf:citekey order="150" intorder="1">FALCAO:SURVEY</bcf:citekey>
+    <bcf:citekey order="151" intorder="1">OpenAirInterface</bcf:citekey>
+    <bcf:citekey order="151" intorder="2">INTEL:FLEXRAN</bcf:citekey>
+    <bcf:citekey order="152" intorder="1">NVIDIA:CNN:COM:NUM</bcf:citekey>
+    <bcf:citekey order="153" intorder="1">massive:gpu</bcf:citekey>
+    <bcf:citekey order="154" intorder="1">Chang:ldpc</bcf:citekey>
+    <bcf:citekey order="155" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="156" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="157" intorder="1">ri:LeG15a</bcf:citekey>
+    <bcf:citekey order="157" intorder="2">mcgill</bcf:citekey>
+    <bcf:citekey order="158" intorder="1">BLG:LDPC:NB</bcf:citekey>
+    <bcf:citekey order="159" intorder="1">ri:LeG15a</bcf:citekey>
+    <bcf:citekey order="160" intorder="1">aff3ct</bcf:citekey>
+    <bcf:citekey order="161" intorder="1">Cass21</bcf:citekey>
+    <bcf:citekey order="162" intorder="1">BLG:SIPS:LDPC</bcf:citekey>
+    <bcf:citekey order="162" intorder="2">BLG:LDPC:NB</bcf:citekey>
+    <bcf:citekey order="162" intorder="3">LEONARDON:SCL</bcf:citekey>
+    <bcf:citekey order="162" intorder="4">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="162" intorder="5">mcgill</bcf:citekey>
+    <bcf:citekey order="163" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="164" intorder="1">5g</bcf:citekey>
+    <bcf:citekey order="165" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="166" intorder="1">FAIR:LDPC</bcf:citekey>
+    <bcf:citekey order="167" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="168" intorder="1">XXX</bcf:citekey>
+    <bcf:citekey order="169" intorder="1">ASIP:1</bcf:citekey>
+    <bcf:citekey order="169" intorder="2">ASIP:2</bcf:citekey>
+    <bcf:citekey order="170" intorder="1">ASIP:DSL:1</bcf:citekey>
+    <bcf:citekey order="170" intorder="2">ASIP:DSL:2</bcf:citekey>
+    <bcf:citekey order="170" intorder="3">ASIP:DSL:3</bcf:citekey>
+    <bcf:citekey order="171" intorder="1">ASIP:PC:SC</bcf:citekey>
+    <bcf:citekey order="172" intorder="1">Coware:1</bcf:citekey>
+    <bcf:citekey order="172" intorder="2">Coware:2</bcf:citekey>
+    <bcf:citekey order="173" intorder="1">Ref_FlexFEC</bcf:citekey>
+    <bcf:citekey order="174" intorder="1">Ref_Flexichap</bcf:citekey>
+    <bcf:citekey order="175" intorder="1">ASIP:PC:SC</bcf:citekey>
+    <bcf:citekey order="176" intorder="1">PPB</bcf:citekey>
+    <bcf:citekey order="176" intorder="2">PPC</bcf:citekey>
+    <bcf:citekey order="177" intorder="1">phd_martin</bcf:citekey>
+    <bcf:citekey order="178" intorder="1">NIOS:II</bcf:citekey>
+    <bcf:citekey order="179" intorder="1">INSTR:SURVEY</bcf:citekey>
+    <bcf:citekey order="180" intorder="1">SS1</bcf:citekey>
+    <bcf:citekey order="181" intorder="1">NIOS:II</bcf:citekey>
+    <bcf:citekey order="182" intorder="1">NIOS:II</bcf:citekey>
+    <bcf:citekey order="182" intorder="2">XTENSA:1</bcf:citekey>
+    <bcf:citekey order="182" intorder="3">XTENSA:2</bcf:citekey>
+    <bcf:citekey order="182" intorder="4">XTENSA:3</bcf:citekey>
+    <bcf:citekey order="183" intorder="1">NIOS:II</bcf:citekey>
+    <bcf:citekey order="183" intorder="2">XTENSA:1</bcf:citekey>
+    <bcf:citekey order="183" intorder="3">phd_martin</bcf:citekey>
+    <bcf:citekey order="184" intorder="1">INSTR:SURVEY</bcf:citekey>
+    <bcf:citekey order="185" intorder="1">RISC:V:Survey</bcf:citekey>
+    <bcf:citekey order="185" intorder="2">SS2</bcf:citekey>
+    <bcf:citekey order="186" intorder="1">RISC:V:Survey</bcf:citekey>
+    <bcf:citekey order="187" intorder="1">RISC:V:AES</bcf:citekey>
+    <bcf:citekey order="188" intorder="1">RISC:V:FIXER</bcf:citekey>
+    <bcf:citekey order="189" intorder="1">Ref_IA1</bcf:citekey>
+    <bcf:citekey order="190" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="191" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="192" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="193" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="194" intorder="1">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="195" intorder="1">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="196" intorder="1">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="196" intorder="2">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="197" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="198" intorder="1">14</bcf:citekey>
+    <bcf:citekey order="198" intorder="2">BLG:LDPC:NB</bcf:citekey>
+    <bcf:citekey order="199" intorder="1">survey:NB</bcf:citekey>
+    <bcf:citekey order="200" intorder="1">Arikan_2009</bcf:citekey>
+    <bcf:citekey order="201" intorder="1">mcgill</bcf:citekey>
+    <bcf:citekey order="201" intorder="2">Leonardon:2019vf</bcf:citekey>
+    <bcf:citekey order="202" intorder="1">92</bcf:citekey>
+    <bcf:citekey order="203" intorder="1">LEONARDON:SCL</bcf:citekey>
+    <bcf:citekey order="204" intorder="1">Berrou93</bcf:citekey>
+    <bcf:citekey order="204" intorder="2">Wei18</bcf:citekey>
+    <bcf:citekey order="205" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="206" intorder="1">ri:LeG19c</bcf:citekey>
+    <bcf:citekey order="207" intorder="1">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
+    <bcf:citekey order="208" intorder="1">cite_riscy</bcf:citekey>
+    <bcf:citekey order="209" intorder="1">noauthor_lowriscibex_2021</bcf:citekey>
+    <bcf:citekey order="209" intorder="2">schiavone_slow_2017</bcf:citekey>
+    <bcf:citekey order="210" intorder="1">noauthor_syntacorescr1_2021</bcf:citekey>
+    <bcf:citekey order="211" intorder="1">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
+    <bcf:citekey order="212" intorder="1">cite_riscy</bcf:citekey>
+    <bcf:citekey order="213" intorder="1">cite_riscy_url</bcf:citekey>
+    <bcf:citekey order="214" intorder="1">noauthor_lowriscibex_2021</bcf:citekey>
+    <bcf:citekey order="214" intorder="2">schiavone_slow_2017</bcf:citekey>
+    <bcf:citekey order="215" intorder="1">noauthor_syntacorescr1_2021</bcf:citekey>
+    <bcf:citekey order="216" intorder="1">Adrien</bcf:citekey>
+    <bcf:citekey order="216" intorder="2">ri:LeG19c</bcf:citekey>
+    <bcf:citekey order="216" intorder="3">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="217" intorder="1">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="218" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="218" intorder="2">BLG:SIPS:LDPC</bcf:citekey>
+    <bcf:citekey order="218" intorder="3">Cass21</bcf:citekey>
+    <bcf:citekey order="219" intorder="1">boom</bcf:citekey>
+    <bcf:citekey order="220" intorder="1">zaruba2019cost</bcf:citekey>
+    <bcf:citekey order="221" intorder="1">shakti</bcf:citekey>
+    <bcf:citekey order="222" intorder="1">rocket</bcf:citekey>
+    <bcf:citekey order="223" intorder="1">cvix</bcf:citekey>
+    <bcf:citekey order="224" intorder="1">phd_martin</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
     <bcf:sort order="1">
       <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -135,6 +140,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>0</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -491,6 +505,7 @@
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -599,6 +614,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -716,6 +732,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -1047,7 +1064,7 @@
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2348,65 +2365,46 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">./biblio/biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="2">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="3">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="4">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="5">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="6">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="7">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="7">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="8">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="9">14</bcf:citekey>
-    <bcf:citekey order="9">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="10">survey:NB</bcf:citekey>
-    <bcf:citekey order="11">Arikan_2009</bcf:citekey>
-    <bcf:citekey order="12">mcgill</bcf:citekey>
-    <bcf:citekey order="12">Leonardon:2019vf</bcf:citekey>
-    <bcf:citekey order="13">92</bcf:citekey>
-    <bcf:citekey order="14">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="15">Berrou93</bcf:citekey>
-    <bcf:citekey order="15">Wei18</bcf:citekey>
-    <bcf:citekey order="16">Ref_4G</bcf:citekey>
-    <bcf:citekey order="17">ri:LeG19c</bcf:citekey>
-    <bcf:citekey order="18">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="19">cite_riscy</bcf:citekey>
-    <bcf:citekey order="20">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="20">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="21">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="22">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="23">cite_riscy</bcf:citekey>
-    <bcf:citekey order="24">cite_riscy_url</bcf:citekey>
-    <bcf:citekey order="25">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="25">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="26">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="27">ArchiRISC:V</bcf:citekey>
-    <bcf:citekey order="28">LDPC:APPROX:3</bcf:citekey>
-    <bcf:citekey order="29">LDPC:APPROX:4</bcf:citekey>
-    <bcf:citekey order="30">BLG:REVUE:TPDS</bcf:citekey>
-    <bcf:citekey order="31">14</bcf:citekey>
-    <bcf:citekey order="32">BLG:LDPC:NB</bcf:citekey>
-    <bcf:citekey order="33">survey:NB</bcf:citekey>
-    <bcf:citekey order="34">Arikan_2009</bcf:citekey>
-    <bcf:citekey order="35">mcgill</bcf:citekey>
-    <bcf:citekey order="36">Leonardon:2019vf</bcf:citekey>
-    <bcf:citekey order="37">92</bcf:citekey>
-    <bcf:citekey order="38">LEONARDON:SCL</bcf:citekey>
-    <bcf:citekey order="39">Berrou93</bcf:citekey>
-    <bcf:citekey order="40">Wei18</bcf:citekey>
-    <bcf:citekey order="41">Ref_4G</bcf:citekey>
-    <bcf:citekey order="42">ri:LeG19c</bcf:citekey>
-    <bcf:citekey order="43">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
-    <bcf:citekey order="44">cite_riscy</bcf:citekey>
-    <bcf:citekey order="45">noauthor_lowriscibex_2021</bcf:citekey>
-    <bcf:citekey order="46">schiavone_slow_2017</bcf:citekey>
-    <bcf:citekey order="47">noauthor_syntacorescr1_2021</bcf:citekey>
-    <bcf:citekey order="48">cite_riscy_url</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">ArchiRISC:V</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">LDPC:APPROX:3</bcf:citekey>
+    <bcf:citekey order="7" intorder="2">LDPC:APPROX:4</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">BLG:REVUE:TPDS</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">14</bcf:citekey>
+    <bcf:citekey order="9" intorder="2">BLG:LDPC:NB</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">survey:NB</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">Arikan_2009</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">mcgill</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">Leonardon:2019vf</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">92</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">LEONARDON:SCL</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">Berrou93</bcf:citekey>
+    <bcf:citekey order="15" intorder="2">Wei18</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">Ref_4G</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">ri:LeG19c</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">cite_riscy</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">noauthor_lowriscibex_2021</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">schiavone_slow_2017</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">noauthor_syntacorescr1_2021</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">wolf_cliffordwolfpicorv32_2021</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">cite_riscy</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">cite_riscy_url</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">noauthor_lowriscibex_2021</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">schiavone_slow_2017</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">noauthor_syntacorescr1_2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
     <bcf:sort order="1">
       <bcf:sortitem order="1">citeorder</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="2">
+      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->

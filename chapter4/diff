@@ -87,7 +87,7 @@ L'augmentation de la complexité matérielle induite et le faible usage d'une tr
 
 
 Dans le cadre de l'étude présentée dans les chapitres précédents, nous avons identifié et intégré des instructions possédant au maximum deux opérandes en entrée, notée dans ce chapitre \textbf{2R}.
-Cette contrainte architecturale a limité certains choix de conception et n'a offert que peu d'opportunités pour exploiter au mieux les codes LDPC-NB et les turbo codes.
+Cette contrainte architecturale a limité certains choix de conception et n'a offert que peu d'opportunités pour exploiter au mieux les codes \acrlong{ldnb} et les \acrlong{tur}.
 Dans ce chapitre, cette contrainte est allégée en considérant que l'UAL, et donc les instructions, sont en mesure de manipuler trois données/registres (\textit{rS1, rS2, rS3}).
 La contrainte sur la sortie de l'UAL, elle reste inchangée, elle ne peut produire au maximum qu'une seule donnée (\textit{rD}).
 
@@ -138,7 +138,7 @@ Ce cœur, développé par ETH Zürich et poussé dans des projets étudiants par
 \begin{figure}
     \centering
     \includegraphics[scale=0.3]{chapter4/ariane_overview.drawio.png}
-    \caption{Schéma de l'architecture du cœur CVA6.}
+    \caption{Schéma de l'architecture du coeur CVA6.}
     \label{figure:cva6}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +154,7 @@ Ce dernier format de représentation des données, choisi avant la synthèse log
     \begin{tabular}{l|r|r|r|r|r|r}
     \toprule
         \textbf{Système}    & \textbf{CVA6} & \textbf{CVA6} & \textbf{CVA6} & \textbf{CVA6} & \textbf{CVA6} & \textbf{CVA6} \\
-        \textbf{évalué}     & \textbf{cœur}& \textbf{cœur}& \textbf{cœur}& \textbf{SoC}  & \textbf{SoC}  & \textbf{SoC}  \\
+        \textbf{évalué}     & \textbf{coeur}& \textbf{coeur}& \textbf{coeur}& \textbf{SoC}  & \textbf{SoC}  & \textbf{SoC}  \\
     \midrule
         Chemin de données   & 64 bits       & 64 bits       & 64 bits       & 64 bits       & 64 bits       & 64 bits       \\
         Entrées dans l'UAL  & 2             & 3             & 3             & 2             & 3             & 3             \\ 
@@ -167,7 +167,7 @@ Ce dernier format de représentation des données, choisi avant la synthèse log
         Blocs RAM           & 72            & 72            & 72            & 87            & 87            & 87            \\
     \bottomrule
     \end{tabular}
-    \caption{Complexités matérielles des cœurs CVA6 avec SoC sur cible Kintex 7 lorsque 2 ou 3 opérandes sont accessibles dans l'UAL. Résultats post-placement routage avec fréquence de fonctionnement fixée à 50 MHz.}
+    \caption{Complexités matérielles des coeurs CVA6 avec SoC sur cible Kintex 7 lorsque 2 ou 3 opérandes sont accessibles dans l'UAL. Résultats post-placement routage avec fréquence de fonctionnement fixée à 50 MHz.}
     \label{tab:cva6:cost}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -265,7 +265,7 @@ On observe pour les codes LDPC que trois nouvelles instructions à 3 registres o
 Il est à noter que ces instructions à 3 opérandes permettent aussi de supprimer l'usage d'instructions arithmétiques et logiques RV32I qui étaient mises en œuvre dans les cœurs de calcul\footnote{Ces dernières n'apparaissent pas dans le tableau}.
 Pour les architectures SIMD inter-trames, les résultats obtenus sont similaires à ceux obtenus précédemment.}
 
-Contrairement au cas des codes LDPC où les nouvelles instructions \textbf{3R} sont une combinaison des instructions précédemment identifiées, pour les codes polaires l'extension à 3 opérandes a aussi permis d'optimiser la fonction \textbf{G} dont l'équation est fournie dans le chapitre 3.
+Contrairement au cas des codes LDPC où les nouvelles instructions \textbf{3R} sont une combinaison des instructions précédemment identifiées, pour les \acrlong{pol} l'extension à 3 opérandes a aussi permis d'optimiser la fonction \textbf{G} dont l'équation est fournie dans le chapitre 3.
 En effet, celle-ci ne pouvait être accélérée auparavant.
 La possibilité d'utiliser 3 opérandes en entrée de l'UAL permet d'inclure l'ensemble des traitements à réaliser au sein d'une seule et unique instruction, tel que cela est indiqué dans le tableau \ref{tab:instrus_polar_3reg}.
 
@@ -288,7 +288,7 @@ La possibilité d'utiliser 3 opérandes en entrée de l'UAL permet d'inclure l'e
     \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 L'analyse des données présentées dans le tableau \ref{tab:compartif_polaire} permet de noter que l'utilisation de cette nouvelle instruction permet de se passer des instructions \textit{i8\_setMask\_Aeq1\_pi8}, \textit{i8\_add\_sat127\_pi8} et \textit{i8\_sub\_sat127\_pi8} et ainsi de réduire le nombre de modifications à apporter au décodeur d'instructions.
-Afin d'accélérer le décodage des codes polaires utilisant l'algorithme SC, seules $4$ instructions sont maintenant requises.
+Afin d'accélérer le décodage des \acrlong{pol} utilisant l'algorithme SC, seules $4$ instructions sont maintenant requises.
 Cette diminution d'un facteur $1.5\times$ du nombre d'instructions spécialisées, par rapport à l'approche \textbf{2R} va permettre de réduire significativement le nombre d'instructions à exécuter.
 Le tableau \ref{tab:compartif_polaire}, met en évidence que les instructions présentées afin d'améliorer les opérations d'élagage de leur côté, ne bénéficient pas de ce 3\up{ème} opérande. Ainsi, l'accélération de l'élagage est toujours supportée par $5$ instructions \textbf{2R}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -396,7 +396,7 @@ Enfin, l'instruction \textit{cmpge\_AandB\_lo8C\_pu8} permet de simplifier l'ét
 
 
 
-Enfin, en ce qui concerne les turbo codes, les résultats sont grandement améliorés grâce à l'utilisation d'une architecture \textbf{3R}.
+Enfin, en ce qui concerne les \acrlong{tur}, les résultats sont grandement améliorés grâce à l'utilisation d'une architecture \textbf{3R}.
 En effet, cette famille de codes bénéficie grandement des instructions à 3 registres sources, comme montré dans \ref{tab:instrus_turbo_3reg}.
 Par exemple, les calculs nécessaires au parcours d'un treillis LTE de l'algorithme BCJR font appel à des opérations utilisant 3 données.
 Il s'agit de la concaténation d'opérations simples : addition, soustraction et maximum.
@@ -456,7 +456,7 @@ Puisque leur application est totalement intégrée à ce chapitre, elles sont ai
         Maximum entre A+B et C-B            & i8\_maxpm\_pi8 rD,rS1,rS2,rS3     & rD := MAX8( rS1 + rS2 , rS3 - rS2 ) \\
         \hline
       \end{tabular}
-    \caption{Nouvelle Instruction spécifique pour les turbo codes avec 3 registres sources.}
+    \caption{Nouvelle Instruction spécifique pour les \acrlong{tur} avec 3 registres sources.}
     \label{tab:instrus_turbo_3reg}
     \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -533,17 +533,17 @@ Dans ce tableau, sont aussi indiqués les gains relatifs entre les différentes 
           \ding{182} $\rightarrow$ \ding{184}       &           & 1.7$\times$ & 1.8$\times$ & 2.1$\times$ &  1.6$\times$  & 1.9$\times$ \\
         \bottomrule
     \end{tabular}
-    \caption{Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration 8 bits SISD avec une fréquence de fonctionnement de 50 MHz. }
+    \caption{Comparaison des performances des coeurs usant d'instructions à 2 et 3 entrées, configuration 8 bits SISD avec une fréquence de fonctionnement de 50 MHz. }
     \label{tab:perfs_scalaire_3regs} 
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-Si l'on s'intéresse tout d'abord aux décodeurs LDPC, on peut noter une réduction du nombre de cycles d'horloge d'environ  $14\%$ entre la version précédente (ISA \textbf{2R} \ding{183}) et la version actuelle (ISA \textbf{3R} \ding{184}). 
+Si l'on s'intéresse tout d'abord aux décodeurs LDPC, on peut noter une réduction du nombre de cycles d'horloge d'environ  $14\%$ entre la version précédente (ISA 2R \ding{183}) et la version actuelle (ISA \textbf{3R} \ding{184}). 
 Ces gains sont liés aux instructions à $3$ opérandes d'entrée que nous avons développées.
 Par rapport à la version d'origine du décodeur, les $7$ instructions spécialisées que nous avons ajoutées ont permis de réduire le temps d'exécution de $41\%$ sur le cœur CVA6.
 
 
-Pour les codes polaires, les gains sont plus limités lorsque l'on considère l'algorithme de décodage SC. 
+Pour les \acrlong{pol}, les gains sont plus limités lorsque l'on considère l'algorithme de décodage SC. 
 En effet, le passage de la version \ding{183} à \ding{184} n'engendre qu'une modeste réduction de $5\%$ du temps d'exécution. 
 Cette dernière n'ajoute qu'une seule instruction depuis la version \ding{183} avec l'instruction \textit{i8\_Gx\_pi8} appliquant la fonction \textbf{G} de l'arbre de décodage.
 Cela permet de s'affranchir de l'utilisation des instructions d'addition et soustraction saturées ainsi que de la sélection conditionnelle. 
@@ -616,13 +616,13 @@ Les surcoûts, exprimés en LUT, sont présentés dans la figure \ref{tikz:alu_s
     
         \end{axis}
     \end{tikzpicture}
-    \caption{Surcôut des instructions spécialisées SISD dans l'UAL du cœur CVA6.}
+    \caption{Surcôut des instructions spécialisées SISD dans l'UAL du coeur CVA6.}
     \label{tikz:alu_sisd}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textcolor{black}{La figure \ref{tikz:alu_sisd} présente ainsi les résultats obtenus. 
 Pour les codes LDPC, la configuration \textbf{2R} implante 8 instructions, soit 1 instruction supplémentaire par rapport à la configuration \textbf{3R} avec 7 instructions. Toutefois, le coût varie de presque $50\%$ entre ces 2 versions. CE gain provient de la simplification du multiplexeur de sortie de l'UAL.
-Dans le cas des codes polaires, les algorithmes SC et Fast-SC (F-SC) partagent les mêmes implantations d'instructions en matériel pour les configurations \textbf{2R} et \textbf{3R}, ainsi les résultats observés sont similaires. L'implantation de 4 (\textbf{3R}) au lieu de 6 instructions (\textbf{3R}), permet de réduire l'empreinte matérielle associée de $\approx 30\%$.
+Dans le cas des \acrlong{pol}, les algorithmes SC et Fast-SC (F-SC) partagent les mêmes implantations d'instructions en matériel pour les configurations \textbf{2R} et \textbf{3R}, ainsi les résultats observés sont similaires. L'implantation de 4 (\textbf{3R}) au lieu de 6 instructions (\textbf{3R}), permet de réduire l'empreinte matérielle associée de $\approx 30\%$.
 Cette observation est également valable avec les codes LDPC-NB.
 Enfin, pour les turbo codes, 6 instructions sont implantées pour la configuration (\textbf{3R}), contre seulement 2 (\textbf{2R}). On constate ainsi que le coût matériel augmente fortement et est plus que doublé ($137\%$). 
 Il est à noter que toutes ces instructions sont implantées sans conséquences sur la fréquence de fonctionnement du cœur.}
@@ -669,7 +669,7 @@ L'utilisation de nos instructions à 3 opérandes en mode \textbf{int8\_t$\times
     \centering
     \begin{tabular}{lllrrrrrrr}
         \toprule
-        \multicolumn{2}{l}{\textbf{inter-trames}}       &&  \textbf{LDPC}& \multicolumn{2}{r}{\textbf{polaire}}&\textbf{LDPC-NB}   & \textbf{turbo}        \\
+        \multicolumn{2}{l}{\textbf{inter-trames}}       &&  \textbf{LDPC}& \multicolumn{2}{r}{\textbf{Polaire}}&\textbf{ LDPC-NB}   & \textbf{Turbo}        \\
         	                                            &&           & OMS	    & SC	    & F-SC            & MS	     & MLM  \\
         \midrule
         int8    &\ding{182} Baseline                    & cycles    & $95955$	& $454637$  & $239292$       & $1715625$ & $1585822$    \\
@@ -719,7 +719,7 @@ L'utilisation de nos instructions à 3 opérandes en mode \textbf{int8\_t$\times
         & \ding{184} $\rightarrow$ \ding{186} & 32 $\rightarrow$ 64 bits    & 2.1$\times$  & 1.7$\times$    &  1.6$\times$      &   1.9$\times$     &   1.6$\times$        \\
         \bottomrule
         \end{tabular}
-    \caption{Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD inter-trames avec une fréquence de fonctionnement fixée à 50 MHz.}
+    \caption{Comparaison des performances des coeurs usant d'instructions à 2 et 3 entrées, configuration SIMD inter-trames avec une fréquence de fonctionnement fixée à 50 MHz.}
     \label{tab:perfs_inter_3regs}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -732,7 +732,7 @@ Si l'on s'intéresse dans un premier temps aux extensions proposées pour les d�
 De fait, même si plusieurs instructions \textbf{2R} ont été fusionnées pour produire des instructions \textbf{3R}, une instruction \textbf{2R} supplémentaire a été ajoutée. 
 Le surcoût matériel pour les codes polaires est quant à lui plus faible (4\%) que celui de l'extension \textbf{2R}.
 L'implantation des codes polaire avec l'algorithme FAST-SC mobilise 3 instructions supplémentaires en mode \textbf{2R} et \textbf{3R} afin d'accélérer les nœuds de l'arbre élagué. Cette différence permet un début d'explication pour la différence de coût $\approx 25\%$ observée en comparaison avec les codes polaires simples. Toutefois, il y a aussi une différence entre les 2 modes précédemment observés.
-Pour les codes LDPC-NB et les turbo codes, l'ajout de $2$ et $4$ instructions respectivement dans l'extension \textbf{3R} ont engendré une augmentation respective de $\approx 2\%$ et $\approx 77\%$ du coût en LUT.
+Pour les codes \acrlong{ldnb} et les \acrlong{tur}, l'ajout de $2$ et $4$ instructions respectivement dans l'extension \textbf{3R} ont engendré une augmentation respective de $\approx 2\%$ et $\approx 77\%$ du coût en LUT.
 
 \textcolor{black}{Ces coûts matériels, qui peuvent sembler importants, sont dans un premier temps à mettre en perspective par rapport au coût matériel du cœur CVA6 (tableau \ref{tab:cva6:cost}) qui nécessite $34576$ LUT dans sa configuration 64 bits.
 Ainsi, l'augmentation de la complexité du cœur est comprise entre $1\%$ et $3\%$ en fonction de l'extension considérée.
@@ -812,7 +812,7 @@ Si l'on s'intéresse dans un premier temps au décodage des codes polaires et pl
 Par rapport à la version \textbf{2R}, l'utilisation de \textbf{3R} apporte un gain supplémentaire de 23\%.
 Ces ordres de grandeur se retrouvent pour les expérimentations réalisées pour l'algorithme F-SC.
 
-Les gains obtenus pour le décodage des turbo codes sont plus conséquents. Par rapport à la version naïve, le temps d'exécution de la version \textbf{3R} est réduit de 90\%.
+Les gains obtenus pour le décodage des \acrlong{tur} sont plus conséquents. Par rapport à la version naïve, le temps d'exécution de la version \textbf{3R} est réduit de 90\%.
 Les nouvelles extensions mises au point grâce à la 3\up{ème} opérande ont permis de réduire de 45\% le temps d'exécution de la version \textbf{2R}.
 
 \textcolor{black}{Les gains observés pour les décodeurs LDPC-NB atteignent $27\%$ et $27.1\%$ lorsque comparés au décodeur de base. Théoriquement, l'utilisation de 8 données concurrentes en parallèle (\textbf{int8\_t\times8}) devrait améliorer significativement la latence de décodage par rapport à 4 données (\textbf{int8\_t\times4}), contrairement à ce qui est observé.
@@ -870,7 +870,7 @@ Les facteurs d'accélération entre les versions originales des décodeurs et de
     \bottomrule
     
     \end{tabular}
-    \caption{Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD intra-trame avec une fréquence de fonctionnement fixée à 50 MHz.}
+    \caption{Comparaison des performances des coeurs usant d'instructions à 2 et 3 entrées, configuration SIMD intra-trame avec une fréquence de fonctionnement fixée à 50 MHz.}
     \label{tab:perfs_intra_3regs}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -887,11 +887,11 @@ En effet, les accès non réguliers à la mémoire lors des calculs des CNs indu
 La figure \ref{tikz:cost:simd:intra} présente le surcoût des extensions en termes de LUT issues des rapports post-placement et routage.
 Contrairement aux expérimentations réalisées en mode inter-trames, on peut observer une plus grande disparité entre les surcoûts des extensions \textbf{2R} et \textbf{3R}. 
 Cela est lié au fait que la possibilité d'utiliser $3$ opérandes a permis de concevoir plus d'instructions spécialisées. 
-C'est particulièrement le cas, par exemple, pour les turbo codes où l'utilisation d'une troisième opérande a permis de créer 4 instructions spécialisées supplémentaires.
+C'est particulièrement le cas, par exemple, pour les \acrlong{tur} où l'utilisation d'une troisième opérande a permis de créer 4 instructions spécialisées supplémentaires.
 Cela explique le doublement du coût de l'extension \textbf{3R} par rapport à son pendant \textbf{2R}.
 Toutefois, même si cette observation devrait également se vérifier en mode 64 bits, l'outil Vivado réalise des optimisations durant les étapes post-placement et routage qui tempèrent cette tendance.
 Un phénomène équivalent est observé pour l'extension dédiée aux code LDPC-NB où l'extension \textbf{2R} est plus onéreuse que la version \textbf{3R} en configuration 32 bits.
-Enfin, si l'on compare le surcoût des extensions dédiées au mode intra-trame, par rapport à celles pour le mode inter-trames, on note qu'il est du même ordre de grandeur, à l'exception des instructions pour les turbo codes; ces dernières sont environ 20\% plus onéreuses. 
+Enfin, si l'on compare le surcoût des extensions dédiées au mode intra-trame, par rapport à celles pour le mode inter-trames, on note qu'il est du même ordre de grandeur, à l'exception des instructions pour les \acrlong{tur}; ces dernières sont environ 20\% plus onéreuses. 
 Comme nous l'avons précédemment évoqué, ces coûts matériels qui peuvent sembler importants ne représentent que de $1\%$ à $3\%$ de la complexité du CVA6.}
 
 
@@ -969,11 +969,11 @@ De plus, grâce à l'utilisation d'un cœur RISC-V plus complexe possédant un c
 \textcolor{black}{Le tableau \ref{tab:sum} propose une synthèse des facteurs d'accélération qui ont été mesurés pour les schémas de parallélisation SIMD. 
 Les facteurs d'accélérations qui sont rapportés ont été calculés par rapports aux codes logiciels n'exploitant que le jeu d'instructions de base des cœurs RISC-V. 
 Comme le met en évidence ce tableau, l'ensemble des extensions proposées offre des facteurs d'accélération élevés tandis que le nombre d'instructions ajouté à l'ISA est relativement faible. 
-Par exemple, pour les codes polaires, le passage de $3$ opérandes d'entrées à permis de concevoir $1$ instruction qui permet d'atteindre une accélération avoisinant 10.7$\times$ (64 bits, mode inter-trames). 
-Des facteurs d'accélération plus important ont été obtenus pour le décodage des turbo codes ($23.5\times$) au prix d'un nombre d'instructions spécialisées supérieur ($11$ instructions en mode 64 bits pour une parallélisation intra-trame). 
+Par exemple, pour les \acrlong{pol}, le passage de $3$ opérandes d'entrées à permis de concevoir $1$ instruction qui permet d'atteindre une accélération avoisinant 10.7$\times$ (64 bits, mode inter-trames). 
+Des facteurs d'accélération plus important ont été obtenus pour le décodage des \acrlong{tur} ($23.5\times$) au prix d'un nombre d'instructions spécialisées supérieur ($11$ instructions en mode 64 bits pour une parallélisation intra-trame). 
 L'utilisation d'un troisième opérande d'entrée pour les opérations spécialisées a permis, en moyenne, d'augmenter le facteur d'accélération de $1.32\times$ (32\%) par rapport aux extensions \textbf{2R}.
 Le choix de la stratégie de parallélisation impacte fortement sur les niveaux de performance atteignables. 
-En effet, alors que la stratégie intra-trame permet d'atteindre un facteur d'accélération de $25.5\times$ pour les turbo codes, elle ne permet d'obtenir que $1.7\times$ pour le décodage des codes LDPC-NB où l'approche inter-trames offre $13.5\times$.}
+En effet, alors que la stratégie intra-trame permet d'atteindre un facteur d'accélération de $25.5\times$ pour les \acrlong{tur}, elle ne permet d'obtenir que $1.7\times$ pour le décodage des codes LDPC-NB où l'approche inter-trames offre $13.5\times$.}
 
 \textcolor{black}{D'un point de vue matériel, les extensions \textbf{3R} ont des complexités matérielles comparables aux extensions \textbf{2R}.
 En effet, le coût lié à l'ajout de nouvelles instructions est en partie compensée par les gains réalisés par la fusion d'autres instructions.

@@ -2365,10 +2365,13 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">./biblio/biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">boom</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">zaruba2019cost</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">shakti</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">rocket</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">Adrien</bcf:citekey>
+    <bcf:citekey order="1" intorder="2">ri:LeG19c</bcf:citekey>
+    <bcf:citekey order="1" intorder="3">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">LDPC:SOFT4</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">BLG:TURBO</bcf:citekey>
+    <bcf:citekey order="3" intorder="2">BLG:SIPS:LDPC</bcf:citekey>
+    <bcf:citekey order="3" intorder="3">Cass21</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

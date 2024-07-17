@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2024.4.26)  10 JUL 2024 09:26
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2024.4.26)  12 JUL 2024 08:07
  restricted system commands enabled.
  file:line:error style messages enabled.
-**/home/dizzy/Documents/PHD/2024_Thesis_mael_no_gloss/main.tex
-(/home/dizzy/Documents/PHD/2024_Thesis_mael_no_gloss/main.tex
+**/home/dizzy/Documents/PHD/2024_Thesis_mael_no_gloss/chapter3_2/chapter3_2.tex
+(/home/dizzy/Documents/PHD/2024_Thesis_mael_no_gloss/chapter3_2/chapter3_2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
@@ -35,7 +35,12 @@ Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
 Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
 Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
-Inserting `tracingstacklevels' in `input_level_string'. (./these-dbl.cls
+Inserting `tracingstacklevels' in `input_level_string'. (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `../main.tex'
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (./chapter3_2/../main.tex (./these-dbl.cls
 Document Class: these-dbl 11/07/2021 v5.1
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
@@ -1427,12 +1432,12 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \glswrite=\write6
 \glo@main@file=\write7
 
-\openout7 = main.glo
-Package glossaries Info: Writing glossary file main.glo on input line 6.
+\openout7 = chapter3_2.glo
+Package glossaries Info: Writing glossary file chapter3_2.glo on input line 6.
 \glo@acronym@file=\write8
 
-\openout8 = main.acn
-Package glossaries Info: Writing glossary file main.acn on input line 6.
+\openout8 = chapter3_2.acn
+Package glossaries Info: Writing glossary file chapter3_2.acn on input line 6.
 ) (./commands.tex) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1630,43 +1635,96 @@ File: listings.cfg 2023/02/27 1.9 listings configuration
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
  (./Couverture-these/pagedegarde.tex (./Couverture-these/liste-ecoles-etablissements.tex)) (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
- (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
-Package: import 2020/04/01  v 6.2
-))
+))) (/usr/share/texlive/texmf-dist/tex/latex/tools/xr.sty
+Package: xr 2023-07-04 v5.06 eXternal References (DPC)
+)
+Package xr Info: IMPORTING LABELS FROM ../main.aux on input line 8.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 21.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 21.
+
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'french'.
- (./main.aux)
-\openout1 = main.aux
+(./chapter3_2/chapter3_2.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
+LaTeX Warning: Label `chapter:3_2' multiply defined.
+
+
+LaTeX Warning: Label `process_SIMD' multiply defined.
+
+
+LaTeX Warning: Label `liste:all:instr' multiply defined.
+
+
+LaTeX Warning: Label `sum:all:instr' multiply defined.
+
+
+LaTeX Warning: Label `cycles_bit_simd_inter' multiply defined.
+
+
+LaTeX Warning: Label `tab:cycles_inter_2r_p1' multiply defined.
+
+
+LaTeX Warning: Label `tab:cycles_inter_2r_p2' multiply defined.
+
+
+LaTeX Warning: Label `lut_cost_simd_inter' multiply defined.
+
+
+LaTeX Warning: Label `tikz_freqXlutperc_inter' multiply defined.
+
+
+LaTeX Warning: Label `cycles_intra' multiply defined.
+
+
+LaTeX Warning: Label `cycles_intra_2' multiply defined.
+
+
+LaTeX Warning: Label `lut_cost_intra' multiply defined.
+
+
+LaTeX Warning: Label `tikz_freqXlutperc_intra' multiply defined.
+
+
+LaTeX Warning: Label `tab:hw' multiply defined.
+
+)
+\openout1 = chapter3_2.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 Package french.ldf Info: Setting StandardItemizeEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 209.
+(french.ldf)             reported on input line 23.
 Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
-(french.ldf)             reported on input line 209.
-LaTeX Info: Redefining \up on input line 209.
+(french.ldf)             reported on input line 23.
+LaTeX Info: Redefining \up on input line 23.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count551
@@ -1720,11 +1778,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 209.
-(./main.out) (./main.out)
+Package hyperref Info: Link coloring ON on input line 23.
+(./chapter3_2/chapter3_2.out) (./chapter3_2/chapter3_2.out)
 \@outlinefile=\write9
 
-\openout9 = main.out
+\openout9 = chapter3_2.out
 Package biblatex Info: Trying to load language 'french'...
 Package biblatex Info: ... file 'french.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/french.lbx
@@ -1740,12 +1798,12 @@ Package biblatex Info: LuaTeX detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 
-\openout5 = main.bcf
+\openout5 = chapter3_2.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 209.
-Package biblatex Info: Reference segment=0 on input line 209.
+Package biblatex Info: ... file 'chapter3_2.bbl' found.
+ (./chapter3_2/chapter3_2.bbl)
+Package biblatex Info: Reference section=0 on input line 23.
+Package biblatex Info: Reference segment=0 on input line 23.
 \Etoc@tf=\read5
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -1754,1000 +1812,82 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count557
-(./Couverture-these/titlepage.tex
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 11.
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+Chapitre 1.
+
+LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/m/sc' undefined
+(Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 30.
+
+\tf@toc=\write10
+
+\openout10 = chapter3_2.toc
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 51.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 11.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 51.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 11.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 51.
  (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 11.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 51.
  (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 51.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 11.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+(Font)              <6> on input line 51.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 51.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 51.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 11.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 51.
  (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 11.
-
-<./Couverture-these/ecoles-doctorales/MathSTIC/logo.png, id=179, 463.0098pt x 185.2521pt>
-File: ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png Graphic file (type png)
-<use ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png>
-Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png  used on input line 11.
-(luatex.def)             Requested size: 170.66801pt x 68.28644pt.
-<./Couverture-these/logos-etablissements/UBS.png, id=180, 205.76875pt x 100.375pt>
-File: ./Couverture-these/logos-etablissements/UBS.png Graphic file (type png)
-<use ./Couverture-these/logos-etablissements/UBS.png>
-Package luatex.def Info: ./Couverture-these/logos-etablissements/UBS.png  used on input line 11.
-(luatex.def)             Requested size: 139.99625pt x 68.29083pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.5> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6.64996> on input line 11.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <4.75> on input line 11.
-
-LaTeX Font Warning: Font shape `U/stmry/m/n' in size <9.5> not available
-(Font)              size <9> substituted on input line 11.
-
-
-LaTeX Font Warning: Font shape `U/stmry/b/n' in size <9.5> not available
-(Font)              size <9> substituted on input line 11.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-
- []
-
-)
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png, id=181, 1466.47874pt x 1153.30875pt>
-File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png Graphic file (type png)
-<use ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png>
-Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png  used on input line 223.
-(luatex.def)             Requested size: 597.50787pt x 467.86598pt.
- [1
-
-
-\openout6 = main.ist
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-garde.png><./Couverture-these/ecoles-doctorales/MathSTIC/logo.png><./Couverture-these/logos-etablissements/UBS.png>] [2
-
-]
-\tf@toc=\write10
-
-\openout10 = main.toc
-
-
-LaTeX Font Warning: Font shape `TU/LatinModernRoman(0)/m/sc' undefined
-(Font)              using `TU/LatinModernRoman(0)/m/n' instead on input line 233.
-
-
-Overfull \hbox (3.2762pt too wide) in paragraph at lines 233--233
- [][] [][][]\TU/LatinModernRoman(0)/m/n/12 Éva-lua-tion de l’im-pact de l’ajout d’ins-truc-tions spé-cia-li-sées sur cœurs RISC- 
- []
-
-[3
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[4] (./main.acr) [5
-
-
-
-] [6
-
-] (./main.gls)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[7] [8
-
-] (./main.lof
-Overfull \hbox (5.86287pt too wide) in paragraph at lines 28--28
- [][] [][][]\TU/LatinModernRoman(0)/m/sc/12 Prin-cipe d’in-ser-tion d’ins-truc-tion spé-cia-li-sées dans un cœur RISC-V (schéma 
- []
-
-[9
-
-])
-\tf@lof=\write11
-
-\openout11 = main.lof
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[10] (./main.lot [11
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12])
-\tf@lot=\write12
-
-\openout12 = main.lot
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13] [14
-
-] (./Introduction/introduction.tex
-Chapitre 1.
-[15
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[16
-Missing character: There is no   (U+202F) in font LatinModernRoman:mode=node;script=latn;language=dflt;+tlig;!
-]
-Underfull \vbox (badness 4291) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[18])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[19] [20
-
-] (./chapter2/chapter2.tex
-Chapitre 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--60
-
- []
-
-<chapter2/figs/chainecom.png, id=552, 1362.08875pt x 583.17876pt>
-File: chapter2/figs/chainecom.png Graphic file (type png)
-<use chapter2/figs/chainecom.png>
-Package luatex.def Info: chapter2/figs/chainecom.png  used on input line 71.
-(luatex.def)             Requested size: 408.62978pt x 174.95497pt.
-[21
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[22<./chapter2/figs/chainecom.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[23]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[24]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 102.
-
-<chapter2/figs/comp_courbes_text.png, id=603, 696.6025pt x 560.0925pt>
-File: chapter2/figs/comp_courbes_text.png Graphic file (type png)
-<use chapter2/figs/comp_courbes_text.png>
-Package luatex.def Info: chapter2/figs/comp_courbes_text.png  used on input line 104.
-(luatex.def)             Requested size: 348.3004pt x 280.04556pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[25<./chapter2/figs/comp_courbes_text.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[26]
-<chapter2/figs/siso_turbo.pdf, id=645, 448.5558pt x 155.6214pt>
-File: chapter2/figs/siso_turbo.pdf Graphic file (type pdf)
-<use chapter2/figs/siso_turbo.pdf>
-Package luatex.def Info: chapter2/figs/siso_turbo.pdf  used on input line 141.
-(luatex.def)             Requested size: 448.55469pt x 155.621pt.
-
-Overfull \hbox (3.25099pt too wide) in paragraph at lines 146--147
-\TU/LatinModernRoman(0)/m/sc/12 ma-nière concise, les in-for-ma-tions pro-ve-nant du ca-nal de com-mu-ni-ca-tion no-tées ($\OML/lmm/b/it/12 S[]; P[]; P[]$\TU/LatinModernRoman(0)/m/sc/12 )
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 152.
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 166.
-<chapter2/figs/turbo_treillis.png, id=657, 858.20625pt x 797.98125pt>
-File: chapter2/figs/turbo_treillis.png Graphic file (type png)
-<use chapter2/figs/turbo_treillis.png>
-Package luatex.def Info: chapter2/figs/turbo_treillis.png  used on input line 175.
-(luatex.def)             Requested size: 257.46387pt x 239.39621pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[27<./chapter2/figs/siso_turbo.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[28]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[29<./chapter2/figs/turbo_treillis.png>]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 235.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 235.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 235.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[30]
-<chapter2/figs/tanner.png, id=758, 607.26875pt x 256.96pt>
-File: chapter2/figs/tanner.png Graphic file (type png)
-<use chapter2/figs/tanner.png>
-Package luatex.def Info: chapter2/figs/tanner.png  used on input line 243.
-(luatex.def)             Requested size: 303.63364pt x 128.47968pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[31<./chapter2/figs/tanner.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[32]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[33]
-<chapter2/figs/yyz.png, id=842, 1000.73875pt x 468.75125pt>
-File: chapter2/figs/yyz.png Graphic file (type png)
-<use chapter2/figs/yyz.png>
-Package luatex.def Info: chapter2/figs/yyz.png  used on input line 347.
-(luatex.def)             Requested size: 300.22394pt x 140.62645pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[34]
-Underfull \vbox (badness 2626) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[35<./chapter2/figs/yyz.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[36]
-<chapter2/figs/XXPC.png, id=918, 1431.3475pt x 790.955pt>
-File: chapter2/figs/XXPC.png Graphic file (type png)
-<use chapter2/figs/XXPC.png>
-Package luatex.def Info: chapter2/figs/XXPC.png  used on input line 439.
-(luatex.def)             Requested size: 429.40756pt x 237.28833pt.
-<chapter2/figs/ZZ.png, id=921, 1449.415pt x 816.04875pt>
-File: chapter2/figs/ZZ.png Graphic file (type png)
-<use chapter2/figs/ZZ.png>
-Package luatex.def Info: chapter2/figs/ZZ.png  used on input line 448.
-(luatex.def)             Requested size: 434.82785pt x 244.81651pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[37]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[38<./chapter2/figs/XXPC.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[39<./chapter2/figs/ZZ.png>])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[40] (./chapter2_2/chapter2_2.tex
-Chapitre 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-
- []
-
-[41
-
-
-]
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[42]
-<./chapter2_2/figs/methodo_dediee.png, id=1030, 1561.835pt x 1361.085pt>
-File: ./chapter2_2/figs/methodo_dediee.png Graphic file (type png)
-<use ./chapter2_2/figs/methodo_dediee.png>
-Package luatex.def Info: ./chapter2_2/figs/methodo_dediee.png  used on input line 89.
-(luatex.def)             Requested size: 203.04567pt x 176.94727pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[43]
-<./chapter2_2/figs/methodo_hl.pdf, id=1048, 445.665pt x 260.89468pt>
-File: ./chapter2_2/figs/methodo_hl.pdf Graphic file (type pdf)
-<use ./chapter2_2/figs/methodo_hl.pdf>
-Package luatex.def Info: ./chapter2_2/figs/methodo_hl.pdf  used on input line 106.
-(luatex.def)             Requested size: 401.09479pt x 234.80302pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[44<./chapter2_2/figs/methodo_dediee.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[45<./chapter2_2/figs/methodo_hl.pdf>]
-<./chapter2_2/figs/methodo_gpp.png, id=1099, 1100.11pt x 770.88pt>
-File: ./chapter2_2/figs/methodo_gpp.png Graphic file (type png)
-<use ./chapter2_2/figs/methodo_gpp.png>
-Package luatex.def Info: ./chapter2_2/figs/methodo_gpp.png  used on input line 137.
-(luatex.def)             Requested size: 220.0181pt x 154.17326pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[46<./chapter2_2/figs/methodo_gpp.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[47]
-<./chapter2_2/figs/methodo_multimany.png, id=1133, 1682.285pt x 674.52pt>
-File: ./chapter2_2/figs/methodo_multimany.png Graphic file (type png)
-<use ./chapter2_2/figs/methodo_multimany.png>
-Package luatex.def Info: ./chapter2_2/figs/methodo_multimany.png  used on input line 163.
-(luatex.def)             Requested size: 285.98466pt x 114.66689pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[48<./chapter2_2/figs/methodo_multimany.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[49]
-<./chapter2_2/figs/SIMD.png, id=1180, 4669.445pt x 3051.4pt>
-File: ./chapter2_2/figs/SIMD.png Graphic file (type png)
-<use ./chapter2_2/figs/SIMD.png>
-Package luatex.def Info: ./chapter2_2/figs/SIMD.png  used on input line 198.
-(luatex.def)             Requested size: 373.56323pt x 244.11699pt.
-
-Underfull \vbox (badness 3758) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[50<./chapter2_2/figs/SIMD.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[51]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[52]
-<./chapter2_2/figs/methodo_asip.png, id=1248, 2344.76pt x 1413.28pt>
-File: ./chapter2_2/figs/methodo_asip.png Graphic file (type png)
-<use ./chapter2_2/figs/methodo_asip.png>
-Package luatex.def Info: ./chapter2_2/figs/methodo_asip.png  used on input line 251.
-(luatex.def)             Requested size: 351.69882pt x 211.98285pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[54<./chapter2_2/figs/methodo_asip.png>]
-Overfull \hbox (3.53203pt too wide) in paragraph at lines 272--273
-[]\TU/LatinModernRoman(0)/b/n/12 Les ar-chi-tec-tures pro-gram-mables - \TU/LatinModernRoman(0)/m/sc/12 elles sont gé-né-riques et flexibles par construc-
- []
-
-
-Overfull \hbox (13.656pt too wide) in paragraph at lines 281--298
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[55])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[56] (./chapter3/chapter3.tex
-Chapitre 4.
-
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
-
- []
-
-
-Overfull \hbox (3.2762pt too wide) in paragraph at lines 57--57
- [][] [][][]\TU/LatinModernRoman(0)/m/sc/12 Éva-lua-tion de l’im-pact de l’ajout d’ins-truc-tions spé-cia-li-sées sur cœurs RISC- 
- []
-
-[57
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 57--57
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[58
-Missing character: There is no   (U+202F) in font LatinModernRoman:mode=node;script=latn;language=dflt;+tlig;!
-]
-<chapter3/figs/flot.pdf, id=1327, 329.31029pt x 409.53pt>
-File: chapter3/figs/flot.pdf Graphic file (type pdf)
-<use chapter3/figs/flot.pdf>
-Package luatex.def Info: chapter3/figs/flot.pdf  used on input line 98.
-(luatex.def)             Requested size: 329.30946pt x 409.52899pt.
-<chapter3/figs/CV32xxx+Ext.png, id=1329, 801.99625pt x 420.57124pt>
-File: chapter3/figs/CV32xxx+Ext.png Graphic file (type png)
-<use chapter3/figs/CV32xxx+Ext.png>
-Package luatex.def Info: chapter3/figs/CV32xxx+Ext.png  used on input line 113.
-(luatex.def)             Requested size: 400.99713pt x 210.28511pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 123.
-
-
-Underfull \vbox (badness 2478) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[59]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[60<./chapter3/figs/flot.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[61<./chapter3/figs/CV32xxx+Ext.png>] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 186.
-
-
-LaTeX Font Warning: Font shape `TU/LatinModernMath(0)/b/n' undefined
-(Font)              using `TU/LatinModernMath(0)/m/n' instead on input line 187.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[62] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2023/02/27 1.9 listings language file
-) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2023/02/27 1.9 listings language file
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[63]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[64]
-Overfull \hbox (4.07088pt too wide) in paragraph at lines 341--350
- [][] 
- []
-
-
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[65]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[66]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[67]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[68]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[69]
-Underfull \vbox (badness 1400) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[70]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[71]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[72]
-Overfull \hbox (7.03613pt too wide) in paragraph at lines 817--818
-[]\TU/LatinModernRoman(0)/m/sc/12 Les ca-rac-té-ris-tiques prin-ci-pales des quatre cœurs sé-lec-tion-nés sont pré-sen-tées ci-dessous : 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[73]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[74]
-Underfull \vbox (badness 1248) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[75]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[76]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[77] (./chapter3/tikz/tikz_freqXlutperc_sisd.tex
-Package pgfplots info on input line 34: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 34: Using 'lua backend=false' for axis: x coord trafo unsupported.
-Package pgfplots info on input line 105: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 105: Using 'lua backend=false' for axis: x coord trafo unsupported.
-
-Overfull \hbox (27.81241pt too wide) in paragraph at lines 52--123
-[][]  [] 
- []
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[78]
-Underfull \vbox (badness 1910) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[79])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[80] (./chapter3_2/chapter3_2.tex
-Chapitre 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
-
- []
+(Font)              using `U/stmry/m/n' instead on input line 51.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
 
-<./chapter3_2/figs/SIMD.png, id=1736, 4669.445pt x 3051.4pt>
-File: ./chapter3_2/figs/SIMD.png Graphic file (type png)
-<use ./chapter3_2/figs/SIMD.png>
-Package luatex.def Info: ./chapter3_2/figs/SIMD.png  used on input line 60.
+<figs/SIMD.png, id=37, 4669.445pt x 3051.4pt>
+File: figs/SIMD.png Graphic file (type png)
+<use figs/SIMD.png>
+Package luatex.def Info: figs/SIMD.png  used on input line 60.
 (luatex.def)             Requested size: 373.56323pt x 244.11699pt.
 
 Underfull \vbox (badness 6063) has occurred while \output is active []
 
- [81
+ [1
 
 
-]
+\openout6 = chapter3_2.ist
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2<chapter3_2/figs/SIMD.png>] (./chapter3_2/tabs/tab_insn_sisd_simd.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 5.
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 88.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 88.
 
-[82<./chapter3_2/figs/SIMD.png>] (./chapter3_2/tabs/tab_insn_sisd_simd.tex)
 Overfull \hbox (9.67426pt too wide) in paragraph at lines 124--124
 []\TU/LatinModernRoman(0)/b/n/17.28 Ex-pé-ri-men-ta-tions me-nées sur des dé-co-deurs SIMD
  []
@@ -2755,64 +1895,16 @@ Overfull \hbox (9.67426pt too wide) in paragraph at lines 124--124
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[83]
+ [3]
 Underfull \vbox (badness 1466) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[84]
+ [4]
 Underfull \vbox (badness 1688) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[85]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[86]
+ [5] [6]
 Underfull \vbox (badness 3989) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[87]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[88] (./chapter3_2/tabs/tikz_lut_cost_simd_inter.tex
+ [7] [8] (./chapter3_2/tabs/tikz_lut_cost_simd_inter.tex
 Package pgfplots info on input line 34: Overriding colorspace to rgb due to xcolor configuration.
 Package pgfplots info on input line 34: Using 'lua backend=false' for axis: x coord trafo unsupported.
 Package pgfplots info on input line 79: Overriding colorspace to rgb due to xcolor configuration.
@@ -2830,34 +1922,10 @@ Overfull \hbox (9.67426pt too wide) in paragraph at lines 388--388
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[89]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[90]
+ [9] [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[91] (./chapter3_2/tabs/tikz_lut_cost_simd_intra.tex
+ [11] (./chapter3_2/tabs/tikz_lut_cost_simd_intra.tex
 Package pgfplots info on input line 34: Overriding colorspace to rgb due to xcolor configuration.
 Package pgfplots info on input line 34: Using 'lua backend=false' for axis: x coord trafo unsupported.
 Package pgfplots info on input line 105: Overriding colorspace to rgb due to xcolor configuration.
@@ -2867,671 +1935,60 @@ Overfull \hbox (27.82748pt too wide) in paragraph at lines 52--124
 [][]  [] 
  []
 
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[92]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[93]
+) [12] [13]
 Underfull \vbox (badness 2261) has occurred while \output is active []
 
+ [14] [15]
 
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[94]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[95])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[96
+[16
 Missing character: There is no   (U+202F) in font LatinModernRoman:mode=node;script=latn;language=dflt;+tlig;!
-] (./chapter4/chapter4.tex
-Chapitre 6.
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 73--73
-
- []
-
-[97
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[98]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 104.
-
-
-Underfull \vbox (badness 1132) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[99]
-<chapter4/ariane_overview.drawio.png, id=1870, 1575.8875pt x 1165.35374pt>
-File: chapter4/ariane_overview.drawio.png Graphic file (type png)
-<use chapter4/ariane_overview.drawio.png>
-Package luatex.def Info: chapter4/ariane_overview.drawio.png  used on input line 140.
-(luatex.def)             Requested size: 472.7699pt x 349.60883pt.
-
-Overfull \hbox (17.52579pt too wide) in paragraph at lines 140--141
- [][] 
- []
-
-
-Underfull \vbox (badness 6236) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[100<./chapter4/ariane_overview.drawio.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[101]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[102]
-Overfull \hbox (50.1775pt too wide) in paragraph at lines 245--260
- [][] 
- []
-
-
-Overfull \hbox (18.92091pt too wide) in paragraph at lines 340--350
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[103]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[104]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.00073pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.00073pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.00073pt}.
-
-[105]
-Overfull \hbox (42.8759pt too wide) in paragraph at lines 449--459
- [][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[106]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[107]
-Underfull \vbox (badness 8113) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[108]
-Package pgfplots info on input line 610: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 610: Using 'lua backend=false' for axis: x coord trafo unsupported.
-PGFPlots: reading {chapter4/data_tikz_sisd.txt}
-PGFPlots: reading {chapter4/data_tikz_sisd.txt}
-
-Underfull \vbox (badness 2435) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[109]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[110]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[111]
-Package pgfplots info on input line 778: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 778: Using 'lua backend=false' for axis: x coord trafo unsupported.
-PGFPlots: reading {chapter4/data_tikz_inter.txt}
-PGFPlots: reading {chapter4/data_tikz_inter.txt}
-PGFPlots: reading {chapter4/data_tikz_inter.txt}
-PGFPlots: reading {chapter4/data_tikz_inter.txt}
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[112]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[113]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[114]
-Package pgfplots info on input line 933: Overriding colorspace to rgb due to xcolor configuration.
-Package pgfplots info on input line 933: Using 'lua backend=false' for axis: x coord trafo unsupported.
-PGFPlots: reading {chapter4/data_tikz_intra.txt}
-PGFPlots: reading {chapter4/data_tikz_intra.txt}
-PGFPlots: reading {chapter4/data_tikz_intra.txt}
-PGFPlots: reading {chapter4/data_tikz_intra.txt}
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[115]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[116])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[117] [118
-
-] (./Conclusion/conclusion.tex
-luaotfload | aux : font no 33 (nil) defines no feature for script latn
-luaotfload | aux : font no 33 (nil) defines no feature for script dflt
-Chapitre 7.
-[119
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [120] [121]) [122] (./Appendices/appendix_A.tex (./Appendices/insn.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--58
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 61--89
-
- []
-
-[123
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 92--120
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--151
-
- []
-
-
-Underfull \vbox (badness 1199) has occurred while \output is active []
-
- [124]
-Underfull \hbox (badness 10000) in paragraph at lines 154--182
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--213
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--244
-
- []
-
-[125]
-Underfull \hbox (badness 10000) in paragraph at lines 247--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--306
-
- []
-
-
-Underfull \vbox (badness 2547) has occurred while \output is active []
-
- [126]
-Underfull \hbox (badness 10000) in paragraph at lines 309--337
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 340--371
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--406
-
- []
-
-[127]
-Underfull \hbox (badness 10000) in paragraph at lines 409--437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 440--469
-
- []
-
-[128]
-Underfull \hbox (badness 10000) in paragraph at lines 472--501
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 504--534
-
- []
-
-
-Underfull \vbox (badness 7685) has occurred while \output is active []
-
- [129]
-Underfull \hbox (badness 10000) in paragraph at lines 537--563
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 566--592
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 595--623
-
- []
-
-[130]
-Underfull \hbox (badness 10000) in paragraph at lines 626--651
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 654--679
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 682--710
-
- []
-
-[131]
-Underfull \hbox (badness 10000) in paragraph at lines 713--741
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 744--772
-
- []
-
-[132]
-Underfull \hbox (badness 10000) in paragraph at lines 775--804
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 807--836
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 839--867
-
- []
-
-[133]
-Underfull \hbox (badness 10000) in paragraph at lines 870--899
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 902--931
-
- []
-
-[134]
-Underfull \hbox (badness 10000) in paragraph at lines 934--962
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 965--997
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [135]
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1028
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1031--1059
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [136]
-Underfull \hbox (badness 10000) in paragraph at lines 1062--1090
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1093--1121
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1124--1157
-
- []
-
-[137]
-Underfull \hbox (badness 10000) in paragraph at lines 1160--1189
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1220
-
- []
-
-[138]
-Underfull \hbox (badness 10000) in paragraph at lines 1223--1251
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1254--1282
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1285--1313
-
- []
-
-[139]
-Underfull \hbox (badness 10000) in paragraph at lines 1316--1344
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1375
-
- []
-
-
-Underfull \vbox (badness 2547) has occurred while \output is active []
-
- [140]
-Underfull \hbox (badness 10000) in paragraph at lines 1378--1406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1437
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1440--1468
-
- []
-
-[141]
-Underfull \hbox (badness 10000) in paragraph at lines 1471--1499
-
- []
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 1502--25
-
- []
-
-) [142]
-luaotfload | aux : font no 33 (nil) defines no feature for script latn
-luaotfload | aux : font no 33 (nil) defines no feature for script dflt [143
-
-
-] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153]
-Overfull \hbox (0.2346pt too wide) in paragraph at lines 311--311
-[]\TU/LatinModernRoman(0)/m/sc/10 M. \TU/lmr/m/sc/10 Rashid\TU/LatinModernRoman(0)/m/sc/10 , L. \TU/lmr/m/sc/10 Apvrille \TU/LatinModernRoman(0)/m/sc/10 et R. \TU/lmr/m/sc/10 Pacalet\TU/LatinModernRoman(0)/m/sc/10 , «   Eva-lua-tion of ASIPS de-sign with LI-SA-Tek », Vol. 5114,
- []
-
-[154]
-Overfull \hbox (4.91931pt too wide) in paragraph at lines 311--311
-[]\TU/lmr/m/sc/10 ALTERA\TU/LatinModernRoman(0)/m/sc/10 , \TU/LatinModernRoman(0)/m/it/10 AN 188:Cus-tom Ins-truc-tions for the Nios Em-bed-ded Pro-ces-sor\TU/LatinModernRoman(0)/m/sc/10 , https://cse.unl.edu/ wit-
- []
-
-[155]
-Overfull \hbox (6.94933pt too wide) in paragraph at lines 311--311
-[]\TU/lmr/m/sc/10 OpenHW Group CORE-V CV32E40P RISC-V IP\TU/LatinModernRoman(0)/m/sc/10 , \TU/LatinModernRoman(0)/m/it/10 https://-gi-thub.com/o-penhw-group/cv32e40p\TU/LatinModernRoman(0)/m/sc/10 ,
- []
-
-[156] [157] (./Couverture-these/resume.tex
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: luatex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(85.35826pt, 455.24411pt, 56.9055pt)
-* v-part:(T,H,B)=(113.81102pt, 674.33032pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=674.33032pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=-15.36449pt
-* \topmargin=4.54103pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=85.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-File: ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png Graphic file (type png)
-<use ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png>
-Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/logo.png  used on input line 12.
-(luatex.def)             Requested size: 170.66801pt x 68.28644pt.
-File: ./Couverture-these/logos-etablissements/UBS.png Graphic file (type png)
-<use ./Couverture-these/logos-etablissements/UBS.png>
-Package luatex.def Info: ./Couverture-these/logos-etablissements/UBS.png  used on input line 12.
-(luatex.def)             Requested size: 139.99625pt x 68.29083pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png, id=2733, 796.9775pt x 627.34375pt>
-File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png Graphic file (type png)
-<use ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png>
-Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png  used on input line 44.
-(luatex.def)             Requested size: 597.52492pt x 470.34392pt.
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png, id=2734, 1466.47874pt x 1153.30875pt>
-File: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png Graphic file (type png)
-<use ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png>
-Package luatex.def Info: ./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png  used on input line 44.
-(luatex.def)             Requested size: 597.50092pt x 469.90318pt.
- [158
-
-
-<./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos.png><./Couverture-these/ecoles-doctorales/MathSTIC/image-fond-dos2.png>] [159]) (./main.aux)
+] (./chapter3_2/chapter3_2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.5pt have occurred.
-
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2634AC2134404ACCAB4C984871E1C636;9972.
-Package logreq Info: Writing requests to 'main.run.xml'.
 
-\openout1 = main.run.xml
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `chapter3_2.out' has not changed.
+(rerunfilecheck)             Checksum: 9D0506D6E4012B2C118217A8B1E0532B;1565.
+Package logreq Info: Writing requests to 'chapter3_2.run.xml'.
+
+\openout1 = chapter3_2.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 65856 strings out of 476553
- 746173,3417909 words of node,token memory allocated
- 20051 words of node memory still in use:
-   8 hlist, 2 vlist, 2 rule, 967 glue, 4 kern, 1 penalty, 2 glyph, 5360 attribute, 98 glue_spec, 767 attribute_list, 3 write, 53 pdf_action nodes
-   avail lists: 1:7,2:30212,3:2216,4:12237,5:11423,6:105,7:19204,8:142,9:28542,10:35,11:1422
- 84443 multiletter control sequences out of 65536+600000
- 181 fonts using 19707591 bytes
- 117i,20n,125p,2396b,4474s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm-math/latinmodern-math.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bolditalic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromandemi10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on main.pdf (159 pages, 2859407 bytes).
+ 62007 strings out of 476553
+ 195574,2848258 words of node,token memory allocated
+ 2126 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 61 glue, 4 kern, 1 penalty, 2 glyph, 439 attribute, 97 glue_spec, 64 attribute_list, 2 write nodes
+   avail lists: 1:7,2:22884,3:2202,4:102,5:455,6:56,7:13707,8:9,9:1624,10:27,11:799
+ 82324 multiletter control sequences out of 65536+600000
+ 103 fonts using 10274895 bytes
+ 137i,20n,131p,2450b,2567s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-PDF statistics: 2958 PDF objects out of 2984 (max. 8388607)
- 2640 compressed objects within 27 object streams
- 1191 named destinations out of 1200 (max. 131072)
- 380 words of extra memory for PDF output out of 10000 (max. 100000000)
+warning  (pdf backend): unreferenced destination with name 'cite.0@Cass21'
+
+warning  (pdf backend): unreferenced destination with name 'cite.0@BLG:TURBO'
+
+warning  (pdf backend): unreferenced destination with name 'cite.0@LDPC:SOFT4'
+
+warning  (pdf backend): unreferenced destination with name 'cite.0@Adrien'
+
+warning  (pdf backend): unreferenced destination with name 'glo:risc'
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on chapter3_2.pdf (16 pages, 507494 bytes).
+
+PDF statistics: 257 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 131072)
+ 84 words of extra memory for PDF output out of 10000 (max. 100000000)
 
