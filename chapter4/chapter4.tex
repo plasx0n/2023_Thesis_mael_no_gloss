@@ -808,7 +808,7 @@ Pour y parvenir, il est nécessaire d'exploiter un parallélisme calculatoire va
 \textcolor{black}{Les performances temporelles des décodeurs ainsi optimisés à l'aide des extensions présentées dans ce chapitre sont exposées dans le tableau \ref{tab:perfs_intra_3regs}, à l'exception des décodeurs LDPC qui à cause de leur nécessité de réaliser des accès non alignés en mémoire n'ont pu être évalués.}
 
 Les données issues du tableau \ref{tab:perfs_intra_3regs} comparent les performances obtenues par les nouvelles extensions à \textbf{3R} par rapport à celles du chapitre précédent.
-Si l'on s'intéresse dans un premier temps au décodage des codes polaires et plus précisément au décodeur SC, on remarque que le schéma de parallélisation SIMD en 32 bits manipulant 4 données en parallèle permet de réduire de 76\% le temps d'exécution par rapport à l'approche naïve (\ding{182}, Baseline).
+Par observation, dans un premier temps au décodage des codes polaires et plus précisément au décodeur SC, on remarque que le schéma de parallélisation SIMD en 32 bits manipulant 4 données en parallèle permet de réduire de 76\% le temps d'exécution par rapport à l'approche naïve (\ding{182}, Baseline).
 Par rapport à la version \textbf{2R}, l'utilisation de \textbf{3R} apporte un gain supplémentaire de 23\%.
 Ces ordres de grandeur se retrouvent pour les expérimentations réalisées pour l'algorithme F-SC.
 
@@ -888,7 +888,7 @@ La figure \ref{tikz:cost:simd:intra} présente le surcoût des extensions en ter
 Contrairement aux expérimentations réalisées en mode inter-trames, on peut observer une plus grande disparité entre les surcoûts des extensions \textbf{2R} et \textbf{3R}. 
 Cela est lié au fait que la possibilité d'utiliser $3$ opérandes a permis de concevoir plus d'instructions spécialisées. 
 C'est particulièrement le cas, par exemple, pour les turbo codes où l'utilisation d'une troisième opérande a permis de créer 4 instructions spécialisées supplémentaires.
-Cela explique le doublement du coût de l'extension \textbf{3R} par rapport à son pendant \textbf{2R}.
+Cela explique le doublement du coût de l'extension \textbf{3R} par rapport à l'extension \textbf{2R}.
 Toutefois, même si cette observation devrait également se vérifier en mode 64 bits, l'outil Vivado réalise des optimisations durant les étapes post-placement et routage qui tempèrent cette tendance.
 Un phénomène équivalent est observé pour l'extension dédiée aux code LDPC-NB où l'extension \textbf{2R} est plus onéreuse que la version \textbf{3R} en configuration 32 bits.
 Enfin, si l'on compare le surcoût des extensions dédiées au mode intra-trame, par rapport à celles pour le mode inter-trames, on note qu'il est du même ordre de grandeur, à l'exception des instructions pour les turbo codes; ces dernières sont environ 20\% plus onéreuses. 
@@ -967,7 +967,7 @@ Les différentes extensions ont été déclinées sous plusieurs formes afin de 
 De plus, grâce à l'utilisation d'un cœur RISC-V plus complexe possédant un chemin de données 64 bits, nous avons pu étudier les options de passage à l'échelle des extensions proposées.}
 
 \textcolor{black}{Le tableau \ref{tab:sum} propose une synthèse des facteurs d'accélération qui ont été mesurés pour les schémas de parallélisation SIMD. 
-Les facteurs d'accélérations qui sont rapportés ont été calculés par rapports aux codes logiciels n'exploitant que le jeu d'instructions de base des cœurs RISC-V. 
+Les facteurs d'accélérations qui sont rapportés ont été calculés par rapport aux codes logiciels n'exploitant que le jeu d'instructions de base des cœurs RISC-V. 
 Comme le met en évidence ce tableau, l'ensemble des extensions proposées offre des facteurs d'accélération élevés tandis que le nombre d'instructions ajouté à l'ISA est relativement faible. 
 Par exemple, pour les codes polaires, le passage de $3$ opérandes d'entrées à permis de concevoir $1$ instruction qui permet d'atteindre une accélération avoisinant 10.7$\times$ (64 bits, mode inter-trames). 
 Des facteurs d'accélération plus important ont été obtenus pour le décodage des turbo codes ($23.5\times$) au prix d'un nombre d'instructions spécialisées supérieur ($11$ instructions en mode 64 bits pour une parallélisation intra-trame). 

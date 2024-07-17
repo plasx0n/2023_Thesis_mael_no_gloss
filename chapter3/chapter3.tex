@@ -28,18 +28,18 @@
 %méthodologie + SISD
 \chapter{Méthodologie de conception et d'implantation d'extensions} 
 \label{chapter:3}
-\chaptermark{Jeux d'instructions à 2 registres}
+\chaptermark{Méthodologie de conception et d'implantation d'extensions}
 %
 % 
 %
 %
 %
 
-Ce chapitre vise à d'introduire les travaux effectués afin de proposer des jeux d'instruction spécialisés dédiés au décodage de codes correcteurs d'erreurs (CCE). 
+Ce chapitre vise à introduire les travaux effectués afin de proposer des jeux d'instruction spécialisés dédiés au décodage de codes correcteurs d'erreurs (CCE). 
 
 Dans un premier temps, le flot d'analyse et d'exploration mis en œuvre est introduit, ainsi que les contraintes architecturales retenues. L'objectif est la mise en place d'une approche permettant d'extraire les instructions ou blocs d'instructions qui affectent les performances des décodeurs de CCE en termes de temps d'exécution sur des cibles de type cœur de processeur. 
 
-À titre d'exemple, il est ensuite présenté quelques sous-parties des codes logiciels pour décodeurs les plus performants (en termes de débit) de l'état de l'art, pour les différentes familles de codes correcteurs, afin d'illustrer certains des motifs d'instructions sélectionnés. 
+À titre d'exemple, il est ensuite présenté quelques sous-parties des codes logiciels pour les décodeurs les plus performants (en termes de débit) de l'état de l'art, pour les différentes familles de codes correcteurs, afin d'illustrer certains des motifs d'instructions sélectionnés. 
 
 La pertinence du flot d'exploration et les nouvelles instructions opérant sur des données scalaires sont ensuite validées par des expérimentations sur des circuits FPGA. Ces dernières sont réalisées grâce à l'enrichissement de cœurs de processeurs \textit{open-source} de type RISC-V. 
 L'analyse des résultats obtenus permet d'évaluer l'apport des extensions proposées sur le temps d'exécution des algorithmes de décodage considérés, mais également leurs impacts sur l'augmentation de la complexité matérielle. 
@@ -96,12 +96,13 @@ Pour toutes les familles de CCE étudiées, nous sommes partis des meilleurs alg
 \begin{figure}
 \centering
 \includegraphics[scale=1]{chapter3/figs/flot.pdf}
-\caption{ Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances.}
+\caption{ Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances.
+Les coeurs sont simulés via l'utilisation de \textit{Verilator} ou \textit{iverilog}(\PicoRV) et lorsque possible, emulés sut carte FPGA.}
 \label{flot}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-L'ensemble de ces instructions ont, par la suite, été décrites au niveau RTL en \textit{Verilog} ou \textit{System-Verilog} (\ding{185}). Ensuite, leur ajout dans l'ISA des cœurs RISC-V (\ding{188}) \cite{ArchiRISC:V} à été effectué.
+L'ensemble de ces instructions ont, par la suite, été décrites au niveau RTL en \textit{Verilog} ou \textit{System-Verilog} (\ding{185}). Ensuite, leur ajout dans l'ISA des cœurs RISC-V (\ding{188}) \cite{ArchiRISC:V} a été effectué.
 Naturellement, afin que les kernels décrits en langage C/C++ puissent exploiter ces nouvelles instructions (\ding{184}), il a été nécessaire de les adapter en remplaçant les sections de codes initiales par des invocations en assembleur à ces nouvelles fonctionnalités (\ding{187}).
 Il a été également primordial de les intégrer dans les chaînes de compilation des cœurs ciblés via GCC/Binutils (\ding{186}) pour permettre la génération de programmes exécutables.
 Enfin, une dernière étape (\ding{189}) a permis de valider les performances des kernels modifiés sur ces cœurs étendus, grâce à des tests réalisés en simulation ou par prototypage sur des circuits FPGA (Digilent Nexys 4 et Digilent Genesys 2).
@@ -116,7 +117,7 @@ Ce sont donc ces versions incluant notre kit d'instructions qui sont alors utili
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-La figure \ref{RV2regs} montre, sur l'exemple d’un cœur de processeur à l'architecture simplifiée, mais proche d'un RISC-V CV32 \cite{ArchiRISC:V}, les principales parties concernées par l'ajout de nos extensions d'instructions.
+La figure \ref{RV2regs} montre, sur l'exemple d’un cœur de processeur à architecture simplifiée, mais proche d'un RISC-V CV32 \cite{ArchiRISC:V}, les principales parties concernées par l'ajout de nos extensions d'instructions.
 Ces nouvelles instructions proposées sont encodées selon le format de type R présenté dans \ref{R_instruction}, qui permet un mécanisme d'échange de données registres vers registres, relativement simple et direct. Ce type d'encodage mémorise l'\textit{OpCode} sur les 7 bits de poids faibles du registre d'instruction. Les adresses de registres sont passées dans les champs \textit{rS1,rS2} pour les sources et \textit{rD} pour la destination. Les champs \textit{funct7} et \textit{funct3} sont utilisés pour identifier l'instruction.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -158,17 +159,17 @@ La suite de ce chapitre présente, pour chacune des familles de CCE, les motifs 
 %
 Depuis leur redécouverte, il y a une trentaine d'années, les codes LDPC ont vu la mise au point de nombreux algorithmes de décodage qui offrent à la fois de bonnes propriétés d'implantation et un pouvoir élevé en termes de correction d'erreurs. Ces derniers ont donné lieu à une multitude d'architectures matérielles tant sur cible ASIC \cite{LDPC:APPROX:3} que FPGA \cite{LDPC:APPROX:4}. 
 
-Dans le cadre de ces travaux de thèse, l'algorithme considéré est le \textit{\textbf{M}in-\textbf{S}um/\textbf{O}ffset \textbf{M}in-\textbf{S}um} (\textit{MS/OMS}) offrant le meilleur compromis entre complexité d'intégration \textit{vs} et performances de décodage. De manière analogue aux architectures matérielles \cite{LDPC:APPROX:3,LDPC:APPROX:4} et aux implantations logicielles sur cibles multicœurs \cite{BLG:REVUE:TPDS}, la formulation par couche horizontale des calculs de parité a été sélectionnée afin d'accélérer la vitesse de convergence du décodeur. 
+Dans le cadre de ces travaux de thèse, l'algorithme considéré est le \textit{\textbf{M}in-\textbf{S}um/\textbf{O}ffset \textbf{M}in-\textbf{S}um} (\textit{MS/OMS}) offrant le meilleur compromis entre complexité d'intégration \textit{vs} et performances de décodage. De manière analogue aux architectures matérielles \cite{LDPC:APPROX:3,LDPC:APPROX:4} et aux implantations logicielles sur cibles multicœurs \cite{BLG:REVUE:TPDS}, la formulation par couche horizontale des calculs de parité a été sélectionnée afin d'accélérer la vitesse de convergence du décodeur. L'ordonnancement par innondation (flooding scheduling) n'a pas été considéré dans ces travaux, mais peut bénificier des instructions spécialisées identifiées. 
 L'algorithme de décodage est composé de plusieurs boucles imbriquées permettant le calcul de la parité des nœuds $\bm{C_n}$ et la mise à jour des nœuds de données $\bm{V_n}$. 
 Pour ce faire, à chaque \textit{itération} de décodage, l'algorithme va, pour chaque $\bm{C_n}$, actualiser sa valeur de parité à partir des $DegCn$ nœuds de variable qui lui sont connectés. 
 À la suite de l'évaluation de sa parité, il va rediffuser des messages à ces mêmes $\bm{V_n}$. Par souci de clarté, un extrait de la formulation de cet algorithme de décodage est présenté ci-après dans le listing \ref{ldpc_code_origin}. Il s'agit d'un code en langage C présentant le calcul de la valeur interne des nœuds de parité à partir des valeurs des accumulateurs et des messages entrants. Cette description simple permet de mettre en exergue la prédominance des opérations arithmétiques et logiques simples par rapport aux accès mémoires et à l'arithmétique sur les pointeurs.
-
+Il est à noter que le listing \ref{ldpc_code_origin} est un extrait de l'algorihtme complet, en effet celui-ci ne présente que la première partie de ce dernier. Les accès mémoires sont effectués par lecture d'un tableau d'index calculé à partir de la matrice de parité \textit{H} utilisée. Les degrées des noeuds sont également pré-calculés après analyse de la matrice de parité. Le code LDPC employé est un code LDPC(34,20) avec une matrice \textit{H} BG1 pour la 5G. L'algorihtme effectue 10 itérations pour 1 trame à décoder. Les données internes sont fixées sur 8 bit signés. 
 
 
 \begin{figure}[!tb]
 \begin{lstlisting}[
       label={ldpc_code_origin},
-      caption={Formulation en langage C du calcul de mise à jour des noeuds de parité pour un algorihtme MS/OMS avec un ordonnancement horizontal.},
+      caption={Formulation en langage C du calcul de mise à jour des noeuds de parité pour un algorihtme MS avec un ordonnancement horizontal.},
     frame=single,
     backgroundcolor=\color{white},  
     commentstyle=\color{blue}\bfseries,
@@ -203,10 +204,11 @@ Pour ce faire, à chaque \textit{itération} de décodage, l'algorithme va, pour
 \end{lstlisting}
 \end{figure}
 
+
 En analysant cet exemple pédagogique de l'algorithme \ref{ldpc_code_origin}, il est possible de se faire une idée des séquences et/ou groupes d'instructions arithmétiques et logiques pouvant être optimisées : soit par une concaténation d'opérations élémentaires, soit par un ensemble d'instructions réduisant la complexité des calculs utilisés dans les boucles. 
 Par exemple, les calculs décrits dans les lignes \textit{8 à 10} réalisent une soustraction signée sur 8 bits suivi d'une saturation symétrique dans l'intervalle $[127, -127]$.
 
-Dans le meilleur des cas, cette séquence d'instructions sera exécutée en cinq cycles d'horloge sur un processeur possédant des instructions conditionnées, ou plus sur un cœur RISC-V qui réaliserait des branchements conditionnels. Pour réduire drastiquement ce temps d'exécution, une approche consiste à créer, par exemple, une instruction capable de réaliser cette soustraction saturée en un seul cycle d'horloge grâce à des ressources matérielles spécifiques. Cette instruction spécifique pourrait ensuite être utilisée dans une version optimisée du code C original.
+Dans le meilleur des cas, cette séquence d'instructions sera exécutée en cinq cycles d'horloge sur un processeur possédant des instructions conditionnées, ou plus sur un cœur RISC-V qui réaliserait des branchements conditionnels. Pour réduire drastiquement ce temps d'exécution, une approche consiste à créer, par exemple, une instruction capable de réaliser cette soustraction saturée en un seul cycle d'horloge grâce à des ressources matérielles spécifiques. Cette instruction spécifique pourrait ensuite être utilisée dans une version optimisée du code C original. Ce principe est similaires aux instructions spécifiques proposées pour le softcore NIOS2 \ref{NIOS:II}.
 
 Afin d'illustrer le résultat de cette transformation, on peut constater dans le listing \ref{ldpc_code_custom} à la ligne \textit{7}, la présence de cette nouvelle instruction \textit{i8\_sub8\_sat127\_pi8}. Celle-ci remplace les instructions des lignes \textit{7, 8} et \textit{9} de l'algorithme originel (listing \ref{ldpc_code_origin}). Cette évolution ne modifie pas le nombre d'itérations de boucle à réaliser, mais réduit la latence de chaque itération et donc minimise le temps d'exécution global.
 
@@ -291,9 +293,9 @@ end
 \end{figure}
 
 L'exemple fourni dans la figure \ref{ldpc_code_custom} montre que, sur une section algorithmique simple, les possibilités d'améliorations possibles offertes par l'approche proposée sont multiples.
-Cependant, ces instructions dédiées permettant de réaliser le calcul d'une soustraction saturée, d'une valeur absolue, d'un minimum et d'un maximum (\textit{i.e. subsat, abs, min et max}) doivent toutes être provisionnées dans l'UAL des cœurs de processeur et être capable de s'exécuter en un cycle d'horloge sans pénaliser fortement la fréquence de fonctionnement. Toutes les sections de l'algorithme ne peuvent pas être optimisées de manière analogue, c'est le cas par exemple des accès à la mémoire qui impliquent des modifications architecturales complexes en dehors de l'UAL. 
+Cependant, ces instructions dédiées permettant de réaliser le calcul d'une soustraction saturée, d'une valeur absolue, d'un minimum et d'un maximum (\textit{i.e. subsat, abs, min et max}) doivent toutes être provisionnées dans l'UAL des cœurs de processeur et être capable de s'exécuter en un cycle d'horloge sans pénaliser la fréquence de fonctionnement. Toutes les sections de l'algorithme ne peuvent pas être optimisées de manière analogue, c'est le cas par exemple des accès à la mémoire qui impliquent des modifications architecturales complexes en dehors de l'UAL. 
 
-Finalement, le tableau \ref{tab:instr_ldpc}, résume les résultats de l'étude menée sur les codes LDPC. Les 8 instructions spécifiques identifiées après analyse de l'algorithme LDPC étudié y sont décrites. L'impact de ces instructions spécialisées sur les performances en termes de réduction du nombre de cycles d'horloges nécessaires pour le décodage sur un cœur RISC-V est détaillé dans la section \ref{chapter:3_2}. 
+Finalement, le tableau \ref{tab:instr_ldpc}, résume les résultats de l'étude menée sur les codes LDPC. Les 8 instructions spécifiques identifiées après analyse de l'algorithme LDPC étudié y sont décrites. L'impact de ces instructions spécialisées sur les performances en termes de réduction du nombre de cycles d'horloges nécessaires pour le décodage sur un cœur RISC-V est détaillé dans la section \ref{impact_coeur}. 
 %%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
 \footnotesize
@@ -358,7 +360,7 @@ Minimum non-signée sur 8b               & u8\_minu\_pu8         rD,rS1,rS2 & rD
 \begin{figure}[!tb]
 \begin{lstlisting}[
     label={ldpcnb_code},
-    caption={Extraits de fonctions issues de l'algorithme de décodage LDPC-NB sans instructions spécifiques.},
+    caption={Extraits de fonctions issues de l'algorithme de décodage LDPC-NB avec ordonnancement par couches horizontales, sans instructions spécifiques.},
     frame=single,
     backgroundcolor=\color{white},  
     commentstyle=\color{blue}\bfseries,
@@ -502,7 +504,7 @@ Cette analyse s'est poursuivie sur l'ensemble du processus de décodage. Le tabl
 %
 
 Les codes polaires sont une famille récente de CCE \cite{Arikan_2009}, mais fait d'ores et déjà partie intégrante du standard 5G. Les enjeux liés à ce standard ont motivé bon nombre de travaux de recherche durant la dernière décennie. De nombreux algorithmes de décodage ont été proposés dans la littérature, comme cela a été exposé dans le chapitre précédent. Ces derniers ont donné lieu à la réalisation d'implantation matérielles dédiées, mais aussi au développement de solutions logicielles \cite{mcgill,Leonardon:2019vf}.
-Dans ces travaux, nous nous sommes focalisés sur l'un des algorithmes qui a est adapté aux implantations logicielles, le \textit{SC}, ainsi qu'à sa variante \textit{Fast-SC}(F-SC) \cite{92}.
+Dans ces travaux, nous nous sommes focalisés sur l'un des algorithmes qui a été adapté aux implantations logicielles, le \textit{SC}, ainsi qu'à sa variante \textit{Fast-SC}(F-SC) \cite{92}.
 Il est à noter que ces travaux pourraient par la suite être étendus à l'optimisation de décodeurs basés sur l'utilisation de l'algorithme SC-list \cite{LEONARDON:SCL}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -801,6 +803,7 @@ Afin de tester et d'évaluer l’efficacité et la pertinence des instructions p
 %
 %
 \section{Évaluation de l'impact de l'ajout d'instructions spécialisées sur cœurs RISC-V}
+\label{impact_coeur}
 %
 %
 %
@@ -819,9 +822,9 @@ Les caractéristiques principales des quatre cœurs sélectionnés sont présent
 \begin{itemize}
     \item {\PicoRV \cite{wolf_cliffordwolfpicorv32_2021} est un cœur à faible complexité. Il a été conçu pour supporter des applications simples. Son implantation matérielle est légère et permet d'atteindre des fréquences de fonctionnement élevées (>300 MHz) sur des cibles de type FPGA. Cependant, il ne possède qu'un seul étage de pipeline avec exécution dans l'ordre.}
  
-    \item {\RISCY \cite{cite_riscy} est un cœur RISC-V performant initialement développé par les équipes du MIT et depuis maintenu par le projet \textit{PULP}. Ce cœur implémente un jeu d'instructions spécialisées visant à l'optimisation des opérations arithmétiques régulières. Son architecture cible principalement des applications DSP à faible consommation énergétique. Il possède 4 étages de pipeline avec exécution dans l'ordre \cite{cite_riscy_url}.}
+    \item {\RISCY \cite{cite_riscy} est un cœur RISC-V performant initialement développé par les équipes du MIT et depuis maintenu par le projet \textit{PULP}. Ce cœur implante un jeu d'instructions spécialisées visant à l'optimisation des opérations arithmétiques régulières. Son architecture cible principalement des applications DSP à faible consommation énergétique. Il possède 4 étages de pipeline avec exécution dans l'ordre \cite{cite_riscy_url}.}
 
-    \item {\IBEX \cite{noauthor_lowriscibex_2021, schiavone_slow_2017} initialement connu comme le \textit{micro-RISCY}, ce cœur offre un compromis entre performance et complexité matérielle. Il implémente 2 étages de pipeline avec exécution dans l'ordre dans sa configuration de base. Similairement au \RISCY, son développement a commencé au sein du projet PULP avant d'être cédé au groupe \textit{lowRISCV}.}
+    \item {\IBEX \cite{noauthor_lowriscibex_2021, schiavone_slow_2017} initialement connu comme le \textit{micro-RISCY}, ce cœur offre un compromis entre performance et complexité matérielle. Il implante 2 étages de pipeline avec exécution dans l'ordre dans sa configuration de base. Similairement au \RISCY, son développement a commencé au sein du projet PULP avant d'être cédé au groupe \textit{lowRISCV}.}
 
     \item {\SCR \cite{noauthor_syntacorescr1_2021} est un cœur performant qui atteint un score MIPS (Million Instructions Per Second) élevé tout en conservant une complexité matérielle modérée. Son architecture utilise trois étages de pipeline avec exécution dans l'ordre dans sa configuration de base.} 
 

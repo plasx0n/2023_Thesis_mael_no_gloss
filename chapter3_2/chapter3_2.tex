@@ -65,7 +65,7 @@ L'étude et les expériences précédentes se sont focalisées sur des instructi
 Le schéma de parallélisation inter-trames consiste à répliquer les mêmes opérations de décodage sur plusieurs trames indépendantes afin de mettre en exergue un parallélisme de calcul facilement accessible. 
 Cela permet d'augmenter le débit des architectures au prix de faibles modifications dans les codes algorithmiques. 
 Cette parallélisation inter-trames a été utilisée à l'origine dans des travaux relatifs à l'accélération des décodeurs CCE sur des architectures multicœurs \cite{Adrien,ri:LeG19c,LDPC:SOFT4}. 
-Toutefois, afin de faciliter les accès mémoires et maximiser l'utilisation les unités de calcul SIMD, les données doivent être arrangées correctement dans la mémoire. 
+Toutefois, afin de faciliter les accès mémoires et maximiser l'utilisation des unités de calcul SIMD, les données doivent être arrangées correctement dans la mémoire. 
 Un entrelacement des données contenues dans les différentes trames est réalisé en amont du processus de décodage, tel que cela est schématisé dans la figure \ref{process_SIMD}. 
 Pour maintenir le comportement du système, à la fin de chaque décodage, l'opération inverse est exécutée. 
 Comme cela a été rapporté dans \cite{LDPC:SOFT4}, le temps d'exécution des ces étapes d'entrelacement des données est négligeable par rapport au temps d'exécution des processus de décodage ces CCE.
@@ -106,12 +106,12 @@ De plus, les facteurs d'accélération n'évoluent pas toujours linéairement av
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Pour pouvoir utiliser l'ensemble de ces stratégies de parallélisation, il est nécessaire d'étendre le jeu d'instructions afin pour pouvoir gérer par exemple les opérations conditionnelles. 
+Pour pouvoir utiliser l'ensemble de ces stratégies de parallélisation, il est nécessaire d'étendre le jeu d'instructions pour pouvoir gérer par exemple les opérations conditionnelles. 
 En effet, lors des traitements SIMD, les mêmes traitements sont appliqués à l'ensemble des données, rendant de fait impossible l'utilisation de structure de type $if$ permettant d'inverser par exemple le signe d'une donnée en fonction d'un calcul de parité. 
 Pour palier à cela, des instructions spécifiques ont été ajoutées à la liste des opérations scalaires dédiées déjà identifiées. 
 La liste exhaustive des extensions nécessaires aux descriptions SIMD est fournie dans le tableau \ref{liste:all:instr}.
 Ce tableau indique pour chaque instruction son usage en fonction des stratégies de parallélisation. 
-La description des traitements réalisés par ces instructions a été placé en annexe pour des raisons de lisibilité. 
+La description des traitements réalisés par ces instructions a été placée en annexe pour des raisons de lisibilité. 
 L'ensemble des descriptions logicielles des décodeurs CCE ont été retravaillées afin d'exploiter ces instructions et offrir des stratégies de parallélisation inter et intra-trame. 
 Un résumé du nombre d'instructions par famille de code et schéma de parallélisation est fourni dans le tableau \ref{sum:all:instr}. 
 Dans la suite de ce chapitre, les résultats obtenus sont présentés.
@@ -693,7 +693,7 @@ Des colonnes similaires fournissent les métriques relatives aux surcoûts en LU
 \textcolor{black}{Ce tableau met en relief les gains obtenus pour chacune des familles de codes correcteurs d'erreurs considérés. 
 Il est à noter que les gains sont substantiels en SISD lorsque l'on observe le temps d'exécution. 
 Cependant, tous les algorithmes de décodage n'en bénéficient pas de manière équivalente. 
-Par exemple, les turbo codes, avec seulement $2$ instructions spécialisées possibles, ne gagnent que $\approx 15~20\%$. 
+Par exemple, les turbo codes, avec seulement $2$ instructions spécialisées possibles, ne gagnent que $\approx 15$ à $\approx 20\%$. 
 Le constat est similaire pour le décodage des codes LDPC-NB, qui avec uniquement $3$ instructions spécialisées ne voit son temps d'exécution réduit que de $\approx 20\%$. 
 En fonction des cœurs RISC-V considérés, le surcoût matériel induit par l'introduction de ces nouvelles instructions est bien inférieur aux gains apportés : de $\approx2\times$ à $\approx8\times$.}
 
