@@ -78,7 +78,7 @@ Ces expérimentations, comparables à celles réalisées pour les instructions �
 %
 
 Les cœurs de processeurs généralistes sont en principe conçus de manière à pouvoir délivrer 2 opérandes par cycle d'horloge à l'unité arithmétique et logique (UAL). 
-Ce choix de conception est intrinsèquement lié à l'ISA des processeurs de type RISC où les instructions exécutées manipulent au plus 2 deux opérandes provenant des registres et/ou une valeur immédiate contenue dans un champ de l'instruction.
+Ce choix de conception est intrinsèquement lié à l'ISA des processeurs de type RISC où les instructions exécutées manipulent au plus 2 opérandes provenant des registres et/ou une valeur immédiate contenue dans un champ de l'instruction.
 Cependant, certains cœurs de processeurs pensés pour exécuter plus efficacement des applications de traitement du signal possèdent un troisième port de lecture pour la file de registres, afin de permettre l'exécution d'instructions de type MAC (Multiply And Accumulate).
 L'accès à une troisième opérande permet l'intégration d'opérations plus complexes au sein de l'UAL, dans le but de réduire le nombre d'instructions à réaliser, et par voie de conséquence, de diminuer le temps d'exécution des applicatifs ainsi que la taille de leur binaire.
 Ces nouvelles opportunités ont toutefois un impact négatif sur la complexité matérielle de l'architecture, car elles nécessitent l'ajout d'un réseau de multiplexage supplémentaire dans la file de registres ou bien une duplication des bancs mémoire dans le but de délivrer cette donnée supplémentaire à l'UAL.
@@ -145,7 +145,7 @@ Ce cœur, développé par ETH Zürich et poussé dans des projets étudiants par
 %paragraphe 
 %paragraphe 
 \textcolor{black}{Le cœur CVA6 possède une architecture interne composée de 6 étages de pipeline, tel que cela est schématisé dans la figure \ref{figure:cva6}.
-Il implante l'ISA de base RV64I, supporte nativement les extensions M/C/F et A de la spécification RISC-V et intègre un mécanisme de prédiction de branchement efficace. En interne, en fonction de la configuration du cœur, ce dernier peut opérer sur des données codées sur 32 bits ou 64 bits.
+Il implante l'ISA de base RV64I, supporte nativement les extensions M/C/F et A de la spécification RISC-V et intègre un mécanisme de prédiction de branchement. En interne, en fonction de la configuration du cœur, ce dernier peut opérer sur des données codées sur 32 bits ou 64 bits.
 Ce dernier format de représentation des données, choisi avant la synthèse logique du cœur, permet d'appliquer un facteur de parallélisation deux fois supérieur lors des modes de fonctionnement SIMD. Toutefois, il est à noter que tout comme les cœurs RISC-V précédemment étudiés, le cœur CVA6 ne gère pas les accès mémoire aux données non-alignées. Les informations fournies dans le tableau \ref{tab:cva6:cost} permettent de quantifier la complexité du cœur CVA6 ainsi que du SoC dans lequel il est inclus. Les résultats présentés sont issus des rapports post-placement et routage pour un FPGA de type Xilinx Kintex 7 lorsqu'une fréquence de fonctionnement de 50 MHz est fixée.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
@@ -332,7 +332,7 @@ Le tableau \ref{tab:compartif_polaire}, met en évidence que les instructions pr
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 En procédant à une analyse similaire à celle que nous venons de décrire, un nouveau jeu d'instruction est ainsi identifié et reporté dans le tableau \ref{tab:instrus_ldpcnb_3reg} pour la famille de code LDPC-NB.
-Celle-ci consiste en l'assemblage de plusieurs instructions spécifiques proposées précédemment et de nouvelles.
+Celle-ci consiste en l'assemblage de plusieurs instructions spécifiques proposées précédemment et de nouvelles instructions.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
     \centering
