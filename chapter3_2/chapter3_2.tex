@@ -137,7 +137,7 @@ Les opérations appliquées sur les 4 trames étant identiques, il est alors pos
 Les résultats expérimentaux concernant le temps d'exécution des différents décodeurs sont reportés dans la table \ref{cycles_bit_simd_inter} et \ref{tab:cycles_inter_2r_p1} et \ref{tab:cycles_inter_2r_p2}.
 Ces résultats sont comparés à ceux obtenus précédemment lorsque les instructions spécialisées manipulaient des instructions scalaires (SISD) (\textit{\ding{183} SISD}) et également avec les décodeurs de base sans l'aide d'instructions spécialisées \textit{\ding{182} Baseline}.
 Les données présentées montrent qu'en moyenne, les instructions SIMD ajoutées permettent de réduire de $75\%$ le temps de décodage des bits par rapport à la solution incorporant nos instructions SISD. 
-Les débits sont également considérablement améliorés lorsqu'ils sont comparés avec la baseline et les instructions SISD.
+Les débits sont également considérablement améliorés lorsqu'ils sont comparés avec les codes originaux (baseline) et les instructions SISD.
 Ce constat est cohérent avec la stratégie de parallélisation employée, même s'il est difficile d'expliquer précisément les raisons des légères disparités entre les versions d'un même décodeur sur les différentes architectures.
 
 Si l'on analyse dans un premier temps les codes CCE et que l'on regarde les décodeurs LDPC binaires et non binaires, le problème ne se pose pas.
@@ -575,7 +575,7 @@ Les gains relatifs aux versions de base \textit{\ding{182}Baseline} sont égalem
 Concernant les décodeurs LDPC, les limitations architecturales des cœurs RISC-V employés réduisent drastiquement l'intérêt de ce type d'implantation. }
 
 En effet, le processus de décodage LDPC réalise des accès 32 bits non alignés à la mémoire. 
-Ce type d'accès, relativement atypique, n'est pas supporté par la majorité des cœurs RISCV testés, à l'exception du cœur \IBEX.
+Ce type d'accès, relativement atypique, n'est pas supporté par la majorité des cœurs RISCV testés, à l'exception du cœur \IBEX qui supporte ce type d'accès.
 
 Pour les décodeurs LDPC non binaires, l'accélération est faible en comparaison de son implantation inter-trames, avec une réduction du temps d'exécution de $\approx 5\%$ à $6.8\%$. 
 Ces gains limités sont liés à la nature de l'algorithme avec un schéma intra-trames, car il est difficile d'extraire des instructions spécialisées opérant sur 32 bits. 
@@ -629,7 +629,7 @@ Par exemple, pour l'extension dédiée au décodage \textit{Fast-SC}, elle est $
 Ces observations liées à l'augmentation de la complexité matérielle entre ces deux types d'extension se retrouvent lorsque l'on analyse l'impact que peuvent avoir les extensions sur la fréquence maximale de fonctionnement des cœurs. 
 Les ordres de grandeur sont conservés malgré quelques disparités.
 
-L'ensemble de ces résultats expérimentaux mettent en évidence que les extensions dédiées à la parallélisation intra-trame offrent, pour les turbo codes et les codes polaires, des facteurs d'accélération substantiels (> 50\% du temps d'exécution) avec un impact limité sur les caractéristiques des cœurs si l'on omet le cœur \PicoRV.
+L'ensemble de ces résultats expérimentaux mettent en évidence que les extensions dédiées à la parallélisation intra-trame offrent, pour les turbo codes et les codes polaires, des facteurs d'accélération substantiels (> 50\% du temps d'exécution) avec un impact limité sur les fréquences et coût des cœurs si l'on omet le \PicoRV. En effet, le coût materiel de ce dernier est fortement impacté avec l'intégration des instructions spécialisées intra-trames.
 
 
 
@@ -730,7 +730,8 @@ Afin d'améliorer les performances ainsi obtenues, différentes pistes d'amélio
 En effet, avec les résultats obtenus par les expérimentations menées, les débits augmentent en concordance avec la réduction de la latence des décodeurs étudiés.}
 
 On retrouve là une philosophie qui a abouti par exemple à l'intégration d'extensions SSEx, AVX sur processeur X86\_64. 
-Toutefois, cette amélioration des performances engendre un surcoût matériel dont l'impact varie en fonction de la complexité initiale du cœur tel que cela est mis en évidence dans le tableau \ref{tab:hw}. 
+Toutefois, cette amélioration des performances engendre un surcoût matériel dont l'impact varie en fonction de la complexité initiale du cœur tel que cela est mis en évidence dans le tableau \ref{tab:hw}. Il serai 
+alors pertinent de disposer d'une métrique combinant débit, latence et complexité matérielle associée. 
 Afin de minimiser cette augmentation de la complexité matérielle, il serait possible de pousser encore plus loin l'intégration de nos extensions dans les architectures cibles. 
 Cela pourrait se faire en réutilisant par exemple tout ou partie des ressources de l'ALU, mais on perdrait alors le principe de \textit{généricité}, sur lequel repose une grande partie de l'intérêt de la solution étudiée.
 

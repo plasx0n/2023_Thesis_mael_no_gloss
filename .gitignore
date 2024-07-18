@@ -48,3 +48,8 @@ main.out
 main.run.xml
 main.synctex.gz
 main.toc
+main.acn
+main.fdb_latexmk
+main.lof
+main.lot
+main.toc

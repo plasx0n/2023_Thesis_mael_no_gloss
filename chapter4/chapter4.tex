@@ -381,7 +381,7 @@ Celle-ci consiste en l'assemblage de plusieurs instructions spécifiques propos�
 \label{tab:compartif_ldpcnb}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textcolor{black}{Toutefois, du fait de la complexité accrue de l'algorithme de décodage (en logiciel), il est difficile d'extraire des instructions spécifiques pertinentes et compatibles avec les contraintes voulues. 
+Toutefois, du fait de la complexité accrue de l'algorithme de décodage (en logiciel), il est difficile d'extraire des instructions spécifiques pertinentes et compatibles avec les contraintes voulues. 
 En effet, le nombre d'accès mémoires et la gestion des pointeurs mémoire complexifient l'analyse du code.
 Les instructions pertinentes identifiées sont les suivantes: 
 \begin{itemize}
@@ -392,7 +392,7 @@ Comme pour les codes LDPC, l'utilisation de ces nouvelles instructions vont thé
 Une différence importante entre les versions inter et intra-trame est l'utilisation d'un minimum horizontal.
 Une majorité des instructions à 2 registres sources de notre extension sont conservées.
 Les nouvelles instructions à 3 registres permettent, quand à elles, d'améliorer la latence dans la fonction de calcul des nœuds de parité, à l'aide de la fonction \textit{u8\_min\_addsat\_pu8}.
-Enfin, l'instruction \textit{cmpge\_AandB\_lo8C\_pu8} permet de simplifier l'étape de recherche de l'index de la valeur minimale du vecteur de données inter-trames.\\ }
+Enfin, l'instruction \textit{cmpge\_AandB\_lo8C\_pu8} permet de simplifier l'étape de recherche de l'index de la valeur minimale du vecteur de données inter-trames. Il est à noter que l'approche choisie n'a pas pour objectif d'adapter les algorihtmes utilisés pour l'architecture. 
 
 
 
@@ -874,16 +874,16 @@ Les facteurs d'accélération entre les versions originales des décodeurs et de
     \label{tab:perfs_intra_3regs}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\textcolor{black}{Lorsque l'on s'intéresse à l'extension de la taille des données manipulées par nos extensions SIMD de 32 bits à 64 bits on observe une accélération variant d'un facteur $1\times \rightarrow 2\times$. 
+Lorsque l'on s'intéresse à l'extension de la taille des données manipulées par nos extensions SIMD de 32 bits à 64 bits on observe une accélération variant d'un facteur $1\times \rightarrow 2\times$. 
 Des facteurs d'accélération de $\approx 2\times$ sont obtenus pour certains codes, tandis que pour d'autres les accélérations sont moins favorables, voir bien inférieures à celles obtenues dans le cas de la parallélisation inter-trames.
 Cela s'explique par un parallélisme de calcul plus difficilement exploitable en mode intra-trame.
 Par exemple, concernant le décodage SC des codes polaires, le parallélisme de calcul varie lors du décodage.
 Ainsi, au niveau des feuilles de l'arbre, seules des opérations scalaires sont réalisées.
 En effet, durant une partie du processus de décodage, le doublement des unités de calculs est sans conséquence, limitant de fait l'accélération globale.
 Le facteur d'accélération du décodeur LDPC-NB est bien inférieur aux attentes.
-En effet, les accès non réguliers à la mémoire lors des calculs des CNs induisent des pénalités qui annulent les gains liés à nos extensions.}
+En effet, les accès non réguliers à la mémoire lors des calculs des CNs induisent des pénalités qui restent très prégnantes et ces dernières compromettent une partie des gains liés à nos extensions.
 
-\textcolor{black}{L'impact des extensions proposées pour l'accélération des décodeurs intra-trame sur la complexité matérielle a aussi été évaluée.
+L'impact des extensions proposées pour l'accélération des décodeurs intra-trame sur la complexité matérielle a aussi été évaluée.
 La figure \ref{tikz:cost:simd:intra} présente le surcoût des extensions en termes de LUT issues des rapports post-placement et routage.
 Contrairement aux expérimentations réalisées en mode inter-trames, on peut observer une plus grande disparité entre les surcoûts des extensions \textbf{2R} et \textbf{3R}. 
 Cela est lié au fait que la possibilité d'utiliser $3$ opérandes a permis de concevoir plus d'instructions spécialisées. 
@@ -892,7 +892,7 @@ Cela explique le doublement du coût de l'extension \textbf{3R} par rapport à l
 Toutefois, même si cette observation devrait également se vérifier en mode 64 bits, l'outil Vivado réalise des optimisations durant les étapes post-placement et routage qui tempèrent cette tendance.
 Un phénomène équivalent est observé pour l'extension dédiée aux code LDPC-NB où l'extension \textbf{2R} est plus onéreuse que la version \textbf{3R} en configuration 32 bits.
 Enfin, si l'on compare le surcoût des extensions dédiées au mode intra-trame, par rapport à celles pour le mode inter-trames, on note qu'il est du même ordre de grandeur, à l'exception des instructions pour les turbo codes; ces dernières sont environ 20\% plus onéreuses. 
-Comme nous l'avons précédemment évoqué, ces coûts matériels qui peuvent sembler importants ne représentent que de $1\%$ à $3\%$ de la complexité du CVA6.}
+Comme nous l'avons précédemment évoqué, ces coûts matériels qui peuvent sembler importants ne représentent que de $1\%$ à $3\%$ de la complexité du CVA6.
 
 
 
