@@ -2066,39 +2066,6 @@
       \field{title}{LDPC decoder architecture for DVB-S2 and DVB-S2X standards}
       \field{year}{2015}
     \endentry
-    \entry{LDPC:SOFT4}{article}{}
-      \name{author}{2}{}{%
-        {{hash=b302d0ceafdd4655b18e25018243626b}{%
-           family={Le\bibnamedelima Gal},
-           familyi={L\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Bertrand},
-           giveni={B\bibinitperiod}}}%
-        {{hash=efbbad097796e5e35613bc06154cad4d}{%
-           family={Jego},
-           familyi={J\bibinitperiod},
-           given={Christophe},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{9dd2f85655d88334d76c43ed12e006c2}
-      \strng{fullhash}{9dd2f85655d88334d76c43ed12e006c2}
-      \strng{bibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
-      \strng{authorbibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
-      \strng{authornamehash}{9dd2f85655d88334d76c43ed12e006c2}
-      \strng{authorfullhash}{9dd2f85655d88334d76c43ed12e006c2}
-      \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Parallel and Distributed Systems}
-      \field{month}{5}
-      \field{number}{5}
-      \field{title}{High-Throughput Multi-Core LDPC Decoders Based on x86 Processor}
-      \field{volume}{27}
-      \field{year}{2016}
-      \field{pages}{1373\bibrangedash 1386}
-      \range{pages}{14}
-    \endentry
     \entry{FAIR:LDPC}{inproceedings}{}
       \name{author}{5}{}{%
         {{hash=74497d6a7dbc7aa66cef3a568c3877e8}{%
@@ -2578,7 +2545,7 @@
       \strng{authorbibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
       \strng{authornamehash}{9dd2f85655d88334d76c43ed12e006c2}
       \strng{authorfullhash}{9dd2f85655d88334d76c43ed12e006c2}
-      \field{extraname}{4}
+      \field{extraname}{3}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -3705,37 +3672,37 @@
     \endentry
     \entry{ri:LeG15a}{article}{}
       \name{author}{3}{}{%
-        {{hash=b302d0ceafdd4655b18e25018243626b}{%
-           family={Le\bibnamedelima Gal},
-           familyi={L\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Bertrand},
+        {{hash=69be0658883c797079d89a098315de96}{%
+           family={{Le~Gal}},
+           familyi={L\bibinitperiod},
+           given={B.},
            giveni={B\bibinitperiod}}}%
-        {{hash=291691b60386f17090cb45b7220ab3c8}{%
+        {{hash=9b44b45b0b23062285b9c32b568c0f10}{%
            family={Leroux},
            familyi={L\bibinitperiod},
-           given={Camille},
+           given={C.},
            giveni={C\bibinitperiod}}}%
-        {{hash=efbbad097796e5e35613bc06154cad4d}{%
+        {{hash=8c36ea2aca2cc7b664d122face4e5414}{%
            family={Jego},
            familyi={J\bibinitperiod},
-           given={Christophe},
+           given={C.},
            giveni={C\bibinitperiod}}}%
       }
-      \strng{namehash}{f3e93d59a12852745c0960c4baddc2bd}
-      \strng{fullhash}{1751d76e91ab01542590939df9d0d07c}
-      \strng{bibnamehash}{1751d76e91ab01542590939df9d0d07c}
-      \strng{authorbibnamehash}{1751d76e91ab01542590939df9d0d07c}
-      \strng{authornamehash}{f3e93d59a12852745c0960c4baddc2bd}
-      \strng{authorfullhash}{1751d76e91ab01542590939df9d0d07c}
+      \strng{namehash}{206739ec85643e18abfbd77c5c93b6b9}
+      \strng{fullhash}{998e4129d1d52fa632c15f856bbe330d}
+      \strng{bibnamehash}{998e4129d1d52fa632c15f856bbe330d}
+      \strng{authorbibnamehash}{998e4129d1d52fa632c15f856bbe330d}
+      \strng{authornamehash}{206739ec85643e18abfbd77c5c93b6b9}
+      \strng{authorfullhash}{998e4129d1d52fa632c15f856bbe330d}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Signal Processing}
+      \field{journaltitle}{IEEE Transactions on Signal Processing (TSP)}
       \field{month}{1}
       \field{number}{2}
-      \field{title}{Multi-Gb/s Software Decoding of Polar Codes}
+      \field{title}{Multi-{Gb/s} software decoding of Polar Codes}
       \field{volume}{63}
       \field{year}{2015}
       \field{pages}{349\bibrangedash 359}
@@ -5877,44 +5844,6 @@
       \range{pages}{5}
       \keyw{Instruction sets;Measurement}
     \endentry
-    \entry{ri:LeG15a}{article}{}
-      \name{author}{3}{}{%
-        {{hash=69be0658883c797079d89a098315de96}{%
-           family={{Le~Gal}},
-           familyi={L\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-        {{hash=9b44b45b0b23062285b9c32b568c0f10}{%
-           family={Leroux},
-           familyi={L\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-        {{hash=8c36ea2aca2cc7b664d122face4e5414}{%
-           family={Jego},
-           familyi={J\bibinitperiod},
-           given={C.},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{206739ec85643e18abfbd77c5c93b6b9}
-      \strng{fullhash}{998e4129d1d52fa632c15f856bbe330d}
-      \strng{bibnamehash}{998e4129d1d52fa632c15f856bbe330d}
-      \strng{authorbibnamehash}{998e4129d1d52fa632c15f856bbe330d}
-      \strng{authornamehash}{206739ec85643e18abfbd77c5c93b6b9}
-      \strng{authorfullhash}{998e4129d1d52fa632c15f856bbe330d}
-      \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Signal Processing (TSP)}
-      \field{month}{1}
-      \field{number}{2}
-      \field{title}{Multi-{Gb/s} software decoding of Polar Codes}
-      \field{volume}{63}
-      \field{year}{2015}
-      \field{pages}{349\bibrangedash 359}
-      \range{pages}{11}
-    \endentry
     \entry{mcgill}{article}{}
       \name{author}{5}{}{%
         {{hash=2974ceeb671e21ef86b14ba0f55d425a}{%
@@ -5986,7 +5915,7 @@
       \strng{authorbibnamehash}{9dd2f85655d88334d76c43ed12e006c2}
       \strng{authornamehash}{9dd2f85655d88334d76c43ed12e006c2}
       \strng{authorfullhash}{9dd2f85655d88334d76c43ed12e006c2}
-      \field{extraname}{5}
+      \field{extraname}{4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6160,7 +6089,7 @@
       \strng{authorbibnamehash}{e7f68d69ec675c8d3b673106ec060927}
       \strng{authornamehash}{e7f68d69ec675c8d3b673106ec060927}
       \strng{authorfullhash}{e7f68d69ec675c8d3b673106ec060927}
-      \field{extraname}{6}
+      \field{extraname}{5}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7138,7 +7067,7 @@
       \strng{authorbibnamehash}{e7f68d69ec675c8d3b673106ec060927}
       \strng{authornamehash}{e7f68d69ec675c8d3b673106ec060927}
       \strng{authorfullhash}{e7f68d69ec675c8d3b673106ec060927}
-      \field{extraname}{7}
+      \field{extraname}{6}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
