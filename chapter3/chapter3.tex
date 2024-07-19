@@ -861,10 +861,10 @@ Pour mener à bien ces expérimentations, les programmes décrivant le comportem
 
 Un ensemble d'expérimentations a été conduit afin de mesurer les gains apportés par l'utilisation d'instructions spécialisées opérant sur des données scalaires codées sur 8 bits (\acrshort{sisd}). Ces expérimentations ont été réalisées sur chacune des cibles présentées précédemment. 
 
-Un sous-ensemble des résultats de mesure concernant les temps d'exécution et les débits des différents décodeurs est présenté dans le tableau \ref{Cycles_cores}.
+Un sous-ensemble des résultats de mesure concernant les temps d'exécution et les débits des différents décodeurs est présenté dans le tableau \ref{Cycles_cores}. L'ensemble des paramètres des codes utilisés sont reportés dans les annexes.
 Les valeurs fournies dans ce tableau présentent pour chacun des cœurs, le nombre de cycles d'horloge nécessaires pour l'exécution du code logiciel original (sans instruction dédiées), noté \textit{\ding{182}Baseline} ainsi que le nombre de cycles d'horloge nécessaires à la version exploitant les nouvelles instructions (\textit{\ding{183}SISD ISA 2R}). 
 La différence entre ces deux mesures est indiquée sur les lignes \textit{Gain \ding{182}$\rightarrow$\ding{183}}, le gain apporté par la version enrichie est exprimé en pourcentage.
-Il est important de noter que le gain en pourcentage est la métrique la plus cohérente au vu des différences d'architectures des cœurs de tests. Les débits sont calculés en fonction de la fréquence maximale obtenue après placement et routage par l'outil Vivado sur cible FPGA.
+Il est important de noter que le gain en pourcentage est la métrique la plus cohérente au vu des différences d'architectures des cœurs de tests. Les débits sont calculés en fonction de la fréquence maximale obtenue après placement et routage par l'outil Vivado sur cible FPGA avec la formule suivante : $ Nb\_bits/(Latence(CH)*(1/Fmax)) $.
 
 
 
@@ -1094,7 +1094,7 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
   
   \end{tabular}
   
-  \caption{Surcoût matériel de l'ajout d'instructions spécialisées (en LUT)}
+  \caption{Surcoût matériel de l'ajout d'instructions spécialisées (en LUT).}
   \label{lut_cost_sisd}
   
   \end{table}
@@ -1104,7 +1104,7 @@ Pour analyser les pénalités engendrées par les instructions ajoutées pour le
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Les données présentées dans la table \ref{lut_cost_sisd} et les figures \ref{tikz_freqXlutperc_sisd} montrent que le surcoût introduit par nos instructions dépend fortement du cœur RISC-V considéré. Même si la complexité matérielle des parties opératives placées dans l'UAL est constante, le surcoût engendré par la modification du décodeur d'instructions et des barrières de registres du pipeline lui est variable en fonction des cœurs. Ces différences peuvent être de plus exacerbées par les scripts de synthèse fournis avec les différents cœurs qui ne sont pas tous identiques en termes d'objectif d'optimisation (vitesse versus complexité). Ainsi, l'intégration des instructions proposées pour le décodage des codes LDPC augmente le coût de l'architecture \IBEX\space d'environ $+9.1\%$ en termes de LUTs, tandis que pour le cœur \PicoRV\space plus compact, l'augmentation est de $34\%$. 
-Si l'on considère les autres extensions pour lesquelles le nombre d'instructions ajoutées est moins important, les surcoûts sont plus faibles. Cependant, l'analyse fine de ces différents résultats, et le positionnement du coût des extensions les unes par rapport aux autres n'est pas triviale, à cause des choix opérés par Vivado lors de la synthèse logique et du placement/routage.
+Si l'on considère les autres extensions pour lesquelles le nombre d'instructions ajoutées est moins important, les surcoûts sont plus faibles. Cependant, l'analyse fine de ces différents résultats, et le positionnement du coût des extensions les unes par rapport aux autres n'est pas triviale, à cause des choix opérés par Vivado lors de la synthèse logique et du placement/routage que nous ne maîtrisons pas.
 
 Ces observations sont confirmées par l'analyse de l'évolution des fréquences maximales de fonctionnement. Dans la figure \ref{tikz_freqXlutperc_sisd}, la fréquence de fonctionnement maximale pour le \PicoRV\space est affectée par l'intégration des différents jeux d'instructions. Ce cœur subit une augmentation de la durée de son chemin critique de $\approx7\%$ (LDPC) à $\approx10\%$ (polaire) en fonction des instructions qui lui sont ajoutées. A l'opposé, sur le cœur \RISCY, la durée du chemin critique n'est pas impactée car ce dernier ne se situe pas dans l'étage d'exécution. Les expérimentations sur les cœurs \IBEX\space et \SCR\space démontrent quant à elles l'imprévisibilité des résultats de synthèse logique liée aux choix réalisés par les outils. Ainsi l'on observe une augmentation de la fréquence de fonctionnement de $\approx 3\%$ à $\approx 5\%$ est obtenue pour le cœur \IBEX\space tandis que pour le \SCR, la fréquence varie de $-1\%$ à $+1\%$.
 

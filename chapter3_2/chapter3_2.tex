@@ -114,7 +114,7 @@ Ce tableau indique pour chaque instruction son usage en fonction des stratégies
 La description des traitements réalisés par ces instructions a été placée en annexe pour des raisons de lisibilité. 
 L'ensemble des descriptions logicielles des décodeurs CCE ont été retravaillées afin d'exploiter ces instructions et offrir des stratégies de parallélisation inter et intra-trame. 
 Un résumé du nombre d'instructions par famille de code et schéma de parallélisation est fourni dans le tableau \ref{sum:all:instr}. 
-Dans la suite de ce chapitre, les résultats obtenus sont présentés.
+Dans la suite de ce chapitre, les résultats obtenus sont présentés. Il est à noté que la formulation logicielle de l'algorihtme de décodage pour les code LDPC dans leur version intra-trame est différente de celles précédemment utilisées, expliquant la réductions des instructions spécialisées identifiées.
 
 % 
 % 
@@ -343,7 +343,7 @@ Ces chiffres ont été obtenus de manière similaire à ceux présentés dans la
     \IBEX        
             & 2 446 LUTs    &+12.2\%    & +12.4\%   & +13.1\%   & +13.7\% & +9.4\%   \\
             & 883	FFs     &0.0\%      & 0.0\%	    & 0.0\%     &  0.0\%  & 0\%     \\
-            & 100	MHz     &+2.4\%     & +4.7\%    & +1.2\%    &  +2.9\% & +3.4\%  \\
+            & 99	MHz     &+2.4\%     & +4.7\%    & +1.2\%    &  +2.9\% & +3.4\%  \\
     \cmidrule(l){2-7}
   
     \SCR        
@@ -370,8 +370,8 @@ L'augmentation la moins marquée est observable pour le cœur le plus complexe, 
 
 L'introduction des nouvelles instructions impacte aussi la fréquence de fonctionnement maximale des différents cœurs, tel que le démontrent les données rapportées dans le tableau \ref{lut_cost_simd_inter} et la figure \ref{tikz_freqXlutperc_inter}. 
 Le cœur le plus impacté est le \PicoRV\space avec une baisse moyenne de $\approx 10\%$ de sa fréquence de fonctionnement, ce qui est $1.5\times$ plus important que précédemment. 
-Pour le cœur \IBEX, l'impact est quand à lui plus faible ou équivalent en fonction de l'extension considérée, tandis que pour le cœur \RISCY, aucun impact n'a été observé. 
-En effet, ce cœur est limité en fréquence par d'autres composants de son architecture. 
+Pour le cœur \IBEX, l'impact est quand à lui plus faible ou équivalent en fonction de l'extension considérée, la fréquence maximale de ce dernier est amélioré, liée au manque de maîtrise des scripts de génération d'implantation FPGA associés. 
+Pour le cœur \RISCY, aucun impact n'a été observé. En effet, ce cœur est limité en fréquence par d'autres composants de son architecture. 
 L'ensemble de ces résultats démontrent que malgré l'augmentation de la complexité matérielle des architectures et la baisse de la fréquence de fonctionnement, les instructions SIMD proposées permettent d'améliorer notablement les performances globales des décodeurs logiciels déployés sur les cœurs RISC-V.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -602,7 +602,7 @@ Nb. Insn Cst. &         &  7        & 6         &8          &    4      &   6   
 \IBEX      
           & 2 446 LUTs  & +11.0\%     & +16.3\% &  +20.5\%   & 8.9\%          & +22.4\%      \\
           & 883 FFs     &    0.0\%    &    0.0\%  &    0.0\%       & 0.0\%             &  +0.8\%     \\
-          & 100 MHz     & +3.4\%    & +5.0\%    &  -2.2\%    & +3.0\%         &  +6.9\%        \\
+          & 99 MHz     & +3.4\%    & +5.0\%    &  -2.2\%    & +3.0\%         &  +6.9\%        \\
           \cmidrule(l){2-7}
 
 \SCR 
