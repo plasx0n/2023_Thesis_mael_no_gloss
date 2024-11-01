@@ -33,39 +33,39 @@
 \contentsline {section}{\numberline {4.2}Descriptif du flot de conception}{61}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Amélioration du décodage logiciel des codes LDPC}{63}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Amélioration du décodage logiciel des codes LDPC non binaires}{67}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Algorithme de décodage logiciel des codes polaires}{69}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Algorithme de décodage logiciel des codes polaires}{70}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Algorithme de décodage logiciel des turbo codes}{72}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Synthèse des extensions proposées}{74}{subsection.4.2.5}%
 \contentsline {section}{\numberline {4.3}Évaluation de l'impact de l'ajout d'instructions spécialisées sur cœurs RISC-V}{75}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Conclusion}{82}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Conclusion}{83}{section.4.4}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {5}Extensions SIMD pour l'accélération des décodeurs de CCE}{83}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Extensions SIMD pour l'accélération des décodeurs de CCE}{85}{chapter.5}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {5.1}Introduction}{84}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Expérimentations menées sur des décodeurs SIMD inter-trames}{86}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Expérimentations menées sur des décodeurs SIMD intra-trame}{92}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Synthèse de la partie expérimentale}{94}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Conclusion}{97}{section.5.5}%
+\contentsline {section}{\numberline {5.1}Introduction}{86}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Expérimentations menées sur des décodeurs SIMD inter-trames}{88}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Expérimentations menées sur des décodeurs SIMD intra-trame}{93}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Synthèse de la partie expérimentale}{98}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Conclusion}{100}{section.5.5}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {6}Extensions spécialisées avec 3 opérandes}{99}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Extensions spécialisées avec 3 opérandes}{101}{chapter.6}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {6.1}Modèle d'architecture ciblé}{100}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Évolution des extensions}{103}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Impact des nouvelles extensions de l'ISA}{109}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Évaluation des extensions scalaires}{109}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Évaluation des extensions SIMD inter-trames}{112}{subsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.3.3}Évaluation des extensions SIMD intra-trame}{114}{subsection.6.3.3}%
-\contentsline {section}{\numberline {6.4}Conclusion}{117}{section.6.4}%
+\contentsline {section}{\numberline {6.1}Modèle d'architecture ciblé}{102}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Évolution des extensions}{105}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Impact des nouvelles extensions de l'ISA}{111}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Évaluation des extensions scalaires}{111}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Évaluation des extensions SIMD inter-trames}{114}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Évaluation des extensions SIMD intra-trame}{116}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Conclusion}{120}{section.6.4}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{\numberline {7}Conclusion et Perspectives}{121}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Conclusion et Perspectives}{123}{chapter.7}%
 \babel@toc {french}{}\relax 
-\contentsline {chapter}{Annexes}{125}{section*.83}%
-\contentsline {subsection}{\numberline {7.0.1}Courbes théoriques}{125}{subsection.7.0.1}%
-\contentsline {subsection}{\numberline {7.0.2}Paramètres des codes}{125}{subsection.7.0.2}%
-\contentsline {chapter}{Bibliographie}{147}{section*.134}%
+\contentsline {chapter}{Annexes}{127}{section*.83}%
+\contentsline {subsection}{\numberline {7.0.1}Courbes théoriques}{127}{subsection.7.0.1}%
+\contentsline {subsection}{\numberline {7.0.2}Paramètres des codes}{128}{subsection.7.0.2}%
+\contentsline {chapter}{Bibliographie}{149}{section*.135}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \babel@toc {english}{}\relax 

@@ -44,23 +44,32 @@
     %   \addplot[mark=|       , Set1-9, semithick] table [x=Eb/N0, y=BER] {main/ch1_fig/curves/sc_N/dat/SC_32768.txt}; \label{plot:line9}
     %   \addplot[mark=none, Paired-3, thick] coordinates {(0.187,0.00000001)(0.187,1)};
   
-      \legend{$Polaire\:SC$,$Polaire\:FSC$,$LDPC$,$turbo$,$LDPCNB$}
+      \legend{$Polaire\:SC (nsys)$,$Polaire\:FSC (sys)$,$LDPC$,$turbo$,$LDPCNB$}
     \end{semilogyaxis}
   \end{tikzpicture}
 
   \subsection{Paramètres des codes}
 
-  \begin{itemize}
-    \item Code LDPC         : LDPC(34,20), Matrice H:BG1 (5G), Message Passing Algorithm (MPA), Ordonnancement : Horizontal Layered (HL), Algorithme de décodage : Min-Sum (MS), Données internes : 8 bits signés , 10 itérations. 
-    \\
-    \item Code LDPC-NB      : LDPC-NB(32,16), GF : 16, Matrice H : CCSDS\_UCN\_128b\_32x16\_GF16, Message Passing Algorithm (MPA), Ordonnancement : Horizontal Layered(HL), Algorithme de décodage : Min-Sum (MS), Données internes : 8 bits non-signées, 2 itérations.
-    \\ 
-    \item Code Polaire SC   : Polaire(1024,512), Algorithme de décodage : Succsesive Cancelation , non-systématique (NSYS), Encodage des bits gélés : custom (Meilleur cas), Données internes : 8 bits signés.
-    \\ 
-    \item Code Polaire F-SC : Polaire(1024,512), Algorithme de décodage : Fast - Succsesive Cancelation (noeuds R0,R1,REP,SPC), systématique (SYS), Encodage des bits gélés : 5G, Données internes : 8 bits signés. 
-    \\ 
-    \item turbo codes       : Turbo(1536,512), BCJR, Max-log Map, treilis LTE, 3 itérations, Données internes : 8 bits signés. 
-  \end{itemize}
+\begin{table}[]
+    \scriptsize
+    \centering
+    \begin{tabular}{l|l|l|l|l|l|l}
+    \toprule
+        Famille     & Bits          & Données           & Algorithme    & Ord. & Itérations & Matrice/Autres  \\
+        \bottomrule
+         LDPC       & (34,20)       & 8 bits signés      & MPA Min-Sum   & HL &  10 & BG1 (5G) \\
+         LDPC-NB    & (32,16) GF:16 & 8 bits non-signées & MPA Min-Sum   & HL &  2 & CCSDS UCN \\
+         
+         
+         Polaire    & (1024,512)    & 8 bits signés      & SC NSYS       &    &    & bits gelés : 5G\\
+         Polaire    & (1024,512)    & 8 bits signés      & F-SC SYS      &    &    & bits gelés : 5G\\
+         turbo-codes& (1536,512)    & 8 bits signés      & BCJR, Max-log Map       &    & 3   & LTE \\
+         \bottomrule
+    \end{tabular}
+    \caption{Configuration et paramètres des familles des CCE utilisés\\
+    Ord. : Ordonnancement}
+    \label{codes}
+\end{table}
 
 
 \section*{Liste des instructions spécialisées} 

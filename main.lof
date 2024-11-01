@@ -26,22 +26,22 @@
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances. Les coeurs sont simulés via l'utilisation de \textit {Verilator} ou \textit {iverilog}(\textbf {PicoRV32}) et lorsque possible, emulés sur carte FPGA.}}{62}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Flot de conception global intégrant l'analyse et la sélection des instructions, l'intégration dans le flot de compilation et la mesure des performances. \textcolor {blue}{Les coeurs \textbf {IBEX}, \textbf {SCR1} et \textbf {RISCY} sont simulés via l'utilisation de \textit {Verilator} et \textit {iverilog} pour le (\textbf {PicoRV32}).}}}{62}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Principe d'insertion d'instruction spécialisées dans un cœur RISC-V (schéma pédagogique du cœur \blx@tocontentsinit {0}\cite {ArchiRISC:V})}}{63}{figure.caption.25}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Impact de l'ajout des instructions spécialisées: surcoût en LUT et fréquence de fonctionnement.}}{82}{figure.caption.48}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Approche de la parallélisation inter-trames incluant les étages d'entrelacement dans l'ordre et inverse.}}{84}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Impact de l'ajout des instructions spécialisées: surcoût en LUTs et fréquence de fonctionnement.}}{91}{figure.caption.56}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Impact de l'ajout des instructions SIMD intra-trame: surcoût en LUTs et fréquence de fonctionnement}}{95}{figure.caption.60}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Approche de la parallélisation inter-trames incluant les étages d'entrelacement dans l'ordre et inverse.}}{86}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Impact de l'ajout des instructions spécialisées: surcoût en LUTs et fréquence de fonctionnement.}}{94}{figure.caption.56}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Impact de l'ajout des instructions SIMD intra-trame: surcoût en LUTs et fréquence de fonctionnement}}{97}{figure.caption.60}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Schéma de l'architecture du cœur CVA6.}}{102}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Surcôut des instructions spécialisées SISD dans l'UAL du cœur CVA6.}}{112}{figure.caption.74}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation inter-trames en configuration 32 bits et 64 bits.}}{115}{figure.caption.76}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation intra-trame en configuration 32 bits et 64 bits.}}{118}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schéma de l'architecture du cœur CVA6.}}{104}{figure.caption.63}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Surcôut des instructions spécialisées SISD dans l'UAL du cœur CVA6.}}{114}{figure.caption.74}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation inter-trames en configuration 32 bits et 64 bits.}}{117}{figure.caption.76}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Surcoût matériel induit par les extensions nécessaires à la parallélisation intra-trame en configuration 32 bits et 64 bits.}}{120}{figure.caption.78}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }

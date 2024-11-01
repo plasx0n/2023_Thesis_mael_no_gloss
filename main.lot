@@ -13,51 +13,52 @@
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Format 32 bits standardisé pour les instructions de type R (2 registres d'entrées) dans la spécification RISC-V. Les champs de registre désignent l'addresse du registre dans la file.}}{62}{table.caption.26}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces \textcolor {blue}{Format des instructions de type R issues de la spécification RISC-V.}}}{62}{table.caption.26}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Ensemble d'instructions proposées pour améliorer le décodage de code LDPC dans un contexte de fonctionnement scalaire.}}{67}{table.caption.30}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Résumé des instructions spécifiques LDPC-NB.}}{68}{table.caption.31}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Résumé des instructions spécifiques au décodage des codes polaires (SC et F-SC) dans un contexte scalaire.}}{72}{table.caption.37}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces Résumé des instructions spécifiques au décodage des turbo codes}}{74}{table.caption.41}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Récapitulatif des instructions proposées pour l'amélioration du décodage des CCE.}}{74}{table.caption.42}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Comparatifs de cœurs de processeurs RISC-V sélectionnés}}{76}{table.caption.43}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Comparaison des performances des cœurs usant des instructions à 2 entrées, configuration 8 bits SISD avec la fréquence de fonctionnement maximale pour chaque implantation.}}{78}{table.caption.44}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes LDPC sur le cœur \textbf {PicoRV32} classées en fonction de leur type.}}{79}{table.caption.45}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes polaires sur le cœur \textbf {PicoRV32} (algorithme \textit {Fast-SC}), classées en fonction de leur type.}}{79}{table.caption.46}%
-\contentsline {table}{\numberline {4.11}{\ignorespaces Surcoût matériel de l'ajout d'instructions spécialisées (en LUT)}}{81}{table.caption.47}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Récapitulatif des instructions proposées pour l'amélioration du décodage des CCE.}}{75}{table.caption.42}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces \textcolor {blue}{Comparatifs de cœurs de processeurs RISC-V sélectionnés}}}{77}{table.caption.43}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Comparaison des performances des cœurs usant des instructions à 2 entrées, configuration 8 bits SISD avec la fréquence de fonctionnement maximale pour chaque implantation.}}{79}{table.caption.44}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes LDPC sur le cœur \textbf {PicoRV32} classées en fonction de leur type.}}{80}{table.caption.45}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes polaires sur le cœur \textbf {PicoRV32} (algorithme \textit {Fast-SC}), classées en fonction de leur type.}}{80}{table.caption.46}%
+\contentsline {table}{\numberline {4.11}{\ignorespaces Surcoût matériel de l'ajout d'instructions spécialisées (en LUT).}}{81}{table.caption.47}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Liste des instructions spécifiques avec Mnemonic et compabilité SISD/SIMD.}}{86}{table.caption.50}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Synthèse du nombre d'instructions identifiées par famille de CCE.}}{87}{table.caption.51}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Réduction du nombre de cycles d'horloge nécessaire au décodage d'un bit grâce à l'usage des instructions SIMD dédiées - Stratégie de parallélisation inter-trames.}}{88}{table.caption.52}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Comparaison des performances des cœurs \textbf {IBEX} et \textbf {PicoRV32} usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}}{89}{table.caption.53}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Comparaison des performances des cœurs \textbf {SCR1} et \textbf {RISCY} usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}}{90}{table.caption.54}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation inter-trames}}{91}{table.caption.55}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}}{93}{table.caption.57}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Comparaison des performances des cœurs \textbf {SCR1} et \textbf {RISCY} usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}}{94}{table.caption.58}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation intra-trame}}{95}{table.caption.59}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Impacts des instructions sélectionnées en termes de réduction de cycles d'horloge par bit décodé et le surcoût en LUT}}{96}{table.caption.61}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Liste des instructions spécifiques avec Mnemonic et compabilité SISD/SIMD.}}{88}{table.caption.50}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Synthèse du nombre d'instructions identifiées par famille de CCE.}}{89}{table.caption.51}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Réduction du nombre de cycles d'horloge nécessaire au décodage d'un bit grâce à l'usage des instructions SIMD dédiées - Stratégie de parallélisation inter-trames.}}{90}{table.caption.52}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Comparaison des performances des cœurs \textbf {IBEX} et \textbf {PicoRV32} usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}}{91}{table.caption.53}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Comparaison des performances des cœurs \textbf {SCR1} et \textbf {RISCY} usant d'instructions à 2 entrées, configuration SIMD inter-trame avec la fréquence de fonctionnement maximale par implantation.}}{92}{table.caption.54}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation inter-trames}}{93}{table.caption.55}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}}{95}{table.caption.57}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Comparaison des performances des cœurs \textbf {SCR1} et \textbf {RISCY} usant d'instructions à 2 entrées, configuration SIMD intra-trame avec la fréquence de fonctionnement maximale par implantation.}}{96}{table.caption.58}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Impact des instructions SIMD dédiées sur la complexité matérielle et la fréquence de fonctionnement des cœurs RISC-V - Stratégie de parallélisation intra-trame}}{97}{table.caption.59}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Impacts des instructions sélectionnées en termes de réduction de cycles d'horloge par bit décodé et le surcoût en LUT}}{98}{table.caption.61}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Format 32 bits standardisé pour les instructions de type R4 (3 registres d'entrées) dans les spécifications RISC-V : RV-FDQ. Les champs de registre désignent l'addresse du registre dans la file.}}{101}{table.caption.62}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Complexités matérielles des cœurs CVA6 avec SoC sur cible Kintex 7 lorsque 2 ou 3 opérandes sont accessibles dans l'UAL. Résultats post-placement routage avec fréquence de fonctionnement fixée à 50 MHz.}}{103}{table.caption.64}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes LDPC en utilisant 2 ou 3 opérandes.}}{104}{table.caption.65}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Spécification des nouvelles instructions à 3 opérandes pour le décodage des codes LDPC.}}{105}{table.caption.66}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Spécification de l'instruction pour la fonction \textbf {G} pour le décodage des codes polaires.}}{105}{table.caption.67}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes polaires (algorithmes SC et F-SC) en utilisant 2 ou 3 opérandes.}}{106}{table.caption.68}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Nouvelles instructions spécifiques pour les codes LDPC-NB avec 3 registres sources.}}{106}{table.caption.69}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes LDPC-NB en utilisant 2 ou 3 opérandes.}}{107}{table.caption.70}%
-\contentsline {table}{\numberline {6.9}{\ignorespaces Instructions proposées pour l'accélération du décodage des turbo codes en utilisant 2 ou 3 opérandes.}}{108}{table.caption.71}%
-\contentsline {table}{\numberline {6.10}{\ignorespaces Nouvelle Instruction spécifique pour les turbo codes avec 3 registres sources.}}{108}{table.caption.72}%
-\contentsline {table}{\numberline {6.11}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration 8 bits SISD avec une fréquence de fonctionnement de 50 MHz. }}{110}{table.caption.73}%
-\contentsline {table}{\numberline {6.12}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD inter-trames avec une fréquence de fonctionnement fixée à 50 MHz.}}{113}{table.caption.75}%
-\contentsline {table}{\numberline {6.13}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD intra-trame avec une fréquence de fonctionnement fixée à 50 MHz.}}{116}{table.caption.77}%
-\contentsline {table}{\numberline {6.14}{\ignorespaces Accélération observé des débits par rapport à la Baseline.}}{119}{table.caption.79}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Format 32 bits standardisé pour les instructions de type R4 (3 registres d'entrées) dans les spécifications RISC-V : RV-FDQ. Les champs de registre désignent l'addresse du registre dans la file.}}{103}{table.caption.62}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Complexités matérielles des cœurs CVA6 avec SoC sur cible Kintex 7 lorsque 2 ou 3 opérandes sont accessibles dans l'UAL. Résultats post-placement routage avec fréquence de fonctionnement fixée à 50 MHz.}}{105}{table.caption.64}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes LDPC en utilisant 2 ou 3 opérandes.}}{106}{table.caption.65}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Spécification des nouvelles instructions à 3 opérandes pour le décodage des codes LDPC.}}{107}{table.caption.66}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Spécification de l'instruction pour la fonction \textbf {G} pour le décodage des codes polaires.}}{107}{table.caption.67}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes polaires (algorithmes SC et F-SC) en utilisant 2 ou 3 opérandes.}}{108}{table.caption.68}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Nouvelles instructions spécifiques pour les codes LDPC-NB avec 3 registres sources.}}{108}{table.caption.69}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Instructions proposées pour l'accélération du décodage des codes LDPC-NB en utilisant 2 ou 3 opérandes.}}{109}{table.caption.70}%
+\contentsline {table}{\numberline {6.9}{\ignorespaces Instructions proposées pour l'accélération du décodage des turbo codes en utilisant 2 ou 3 opérandes.}}{110}{table.caption.71}%
+\contentsline {table}{\numberline {6.10}{\ignorespaces Nouvelle Instruction spécifique pour les turbo codes avec 3 registres sources.}}{110}{table.caption.72}%
+\contentsline {table}{\numberline {6.11}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration 8 bits SISD avec une fréquence de fonctionnement de 50 MHz. }}{112}{table.caption.73}%
+\contentsline {table}{\numberline {6.12}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD inter-trames avec une fréquence de fonctionnement fixée à 50 MHz.}}{115}{table.caption.75}%
+\contentsline {table}{\numberline {6.13}{\ignorespaces Comparaison des performances des cœurs usant d'instructions à 2 et 3 entrées, configuration SIMD intra-trame avec une fréquence de fonctionnement fixée à 50 MHz.}}{118}{table.caption.77}%
 \babel@toc {french}{}\relax 
+\contentsline {table}{\numberline {6.14}{\ignorespaces Accélération observé des débits par rapport à la Baseline.}}{122}{table.caption.79}%
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
 \babel@toc {french}{}\relax 
+\contentsline {table}{\numberline {7.1}{\ignorespaces Configuration et paramètres des familles des CCE utilisés Ord. : Ordonnancement}}{128}{table.caption.85}%
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \babel@toc {english}{}\relax 

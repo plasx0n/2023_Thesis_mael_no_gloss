@@ -1,5 +1,5 @@
-This is makeindex, version 2.15 [TeX Live 2022/dev] (kpathsea + Thai support).
-Scanning style file ./main.ist.............................done (29 attributes redefined, 0 ignored).
+This is makeindex, version 2.17 [TeX Live 2023] (kpathsea + Thai support).
+Scanning style file ./main.ist...........................done (27 attributes redefined, 0 ignored).
 Scanning input file main.acn....done (12 entries accepted, 0 rejected).
 Sorting entries....done (43 comparisons).
 Generating output file main.acr....done (34 lines written, 0 warnings).

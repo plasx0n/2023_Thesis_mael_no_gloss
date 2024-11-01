@@ -33,7 +33,13 @@
               }
            ]
          \addplot [draw=Paired-1, fill=Paired-1!40, postaction={pattern color = black!80!Paired-1!70, pattern=north west  lines}]coordinates 
-         {(LDPC,333) (SC,120) (F-SC,120)  (LDPC-NB,122) (TURBO,123)};
+         {
+         (LDPC,333) 
+         (SC,120) 
+         (F-SC,120)  
+         (LDPC-NB,122) 
+         (TURBO,123)
+         };
          \addlegendentry{PicoRV32}
 
          \addplot [draw=Paired-3, fill=Paired-3!40, postaction={pattern color = black!80!Paired-3!70, pattern=north east  lines}]coordinates 
@@ -41,11 +47,11 @@
          \addlegendentry{IBEX}
 
          \addplot [draw=Paired-7, fill=Paired-7!40, postaction={pattern color = black!80!Paired-7!70, pattern=crosshatch  dots} ]coordinates 
-         {(LDPC,210) (SC,118) (F-SC,118) (LDPC-NB,133) (TURBO,65)};
+         {(LDPC,210) (SC,118) (F-SC,118) (LDPC-NB,133) (TURBO,102)};
          \addlegendentry{SCR1}
 
          \addplot [draw=Paired-5, fill=Paired-5!40, postaction={pattern color = black!80!Paired-5!70, pattern=horizontal lines} ]coordinates 
-         {(LDPC,182) (SC,129) (F-SC,116) (LDPC-NB,78) (TURBO,60)};
+         {(LDPC,233) (SC,189) (F-SC,76) (LDPC-NB,78) (TURBO,60)};
          \addlegendentry{RISCY}
 
         \end{axis}
