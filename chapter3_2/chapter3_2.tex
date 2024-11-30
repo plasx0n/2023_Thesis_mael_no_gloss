@@ -114,7 +114,7 @@ Ce tableau indique pour chaque instruction son usage en fonction des stratégies
 La description des traitements réalisés par ces instructions a été placée en annexe pour des raisons de lisibilité. 
 L'ensemble des descriptions logicielles des décodeurs CCE ont été retravaillées afin d'exploiter ces instructions et offrir des stratégies de parallélisation inter et intra-trame. 
 Un résumé du nombre d'instructions par famille de code et schéma de parallélisation est fourni dans le tableau \ref{sum:all:instr}. 
-Dans la suite de ce chapitre, les résultats obtenus sont présentés. \textcolor{blue}{Il est à noter que la formulation logicielle de l'algorithme de décodage pour les code LDPC dans leur version intra-trame est différente de celles précédemment utilisées, expliquant la réductions des instructions spécialisées identifiées.}
+Dans la suite de ce chapitre, les résultats obtenus sont présentés. Il est à noter que la formulation logicielle de l'algorithme de décodage pour les code LDPC dans leur version intra-trame est différente de celles précédemment utilisées, expliquant la réductions des instructions spécialisées identifiées.
 
 % 
 % 
@@ -136,7 +136,7 @@ Les opérations appliquées sur les 4 trames étant identiques, il est alors pos
 
 Les résultats expérimentaux concernant le temps d'exécution des différents décodeurs sont reportés dans la table \ref{cycles_bit_simd_inter} et \ref{tab:cycles_inter_2r_p1} et \ref{tab:cycles_inter_2r_p2}.
 Ces résultats sont comparés à ceux obtenus précédemment lorsque les instructions spécialisées manipulaient des instructions scalaires (SISD) (\textit{\ding{183} SISD}) et également avec les décodeurs de base sans l'aide d'instructions spécialisées \textit{\ding{182} Baseline}.
-\textcolor{blue}{Le tableau \ref{cycles_bit_simd_inter} permet d’analyser la réduction en cycles d’horloges, toutefois les différences observables sont faibles entre les versions baseline et SIMD. Ceci est dû aux étapes nécessaires pour correctement paralléliser les données des trames à traiter. Ces étapes de "pré-calcul" ajoutent des cycles d’horloges pénalisant.}
+Le tableau \ref{cycles_bit_simd_inter} permet d’analyser la réduction en cycles d’horloges, toutefois les différences observables sont faibles entre les versions baseline et SIMD. Ceci est dû aux étapes nécessaires pour correctement paralléliser les données des trames à traiter. Ces étapes de "pré-calcul" ajoutent des cycles d’horloges pénalisant.
 Les données présentées montrent qu'en moyenne, les instructions SIMD ajoutées permettent de réduire de $75\%$ le temps de décodage des bits par rapport à la solution incorporant nos instructions SISD. 
 Les débits sont également considérablement améliorés lorsqu'ils sont comparés avec les codes originaux (baseline) et les instructions SISD.
 Ce constat est cohérent avec la stratégie de parallélisation employée, même s'il est difficile d'expliquer précisément les raisons des légères disparités entre les versions d'un même décodeur sur les différentes architectures.
@@ -573,7 +573,7 @@ Les gains en termes de temps d'exécution sont pour ces familles de codes compri
 Ces gains sont calculés par rapport aux versions scalaires \textit{\ding{183} SISD} développées précédemment. 
 Les gains relatifs aux versions de base \textit{\ding{182}Baseline} sont également présentés.
 Concernant les décodeurs LDPC, les limitations architecturales des cœurs RISC-V employés réduisent drastiquement l'intérêt de ce type d'implantation.
-\textcolor{blue}{En effet, le processus de décodage LDPC réalise des accès 32 bits non alignés à la mémoire. Ce type d'accès, relativement atypique, n'est pas supporté par la majorité des cœurs RISCV testés, à l'exception du cœur \IBEX.}
+En effet, le processus de décodage LDPC réalise des accès 32 bits non alignés à la mémoire. Ce type d'accès, relativement atypique, n'est pas supporté par la majorité des cœurs RISCV testés, à l'exception du cœur \IBEX.
 
 Pour les décodeurs LDPC non binaires, l'accélération est faible en comparaison de son implantation inter-trames, avec une réduction du temps d'exécution de $\approx 5\%$ à $6.8\%$. 
 Ces gains limités sont liés à la nature de l'algorithme avec un schéma intra-trames, car il est difficile d'extraire des instructions spécialisées opérant sur 32 bits. 
@@ -627,8 +627,8 @@ Par exemple, pour l'extension dédiée au décodage \textit{Fast-SC}, elle est $
 Ces observations liées à l'augmentation de la complexité matérielle entre ces deux types d'extension se retrouvent lorsque l'on analyse l'impact que peuvent avoir les extensions sur la fréquence maximale de fonctionnement des cœurs. 
 Les ordres de grandeur sont conservés malgré quelques disparités.
 
-\textcolor{blue}{L'ensemble de ces résultats expérimentaux mettent en évidence que les extensions dédiées à la parallélisation intra-trame offrent, pour les turbo codes et les codes polaires, des facteurs d'accélération substantiels (> 50\% du temps d'exécution) avec un impact limité sur les fréquences et coût des cœurs si l'on omet le \PicoRV. 
-En effet, le coût matériel de ce dernier est fortement impacté avec l'intégration des instructions spécialisées intra-trames, car celles-ci sont les plus chères à implanter, tout coeurs et codes confondus.}
+L'ensemble de ces résultats expérimentaux mettent en évidence que les extensions dédiées à la parallélisation intra-trame offrent, pour les turbo codes et les codes polaires, des facteurs d'accélération substantiels (> 50\% du temps d'exécution) avec un impact limité sur les fréquences et coût des cœurs si l'on omet le \PicoRV. 
+En effet, le coût matériel de ce dernier est fortement impacté avec l'intégration des instructions spécialisées intra-trames, car celles-ci sont les plus chères à implanter, tout coeurs et codes confondus.
 
 
 
@@ -643,11 +643,11 @@ En effet, le coût matériel de ce dernier est fortement impacté avec l'intégr
 %
 %
 %
-\textcolor{black}{Cette dernière sous-section se propose de synthétiser les différents résultats présentés  précédemment afin de conclure sur l'intérêt des extensions proposées. 
+Cette dernière sous-section se propose de synthétiser les différents résultats présentés  précédemment afin de conclure sur l'intérêt des extensions proposées. 
 Le tableau \ref{tab:hw} récapitule les données issues des différentes expérimentations. 
 Les gains minimums, maximums et moyens en termes de réduction de cycles d'horloges nécessaires pour décoder 1 bit d'information sont fournis pour les 4 architectures testées. 
 Il est important de rappeler que (a) les gains pour les versions SISD sont relatifs aux codes logiciels sans instruction spécialisée, tandis que les gains inter/intra-trame ont été calculés par rapport aux versions SISD;  (b) pour les les versions inter-trames, le gain en terme de temps d'exécution permet une augmentation du débit des décodeurs, mais ne réduit pas la latence de décodage par rapport aux implantations SISD, tandis qu'avec la parallélisation intra-trame, l'augmentation du débit s'accompagne d'une réduction de la latence du même ordre de grandeur. 
-Des colonnes similaires fournissent les métriques relatives aux surcoûts en LUT, cependant toutes ces valeurs doivent se lire relativement aux cœurs RISC-V originaux.}
+Des colonnes similaires fournissent les métriques relatives aux surcoûts en LUT, cependant toutes ces valeurs doivent se lire relativement aux cœurs RISC-V originaux.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[!tb]
     \footnotesize
@@ -706,9 +706,9 @@ Les expérimentations ciblant un schéma de parallélisation intra-trame pour le
 Il s'inspire des stratégies mises en œuvre dans les architectures matérielles. 
 D'un point de vue théorique, les gains mesurés devraient être similaires à ceux obtenus pour les expérimentations INTER car 4 données de 8 bits sont, ici aussi, traitées en parallèle.
 Cependant, comme le démontrent les résultats rapportés dans le tableau \ref{tab:hw}, les facteurs d'accélération obtenus pour les codes LDPC et LDPC-NB sont bien inférieurs à ceux obtenus par leurs homologues INTER. 
-\textcolor{blue}{Ce constat est lié aux formulations des algorithmes de décodage qui limitent l'exploitation du parallélisme et impactent négativement sur la conception des instructions spécialisées.
+Ce constat est lié aux formulations des algorithmes de décodage qui limitent l'exploitation du parallélisme et impactent négativement sur la conception des instructions spécialisées.
 Les résultats sont meilleurs pour les autres familles de CCE utilisées, pour lesquelles des réductions de $57\%$ à $64\%$ du temps d'exécution sont mesurées. 
-Le coût matériel des instructions spécialisées rajoutées dans ce contexte s'avère, en outre plus onéreux que pour la parallélisation inter-trames (jusqu'à 10\%).}
+Le coût matériel des instructions spécialisées rajoutées dans ce contexte s'avère, en outre plus onéreux que pour la parallélisation inter-trames (jusqu'à 10\%).
 
 Pour conclure, l'ensemble de ces résultats expérimentaux démontrent l'intérêt des extensions proposées pour l'accélération du décodage des CCE actuels. Afin d'améliorer les performances ainsi obtenues, différentes pistes d'amélioration existent, tel que cela sera détaillé dans le prochain chapitre.
 
@@ -723,8 +723,8 @@ Pour conclure, l'ensemble de ces résultats expérimentaux démontrent l'intér�
 %
 %
 %
-\textcolor{black}{Ce chapitre permet de conclure sur l'efficacité de l'intégration d'instructions de type SIMD, pour l'accélération des CCE lorsque appliqués à leurs algorithmes de décodage. 
-En effet, avec les résultats obtenus par les expérimentations menées, les débits augmentent en concordance avec la réduction de la latence des décodeurs étudiés.}
+Ce chapitre permet de conclure sur l'efficacité de l'intégration d'instructions de type SIMD, pour l'accélération des CCE lorsque appliqués à leurs algorithmes de décodage. 
+En effet, avec les résultats obtenus par les expérimentations menées, les débits augmentent en concordance avec la réduction de la latence des décodeurs étudiés.
 
 On retrouve là une philosophie qui a abouti par exemple à l'intégration d'extensions SSEx, AVX sur processeur X86\_64. 
 Toutefois, cette amélioration des performances engendre un surcoût matériel dont l'impact varie en pas la complexité initiale du cœur tel que cela est mis en évidence dans le tableau \ref{tab:hw}. Il serai 
