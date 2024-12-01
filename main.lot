@@ -13,13 +13,13 @@
 \babel@toc {french}{}\relax 
 \babel@toc {french}{}\relax 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces \textcolor {blue}{Format des instructions de type R issues de la spécification RISC-V.}}}{62}{table.caption.26}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Format des instructions de type R issues de la spécification RISC-V.}}{62}{table.caption.26}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Ensemble d'instructions proposées pour améliorer le décodage de code LDPC dans un contexte de fonctionnement scalaire.}}{67}{table.caption.30}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces Résumé des instructions spécifiques LDPC-NB.}}{68}{table.caption.31}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Résumé des instructions spécifiques au décodage des codes polaires (SC et F-SC) dans un contexte scalaire.}}{72}{table.caption.37}%
 \contentsline {table}{\numberline {4.5}{\ignorespaces Résumé des instructions spécifiques au décodage des turbo codes}}{74}{table.caption.41}%
 \contentsline {table}{\numberline {4.6}{\ignorespaces Récapitulatif des instructions proposées pour l'amélioration du décodage des CCE.}}{75}{table.caption.42}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces \textcolor {blue}{Comparatifs de cœurs de processeurs RISC-V sélectionnés}}}{77}{table.caption.43}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Comparatifs de cœurs de processeurs RISC-V sélectionnés}}{77}{table.caption.43}%
 \contentsline {table}{\numberline {4.8}{\ignorespaces Comparaison des performances des cœurs usant des instructions à 2 entrées, configuration 8 bits SISD avec la fréquence de fonctionnement maximale pour chaque implantation.}}{79}{table.caption.44}%
 \contentsline {table}{\numberline {4.9}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes LDPC sur le cœur \textbf {PicoRV32} classées en fonction de leur type.}}{80}{table.caption.45}%
 \contentsline {table}{\numberline {4.10}{\ignorespaces Nombre d'instructions exécutées lors du décodage de codes polaires sur le cœur \textbf {PicoRV32} (algorithme \textit {Fast-SC}), classées en fonction de leur type.}}{80}{table.caption.46}%
